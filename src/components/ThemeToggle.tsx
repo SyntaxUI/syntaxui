@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
+import { create } from 'zustand'
 
 function SunIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -21,17 +22,29 @@ function MoonIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+// create zustand store:
+
+interface MountedStore {
+  mounted: boolean
+  setMounted: (mounted: boolean) => void
+}
+
+const useMountedStore = create<MountedStore>((set) => ({
+  mounted: false,
+  setMounted: (mounted: boolean) => set({ mounted }),
+}))
+
 export function ThemeToggle() {
   let { resolvedTheme, setTheme } = useTheme()
   let otherTheme = resolvedTheme === 'dark' ? 'light' : 'dark'
-  let [mounted, setMounted] = useState(false)
+  const { mounted, setMounted } = useMountedStore()
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
   useEffect(() => {
-    console.log(otherTheme, resolvedTheme)
+    console.log(otherTheme)
   })
 
   return (
