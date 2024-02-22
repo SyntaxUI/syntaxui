@@ -1,13 +1,12 @@
 'use client'
 
 import { Header } from '@/components/Header'
-import React from 'react'
 
 const Home = () => {
   return (
-    <div>
+    <div className="h-screen w-full">
       <Header />
-      Ansub Khan
+      <div className="flex h-full items-center justify-center">Ansub Khan</div>
     </div>
   )
 }

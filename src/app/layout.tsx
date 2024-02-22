@@ -17,7 +17,9 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full" suppressHydrationWarning>
-      {children}
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }
