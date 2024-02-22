@@ -1,0 +1,77 @@
+import {
+  OrangeBadge,
+  BlueBadge,
+  GreenBadge,
+  RedBadge,
+} from '../../../ui/badges'
+export { CodeGroup } from '@/components/Code'
+
+# Badges
+
+<div>Requires Tailwind CSS</div>
+<div>
+  Badges are used to display a status or a label. They are often used to
+  indicate the status of a project, a build, or a version.
+</div>
+
+<div className='inline-flex items-center justify-center w-full py-8 border rounded-lg gap-3'>
+<OrangeBadge />
+<BlueBadge/>
+<GreenBadge/>
+<RedBadge/>
+</div>
+ <CodeGroup title="Code">
+
+    ```jsx {{ title: 'React' }}
+
+const Badge = () => {
+return (
+
+<div className="flex items-center rounded-full bg-yellow-400/20 px-1.5 py-0.5 text-sm font-medium text-yellow-700 sm:text-xs/5">
+  Draft
+</div>
+) }
+
+export default Badge
+
+    ```
+    </CodeGroup>
+
+## Colors
+
+these are the colors used in the badges above and their corresponding classes in tailwindcss in order to create your own badges with different colors you simply need to change the background and text color classes with the desired color.
+
+<table class="w-full table-auto">
+  <thead>
+    <tr>
+      <th class="px-4 py-2">Badge</th>
+      <th class="px-4 py-2">Color</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border px-4 py-2">
+        <OrangeBadge />
+      </td>
+      <td class="border px-4 py-2">bg-yellow-400/20 text-yellow-700</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">
+        <BlueBadge />
+      </td>
+      <td class="border px-4 py-2">bg-blue-400/20 text-blue-700</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">
+        <GreenBadge />
+      </td>
+      <td class="border px-4 py-2">bg-green-400/20 text-green-700</td>
+    </tr>
+    <tr>
+      <td class="border px-4 py-2">
+        <RedBadge />
+      </td>
+      <td class="border px-4 py-2">bg-red-400/20 text-red-700</td>
+    </tr>
+  </tbody>
+</table>

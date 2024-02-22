@@ -252,6 +252,10 @@ export const navigation: Array<NavGroup> = [
       { title: 'Attachments', href: '/docs/attachments' },
     ],
   },
+  {
+    title: 'Components',
+    links: [{ title: 'Badges', href: '/docs/badges' }],
+  },
 ]
 
 export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {
