@@ -254,7 +254,7 @@ export const navigation: Array<NavGroup> = [
   },
   {
     title: 'Components',
-    links: [{ title: 'Badges', href: '/docs/badges' }],
+    links: [{ title: 'Badges', href: '/docs/components/badges' }],
   },
 ]
 
