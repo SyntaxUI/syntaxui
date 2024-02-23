@@ -5,8 +5,8 @@ import { type Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Protocol API Reference',
-    default: 'Protocol API Reference',
+    template: '%s - ansub/ui',
+    default: 'ansub/ui',
   },
 }
 
