@@ -3,8 +3,9 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-import { Button } from '@/components/Button'
+import { Button } from '@/components/ui/button'
 import { navigation } from '@/components/Navigation'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 function PageLink({
   label,
@@ -17,14 +18,13 @@ function PageLink({
 }) {
   return (
     <>
-      <Button
-        href={page.href}
-        aria-label={`${label}: ${page.title}`}
-        variant="secondary"
-        arrow={previous ? 'left' : 'right'}
-      >
-        {label}
-      </Button>
+      <Link href={page.href} passHref>
+        <Button aria-label={`${label}: ${page.title}`} variant="secondary">
+          {previous ? <ChevronLeft size={18} /> : null}
+          {label}
+          {!previous ? <ChevronRight size={18} /> : null}
+        </Button>
+      </Link>
       <Link
         href={page.href}
         tabIndex={-1}

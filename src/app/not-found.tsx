@@ -1,7 +1,8 @@
 'use client'
 
-import { Button } from '@/components/Button'
+import { Button } from '@/components/ui/button'
 import { Header } from '@/components/Header'
+import Link from 'next/link'
 
 export default function NotFound() {
   return (
@@ -14,9 +15,9 @@ export default function NotFound() {
         <p className="mt-2 text-base text-zinc-600 dark:text-zinc-400">
           Sorry, we couldn’t find the page you’re looking for.
         </p>
-        <Button href="/" arrow="right" className="mt-8">
-          Go Back
-        </Button>
+        <Link href="/">
+          <Button className="mt-8">Go Back</Button>
+        </Link>
       </div>
     </>
   )
