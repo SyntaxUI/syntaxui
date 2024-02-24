@@ -107,10 +107,10 @@ function SocialLink({
   children: React.ReactNode
 }) {
   return (
-    <Link href={href} className="group">
+    <a href={href} target="_blank" rel="noreferrer" className="group">
       <span className="sr-only">{children}</span>
       <Icon className="h-5 w-5 fill-zinc-700 transition group-hover:fill-zinc-900 dark:group-hover:fill-zinc-500" />
-    </Link>
+    </a>
   )
 }
 
@@ -118,17 +118,14 @@ function SmallPrint() {
   return (
     <div className="flex flex-col items-center justify-between gap-5 border-t border-zinc-900/5 pt-8 sm:flex-row dark:border-white/5">
       <p className="text-xs text-zinc-600 dark:text-zinc-400">
-        &copy; Copyright {new Date().getFullYear()}. All rights reserved.
+        Built by <a href="https://twitter.com/justansub">Ansub</a>
       </p>
       <div className="flex gap-4">
-        <SocialLink href="#" icon={XIcon}>
-          Follow us on X
+        <SocialLink href="https://twitter.com/justansub" icon={XIcon}>
+          Follow me on X
         </SocialLink>
-        <SocialLink href="#" icon={GitHubIcon}>
-          Follow us on GitHub
-        </SocialLink>
-        <SocialLink href="#" icon={DiscordIcon}>
-          Join our Discord server
+        <SocialLink href="http://github.com/ansub" icon={GitHubIcon}>
+          Follow me on GitHub
         </SocialLink>
       </div>
     </div>

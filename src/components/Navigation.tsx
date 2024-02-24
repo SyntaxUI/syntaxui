@@ -231,28 +231,6 @@ function NavigationGroup({
 
 export const navigation: Array<NavGroup> = [
   {
-    title: 'Guides',
-    links: [
-      { title: 'Introduction', href: '/docs' },
-      { title: 'Quickstart', href: '/docs/quickstart' },
-      { title: 'SDKs', href: '/docs/sdks' },
-      { title: 'Authentication', href: '/docs/authentication' },
-      { title: 'Pagination', href: '/docs/pagination' },
-      { title: 'Errors', href: '/docs/errors' },
-      { title: 'Webhooks', href: '/docs/webhooks' },
-    ],
-  },
-  {
-    title: 'Resources',
-    links: [
-      { title: 'Contacts', href: '/docs/contacts' },
-      { title: 'Conversations', href: '/docs/conversations' },
-      { title: 'Messages', href: '/docs/messages' },
-      { title: 'Groups', href: '/docs/groups' },
-      { title: 'Attachments', href: '/docs/attachments' },
-    ],
-  },
-  {
     title: 'Components',
     links: [{ title: 'Badges', href: '/docs/components/badges' }],
   },
