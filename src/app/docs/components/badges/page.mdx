@@ -30,12 +30,12 @@ export const metadata = {
   indicate the status of a project, a build, or a version.
 </div>
 
-<div className='inline-flex items-center justify-center w-full py-8 border rounded-lg gap-3'>
+<Preview>
 <OrangeBadge />
 <BlueBadge/>
 <GreenBadge/>
 <RedBadge/>
-</div>
+</Preview>
  <CodeGroup title="Code">
 
     ```jsx {{ title: 'React' }}
@@ -58,40 +58,42 @@ these are the colors used in the badges above and their corresponding classes in
 <Table>
   <TableHeader>
     <TableRow>
-      <TableHead class="px-4 py-2">Badge</TableHead>
-      <TableHead class="px-4 py-2">Color</TableHead>
+      <TableHead className="px-4 py-2">Badge</TableHead>
+      <TableHead className="px-4 py-2">Color</TableHead>
     </TableRow>
   </TableHeader>
   <TableBody>
     <TableRow>
-      <TableCell class="border px-4 py-2">
+      <TableCell className="border px-4 py-2">
         <OrangeBadge />
       </TableCell>
-      <TableCell class="border px-4 py-2">
+      <TableCell className="border px-4 py-2">
         bg-yellow-400/20 text-yellow-700
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell class="border px-4 py-2">
+      <TableCell className="border px-4 py-2">
         <BlueBadge />
       </TableCell>
-      <TableCell class="border px-4 py-2">
+      <TableCell className="border px-4 py-2">
         bg-blue-400/20 text-blue-700
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell class="border px-4 py-2">
+      <TableCell className="border px-4 py-2">
         <GreenBadge />
       </TableCell>
-      <TableCell class="border px-4 py-2">
+      <TableCell className="border px-4 py-2">
         bg-green-400/20 text-green-700
       </TableCell>
     </TableRow>
     <TableRow>
-      <TableCell class="border px-4 py-2">
+      <TableCell className="border px-4 py-2">
         <RedBadge />
       </TableCell>
-      <TableCell class="border px-4 py-2">bg-red-400/20 text-red-700</TableCell>
+      <TableCell className="border px-4 py-2">
+        bg-red-400/20 text-red-700
+      </TableCell>
     </TableRow>
   </TableBody>
 </Table>
