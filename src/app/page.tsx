@@ -21,9 +21,9 @@ const Home = () => {
               height={100}
             />
             <span className="mb-1 text-3xl font-semibold tracking-tight">
-              Pre-build Components for your next project
+              Pre-built components for your next project
             </span>
-            <div className="text-gray-600">Just Copy, Paste, and Launch.</div>
+            <div className="text-gray-600">Just Copy, Paste, and Launch</div>
           </div>
           <div className="mt-4 space-x-4">
             <Link href="/docs">
