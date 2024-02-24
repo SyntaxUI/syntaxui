@@ -1,7 +1,6 @@
 'use client'
 
 import { Header } from '@/components/Header'
-import Breadcrumb from '@/ui/Breadcrumb'
 
 const Home = () => {
   return (
@@ -9,7 +8,6 @@ const Home = () => {
       <Header />
       <div className="flex h-full flex-col items-center justify-center gap-4">
         Ansub Khan
-        <Breadcrumb />
       </div>
     </div>
   )
