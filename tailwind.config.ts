@@ -25,6 +25,11 @@ export default {
     },
     typography: typographyStyles,
     extend: {
+      colors: {
+        gray: {
+          800: '#222222',
+        },
+      },
       boxShadow: {
         glow: '0 0 4px rgb(0 0 0 / 0.1)',
       },

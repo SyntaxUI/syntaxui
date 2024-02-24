@@ -12,6 +12,7 @@ import {
 import { MobileSearch, Search } from '@/components/Search'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 
 function TopLevelNavItem({
   href,
@@ -70,29 +71,55 @@ export const Header = forwardRef<
         )}
       />
       <div className="hidden gap-4 lg:flex">
-        <Link href="/" aria-label="Home">
-          <Logo className="h-6" />
+        <Link
+          href="/"
+          aria-label="Home"
+          className="mr-3 flex items-center justify-center gap-1"
+        >
+          <Image
+            src="/images/ansub-ui.svg"
+            alt="ansub-ui"
+            className="h-5 w-5"
+            width={100}
+            height={100}
+          />
+          <div className="text-sm font-medium text-gray-800">ansub/ui</div>
         </Link>
         <ul role="list" className="flex w-full items-center gap-4">
-          <TopLevelNavItem href="/docs">Documentation</TopLevelNavItem>
+          <TopLevelNavItem href="/docs">Docs</TopLevelNavItem>
           <TopLevelNavItem href="/github">Github</TopLevelNavItem>
         </ul>
       </div>
       {/* <Search /> */}
       <div className="flex items-center gap-5 lg:hidden">
         {pathname === '/' ? null : <MobileNavigation />}
-        <Link href="/" aria-label="Home">
-          <Logo className="h-6" />
+        <Link
+          href="/"
+          aria-label="Home"
+          className="mr-3 flex items-center justify-center gap-1"
+        >
+          <Image
+            src="/images/ansub-ui.svg"
+            alt="ansub-ui"
+            className="h-5 w-5"
+            width={100}
+            height={100}
+          />
+          <div className="text-sm font-medium text-gray-800">ansub/ui</div>
         </Link>
+        <ul role="list" className="flex w-full items-center gap-4">
+          <TopLevelNavItem href="/docs">Docs</TopLevelNavItem>
+          <TopLevelNavItem href="/github">Github</TopLevelNavItem>
+        </ul>
       </div>
       <div className="flex items-center gap-5">
         <nav className="hidden md:block">
           <Search />
         </nav>
-        <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10 md:dark:bg-white/15" />
+        {/* <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10 md:dark:bg-white/15" /> */}
         <div className="flex gap-4">
           <MobileSearch />
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </div>
       </div>
     </motion.div>
