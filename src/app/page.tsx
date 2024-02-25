@@ -5,6 +5,8 @@ import { Header } from '@/components/Header'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
+import React from 'react'
+import GitHubIcon from '@/icons/github'
 
 const Home = () => {
   return (
@@ -25,11 +27,22 @@ const Home = () => {
             </span>
             <div className="text-gray-600">Just Copy, Paste, and Launch</div>
           </div>
-          <div className="mt-4 space-x-4">
+          <div className="mt-4 flex items-center space-x-4">
             <Link href="/docs">
               <Button>Get Started</Button>
             </Link>
-            <Button variant={'outline'}>Github</Button>
+            <a
+              href="https://github.com/Ansub/ui"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button variant={'outline'} className="gap-1">
+                <div className="h-5 w-5 text-gray-800">
+                  <GitHubIcon />
+                </div>{' '}
+                Github
+              </Button>
+            </a>
           </div>
         </div>
         <Footer />

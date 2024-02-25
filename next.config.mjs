@@ -16,6 +16,16 @@ const withMDX = nextMDX({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+
+  async redirects() {
+    return [
+      {
+        source: '/github',
+        destination: 'https://github.com/ansub/ui',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 export default withSearch(withMDX(nextConfig))
