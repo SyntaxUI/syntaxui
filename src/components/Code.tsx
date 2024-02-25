@@ -345,13 +345,13 @@ export function CodeGroup({
         ) : (
           <div className={containerClassName}>
             <div className="not-prose">
-              {/* {header} */}
+              {header}
               {panels}
             </div>
           </div>
         )}
         <Button
-          className="w-xs absolute bottom-0 left-0 right-0 block rounded-2xl bg-black/20 p-0 text-sm font-medium text-white"
+          className="w-xs absolute bottom-0 left-0 right-0 block rounded-2xl bg-transparent p-0 text-sm font-medium text-white"
           onClick={() => setIsExpanded(!isExpanded)}
         >
           {isExpanded ? 'Collapse' : 'Expand'}

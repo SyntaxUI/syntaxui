@@ -13,8 +13,8 @@ const Home = () => {
     <>
       <div className="flex h-screen w-full flex-col items-center justify-between text-center">
         <Header />
-        <div className="flex h-full flex-col items-center justify-center px-3">
-          <div className="flex w-full flex-col items-center justify-center">
+        <div className="flex h-full flex-col items-center justify-center gap-4 px-3">
+          <div className="flex w-full flex-col items-center justify-center gap-4">
             <Image
               src="/images/ansub-ui.svg"
               alt="ansub-ui"
@@ -22,12 +22,12 @@ const Home = () => {
               width={100}
               height={100}
             />
-            <span className="mb-1 text-3xl font-semibold tracking-tight">
+            <span className="text-2xl font-bold tracking-tight md:text-5xl">
               Pre-built components for your next project
             </span>
             <div className="text-gray-600">Just Copy, Paste, and Launch</div>
           </div>
-          <div className="mt-4 flex items-center space-x-4">
+          <div className="flex items-center space-x-4">
             <Link href="/docs">
               <Button>Get Started</Button>
             </Link>
