@@ -14,6 +14,7 @@ import clsx from 'clsx'
 import { create } from 'zustand'
 
 import { Tag } from '@/components/Tag'
+import { Button } from './mdx'
 
 const languageNames: Record<string, string> = {
   js: 'JavaScript',
@@ -312,6 +313,8 @@ export function CodeGroup({
   title,
   ...props
 }: React.ComponentPropsWithoutRef<typeof CodeGroupPanels> & { title: string }) {
+  const [isExpanded, setIsExpanded] = useState(false)
+
   let languages =
     Children.map(children, (child) =>
       getPanelTitle(isValidElement(child) ? child.props : {}),
@@ -319,8 +322,9 @@ export function CodeGroup({
   let tabGroupProps = useTabGroupProps(languages)
   let hasTabs = Children.count(children) > 1
 
-  let containerClassName =
-    'my-6 rounded-2xl bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10'
+  let containerClassName = `my-6 rounded-2xl  ${
+    isExpanded ? '' : 'max-h-[300px]  h-full overflow-hidden'
+  } bg-zinc-900 shadow-md dark:ring-1 dark:ring-white/10`
   let header = (
     <CodeGroupHeader title={title} selectedIndex={tabGroupProps.selectedIndex}>
       {children}
@@ -330,21 +334,29 @@ export function CodeGroup({
 
   return (
     <CodeGroupContext.Provider value={true}>
-      {hasTabs ? (
-        <Tab.Group {...tabGroupProps} className={containerClassName}>
-          <div className="not-prose">
-            {header}
-            {panels}
+      <div className="relative">
+        {hasTabs ? (
+          <Tab.Group {...tabGroupProps} className={containerClassName}>
+            <div className="not-prose">
+              {header}
+              {panels}
+            </div>
+          </Tab.Group>
+        ) : (
+          <div className={containerClassName}>
+            <div className="not-prose">
+              {/* {header} */}
+              {panels}
+            </div>
           </div>
-        </Tab.Group>
-      ) : (
-        <div className={containerClassName}>
-          <div className="not-prose">
-            {/* {header} */}
-            {panels}
-          </div>
-        </div>
-      )}
+        )}
+        <Button
+          className="w-xs absolute bottom-0 left-0 right-0 block rounded-2xl bg-black/20 p-0 text-sm font-medium text-white"
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
+          {isExpanded ? 'Collapse' : 'Expand'}
+        </Button>
+      </div>
     </CodeGroupContext.Provider>
   )
 }
