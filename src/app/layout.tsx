@@ -5,10 +5,12 @@ import { type Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ui.ansubkhan.com'),
   title: {
     template: '%s - ansub/ui',
     default: 'ansub/ui',
   },
+  description: 'pre-built components for your next project',
 }
 
 export default async function RootLayout({
