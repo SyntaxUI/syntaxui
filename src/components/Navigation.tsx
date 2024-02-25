@@ -241,6 +241,10 @@ export const navigation: Array<NavGroup> = [
       { title: 'Breadcrumb', href: '/docs/components/breadcrumb' },
     ],
   },
+  {
+    title: 'Effects',
+    links: [{ title: 'Image Fade', href: '/docs/effects/image-fade' }],
+  },
 ]
 
 export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {

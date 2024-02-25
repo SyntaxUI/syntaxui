@@ -1,0 +1,49 @@
+import ImageFade from '@/ui/effects/ImageFade'
+import { CodeGroup } from '@/components/Code'
+import { RequiresTailwind } from '@/components/Requires'
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table'
+
+export const metadata = {
+  title: 'Badges',
+  description:
+    'Badges are used to display a status or a label. They are often used to indicate the status of a project, a build, or a version.',
+}
+
+# Image Fade Effect
+
+<RequiresTailwind />
+
+<div className="mt-4">A faded effect on image.</div>
+
+<ImageFade />
+
+ <CodeGroup title="Code">
+
+    ```jsx {{ title: 'React' }}
+
+ <div>
+      <div className="relative flex max-w-6xl justify-center overflow-hidden">
+        <img
+          src="add-your-image-url"
+          alt="hero-section"
+          className="h-full w-full rounded-lg border object-cover md:w-[1300px]"
+        />
+        <div className="from-1% absolute inset-0 bg-gradient-to-t from-white to-35%" />
+      </div>
+    </div>
+    ```
+    </CodeGroup>
+
+<Row>
+  <a href="https://dashboardsdesign.com/" className="underline">
+    <div className="text-xs">Image taken from Dashboard Designs</div>
+  </a>
+</Row>
