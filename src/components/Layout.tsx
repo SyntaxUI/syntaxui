@@ -4,7 +4,6 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Navigation } from '@/components/Navigation'
 import { SectionProvider, type Section } from '@/components/SectionProvider'
-import Breadcrumb from '@/ui/Breadcrumb'
 import { motion } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 

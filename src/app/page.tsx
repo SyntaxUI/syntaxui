@@ -23,7 +23,7 @@ const Home = () => {
               height={100}
             />
             <span className="max-w-lg text-3xl font-bold tracking-tight md:max-w-2xl md:text-4xl">
-              Not Your Average Component Library - Build Faster, Launch Sooner
+              Not your average component library - build faster, launch sooner
             </span>
             <div className="text-gray-600">
               Ready-to-use UI elements designed for rapid development.
