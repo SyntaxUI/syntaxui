@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export const RequiresTailwind = () => {
   return (
-    <div className="inline-flex h-6 items-center justify-center gap-1 rounded-full border border-cyan-100 bg-cyan-100/30 px-2">
+    <div className="inline-flex h-6 items-center justify-center gap-1 rounded-full border border-cyan-100 bg-cyan-100/30 px-1">
       <Image
         src="/images/tailwind.svg"
         alt="Tailwind CSS"
