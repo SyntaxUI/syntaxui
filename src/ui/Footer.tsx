@@ -34,7 +34,7 @@ const Footer = () => {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-4 pb-8 pt-24">
+      <div className="mx-auto max-w-7xl px-2">
         <div className="flex flex-col justify-between lg:flex-row">
           <div className="space-y-8">
             <Image
