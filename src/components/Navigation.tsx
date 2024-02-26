@@ -1,12 +1,11 @@
 'use client'
 
-import { useRef } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { AnimatePresence, motion, useIsPresent } from 'framer-motion'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useRef } from 'react'
 
-import { Button } from '@/components/ui/button'
 import { useIsInsideMobileNavigation } from '@/components/MobileNavigation'
 import { useSectionStore } from '@/components/SectionProvider'
 import { Tag } from '@/components/Tag'
@@ -239,6 +238,10 @@ export const navigation: Array<NavGroup> = [
     links: [
       { title: 'Badges', href: '/docs/components/badges' },
       { title: 'Breadcrumb', href: '/docs/components/breadcrumb' },
+      {
+        title: 'Features',
+        href: '/docs/components/features',
+      },
     ],
   },
   {
