@@ -249,6 +249,15 @@ export const navigation: Array<NavGroup> = [
     ],
   },
   {
+    title: 'Animations',
+    links: [
+      {
+        title: 'Skewed Infinite Scroll',
+        href: '/docs/animations/skewed-infinite-scroll',
+      },
+    ],
+  },
+  {
     title: 'Effects',
     links: [{ title: 'Image Fade', href: '/docs/effects/image-fade' }],
   },

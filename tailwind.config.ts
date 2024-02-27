@@ -6,9 +6,6 @@ import headlessuiPlugin from '@headlessui/tailwindcss'
 export default {
   content: ['./src/**/*.{js,mjs,jsx,ts,tsx,mdx}'],
   darkMode: 'selector',
-  // future: {
-  //   hoverOnlyWhenSupported: true,
-  // },
   theme: {
     fontSize: {
       '2xs': ['0.75rem', { lineHeight: '1.25rem' }],
