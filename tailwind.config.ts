@@ -6,6 +6,9 @@ import headlessuiPlugin from '@headlessui/tailwindcss'
 export default {
   content: ['./src/**/*.{js,mjs,jsx,ts,tsx,mdx}'],
   darkMode: 'selector',
+  // future: {
+  //   hoverOnlyWhenSupported: true,
+  // },
   theme: {
     fontSize: {
       '2xs': ['0.75rem', { lineHeight: '1.25rem' }],
@@ -56,10 +59,21 @@ export default {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+        'skew-scroll': {
+          '0%': {
+            transform:
+              'rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(0)',
+          },
+          '100%': {
+            transform:
+              'rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(-100%)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'skew-scroll': 'skew-scroll 20s linear infinite',
       },
     },
   },
