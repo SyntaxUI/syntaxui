@@ -13,6 +13,8 @@ import { MobileSearch, Search } from '@/components/Search'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
+import GitHubIcon from '@/icons/github'
+import { Star } from 'lucide-react'
 
 function TopLevelNavItem({
   href,
@@ -117,9 +119,17 @@ export const Header = forwardRef<
           <Search />
         </nav>
         {/* <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10 md:dark:bg-white/15" /> */}
-        <div className="flex gap-4">
+        <div className="flex">
           <MobileSearch />
           {/* <ThemeToggle /> */}
+          <a
+            href="https://github.com/ansub/ui"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1 rounded-lg border p-1 px-2 text-sm transition-all duration-300 ease-in-out hover:bg-gray-100"
+          >
+            <Star className="h-4 w-4" /> on <GitHubIcon className="h-4 w-4" />
+          </a>
         </div>
       </div>
     </motion.div>
