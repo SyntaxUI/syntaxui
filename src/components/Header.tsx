@@ -126,9 +126,9 @@ export const Header = forwardRef<
             href="https://github.com/ansub/ui"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1 rounded-lg border p-1 px-2 text-sm transition-all duration-300 ease-in-out hover:bg-gray-100"
+            className="flex items-center gap-1 rounded-lg border p-1 px-3 text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100"
           >
-            <Star className="h-4 w-4" /> on <GitHubIcon className="h-4 w-4" />
+            star on <GitHubIcon className="h-4 w-4" />
           </a>
         </div>
       </div>
