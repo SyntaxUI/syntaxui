@@ -31,6 +31,9 @@ export default {
           700: '#333333',
           800: '#222222',
         },
+        red: {
+          500: '#fb3a5d',
+        },
       },
       boxShadow: {
         glow: '0 0 4px rgb(0 0 0 / 0.1)',

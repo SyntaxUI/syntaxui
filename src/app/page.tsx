@@ -31,7 +31,9 @@ const Home = () => {
           </div>
           <div className="flex items-center space-x-4">
             <Link href="/docs">
-              <Button>Get Started</Button>
+              <Button className="bg-red-500 hover:bg-red-500/90">
+                Get Started
+              </Button>
             </Link>
             <a
               href="https://github.com/Ansub/ui"
