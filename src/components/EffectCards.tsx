@@ -5,31 +5,13 @@ import React from 'react'
 const data = [
   {
     id: 1,
-    title: 'Badge',
-    image: '/images/ui/badges.png',
-    link: '/docs/components/badges',
-  },
-  {
-    id: 2,
-    title: 'Breadcrumb',
-    image: '/images/ui/breadcrumb.png',
-    link: '/docs/components/breadcrumb',
-  },
-  {
-    id: 3,
-    title: 'Feature',
-    image: '/images/ui/features.png',
-    link: '/docs/components/features',
-  },
-  {
-    id: 4,
-    title: 'Footer',
-    image: '/images/ui/footer.png',
-    link: '/docs/components/footer',
+    title: 'Image Fade',
+    image: '/images/ui/image-fade.png',
+    link: '/docs/effects/image-fade',
   },
 ]
 
-const ComponentCards = () => {
+const EffectCards = () => {
   return (
     <div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
@@ -56,4 +38,4 @@ const ComponentCards = () => {
   )
 }
 
-export default ComponentCards
+export default EffectCards
