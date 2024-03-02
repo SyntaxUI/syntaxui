@@ -261,6 +261,10 @@ export const navigation: Array<NavGroup> = [
     title: 'Effects',
     links: [{ title: 'Image Fade', href: '/docs/effects/image-fade' }],
   },
+  {
+    title: 'Hooks',
+    links: [{ title: 'useVisible()', href: '/docs/hooks/useVisible' }],
+  },
 ]
 
 export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {
