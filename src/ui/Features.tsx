@@ -84,7 +84,7 @@ const Features = () => {
           <div key={feature.name} className="relative">
             <div className="flex flex-col">
               <feature.icon
-                className="mb-2 h-5 w-5 text-cyan-500"
+                className="mb-2 h-5 w-5 text-red-500"
                 aria-hidden="true"
               />
               <div className="text-md inline font-semibold text-gray-800">
