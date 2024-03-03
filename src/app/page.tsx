@@ -14,7 +14,7 @@ const Home = () => {
       <div className="flex h-screen w-full flex-col items-center justify-between text-center">
         <Header />
         <div className="flex h-full flex-col items-center justify-center gap-4 px-3">
-          <div className="flex w-full flex-col items-center justify-center gap-4">
+          <div className="flex w-full flex-col items-center justify-center gap-2">
             <Image
               src="/images/ansub-ui.svg"
               alt="ansub-ui"
