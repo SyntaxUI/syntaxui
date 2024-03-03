@@ -36,7 +36,7 @@ const Home = () => {
               </Button>
             </Link>
             <a
-              href="https://github.com/Ansub/ui"
+              href="https://github.com/Ansub/syntaxUI"
               target="_blank"
               rel="noreferrer"
             >
@@ -44,7 +44,7 @@ const Home = () => {
                 <div className="h-5 w-5 text-gray-800">
                   <GitHubIcon />
                 </div>
-                Github
+                Star on Github
               </Button>
             </a>
           </div>

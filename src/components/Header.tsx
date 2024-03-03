@@ -85,7 +85,7 @@ export const Header = forwardRef<
             width={100}
             height={100}
           />
-          <div className="text-sm font-medium text-gray-800">Syntax UI</div>
+          <div className="text-sm font-medium text-gray-800">SyntaxUI</div>
         </Link>
         <ul role="list" className="flex w-full items-center gap-4">
           <TopLevelNavItem href="/docs">Docs</TopLevelNavItem>
@@ -119,16 +119,16 @@ export const Header = forwardRef<
           <Search />
         </nav>
         {/* <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10 md:dark:bg-white/15" /> */}
-        <div className="flex">
+        <div className="flex items-center gap-2">
           <MobileSearch />
           {/* <ThemeToggle /> */}
           <a
             href="https://github.com/ansub/ui"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1 rounded-lg border p-1 px-3 text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100"
+            className="flex items-center gap-1 rounded-lg border p-2 text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100"
           >
-            star on <GitHubIcon className="h-4 w-4" />
+            <GitHubIcon className="h-4 w-4" />
           </a>
         </div>
       </div>

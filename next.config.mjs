@@ -21,7 +21,7 @@ const nextConfig = {
     return [
       {
         source: '/github',
-        destination: 'https://github.com/ansub/ui',
+        destination: 'https://github.com/Ansub/syntaxUI',
         permanent: true,
       },
     ]
