@@ -7,10 +7,10 @@ import { GeistSans } from 'geist/font/sans'
 export const metadata: Metadata = {
   metadataBase: new URL('https://syntaxui.com'),
   title: {
-    template: '%s - Syntax UI',
-    default: 'Syntax UI',
+    template: '%s - SyntaxUI',
+    default: 'SyntaxUI',
   },
-  description: 'pre-built components for your next project',
+  description: 'Ready-to-use UI elements designed for rapid development.',
 }
 
 export default async function RootLayout({
