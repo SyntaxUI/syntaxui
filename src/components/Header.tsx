@@ -2,19 +2,16 @@ import clsx from 'clsx'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Link from 'next/link'
 import { forwardRef } from 'react'
-
-import { Logo } from '@/components/Logo'
 import {
   MobileNavigation,
   useIsInsideMobileNavigation,
   useMobileNavigationStore,
 } from '@/components/MobileNavigation'
 import { MobileSearch, Search } from '@/components/Search'
-import { ThemeToggle } from '@/components/ThemeToggle'
-import { usePathname } from 'next/navigation'
-import Image from 'next/image'
 import GitHubIcon from '@/icons/github'
-import { Star } from 'lucide-react'
+import XIcon from '@/icons/x'
+import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 function TopLevelNavItem({
   href,
@@ -129,6 +126,14 @@ export const Header = forwardRef<
             className="flex items-center gap-1 rounded-lg border p-2 text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100"
           >
             <GitHubIcon className="h-4 w-4" />
+          </a>
+          <a
+            href="https://twitter.com/justansub"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1 rounded-lg border p-2 text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100"
+          >
+            <XIcon className="h-4 w-4" />
           </a>
         </div>
       </div>
