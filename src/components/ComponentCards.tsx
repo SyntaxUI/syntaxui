@@ -5,7 +5,7 @@ import React from 'react'
 const data = [
   {
     id: 1,
-    title: 'Badge',
+    title: 'Badges',
     image: '/images/ui/badges.png',
     link: '/docs/components/badges',
   },
@@ -17,7 +17,7 @@ const data = [
   },
   {
     id: 3,
-    title: 'Feature',
+    title: 'Features',
     image: '/images/ui/features.png',
     link: '/docs/components/features',
   },
