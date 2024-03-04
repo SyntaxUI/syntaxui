@@ -76,9 +76,9 @@ export const Header = forwardRef<
           className="mr-3 flex items-center justify-center gap-1"
         >
           <Image
-            src="/images/ansub-ui.svg"
+            src="/images/syntaxUI.png"
             alt="ansub-ui"
-            className="h-5 w-5"
+            className="mr-1 h-6 w-6"
             width={100}
             height={100}
           />
