@@ -7,13 +7,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import GitHubIcon from '@/icons/github'
+import ComponentCards from '@/components/ComponentCards'
+import AnimationCards from '@/components/AnimationCards'
+import EffectCards from '@/components/EffectCards'
 
 const Home = () => {
   return (
     <>
       <div className="flex h-screen w-full flex-col items-center justify-between text-center">
         <Header />
-        <div className="flex h-full flex-col items-center justify-center gap-4 px-3">
+        <div className="my-64 flex h-full flex-col items-center justify-center gap-4 px-3">
           <div className="flex w-full flex-col items-center justify-center gap-2">
             <Image
               src="/images/ansub-ui.svg"
@@ -49,6 +52,28 @@ const Home = () => {
             </a>
           </div>
         </div>
+        {/* UI Elements */}
+        <div className="mb-12 flex w-full max-w-7xl flex-col gap-8 px-3">
+          <div>
+            <h1 className="mb-4 text-left text-lg font-semibold tracking-tight">
+              Components
+            </h1>
+            <ComponentCards />
+          </div>
+          <div>
+            <h1 className="mb-4 text-left text-lg font-semibold tracking-tight">
+              Animations
+            </h1>
+            <AnimationCards />
+          </div>
+          <div>
+            <h1 className="mb-4 w-full text-left text-lg font-semibold">
+              Effects
+            </h1>
+            <EffectCards />
+          </div>
+        </div>
+
         <Footer />
       </div>
     </>
