@@ -42,7 +42,7 @@ const Footer = () => {
               unoptimized={true}
               width={100}
               height={40}
-              src="/images/ansub-ui.svg"
+              src="/images/syntaxUI.svg"
               alt="logo"
               className="h-7 w-auto"
             />

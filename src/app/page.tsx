@@ -19,8 +19,8 @@ const Home = () => {
         <div className="my-64 flex h-full flex-col items-center justify-center gap-4 px-3">
           <div className="flex w-full flex-col items-center justify-center gap-2">
             <Image
-              src="/images/ansub-ui.svg"
-              alt="ansub-ui"
+              src="/images/syntaxUI.svg"
+              alt="syntaxUI"
               className="mb-4 h-16 w-16"
               width={100}
               height={100}
