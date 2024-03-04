@@ -20,7 +20,7 @@ const Home = () => {
           <div className="flex w-full flex-col items-center justify-center gap-2">
             <Image
               src="/images/syntaxUI.svg"
-              alt="ansub-ui"
+              alt="syntaxUI"
               className="mb-4 h-16 w-16"
               width={100}
               height={100}

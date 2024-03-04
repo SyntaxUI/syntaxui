@@ -76,8 +76,8 @@ export const Header = forwardRef<
           className="mr-3 flex items-center justify-center gap-1"
         >
           <Image
-            src="/images/syntaxUI.png"
-            alt="ansub-ui"
+            src="/images/syntaxUI.svg"
+            alt="syntaxUI"
             className="mr-1 h-6 w-6"
             width={100}
             height={100}
@@ -98,13 +98,13 @@ export const Header = forwardRef<
           className="mr-3 flex items-center justify-center gap-1"
         >
           <Image
-            src="/images/ansub-ui.svg"
-            alt="ansub-ui"
-            className="h-5 w-5"
+            src="/images/syntaxUI.svg"
+            alt="syntaxUI"
+            className="h-6 w-6"
             width={100}
             height={100}
           />
-          <div className="text-sm font-medium text-gray-800">ansub/ui</div>
+          <div className="text-sm font-medium text-gray-800">syntaxUI</div>
         </Link>
         <ul role="list" className="flex w-full items-center gap-4">
           <TopLevelNavItem href="/docs">Docs</TopLevelNavItem>
