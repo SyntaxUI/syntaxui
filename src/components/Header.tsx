@@ -82,7 +82,7 @@ export const Header = forwardRef<
             width={100}
             height={100}
           />
-          <div className="text-sm font-medium text-gray-800">SyntaxUI</div>
+          <div className="text-sm font-medium text-gray-800">syntaxUI</div>
         </Link>
         <ul role="list" className="flex w-full items-center gap-4">
           <TopLevelNavItem href="/docs">Docs</TopLevelNavItem>
