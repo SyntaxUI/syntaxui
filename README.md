@@ -1,6 +1,5 @@
 # Syntax UI
-
-![CleanShot 2024-02-29 at 22 11 14@2x](https://github.com/Ansub/syntaxUI/assets/12985873/82314ee1-a353-41ac-8da1-32c1aa7d195f)
+![syntaxUI](https://github.com/Ansub/syntaxUI/assets/12985873/40cc4910-ba16-4cf5-b8ba-1a9914c76ce5)
 
 ## License
 
