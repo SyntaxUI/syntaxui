@@ -17,13 +17,17 @@ export const metadata = {
     'Badges are used to display a status or a label. They are often used to indicate the status of a project, a build, or a version.',
 }
 
-# Badges
+# Input
 
 <RequiresTailwind />
 
+## Tag Input
+
 <div className="mb-4"></div>
 <Preview>
+<div className="max-w-md w-full">
 <TagInput/>
+</div>
 </Preview>
  <CodeGroup title="TagInput.tsx">
 
@@ -132,6 +136,34 @@ return (
 ) }
 
 export default KeywordsInput
-
     ```
     </CodeGroup>
+
+### Usage
+
+<CodeGroup>
+  ```jsx {{ title: 'React' }}
+
+import React, { useState } from 'react'
+import TagInput from 'add-path-to-tag-input'
+
+const MyComponent = () => {
+const [keywords, setKeywords] = useState([]);
+
+const handleKeywordsChange = (newKeywords) => {
+setKeywords(newKeywords);
+};
+
+return (
+
+<>
+  <KeywordsInput
+    initialKeywords={keywords}
+    onKeywordsChange={handleKeywordsChange}
+  />
+</>
+); };
+
+export default MyComponent;
+```
+</CodeGroup>

@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { X } from 'lucide-react'
 
 const TagInput: React.FC = () => {
-  const [keywords, setKeywords] = useState<string[]>([])
+  const [keywords, setKeywords] = useState<string[]>(['ansub', 'syntax'])
 
   const onKeywordsChange = (newKeywords: string[]) => {
     setKeywords(newKeywords)
@@ -78,7 +78,7 @@ const TagInput: React.FC = () => {
           <button
             key={index}
             onClick={() => removeKeyword(index)}
-            className="m-1 flex items-center rounded-full bg-orange-500 px-2 py-1 text-xs text-white"
+            className="py- m-1 flex items-center rounded-full bg-red-500 px-2 text-xs text-white hover:bg-red-500/90"
           >
             {keyword}
             <X size={14} className="ml-2 cursor-pointer" />
