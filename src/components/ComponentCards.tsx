@@ -27,6 +27,18 @@ const data = [
     image: '/images/ui/footer.png',
     link: '/docs/components/footer',
   },
+  {
+    id: 5,
+    title: 'Input',
+    image: '/images/ui/input.png',
+    link: '/docs/components/input',
+  },
+  {
+    id: 4,
+    title: 'Tab',
+    image: '/images/ui/tabs.png',
+    link: '/docs/components/tabs',
+  },
 ]
 
 const ComponentCards = () => {
@@ -36,7 +48,7 @@ const ComponentCards = () => {
         {data.map((item) => (
           <Link href={item.link} key={item.id}>
             <div className="overflow group rounded-xl border border-white ring-1 ring-zinc-200 transition-all ease-in-out hover:cursor-pointer">
-              <div className="flex h-[12rem] items-center justify-center border-b bg-gray-50 text-xs text-gray-400 transition-all ease-in-out group-hover:bg-gray-100">
+              <div className="flex h-[12rem] items-center justify-center rounded-t-xl border-b bg-gray-50 text-xs text-gray-400 transition-all ease-in-out group-hover:bg-gray-100">
                 <Image
                   width={200}
                   height={200}
