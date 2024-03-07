@@ -1,0 +1,125 @@
+import TagInput from '../../../../ui/TagInput'
+import PreviewTabs from '@/components/PreviewCode/Tabs'
+import { RequiresTailwind, RequiresShadcn } from '@/components/Requires'
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table'
+
+export const metadata = {
+  title: 'Tabs',
+  description:
+    'Tabs are used to quickly navigate between different views. They are used to organize content into different categories.',
+}
+
+# Tabs
+
+<RequiresTailwind />
+
+<div className="mb-4"></div>
+<Preview>
+<div className="max-w-md w-full">
+<PreviewTabs/>
+</div>
+</Preview>
+ <CodeGroup title="Tabs.tsx">
+
+    ```jsx
+
+type Tab = {
+id: string
+label: string
+}
+
+type TabProps = {
+label: string
+isActive: boolean
+onClick: () => void
+}
+
+const Tab = ({ label, isActive, onClick }: TabProps) => {
+return (
+
+<div
+  className={`
+  ${
+    isActive
+      ? 'border-b-[3px] border-orange-500 bg-white pb-2 font-semibold'
+      : 'cursor-pointer hover:bg-transparent'
+  }
+        text-decoration-none mx-2 justify-start rounded-t-md px-2 py-2 text-sm font-medium hover:bg-orange-100
+      `}
+  onClick={onClick}
+>
+  {label}
+</div>
+) }
+
+type TabsProps = {
+tabs: Tab[]
+activeTab: string
+onTabClick: (tabId: string) => void
+}
+
+export const Tabs = ({ tabs, activeTab, onTabClick }: TabsProps) => {
+  return (
+    <div className="flex w-full">
+      {tabs.map((tab) => (
+        <Tab
+          key={tab.id}
+          label={tab.label}
+          isActive={activeTab === tab.id}
+          onClick={() => onTabClick(tab.id)}
+        />
+      ))}
+    </div>
+  )
+}
+```
+
+</CodeGroup>
+
+### Usage
+
+<CodeGroup>
+
+```jsx
+'use client'
+
+import { Tabs } from '@/ui/Tabs'
+import { useState } from 'react'
+
+const PreviewTabs = () => {
+  const [activeTab, setActiveTab] = useState('ansub')
+
+  const tabs = [
+    { id: 'ansub', label: 'Ansub' },
+    { id: 'syntax', label: 'Syntax UI' },
+  ]
+
+  const handleTabClick = (tabId: string) => {
+    setActiveTab(tabId)
+  }
+
+  return (
+    <div>
+      <Tabs tabs={tabs} activeTab={activeTab} onTabClick={handleTabClick} />
+      {/* Render content based on the active tab */}
+      {activeTab === 'ansub' && <div>Ansub is working on syntaxUI</div>}
+      {activeTab === 'syntax' && (
+        <div>syntaxUI is for people who want to start rapid development.</div>
+      )}
+    </div>
+  )
+}
+
+export default PreviewTabs
+
+```
+
+</CodeGroup>

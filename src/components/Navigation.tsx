@@ -250,6 +250,10 @@ export const navigation: Array<NavGroup> = [
         title: 'Input',
         href: '/docs/components/input',
       },
+      {
+        title: 'Tabs',
+        href: '/docs/components/tabs',
+      },
     ],
   },
   {
