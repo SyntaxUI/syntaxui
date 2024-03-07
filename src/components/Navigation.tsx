@@ -246,6 +246,10 @@ export const navigation: Array<NavGroup> = [
         title: 'Footer',
         href: '/docs/components/footer',
       },
+      {
+        title: 'Input',
+        href: '/docs/components/input',
+      },
     ],
   },
   {
