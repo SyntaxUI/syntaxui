@@ -16,7 +16,7 @@ const Home = () => {
     <>
       <div className="flex h-screen w-full flex-col items-center justify-between text-center">
         <Header />
-        <div className="my-64 flex h-full flex-col items-center justify-center gap-4 px-3">
+        <div className="my-[8rem] flex h-full flex-col items-center justify-center gap-4 px-3">
           <div className="flex w-full flex-col items-center justify-center gap-2">
             <Image
               src="/images/syntaxUI.svg"
@@ -25,7 +25,7 @@ const Home = () => {
               width={100}
               height={100}
             />
-            <span className="max-w-lg text-3xl font-bold tracking-tight md:max-w-lg md:text-4xl">
+            <span className="max-w-lg text-3xl font-bold tracking-tight md:max-w-2xl md:text-5xl">
               Stop coding from scratch. Build faster. Launch sooner.
             </span>
             <div className="text-gray-600">
