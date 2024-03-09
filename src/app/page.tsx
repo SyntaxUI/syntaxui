@@ -10,6 +10,7 @@ import GitHubIcon from '@/icons/github'
 import ComponentCards from '@/components/ComponentCards'
 import AnimationCards from '@/components/AnimationCards'
 import EffectCards from '@/components/EffectCards'
+import HooksCard from '@/components/HooksCards'
 
 const Home = () => {
   return (
@@ -71,6 +72,12 @@ const Home = () => {
               Effects
             </h1>
             <EffectCards />
+          </div>
+          <div>
+            <h1 className="mb-4 w-full text-left text-lg font-semibold">
+              Hooks
+            </h1>
+            <HooksCard />
           </div>
         </div>
 

@@ -69,11 +69,26 @@ export default {
               'rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(-100%)',
           },
         },
+        buttonheartbeat: {
+          '0%': {
+            'box-shadow': '0 0 0 0 theme("colors.red.500")',
+            transform: 'scale(1)',
+          },
+          '50%': {
+            'box-shadow': '0 0 0 7px theme("colors.red.500/0")',
+            transform: 'scale(1.05)',
+          },
+          '100%': {
+            'box-shadow': '0 0 0 0 theme("colors.red.500/0")',
+            transform: 'scale(1)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'skew-scroll': 'skew-scroll 20s linear infinite',
+        buttonheartbeat: 'buttonheartbeat 2s infinite ease-in-out',
       },
     },
   },
