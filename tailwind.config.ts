@@ -118,6 +118,20 @@ export default {
             transform: 'scale(1) rotate(0)',
           },
         },
+        'tag-input-scale-in': {
+          '0%': {
+            transform: 'scale(0.5)',
+            opacity: '0',
+          },
+          '50%': {
+            transform: 'scale(1.05)',
+            opacity: '1',
+          },
+          '100%': {
+            transform: 'scale(1)',
+            opacity: '1',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -125,6 +139,7 @@ export default {
         'skew-scroll': 'skew-scroll 20s linear infinite',
         buttonheartbeat: 'buttonheartbeat 2s infinite ease-in-out',
         'hover-tada': 'hover-tada 1s ease-in-out',
+        'tag-input-scale-in': 'tag-input-scale-in 0.3s ease-in-out forwards',
       },
     },
   },
