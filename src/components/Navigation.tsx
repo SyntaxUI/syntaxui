@@ -270,7 +270,7 @@ export const navigation: Array<NavGroup> = [
       },
       {
         title: 'Hover Animations',
-        href: '/docs/animations/hover',
+        href: '/docs/animations/hovers',
       },
     ],
   },

@@ -5,7 +5,7 @@ const data = [
   {
     id: 1,
     title: 'Tada',
-    link: '/docs/animations/hover-tada',
+    link: '/docs/animations/hovers/tada',
     component: <HoverTadaButton />,
   },
 ]
