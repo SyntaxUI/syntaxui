@@ -2,8 +2,7 @@
 
 import { cn } from '@/lib/utils'
 
-const buttonProps =
-  'hover:underline-0 rounded-lg bg-red-500 px-6 py-2 text-white hover:no-underline'
+const buttonProps = 'rounded-lg bg-red-500 px-6 py-2 text-white no-underline'
 
 export const HoverTadaButton = () => {
   return (
