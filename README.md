@@ -1,5 +1,7 @@
 # Syntax UI
-![syntaxUI](https://github.com/Ansub/syntaxUI/assets/12985873/40cc4910-ba16-4cf5-b8ba-1a9914c76ce5)
+Ready-to-use UI elements designed for rapid development.
+
+![syntaxUI](https://github.com/Ansub/syntaxUI/assets/12985873/ed202498-e899-435e-96ad-c81f2082ac2d)
 
 ## Contributing
 Please read the [contributing guide](/CONTRIBUTING.md).
