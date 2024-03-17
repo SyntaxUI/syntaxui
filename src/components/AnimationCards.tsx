@@ -1,6 +1,7 @@
 import HeartbeatButton from '@/ui/animation/HeartbeatButton'
 import SkewedInfiniteScroll from '@/ui/animation/SkewedInfiniteScroll'
 import Link from 'next/link'
+import { HoverTadaButton } from './PreviewCode/HoverAnimationButtons'
 
 const data = [
   {
@@ -14,6 +15,12 @@ const data = [
     title: 'Heartbeat Button',
     link: '/docs/animations/heartbeat-button',
     component: <HeartbeatButton />,
+  },
+  {
+    id: 3,
+    title: 'Hover Animations',
+    link: '/docs/animations/hovers',
+    component: <HoverTadaButton />,
   },
 ]
 
