@@ -2,6 +2,7 @@ import Link from 'next/link'
 import {
   HoverTadaButton,
   HoverJiggleButton,
+  HoverPopButton,
 } from './PreviewCode/HoverAnimationButtons'
 
 const data = [
@@ -16,6 +17,12 @@ const data = [
     title: 'Jiggle',
     link: '/docs/animations/hovers/jiggle',
     component: <HoverJiggleButton />,
+  },
+  {
+    id: 3,
+    title: 'Pop',
+    link: '/docs/animations/hovers/pop',
+    component: <HoverPopButton />,
   },
 ]
 

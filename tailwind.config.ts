@@ -129,6 +129,17 @@ export default {
             transform: 'rotate(-4deg)',
           },
         },
+        'hover-pop': {
+          '0%': {
+            transform: 'scale(1)',
+          },
+          '50%': {
+            transform: 'scale(1.07)',
+          },
+          '100%': {
+            transform: 'scale(1)',
+          },
+        },
         'tag-input-scale-in': {
           '0%': {
             transform: 'scale(0.5)',
@@ -152,6 +163,7 @@ export default {
         'hover-tada': 'hover-tada 1s ease-in-out',
         'hover-jiggle': 'hover-jiggle 0.3s ease-in-out',
         'tag-input-scale-in': 'tag-input-scale-in 0.3s ease-in-out forwards',
+        'hover-pop': 'hover-pop 0.5s ease-out',
       },
     },
   },

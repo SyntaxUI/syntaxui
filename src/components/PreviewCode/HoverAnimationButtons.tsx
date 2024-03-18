@@ -14,6 +14,14 @@ export const HoverTadaButton = () => {
 export const HoverJiggleButton = () => {
   return (
     <button className={cn(`group-hover:animate-hover-jiggle`, buttonProps)}>
+      syntaxUI
+    </button>
+  )
+}
+
+export const HoverPopButton = () => {
+  return (
+    <button className={cn(`group-hover:animate-hover-pop`, buttonProps)}>
       Ansub
     </button>
   )
