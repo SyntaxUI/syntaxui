@@ -1,5 +1,8 @@
 import Link from 'next/link'
-import { HoverTadaButton } from './PreviewCode/HoverAnimationButtons'
+import {
+  HoverTadaButton,
+  HoverJiggleButton,
+} from './PreviewCode/HoverAnimationButtons'
 
 const data = [
   {
@@ -7,6 +10,12 @@ const data = [
     title: 'Tada',
     link: '/docs/animations/hovers/tada',
     component: <HoverTadaButton />,
+  },
+  {
+    id: 2,
+    title: 'Jiggle',
+    link: '/docs/animations/hovers/jiggle',
+    component: <HoverJiggleButton />,
   },
 ]
 

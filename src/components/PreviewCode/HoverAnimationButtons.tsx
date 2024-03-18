@@ -10,3 +10,11 @@ export const HoverTadaButton = () => {
     </button>
   )
 }
+
+export const HoverJiggleButton = () => {
+  return (
+    <button className={cn(`group-hover:animate-hover-jiggle`, buttonProps)}>
+      Ansub
+    </button>
+  )
+}

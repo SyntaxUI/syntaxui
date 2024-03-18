@@ -118,6 +118,17 @@ export default {
             transform: 'scale(1) rotate(0)',
           },
         },
+        'hover-jiggle': {
+          '0%': {
+            transform: 'rotate(-4deg)',
+          },
+          '50%': {
+            transform: 'rotate(4deg)',
+          },
+          '100%': {
+            transform: 'rotate(-4deg)',
+          },
+        },
         'tag-input-scale-in': {
           '0%': {
             transform: 'scale(0.5)',
@@ -139,6 +150,7 @@ export default {
         'skew-scroll': 'skew-scroll 20s linear infinite',
         buttonheartbeat: 'buttonheartbeat 2s infinite ease-in-out',
         'hover-tada': 'hover-tada 1s ease-in-out',
+        'hover-jiggle': 'hover-jiggle 0.3s ease-in-out',
         'tag-input-scale-in': 'tag-input-scale-in 0.3s ease-in-out forwards',
       },
     },

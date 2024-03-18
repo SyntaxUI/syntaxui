@@ -24,10 +24,11 @@ import { ChevronLeft } from 'lucide-react'
 
 ```js
 {
-  "animation": {
+  animation: {
     "hover-tada": "hover-tada 1s ease-in-out"
   },
-  "hover-tada": {
+ keyframes: {
+   "hover-tada": {
     "0%": {
       "transform": "scale(1)"
     },
@@ -61,7 +62,8 @@ import { ChevronLeft } from 'lucide-react'
     "100%": {
       "transform": "scale(1) rotate(0)"
     }
-  }
+  },
+ }
 }
 ```
 
