@@ -2,6 +2,7 @@ import { OrangeBadge, BlueBadge, GreenBadge, RedBadge } from '@/ui/badges'
 import { CodeGroup } from '@/components/Code'
 import { RequiresTailwind } from '@/components/Requires'
 import { Breadcrumb } from '@/ui/Breadcrumb'
+import PreviewCodeTabs from '@/components/CodePreview/page'
 
 import {
   Table,
@@ -30,58 +31,58 @@ export const metadata = {
   and use your own icon or image.
 </Note>
 
-<Preview>
-  <Breadcrumb />
-</Preview>
+<PreviewCodeTabs
+  previewContent={
+    <div className="group flex w-full items-center justify-center">
+      <Breadcrumb />
+    </div>
+  }
+  codeContent={`
+    import Link from 'next/link'
+    import { ChevronRight } from 'lucide-react'
 
- <CodeGroup title="Code">
+    export const Breadcrumb = () => {
+      const breadcrumbs = [
+        { title: 'Home', path: '/' },
+        { title: 'Category', path: '/category' },
+        { title: 'Subcategory', path: '/category/subcategory' },
+        { title: 'Item' },
+      ]
 
-    ```jsx {{ title: 'React' }}
-
-import Link from 'next/link'
-import { ChevronRight } from 'lucide-react'
-
-export const Breadcrumb = () => {
-  const breadcrumbs = [
-    { title: 'Home', path: '/' },
-    { title: 'Category', path: '/category' },
-    { title: 'Subcategory', path: '/category/subcategory' },
-    { title: 'Item' },
-  ]
-
-return (
-
-<nav aria-label="breadcrumb" className="flex">
-  <div className="flex items-center space-x-1">
-    {breadcrumbs.map((breadcrumb, index) => {
-      const isLast = index === breadcrumbs.length - 1
       return (
-        <div
-          key={index}
-          className={`${
-            isLast ? 'text-black' : 'text-gray-500'
-          } font-regular flex items-center font-medium`}
-        >
-          {breadcrumb.path && !isLast ? (
-            <Link href={breadcrumb.path}>
-              <span className="hover:underline">{breadcrumb.title}</span>
-            </Link>
-          ) : (
-            <span>{breadcrumb.title}</span>
-          )}
-          {!isLast && (
-            <span className="mx-1">
-              <ChevronRight size={16} />
-            </span>
-          )}
-        </div>
+        <nav aria-label="breadcrumb" className="flex">
+          <div className="flex items-center space-x-1">
+            {breadcrumbs.map((breadcrumb, index) => {
+              const isLast = index === breadcrumbs.length - 1
+              return (
+                <div
+                  key={index}
+                  className={\`\${
+                    isLast ? 'text-black' : 'text-gray-500'
+                  } font-regular flex items-center font-medium\`}
+                >
+                  {breadcrumb.path && !isLast ? (
+                    <Link href={breadcrumb.path}>
+                      <span className="hover:underline">{breadcrumb.title}</span>
+                    </Link>
+                  ) : (
+                    <span>{breadcrumb.title}</span>
+                  )}
+                  {!isLast && (
+                    <span className="mx-1">
+                      <ChevronRight size={16} />
+                    </span>
+                  )}
+                </div>
+              )
+            })}
+          </div>
+        </nav>
       )
-    })}
-  </div>
-</nav>
-) }
+    }
 
-export default Breadcrumb
+    export default Breadcrumb
 
-    ```
-    </CodeGroup>
+`}
+language="jsx"
+/>

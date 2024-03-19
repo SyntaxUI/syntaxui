@@ -1,6 +1,7 @@
 import Footer from '@/ui/Footer'
 import { CodeGroup } from '@/components/Code'
 import { RequiresTailwind, RequiresShadcn } from '@/components/Requires'
+import PreviewCodeTabs from '@/components/CodePreview/page'
 
 export const metadata = {
   title: 'Footer',
@@ -13,13 +14,14 @@ export const metadata = {
 
 <div className="my-3"></div>
 
-<Preview>
-<Footer/>
-</Preview>
- <CodeGroup title="Code">
-
-    ```jsx {{ title: 'React' }}
-
+<PreviewCodeTabs
+  previewContent={
+    <div className="group">
+      <Footer />
+    </div>
+  }
+  codeContent={`
+  
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -128,6 +130,7 @@ return (
 ) }
 
 export default Footer
-
-    ```
-    </CodeGroup>
+  `
+}
+language="jsx"
+/>
