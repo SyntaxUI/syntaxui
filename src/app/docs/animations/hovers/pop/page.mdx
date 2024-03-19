@@ -3,27 +3,20 @@ import { RequiresTailwind } from '@/components/Requires'
 import HoverAnimations from '@/components/HoverAnimationCards'
 import { HoverPopButton } from '@/components/PreviewCode/HoverAnimationButtons'
 import { ChevronLeft } from 'lucide-react'
+import PreviewCodeTabs from '@/components/CodePreview/page'
 
-<Link
-  className="hover: flex flex-row items-center"
-  href="/docs/animations/hovers"
->
+<Link className="flex flex-row items-center" href="/docs/animations/hovers">
   <ChevronLeft size={17} />
   Back
 </Link>
-
-# Hover Pop
+# Pop Tada
 
 <div className="mt-4"></div>
 
-<Preview className="group">
-  <HoverPopButton />
-</Preview>
-
-<CodeGroup title="tailwind.config.js">
-
-```js
-{
+<PreviewCodeTabs
+  previewContent={<HoverPopButton />}
+  codeContent={`
+  {
   animation: {
     'hover-pop': 'hover-pop 0.5s ease-out',
   },
@@ -41,6 +34,6 @@ import { ChevronLeft } from 'lucide-react'
     },
  }
 }
-```
-
-</CodeGroup>
+`}
+  language="javascript"
+/>
