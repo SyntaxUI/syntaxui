@@ -9,12 +9,17 @@ import PreviewCodeTabs from '@/components/CodePreview/page'
   <ChevronLeft size={17} />
   Back
 </Link>
-# Pop Tada
+
+# Pop
 
 <div className="mt-4"></div>
 
 <PreviewCodeTabs
-  previewContent={<HoverPopButton />}
+  previewContent={
+    <div className="group flex w-full items-center justify-center">
+      <HoverPopButton />
+    </div>
+  }
   codeContent={`
   {
   animation: {

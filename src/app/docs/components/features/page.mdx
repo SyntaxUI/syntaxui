@@ -1,6 +1,7 @@
 import Features from '../../../../ui/Features'
 import { CodeGroup } from '@/components/Code'
 import { RequiresTailwind, RequiresShadcn } from '@/components/Requires'
+import PreviewCodeTabs from '@/components/CodePreview/page'
 
 export const metadata = {
   title: 'Features',
@@ -16,17 +17,14 @@ export const metadata = {
   can simply replace the icons with the ones you want to use.
 </Note>
 
-<Preview>
-<div className='px-3'>
-<Features/>
-
-</div>
-</Preview>
- <CodeGroup title="Code">
-
-    ```jsx {{ title: 'React' }}
-
-import {
+<PreviewCodeTabs
+  previewContent={
+    <div className="group">
+      <Features />
+    </div>
+  }
+  codeContent={`
+ import {
   BadgeDollarSign,
   BookOpenText,
   ExternalLink,
@@ -135,7 +133,6 @@ return (
 
 export default Features
 
-);
-
-    ```
-    </CodeGroup>
+);`}
+language="jsx"
+/>

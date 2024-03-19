@@ -88,9 +88,9 @@ const CodePreviewComponent = ({ previewContent, highlighted, code }) => {
           </button>
         </nav>
       </div>
-      <div className="group mt-4 justify-center rounded-lg border text-center">
+      <div className="group mt-4 rounded-lg border">
         {activeTab === 'preview' && (
-          <div className="py-10">{previewContent}</div>
+          <div className="px-4 py-10">{previewContent}</div>
         )}
         {activeTab === 'code' && (
           <div className="relative rounded-md bg-black p-4 text-left">
