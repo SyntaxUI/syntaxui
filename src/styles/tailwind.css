@@ -19,3 +19,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.prose code {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  box-shadow: none;
+  font-size: 14px;
+}
