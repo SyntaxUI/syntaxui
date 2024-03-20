@@ -2,6 +2,7 @@ import { type Config } from 'tailwindcss'
 import typographyStyles from './typography'
 import typographyPlugin from '@tailwindcss/typography'
 import headlessuiPlugin from '@headlessui/tailwindcss'
+import { transform } from 'next/dist/build/swc'
 
 export default {
   content: ['./src/**/*.{js,mjs,jsx,ts,tsx,mdx}'],
@@ -129,6 +130,41 @@ export default {
             transform: 'rotate(-4deg)',
           },
         },
+        'hover-vibrate': {
+          '0%': {
+            transform: 'translateY(0)',
+          },
+          '10%': {
+            transform: 'translateY(-4px)',
+          },
+          '20%': {
+            transform: 'translateY(0px)',
+          },
+          '30%': {
+            transform: 'translateY(4px)',
+          },
+          '40%': {
+            transform: 'translateY(0px)',
+          },
+          '50%': {
+            transform: 'translateY(-4px)',
+          },
+          '60%': {
+            transform: 'translateY(0px)',
+          },
+          '70%': {
+            transform: 'translateY(4px)',
+          },
+          '80%': {
+            transform: 'translateY(0px)',
+          },
+          '90%': {
+            transform: 'translateY(-4px)',
+          },
+          '100%': {
+            transform: 'translateY(0)',
+          },
+        },
         'hover-pop': {
           '0%': {
             transform: 'scale(1)',
@@ -164,6 +200,7 @@ export default {
         'hover-jiggle': 'hover-jiggle 0.3s ease-in-out',
         'tag-input-scale-in': 'tag-input-scale-in 0.3s ease-in-out forwards',
         'hover-pop': 'hover-pop 0.5s ease-out',
+        'hover-vibrate': 'hover-vibrate 0.4s ease-in-out',
       },
     },
   },

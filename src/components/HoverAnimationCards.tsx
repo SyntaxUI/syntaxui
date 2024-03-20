@@ -3,6 +3,7 @@ import {
   HoverTadaButton,
   HoverJiggleButton,
   HoverPopButton,
+  HoverVibrateButton,
 } from './PreviewCode/HoverAnimationButtons'
 
 const data = [
@@ -23,6 +24,12 @@ const data = [
     title: 'Pop',
     link: '/docs/animations/hovers/pop',
     component: <HoverPopButton />,
+  },
+  {
+    id: 4,
+    title: 'Vibrate',
+    link: '/docs/animations/hovers/vibrate',
+    component: <HoverVibrateButton />,
   },
 ]
 

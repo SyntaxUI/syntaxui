@@ -26,3 +26,11 @@ export const HoverPopButton = () => {
     </button>
   )
 }
+
+export const HoverVibrateButton = () => {
+  return (
+    <button className={cn(`group-hover:animate-hover-vibrate`, buttonProps)}>
+      syntaxUI
+    </button>
+  )
+}
