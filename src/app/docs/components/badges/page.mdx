@@ -15,6 +15,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
+import PreviewCodeTabs from '@/components/CodePreview/page'
 
 export const metadata = {
   title: 'Badges',
@@ -26,17 +27,18 @@ export const metadata = {
 
 <RequiresTailwind />
 
-<div className="mb-4"></div>
-<Preview>
-<OrangeBadge />
-<BlueBadge/>
-<GreenBadge/>
-<RedBadge/>
-</Preview>
- <CodeGroup title="Code">
+<div className="my-4"></div>
 
-    ```jsx {{ title: 'React' }}
-
+<PreviewCodeTabs
+  previewContent={
+    <div className="group flex w-full items-center justify-center gap-3">
+      <OrangeBadge />
+      <BlueBadge/>
+      <GreenBadge/>
+      <RedBadge/>
+    </div>
+  }
+  codeContent={` 
 const Badge = () => (
 
 <div
@@ -48,8 +50,9 @@ const Badge = () => (
 );
 
 export default Badge;
-    ```
-    </CodeGroup>
+ `}
+  language="jsx"
+/>
 
 ### Badge Colors
 
