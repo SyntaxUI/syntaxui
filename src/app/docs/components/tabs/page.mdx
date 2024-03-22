@@ -1,6 +1,11 @@
 import TagInput from '../../../../ui/TagInput'
 import PreviewTabs from '@/components/PreviewCode/Tabs'
-import { RequiresTailwind, RequiresShadcn } from '@/components/Requires'
+import AnimatedTabs from '@/components/PreviewCode/AnimatedTabs'
+import {
+  RequiresTailwind,
+  RequiresShadcn,
+  RequiresFramerMotion,
+} from '@/components/Requires'
 import {
   Table,
   TableBody,
@@ -10,6 +15,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
+import PreviewCodeTabs from '@/components/CodePreview/page'
 
 export const metadata = {
   title: 'Tabs',
@@ -19,107 +25,136 @@ export const metadata = {
 
 # Tabs
 
-<RequiresTailwind />
+## Simple Tab Component
 
-<div className="mb-4"></div>
-<Preview>
-<div className="max-w-md w-full">
-<PreviewTabs/>
+<div className="my-4 flex gap-2">
+  <RequiresTailwind />
 </div>
-</Preview>
- <CodeGroup title="Tabs.tsx">
 
-    ```jsx
+<PreviewCodeTabs
+  previewContent={
+     <div className="max-w-md w-full">
+      <PreviewTabs/>
+    </div>
+  }
+codeContent={`
+  import { useState } from 'react'
 
-type Tab = {
-id: string
-label: string
-}
-
-type TabProps = {
-label: string
-isActive: boolean
-onClick: () => void
-}
-
-const Tab = ({ label, isActive, onClick }: TabProps) => {
+const Tab = ({ label, isActive, onClick }) => {
 return (
 
 <div
-  className={`
-  ${
+  className={
     isActive
-      ? 'border-b-[3px] border-orange-500 bg-white pb-2 font-semibold'
-      : 'cursor-pointer hover:bg-transparent'
+      ? 'text-decoration-none mx-2 justify-start rounded-t-md border-b-[3px] border-orange-500 bg-white px-2 py-2 pb-2 text-sm font-medium font-semibold hover:bg-orange-100'
+      : 'text-decoration-none mx-2 cursor-pointer justify-start rounded-t-md px-2 py-2 text-sm font-medium hover:bg-orange-100 hover:bg-transparent'
   }
-        text-decoration-none mx-2 justify-start rounded-t-md px-2 py-2 text-sm font-medium hover:bg-orange-100
-      `}
   onClick={onClick}
 >
   {label}
 </div>
 ) }
 
-type TabsProps = {
-tabs: Tab[]
-activeTab: string
-onTabClick: (tabId: string) => void
-}
+const Tabs = ({ tabs, activeTab, onTabClick }) => {
+return (
 
-export const Tabs = ({ tabs, activeTab, onTabClick }: TabsProps) => {
-  return (
-    <div className="flex w-full">
-      {tabs.map((tab) => (
-        <Tab
-          key={tab.id}
-          label={tab.label}
-          isActive={activeTab === tab.id}
-          onClick={() => onTabClick(tab.id)}
-        />
-      ))}
-    </div>
-  )
-}
-```
-
-</CodeGroup>
-
-### Usage
-
-<CodeGroup>
-
-```jsx
-'use client'
-
-import { Tabs } from '@/ui/Tabs'
-import { useState } from 'react'
+<div className="flex w-full">
+  {tabs.map((tab) => (
+    <Tab
+      key={tab.id}
+      label={tab.label}
+      isActive={activeTab === tab.id}
+      onClick={() => onTabClick(tab.id)}
+    />
+  ))}
+</div>
+) }
 
 const PreviewTabs = () => {
-  const [activeTab, setActiveTab] = useState('ansub')
+const [activeTab, setActiveTab] = useState('ansub')
 
-  const tabs = [
-    { id: 'ansub', label: 'Ansub' },
-    { id: 'syntax', label: 'Syntax UI' },
-  ]
+    const tabs = [
+      { id: 'ansub', label: 'Ansub' },
+      { id: 'syntax', label: 'Syntax UI' },
+    ]
 
-  const handleTabClick = (tabId: string) => {
-    setActiveTab(tabId)
-  }
+    const handleTabClick = (tabId) => {
+      setActiveTab(tabId)
+    }
 
-  return (
-    <div>
-      <Tabs tabs={tabs} activeTab={activeTab} onTabClick={handleTabClick} />
-      {/* Render content based on the active tab */}
-      {activeTab === 'ansub' && <div>Ansub is working on syntaxUI</div>}
-      {activeTab === 'syntax' && (
-        <div>syntaxUI is for people who want to start rapid development.</div>
-      )}
-    </div>
-  )
+    return (
+      <div>
+        <Tabs tabs={tabs} activeTab={activeTab} onTabClick={handleTabClick} />
+        {/* Render content based on the active tab */}
+        {activeTab === 'ansub' && <div>Ansub is working on syntaxUI</div>}
+        {activeTab === 'syntax' && (
+          <div>syntaxUI is for people who want to start rapid development.</div>
+        )}
+      </div>
+    )
+
 }
 
 export default PreviewTabs
+`}
+language="jsx"
+/>
 
-```
+## Animated Tabs
 
-</CodeGroup>
+<div className="my-4 flex gap-2">
+  <RequiresFramerMotion />
+  <RequiresTailwind />
+</div>
+
+<PreviewCodeTabs
+  previewContent={
+    <div className="w-full flex items-center justify-center py-[40rem]">
+      <AnimatedTabs />
+    </div>
+  }
+  codeContent={`
+    import { motion } from 'framer-motion'
+    import { useState } from 'react'
+
+    const tabs = ['Home', 'Docs', 'Components', 'Effects']
+
+
+    const Tab = ({ text, selected, setSelected }) => {
+      return (
+        <button
+          onClick={() => setSelected(text)}
+          className={
+            selected
+              ? 'text-white relative rounded-md px-2 py-1 text-sm font-medium transition-colors'
+              : 'text-gray-500 hover:text-gray-900 relative rounded-md px-2 py-1 text-sm font-medium transition-colors'
+          }
+        >
+          <span className="relative z-10">{text}</span>
+          {selected && (
+            <motion.span
+              layoutId="tab"
+              transition={{ type: 'spring', duration: 0.4 }}
+              className="absolute inset-0 z-0 rounded-md bg-red-500"
+            ></motion.span>
+          )}
+        </button>
+      )
+    }
+
+    const AnimatedTabs = () => {
+      const [selected, setSelected] = useState(tabs[0])
+      return (
+        <div className="mb-8 flex flex-wrap items-center gap-2">
+          {tabs.map((tab, index) => (
+            <Tab text={tab} selected={selected === tab} setSelected={setSelected} key={tab} />
+          ))}
+        </div>
+      )
+    }
+
+    export default AnimatedTabs
+
+`}
+language="jsx"
+/>
