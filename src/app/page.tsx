@@ -39,11 +39,7 @@ const Home = () => {
                 Get Started
               </Button>
             </Link>
-            <a
-              href="https://github.com/Ansub/syntaxUI"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://git.new/syntax" target="_blank" rel="noreferrer">
               <Button variant={'outline'} className="gap-1">
                 <div className="h-5 w-5 text-gray-800">
                   <GitHubIcon />
