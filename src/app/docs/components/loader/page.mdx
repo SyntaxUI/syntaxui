@@ -1,0 +1,53 @@
+import { BounceLoader, ClassicLoader } from '@/ui/Loader'
+import { CodeGroup } from '@/components/Code'
+import { RequiresTailwind, RequiresShadcn } from '@/components/Requires'
+import PreviewCodeTabs from '@/components/CodePreview/page'
+
+export const metadata = {
+  title: 'Loader',
+  description: 'A minimal loader component.',
+}
+
+# Loader
+
+<div className="my-3"></div>
+
+### Classic Loader
+
+<PreviewCodeTabs
+  previewContent={
+    <div className="flex items-center justify-center">
+      <ClassicLoader />
+    </div>
+  }
+  codeContent={`
+export const ClassicLoader = () => {
+  return (
+    <div className="h-10 w-10 animate-spin rounded-full border-4 border-gray-200 border-t-red-500" />
+  )
+}
+`}
+  language="jsx"
+/>
+
+### Bounce Loader
+
+<PreviewCodeTabs
+  previewContent={
+    <div className="group">
+      <BounceLoader />
+    </div>
+  }
+  codeContent={`
+const BounceLoader = () => {
+  return (
+    <div className="flex items-center justify-center space-x-2 bg-white">
+      <div className="h-5 w-5 animate-bounce rounded-full bg-red-500 [animation-delay:-0.3s]"></div>
+      <div className="h-5 w-5 animate-bounce rounded-full bg-red-500 [animation-delay:-0.13s]"></div>
+      <div className="h-5 w-5 animate-bounce rounded-full bg-red-500"></div>
+    </div>
+  )
+}
+`}
+  language="jsx"
+/>
