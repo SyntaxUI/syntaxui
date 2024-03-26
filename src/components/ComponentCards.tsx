@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { OrbitingLoader } from '@/ui/Loader'
 
 const data = [
   {
@@ -35,6 +36,12 @@ const data = [
   },
   {
     id: 4,
+    title: 'Loader',
+    component: <OrbitingLoader />,
+    link: '/docs/components/loader',
+  },
+  {
+    id: 4,
     title: 'Tab',
     image: '/images/ui/tabs.png',
     link: '/docs/components/tabs',
@@ -49,13 +56,17 @@ const ComponentCards = () => {
           <Link href={item.link} key={item.id}>
             <div className="overflow group rounded-xl border border-white ring-1 ring-zinc-200 transition-all ease-in-out hover:cursor-pointer">
               <div className="flex h-[9rem] items-center justify-center rounded-t-xl border-b bg-gray-50 text-xs text-gray-400 transition-all ease-in-out group-hover:bg-gray-100 md:h-[12rem]">
-                <Image
-                  width={200}
-                  height={200}
-                  src={item.image}
-                  alt={item.title}
-                  className="h-auto w-[150px] duration-300 ease-in-out group-hover:scale-110"
-                />
+                {item.image ? (
+                  <Image
+                    width={200}
+                    height={200}
+                    src={item.image}
+                    alt={item.title}
+                    className="h-auto w-[150px] duration-300 ease-in-out group-hover:scale-110"
+                  />
+                ) : item.component ? (
+                  item.component
+                ) : null}
               </div>
               <div className="w-full p-4 text-sm font-medium text-gray-800">
                 {item.title}
