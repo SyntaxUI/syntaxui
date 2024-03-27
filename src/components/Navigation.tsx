@@ -251,8 +251,8 @@ export const navigation: Array<NavGroup> = [
         href: '/docs/components/input',
       },
       {
-        title: 'Loader',
-        href: '/docs/components/loader',
+        title: 'Loaders',
+        href: '/docs/components/loaders',
       },
       {
         title: 'Tabs',
