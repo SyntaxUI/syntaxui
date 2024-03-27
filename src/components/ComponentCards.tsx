@@ -38,7 +38,7 @@ const data = [
     id: 4,
     title: 'Loader',
     component: <OrbitingLoader />,
-    link: '/docs/components/loader',
+    link: '/docs/components/loaders',
   },
   {
     id: 4,
