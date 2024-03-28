@@ -35,12 +35,12 @@ const data = [
   //   component: <StaggeredFadeLoader />,
   // },
 
-  // {
-  //   id: 4,
-  //   title: 'Neon Glow',
-  //   link: '/docs/components/loaders/neon-glow',
-  //   component: <NeonGlowLoader />,
-  // },
+  {
+    id: 4,
+    title: 'Neon Glow',
+    link: '/docs/components/loaders/neon-glow',
+    component: <NeonGlowLoader />,
+  },
   // {
   //   id: 5,
   //   title: 'Pulsating Gradient',
