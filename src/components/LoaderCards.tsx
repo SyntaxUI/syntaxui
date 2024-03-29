@@ -28,12 +28,12 @@ const data = [
     link: '/docs/components/loaders/orbiting',
     component: <OrbitingLoader />,
   },
-  // {
-  //   id: 4,
-  //   title: 'Staggered Fade',
-  //   link: '/docs/components/loaders/staggered-fade',
-  //   component: <StaggeredFadeLoader />,
-  // },
+  {
+    id: 4,
+    title: 'Staggered Fade',
+    link: '/docs/components/loaders/staggered-fade',
+    component: <StaggeredFadeLoader />,
+  },
 
   {
     id: 4,
@@ -41,12 +41,12 @@ const data = [
     link: '/docs/components/loaders/neon-glow',
     component: <NeonGlowLoader />,
   },
-  // {
-  //   id: 5,
-  //   title: 'Pulsating Gradient',
-  //   link: '/docs/components/loaders/pulsating-gradient',
-  //   component: <PulsatingGradientLoader />,
-  // },
+  {
+    id: 5,
+    title: 'Pulsating Gradient',
+    link: '/docs/components/loaders/pulsating-gradient',
+    component: <PulsatingGradientLoader />,
+  },
 ]
 
 const HoverAnimationCards = () => {
