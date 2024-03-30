@@ -29,11 +29,11 @@ When contributing to syntaxUI, please keep the following guidelines in mind:
 
 ## Reporting Bugs
 
-If you encounter any bugs or issues while using syntaxUI, please report them by opening an issue on the [GitHub issue tracker](https://git.new/syntax/issues). When reporting a bug, please provide a clear description of the problem, steps to reproduce it, and any relevant code snippets or error messages.
+If you encounter any bugs or issues while using syntaxUI, please report them by opening an issue on the [GitHub issue tracker](https://github.com/Ansub/syntaxUI/issues). When reporting a bug, please provide a clear description of the problem, steps to reproduce it, and any relevant code snippets or error messages.
 
 ## Feature Requests
 
-If you have an idea for a new feature or improvement, I'd love to hear about it! Please submit your feature requests by opening an issue on the [GitHub issue tracker](https://git.new/syntax/issues). Provide a detailed description of the feature, its benefits, and any relevant use cases.
+If you have an idea for a new feature or improvement, I'd love to hear about it! Please submit your feature requests by opening an issue on the [GitHub issue tracker](https://github.com/Ansub/syntaxUI/issues). Provide a detailed description of the feature, its benefits, and any relevant use cases.
 
 ## License
 
