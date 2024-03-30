@@ -2,7 +2,7 @@
 
 Ready-to-use UI elements designed for rapid development.
 
-![syntaxUI](https://git.new/syntax/assets/12985873/ed202498-e899-435e-96ad-c81f2082ac2d)
+![syntaxUI](https://github.com/Ansub/syntaxUI/assets/12985873/ed202498-e899-435e-96ad-c81f2082ac2d)
 
 ## Contributing
 
