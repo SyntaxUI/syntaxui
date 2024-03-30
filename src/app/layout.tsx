@@ -9,7 +9,8 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://syntaxui.com'),
   title: {
     template: '%s - syntaxUI',
-    default: 'syntaxUI',
+    default:
+      'syntaxUI - Stop coding from scratch. Build faster. Launch sooner.',
   },
   description: 'Ready-to-use UI elements designed for rapid development.',
 }
