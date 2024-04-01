@@ -2,7 +2,7 @@
 
 Free-to-use UI elements designed for rapid development.
 
-![syntaxUI](https://github.com/Ansub/syntaxUI/assets/12985873/ed202498-e899-435e-96ad-c81f2082ac2d)
+![syntaxUI](https://raw.githubusercontent.com/Ansub/syntaxUI/main/src/app/opengraph-image.png)
 
 ## Contributing
 
