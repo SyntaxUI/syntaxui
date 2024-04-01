@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default:
       'syntaxUI - Stop coding from scratch. Build faster. Launch sooner.',
   },
-  description: 'Ready-to-use UI elements designed for rapid development.',
+  description: 'Free-to-use UI elements designed for rapid development.',
 }
 
 export default async function RootLayout({
