@@ -1,7 +1,7 @@
 ---
 name: Feature request
 about: Suggest an idea for syntaxUI
-title: '[Feature Request]: '
+title: '✨: '
 labels: enhancement
 assignees: ''
 ---

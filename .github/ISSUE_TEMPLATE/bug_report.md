@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Create a report to help me improve syntaxUI
-title: '[Bug]: '
+title: '🐞: '
 labels: bug
 assignees: ''
 ---
