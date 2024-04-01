@@ -112,18 +112,14 @@ module.exports = {
         'skew-scroll': 'skew-scroll 20s linear infinite',
       },
       keyframes: {
-        buttonheartbeat: {
+        'skew-scroll': {
           '0%': {
-            'box-shadow': '0 0 0 0 theme("colors.red.500")',
-            transform: 'scale(1)',
-          },
-          '50%': {
-            'box-shadow': '0 0 0 7px theme("colors.red.500/0")',
-            transform: 'scale(1.05)',
+            transform:
+              'rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(0)',
           },
           '100%': {
-            'box-shadow': '0 0 0 0 theme("colors.red.500/0")',
-            transform: 'scale(1)',
+            transform:
+              'rotatex(20deg) rotateZ(-20deg) skewX(20deg) translateZ(0) translateY(-100%)',
           },
         },
       },
