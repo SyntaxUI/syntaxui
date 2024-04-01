@@ -30,7 +30,7 @@ const Home = () => {
               Stop coding from scratch. Build faster. Launch sooner.
             </span>
             <div className="text-gray-600">
-              Ready-to-use UI elements designed for rapid development.
+              Free-to-use UI elements designed for rapid development.
             </div>
           </div>
           <div className="flex items-center space-x-4">
