@@ -113,6 +113,7 @@ function VisibleSectionHighlight({
       layout
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.2 } }}
+      transition={{ duration: 0.15 }}
       exit={{ opacity: 0 }}
       className="absolute inset-x-0 top-0 bg-zinc-800/2.5 will-change-transform dark:bg-white/2.5"
       style={{ borderRadius: 8, height, top }}
@@ -138,6 +139,7 @@ function ActivePageMarker({
       className="absolute left-2 h-6 w-px bg-red-500"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 0.2 } }}
+      transition={{ duration: 0.15 }}
       exit={{ opacity: 0 }}
       style={{ top }}
     />
