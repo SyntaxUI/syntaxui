@@ -26,6 +26,9 @@ const nextConfig = {
       },
     ]
   },
+  images: {
+    domains: ['ansubkhan.com'],
+  },
 }
 
 export default withSearch(withMDX(nextConfig))

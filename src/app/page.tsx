@@ -1,16 +1,15 @@
 'use client'
 
+import AnimationCards from '@/components/AnimationCards'
+import ComponentCards from '@/components/ComponentCards'
+import EffectCards from '@/components/EffectCards'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import HooksCard from '@/components/HooksCards'
 import { Button } from '@/components/ui/button'
+import GitHubIcon from '@/icons/github'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
-import GitHubIcon from '@/icons/github'
-import ComponentCards from '@/components/ComponentCards'
-import AnimationCards from '@/components/AnimationCards'
-import EffectCards from '@/components/EffectCards'
-import HooksCard from '@/components/HooksCards'
 
 const Home = () => {
   return (

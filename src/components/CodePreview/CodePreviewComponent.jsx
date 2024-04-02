@@ -65,8 +65,8 @@ const CodePreviewComponent = ({ previewContent, highlighted, code }) => {
 
   return (
     <div>
-      <div className="border-b border-gray-200">
-        <nav className="-mb-px flex space-x-5">
+      <div className="border-gray-200">
+        <nav className="flex items-center justify-end space-x-5">
           <button
             className={`${
               activeTab === 'preview'
