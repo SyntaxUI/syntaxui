@@ -6,6 +6,7 @@ import EffectCards from '@/components/EffectCards'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import HooksCard from '@/components/HooksCards'
+import PricingPage from '@/components/PreviewCode/Pricing'
 import { Button } from '@/components/ui/button'
 import GitHubIcon from '@/icons/github'
 import Image from 'next/image'
@@ -18,6 +19,7 @@ const Home = () => {
         <Header />
         <div className="my-[8rem] flex h-full flex-col items-center justify-center gap-4 px-3">
           <div className="flex w-full flex-col items-center justify-center gap-2">
+            <PricingPage />
             <Image
               src="/images/syntaxUI.svg"
               alt="syntaxUI"
