@@ -6,8 +6,8 @@ export default function typographyStyles({ theme }: PluginUtils) {
       css: {
         '--tw-prose-body': theme('colors.zinc.700'),
         '--tw-prose-headings': theme('colors.zinc.900'),
-        // '--tw-prose-links': theme('colors.emerald.500'),
-        '--tw-prose-links-hover': theme('colors.white'),
+        '--tw-prose-links': theme('colors.red.500'),
+        '--tw-prose-links-hover': theme('colors.red.400'),
         '--tw-prose-links-underline': theme('colors.white'),
         '--tw-prose-bold': theme('colors.zinc.900'),
         '--tw-prose-counters': theme('colors.zinc.500'),
