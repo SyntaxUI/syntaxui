@@ -10,6 +10,7 @@ import {
 import { MobileSearch, Search } from '@/components/Search'
 import GitHubIcon from '@/icons/github'
 import XIcon from '@/icons/x'
+import DiscordIcon from '@/icons/discord'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
@@ -119,14 +120,7 @@ export const Header = forwardRef<
         <div className="flex items-center gap-2">
           <MobileSearch />
           {/* <ThemeToggle /> */}
-          <a
-            href="https://github.com/ansub/ui"
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-1 rounded-lg  p-2 text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100"
-          >
-            <GitHubIcon className="h-4 w-4" />
-          </a>
+
           <a
             href="https://twitter.com/justansub"
             target="_blank"
@@ -134,6 +128,22 @@ export const Header = forwardRef<
             className="flex items-center gap-1 rounded-lg  p-2 text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100"
           >
             <XIcon className="h-4 w-4" />
+          </a>
+          <a
+            href="https://discord.gg/P8GXYyH3ZU"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1 rounded-lg  p-2 text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100"
+          >
+            <DiscordIcon className="h-4 w-4" />
+          </a>
+          <a
+            href="https://github.com/ansub/ui"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1 rounded-lg  p-2 text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100"
+          >
+            <GitHubIcon className="h-4 w-4" />
           </a>
         </div>
       </div>
