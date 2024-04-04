@@ -54,7 +54,7 @@ const Pricing = () => {
   const [billingCycle, setBillingCycle] = useState<'M' | 'A'>('M')
 
   const renderHeading = () => (
-    <div className="relative z-10 my-12 flex flex-col items-center justify-center gap-4 lg:mb-24">
+    <div className="relative z-10 my-12 flex flex-col items-center justify-center gap-4">
       <div className="flex w-full flex-col items-start justify-center space-y-4 md:items-center">
         <div className="mb-2 inline-block rounded-full bg-red-100 px-2 py-[0.20rem] text-xs font-medium uppercase text-red-500">
           {' '}
