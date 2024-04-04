@@ -87,7 +87,9 @@ export const Header = forwardRef<
         </Link>
         <ul role="list" className="flex w-full items-center gap-4">
           <TopLevelNavItem href="/docs">Docs</TopLevelNavItem>
-          <TopLevelNavItem href="/github">Github</TopLevelNavItem>
+          <TopLevelNavItem href="https://discord.gg/P8GXYyH3ZU">
+            Community
+          </TopLevelNavItem>
         </ul>
       </div>
       {/* <Search /> */}
