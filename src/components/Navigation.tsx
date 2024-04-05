@@ -257,6 +257,10 @@ export const navigation: Array<NavGroup> = [
         href: '/docs/components/loaders',
       },
       {
+        title: 'Pricing',
+        href: '/docs/components/pricing',
+      },
+      {
         title: 'Tabs',
         href: '/docs/components/tabs',
       },

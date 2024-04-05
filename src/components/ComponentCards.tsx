@@ -42,6 +42,12 @@ const data = [
   },
   {
     id: 4,
+    title: 'Pricing',
+    image: '/images/ui/pricing.png',
+    link: '/docs/components/pricing',
+  },
+  {
+    id: 4,
     title: 'Tab',
     image: '/images/ui/tabs.png',
     link: '/docs/components/tabs',

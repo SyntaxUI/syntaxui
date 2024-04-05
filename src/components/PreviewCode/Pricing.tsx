@@ -53,7 +53,7 @@ const pricingPlans = [
 const Pricing = () => {
   const [billingCycle, setBillingCycle] = useState<'M' | 'A'>('M')
 
-  const renderHeading = () => (
+  const Heading = () => (
     <div className="relative z-10 my-12 flex flex-col items-center justify-center gap-4">
       <div className="flex w-full flex-col items-start justify-center space-y-4 md:items-center">
         <div className="mb-2 inline-block rounded-full bg-red-100 px-2 py-[0.20rem] text-xs font-medium uppercase text-red-500">
@@ -94,7 +94,7 @@ const Pricing = () => {
     </div>
   )
 
-  const renderPriceCards = () => (
+  const PricingCards = () => (
     <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-8 lg:flex-row lg:gap-4">
       {pricingPlans.map((plan, index) => (
         <div
@@ -115,7 +115,7 @@ const Pricing = () => {
                 className="text-3xl font-semibold text-gray-900"
               >
                 <span>
-                  ${billingCycle === 'M' ? plan.monthlyPrice : plan.annualPrice}
+                  {billingCycle === 'M' ? plan.monthlyPrice : plan.annualPrice}
                 </span>
                 <span className="text-sm font-medium">
                   /{billingCycle === 'M' ? 'month' : 'year'}
@@ -142,8 +142,8 @@ const Pricing = () => {
 
   return (
     <section className="relative w-full overflow-hidden bg-white px-4 py-12 text-black lg:px-8 lg:py-12">
-      {renderHeading()}
-      {renderPriceCards()}
+      <Heading />
+      <PricingCards />
     </section>
   )
 }
