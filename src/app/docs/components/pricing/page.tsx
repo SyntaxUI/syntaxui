@@ -1,6 +1,8 @@
 import PreviewCodeTabs from '@/components/CodePreview/page'
 import PricingPage from '@/components/PreviewCode/Pricing'
 
+// Testing Cloudflare Pages PR deployment
+
 export const metadata = {
   title: 'Pricing',
   description: 'Pricing is used to showcase the cost of different services.',
