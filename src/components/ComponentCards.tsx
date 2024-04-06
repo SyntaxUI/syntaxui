@@ -5,22 +5,22 @@ import { OrbitingLoader } from '@/ui/Loader'
 
 const data = [
   {
-    id: 1,
-    title: 'Badges',
-    image: '/images/ui/badges.png',
-    link: '/docs/components/badges',
-  },
-  {
-    id: 2,
-    title: 'Breadcrumb',
-    image: '/images/ui/breadcrumb.png',
-    link: '/docs/components/breadcrumb',
-  },
-  {
     id: 3,
     title: 'Features',
     image: '/images/ui/features.png',
     link: '/docs/components/features',
+  },
+  {
+    id: 4,
+    title: 'Pricing',
+    image: '/images/ui/pricing.png',
+    link: '/docs/components/pricing',
+  },
+  {
+    id: 4,
+    title: 'Loaders',
+    component: <OrbitingLoader />,
+    link: '/docs/components/loaders',
   },
   {
     id: 4,
@@ -34,23 +34,24 @@ const data = [
     image: '/images/ui/input.png',
     link: '/docs/components/input',
   },
-  {
-    id: 4,
-    title: 'Loaders',
-    component: <OrbitingLoader />,
-    link: '/docs/components/loaders',
-  },
-  {
-    id: 4,
-    title: 'Pricing',
-    image: '/images/ui/pricing.png',
-    link: '/docs/components/pricing',
-  },
+
   {
     id: 4,
     title: 'Tab',
     image: '/images/ui/tabs.png',
     link: '/docs/components/tabs',
+  },
+  {
+    id: 1,
+    title: 'Badges',
+    image: '/images/ui/badges.png',
+    link: '/docs/components/badges',
+  },
+  {
+    id: 2,
+    title: 'Breadcrumb',
+    image: '/images/ui/breadcrumb.png',
+    link: '/docs/components/breadcrumb',
   },
 ]
 
