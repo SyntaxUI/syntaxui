@@ -111,7 +111,9 @@ export const Header = forwardRef<
         </Link>
         <ul role="list" className="flex w-full items-center gap-4">
           <TopLevelNavItem href="/docs">Docs</TopLevelNavItem>
-          <TopLevelNavItem href="/github">Github</TopLevelNavItem>
+          <TopLevelNavItem href="https://discord.gg/P8GXYyH3ZU">
+            Community
+          </TopLevelNavItem>
         </ul>
       </div>
       <div className="flex items-center gap-5">
@@ -135,7 +137,7 @@ export const Header = forwardRef<
             href="https://discord.gg/P8GXYyH3ZU"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1 rounded-lg  p-2 text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100"
+            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex"
           >
             <DiscordIcon className="h-4 w-4" />
           </a>
