@@ -77,13 +77,13 @@ export const Header = forwardRef<
           className="mr-3 flex items-center justify-center gap-1"
         >
           <Image
-            src="/images/syntaxUI.svg"
+            src="/images/syntaxUI-outline.svg"
             alt="syntaxUI"
-            className="mr-1 h-6 w-6"
+            className="mr-1 h-6 w-6 rounded-lg"
             width={100}
             height={100}
           />
-          <div className="text-sm font-medium text-gray-800">syntaxUI</div>
+          <div className="text-sm font-medium text-gray-800">SyntaxUI</div>
         </Link>
         <ul role="list" className="flex w-full items-center gap-4">
           <TopLevelNavItem href="/docs">Docs</TopLevelNavItem>
@@ -101,7 +101,7 @@ export const Header = forwardRef<
           className="mr-3 flex items-center justify-center gap-1"
         >
           <Image
-            src="/images/syntaxUI.svg"
+            src="/images/syntaxUI-outline.svg"
             alt="syntaxUI"
             className="h-6 w-6"
             width={100}
@@ -129,7 +129,7 @@ export const Header = forwardRef<
             href="https://twitter.com/justansub"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1 rounded-lg  p-2 text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100"
+            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex"
           >
             <XIcon className="h-4 w-4" />
           </a>
@@ -145,7 +145,7 @@ export const Header = forwardRef<
             href="https://github.com/ansub/ui"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1 rounded-lg  p-2 text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100"
+            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex"
           >
             <GitHubIcon className="h-4 w-4" />
           </a>

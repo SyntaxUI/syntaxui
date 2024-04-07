@@ -21,7 +21,7 @@ const Home = () => {
             <Image
               src="/images/syntaxUI.svg"
               alt="syntaxUI"
-              className="mb-4 h-16 w-16"
+              className="mb-4 h-16 w-16 rounded-lg"
               width={100}
               height={100}
             />
