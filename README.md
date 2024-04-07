@@ -9,8 +9,7 @@ Free-to-use UI elements designed for rapid development.
 Please read the [contributing guide](/CONTRIBUTING.md).
 
 ## Credits
-Branding - Amjad ([Jades Agency](https://www.jades.agency/))
- 
+Branding - Amjad ([Jades Agency](https://www.jades.agency/?ref=syntaxui))
 
 ## License
 
