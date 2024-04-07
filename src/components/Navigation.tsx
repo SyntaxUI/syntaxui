@@ -238,8 +238,8 @@ export const navigation: Array<NavGroup> = [
   {
     title: 'Components',
     links: [
-      { title: 'Badges', href: '/docs/components/badges' },
-      { title: 'Breadcrumb', href: '/docs/components/breadcrumb' },
+      // { title: 'Badges', href: '/docs/components/badges' },
+      // { title: 'Breadcrumb', href: '/docs/components/breadcrumb' },
       {
         title: 'Features',
         href: '/docs/components/features',

@@ -41,18 +41,18 @@ const data = [
     image: '/images/ui/tabs.png',
     link: '/docs/components/tabs',
   },
-  {
-    id: 1,
-    title: 'Badges',
-    image: '/images/ui/badges.png',
-    link: '/docs/components/badges',
-  },
-  {
-    id: 2,
-    title: 'Breadcrumb',
-    image: '/images/ui/breadcrumb.png',
-    link: '/docs/components/breadcrumb',
-  },
+  // {
+  //   id: 1,
+  //   title: 'Badges',
+  //   image: '/images/ui/badges.png',
+  //   link: '/docs/components/badges',
+  // },
+  // {
+  //   id: 2,
+  //   title: 'Breadcrumb',
+  //   image: '/images/ui/breadcrumb.png',
+  //   link: '/docs/components/breadcrumb',
+  // },
 ]
 
 const ComponentCards = () => {
