@@ -3,6 +3,7 @@ import { Providers } from '@/app/providers'
 import '@/styles/tailwind.css'
 import { type Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://syntaxui.com'),
@@ -22,7 +23,10 @@ export default async function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={GeistSans.className}>
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <Analytics />
+        </Providers>
       </body>
     </html>
   )
