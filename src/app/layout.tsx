@@ -4,6 +4,7 @@ import '@/styles/tailwind.css'
 import { type Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://syntaxui.com'),
@@ -26,6 +27,7 @@ export default async function RootLayout({
         <Providers>
           {children}
           <Analytics />
+          <SpeedInsights />
         </Providers>
       </body>
     </html>
