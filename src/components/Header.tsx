@@ -83,7 +83,9 @@ export const Header = forwardRef<
             width={100}
             height={100}
           />
-          <div className="text-sm font-medium text-gray-800">SyntaxUI</div>
+          <div className="text-md font-medium text-gray-800">
+            Syntax<span className="text-[10px] font-bold text-red-500">UI</span>
+          </div>
         </Link>
         <ul role="list" className="flex w-full items-center gap-4">
           <TopLevelNavItem href="/docs">Docs</TopLevelNavItem>
@@ -98,7 +100,7 @@ export const Header = forwardRef<
         <Link
           href="/"
           aria-label="Home"
-          className="mr-3 flex items-center justify-center gap-1"
+          className="ml-2 mr-3 flex items-center justify-center gap-1"
         >
           <Image
             src="/images/syntaxUI-outline.svg"
@@ -107,7 +109,9 @@ export const Header = forwardRef<
             width={100}
             height={100}
           />
-          <div className="text-sm font-medium text-gray-800">syntaxUI</div>
+          <div className="text-md font-medium text-gray-800">
+            Syntax<span className="text-[10px] font-bold text-red-500">UI</span>
+          </div>{' '}
         </Link>
         <ul role="list" className="flex w-full items-center gap-4">
           <TopLevelNavItem href="/docs">Docs</TopLevelNavItem>
