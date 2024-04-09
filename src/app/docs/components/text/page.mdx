@@ -22,7 +22,7 @@ export const metadata = {
 import { useEffect, useRef } from 'react'
 import { useInView, useMotionValue, useSpring } from 'framer-motion'
 
-export default function Counter({ value, direction = 'up' }) {
+export default function TextTicker({ value, direction = 'up' }) {
   const ref = useRef(null)
   const motionValue = useMotionValue(direction === 'down' ? value : 0)
   const springValue = useSpring(motionValue, { damping: 100, stiffness: 100 })
@@ -66,7 +66,7 @@ import TextTicker from 'path-to-text-ticker-component'
 export const TextTicker = () => {
   return (
     <div className="text-2xl font-semibold tracking-tight">
-      <Counter value={1000} /> // use direction param for "up" or "down"
+      <TextTicker value={1000} /> // use direction param for "up" or "down"
     </div>
   )
 }
