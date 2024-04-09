@@ -256,6 +256,7 @@ export const navigation: Array<NavGroup> = [
         title: 'Loaders',
         href: '/docs/components/loaders',
       },
+
       {
         title: 'Pricing',
         href: '/docs/components/pricing',
@@ -263,6 +264,10 @@ export const navigation: Array<NavGroup> = [
       {
         title: 'Tabs',
         href: '/docs/components/tabs',
+      },
+      {
+        title: 'Text',
+        href: '/docs/components/text',
       },
     ],
   },
