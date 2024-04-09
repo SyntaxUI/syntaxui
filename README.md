@@ -1,4 +1,4 @@
-# Syntax UI
+# SyntaxUI
 
 Free-to-use UI elements designed for rapid development.
 
