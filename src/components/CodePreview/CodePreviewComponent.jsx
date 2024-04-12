@@ -102,7 +102,7 @@ const CodePreviewComponent = ({ previewContent, highlighted, code }) => {
           <div className="px-4 py-10">{previewContent}</div>
         )}
         {activeTab === 'code' && (
-          <div className="relative overflow-scroll rounded-md bg-black p-4 text-left">
+          <div className="relative max-w-5xl overflow-scroll rounded-md bg-black p-4 text-left">
             <div>
               <CopyButton code={code} />
             </div>
