@@ -6,7 +6,7 @@ const buttonProps =
 export const HoverTadaButton = () => {
   return (
     <button className={cn(`group-hover:animate-hover-tada`, buttonProps)}>
-      Ansub
+      Hover Me
     </button>
   )
 }
@@ -14,7 +14,7 @@ export const HoverTadaButton = () => {
 export const HoverJiggleButton = () => {
   return (
     <button className={cn(`group-hover:animate-hover-jiggle`, buttonProps)}>
-      syntaxUI
+      Hover Me
     </button>
   )
 }
@@ -22,7 +22,7 @@ export const HoverJiggleButton = () => {
 export const HoverPopButton = () => {
   return (
     <button className={cn(`group-hover:animate-hover-pop`, buttonProps)}>
-      Ansub
+      Hover Me
     </button>
   )
 }
@@ -30,7 +30,7 @@ export const HoverPopButton = () => {
 export const HoverVibrateButton = () => {
   return (
     <button className={cn(`group-hover:animate-hover-vibrate`, buttonProps)}>
-      syntaxUI
+      Hover Me
     </button>
   )
 }
