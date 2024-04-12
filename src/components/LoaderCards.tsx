@@ -7,6 +7,7 @@ import {
   StaggeredFadeLoader,
   NeonGlowLoader,
   PulsatingGradientLoader,
+  RotatingDotsLoader,
 } from '@/ui/Loader'
 
 const data = [
@@ -34,7 +35,12 @@ const data = [
     link: '/docs/components/loaders/staggered-fade',
     component: <StaggeredFadeLoader />,
   },
-
+  {
+    id: 5,
+    title: 'Rotating Dots',
+    link: '/docs/components/loaders/rotating-dots',
+    component: <RotatingDotsLoader />,
+  },
   {
     id: 4,
     title: 'Neon Glow',
