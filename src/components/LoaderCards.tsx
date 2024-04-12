@@ -4,11 +4,10 @@ import {
   BounceLoader,
   ClassicLoader,
   OrbitingLoader,
-  StaggeredFadeLoader,
-  NeonGlowLoader,
-  PulsatingGradientLoader,
+  RippleLoader,
   RotatingDotsLoader,
   SpinningCubeLoader,
+  StaggeredFadeLoader,
 } from '@/ui/Loader'
 
 const data = [
@@ -47,6 +46,12 @@ const data = [
     title: 'Spinning Cube',
     link: '/docs/components/loaders/spinning-cube',
     component: <SpinningCubeLoader />,
+  },
+  {
+    id: 7,
+    title: 'Ripple',
+    link: '/docs/components/loaders/ripple',
+    component: <RippleLoader />,
   },
   // {
   //   id: 4,
