@@ -8,6 +8,7 @@ import {
   NeonGlowLoader,
   PulsatingGradientLoader,
   RotatingDotsLoader,
+  SpinningCubeLoader,
 } from '@/ui/Loader'
 
 const data = [
@@ -42,17 +43,23 @@ const data = [
     component: <RotatingDotsLoader />,
   },
   {
-    id: 4,
-    title: 'Neon Glow',
-    link: '/docs/components/loaders/neon-glow',
-    component: <NeonGlowLoader />,
+    id: 6,
+    title: 'Spinning Cube',
+    link: '/docs/components/loaders/spinning-cube',
+    component: <SpinningCubeLoader />,
   },
-  {
-    id: 5,
-    title: 'Pulsating Gradient',
-    link: '/docs/components/loaders/pulsating-gradient',
-    component: <PulsatingGradientLoader />,
-  },
+  // {
+  //   id: 4,
+  //   title: 'Neon Glow',
+  //   link: '/docs/components/loaders/neon-glow',
+  //   component: <NeonGlowLoader />,
+  // },
+  // {
+  //   id: 5,
+  //   title: 'Pulsating Gradient',
+  //   link: '/docs/components/loaders/pulsating-gradient',
+  //   component: <PulsatingGradientLoader />,
+  // },
 ]
 
 const HoverAnimationCards = () => {
