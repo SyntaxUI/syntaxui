@@ -8,6 +8,7 @@ import {
   RotatingDotsLoader,
   SpinningCubeLoader,
   StaggeredFadeLoader,
+  PulsatingDots,
 } from '@/ui/Loader'
 
 const data = [
@@ -41,6 +42,7 @@ const data = [
     link: '/docs/components/loaders/rotating-dots',
     component: <RotatingDotsLoader />,
   },
+
   {
     id: 6,
     title: 'Spinning Cube',
@@ -48,11 +50,18 @@ const data = [
     component: <SpinningCubeLoader />,
   },
   {
+    id: 8,
+    title: 'Pulsating Dots',
+    link: '/docs/components/loaders/pulsating-dots',
+    component: <PulsatingDots />,
+  },
+  {
     id: 7,
     title: 'Ripple',
     link: '/docs/components/loaders/ripple',
     component: <RippleLoader />,
   },
+
   // {
   //   id: 4,
   //   title: 'Neon Glow',

@@ -1,0 +1,69 @@
+import Link from 'next/link'
+import { ChevronLeft } from 'lucide-react'
+import PreviewCodeTabs from '@/components/CodePreview/page'
+import { PulsatingDots } from '@/ui/Loader'
+
+<Link className="flex flex-row items-center" href="/docs/components/loaders">
+  <ChevronLeft size={17} />
+  Back
+</Link>
+
+# Pulsating Dots
+
+<div className="mt-4"></div>
+
+<PreviewCodeTabs
+  previewContent={
+    <div className="flex items-center justify-center py-3">
+      <PulsatingDots />
+    </div>
+  }
+  codeContent={`
+
+export const PulsatingDots = () => {
+  return (
+    <div className="flex h-screen items-center justify-center">
+      <div className="flex space-x-2">
+        <motion.div
+          className="h-3 w-3 rounded-full bg-red-500"
+          animate={{
+            scale: [1, 1.5, 1],
+            opacity: [0.5, 1, 0.5],
+          }}
+          transition={{
+            duration: 1,
+            ease: 'easeInOut',
+            repeat: Infinity,
+          }}
+        />
+        <motion.div
+          className="h-3 w-3 rounded-full bg-red-500"
+          animate={{
+            scale: [1, 1.5, 1],
+            opacity: [0.5, 1, 0.5],
+          }}
+          transition={{
+            duration: 1,
+            ease: 'easeInOut',
+            repeat: Infinity,
+            delay: 0.3,
+          }}
+        />
+        <motion.div
+          className="h-3 w-3 rounded-full bg-red-500"
+          animate={{
+            scale: [1, 1.5, 1],
+            opacity: [0.5, 1, 0.5],
+          }}
+          transition={{
+            duration: 1,
+            ease: 'easeInOut',
+            repeat: Infinity,
+            delay: 0.6,
+          }}
+        />
+      </div>
+    </div>
+  )
+}
+`} language="jsx" />
