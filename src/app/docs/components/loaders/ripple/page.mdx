@@ -1,0 +1,73 @@
+import Link from 'next/link'
+import { ChevronLeft } from 'lucide-react'
+import PreviewCodeTabs from '@/components/CodePreview/page'
+import { RippleLoader } from '@/ui/Loader'
+
+<Link className="flex flex-row items-center" href="/docs/components/loaders">
+  <ChevronLeft size={17} />
+  Back
+</Link>
+
+# Ripple
+
+<div className="mt-4"></div>
+
+<PreviewCodeTabs
+  previewContent={
+    <div className="flex items-center justify-center py-3">
+      <RippleLoader />
+    </div>
+  }
+  codeContent={`
+
+import { motion } from 'framer-motion'
+
+export const RippleLoader = () => {
+const rippleVariants = {
+start: {
+opacity: 1,
+scale: 0,
+},
+end: {
+opacity: 0,
+scale: 3,
+},
+};
+
+const rippleTransition = {
+duration: 2,
+ease: 'easeInOut',
+repeat: Infinity,
+repeatDelay: 1,
+};
+
+return (
+
+<div className="flex items-center justify-center">
+  <div className="relative h-10 w-10">
+    <motion.div
+      className="absolute h-full w-full rounded-full bg-red-500 opacity-0"
+      variants={rippleVariants}
+      initial="start"
+      animate="end"
+      transition={rippleTransition}
+    ></motion.div>
+    <motion.div
+      className="absolute h-full w-full rounded-full bg-red-500 opacity-0"
+      variants={rippleVariants}
+      initial="start"
+      animate="end"
+      transition={{ ...rippleTransition, delay: 0.5 }}
+    ></motion.div>
+    <motion.div
+      className="absolute h-full w-full rounded-full bg-red-500 opacity-0"
+      variants={rippleVariants}
+      initial="start"
+      animate="end"
+      transition={{ ...rippleTransition, delay: 1 }}
+    ></motion.div>
+  </div>
+</div>
+); };
+
+`} language="jsx" />
