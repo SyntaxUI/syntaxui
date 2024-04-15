@@ -1,7 +1,23 @@
-'use client'
+import PreviewCodeTabs from '@/components/CodePreview/page'
+import { ThreeDButton } from '@/ui/button'
 
-import React from 'react'
+export const metadata = {
+  title: 'Button',
+  description:
+    'A button is a clickable element that initiates an action or triggers a response, such as submitting a form or opening a dialog.',
+}
 
+# Badges
+
+<div className="my-4"></div>
+
+<PreviewCodeTabs
+  previewContent={
+    <div className="group flex w-full items-center justify-center gap-3">
+      <ThreeDButton />
+    </div>
+  }
+  codeContent={` 
 export const ThreeDButton = () => {
   return (
     <button
@@ -13,3 +29,6 @@ export const ThreeDButton = () => {
     </button>
   )
 }
+`}
+  language="jsx"
+/>
