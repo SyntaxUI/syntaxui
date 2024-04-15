@@ -325,7 +325,7 @@ export const RippleLoader = () => {
 
 export const PulsatingDots = () => {
   return (
-    <div className="flex h-screen items-center justify-center">
+    <div className="flex items-center justify-center">
       <div className="flex space-x-2">
         <motion.div
           className="h-3 w-3 rounded-full bg-red-500"
