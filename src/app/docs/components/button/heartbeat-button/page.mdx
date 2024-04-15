@@ -1,10 +1,17 @@
 import HeartbeatButton from '@/ui/animation/HeartbeatButton'
 import { RequiresTailwind } from '@/components/Requires'
+import Link from 'next/link'
+import { ChevronLeft } from 'lucide-react'
 
 export const metadata = {
   title: 'Heartbeat Button',
   description: 'A button that beats like a heart',
 }
+
+<Link className="flex flex-row items-center" href="/docs/components/button">
+  <ChevronLeft size={17} />
+  Back
+</Link>
 
 # Heartbeat Button
 
