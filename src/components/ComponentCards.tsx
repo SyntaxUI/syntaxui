@@ -3,8 +3,15 @@ import Link from 'next/link'
 import React from 'react'
 import { OrbitingLoader } from '@/ui/Loader'
 import { TextTicker } from './PreviewCode/Text'
+import { ThreeDButton } from '@/ui/button'
 
 const data = [
+  {
+    id: 1,
+    title: 'Button',
+    component: <ThreeDButton />,
+    link: '/docs/components/button',
+  },
   {
     id: 3,
     title: 'Features',
