@@ -8,8 +8,8 @@ export const metadata = {
 
 const PricingMDX = () => {
   return (
-    <div className="my-12 flex w-full items-center justify-center">
-      <div className="flex max-w-5xl flex-col items-start justify-center">
+    <div className="my-12 flex flex-col max-w-5xl mx-auto ">
+      <div className="flex-auto">
         <div className="text-2xl font-bold">Pricing</div>
         <PreviewCodeTabs
           previewContent={
