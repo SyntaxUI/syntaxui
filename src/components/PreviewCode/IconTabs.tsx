@@ -1,19 +1,29 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, ReactNode } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { ReactNode } from 'react'
-import { Activity, Category2, Home2, LanguageCircle } from 'iconsax-react'
+import {
+  Fingerprint,
+  Bolt,
+  Info,
+  CircleUserRound,
+  CircleDollarSign,
+} from 'lucide-react'
 
 const tabs = [
-  { title: 'Home', icon: <Home2 size={22} /> },
-  { title: 'Activities', icon: <Activity size={22} /> },
-  { title: 'Components', icon: <Category2 size={22} /> },
-  { title: 'Language', icon: <LanguageCircle size={22} /> },
+  { title: 'General', icon: <Bolt /> },
+  { title: 'About', icon: <Info /> },
+  { title: 'Billing', icon: <CircleDollarSign /> },
+  { title: 'Privacy', icon: <Fingerprint /> },
+  { title: 'Profile', icon: <CircleUserRound /> },
 ]
 
 const buttonVariants = {
-  initial: { gap: 0, paddingLeft: '.5rem', paddingRight: '.5rem' },
+  initial: {
+    gap: 0,
+    paddingLeft: '.5rem',
+    paddingRight: '.5rem',
+  },
   animate: (selected: boolean) => ({
     gap: selected ? '.5rem' : 0,
     paddingLeft: selected ? '1rem' : '.5rem',
@@ -27,7 +37,7 @@ const spanVariants = {
   exit: { width: 0, opacity: 0 },
 }
 
-const transition = { delay: 0.1, type: 'spring', bounce: 0, duration: 0.3 }
+const transition = { delay: 0.1, type: 'spring', bounce: 0, duration: 0.35 }
 
 interface TabProps {
   text: string
@@ -45,9 +55,10 @@ const Tab = ({ text, selected, setSelected, index, children }: TabProps) => {
       animate="animate"
       custom={selected}
       onClick={() => setSelected(tabs[index])}
+      transition={transition}
       className={`${
         selected ? 'bg-red-500/15 text-red-500 ' : ' hover:text-gray-900'
-      } relative flex items-center rounded-full px-4 py-2 text-sm font-medium text-gray-500 transition-colors duration-300`}
+      } relative flex items-center rounded-full px-4 py-2 text-sm font-medium text-gray-500 transition-colors duration-300 focus-within:outline-red-500/50`}
     >
       {children}
       <AnimatePresence>

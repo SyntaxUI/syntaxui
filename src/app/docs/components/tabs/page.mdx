@@ -44,7 +44,7 @@ return (
 <div
   className={
     isActive
-      ? 'text-decoration-none mx-2 justify-start rounded-t-md border-b-[3px] border-orange-500 bg-white px-2 py-2 pb-2 text-sm font-medium font-semibold hover:bg-orange-100'
+      ? 'text-decoration-none mx-2 justify-start rounded-t-md border-b-[3px] border-orange-500 bg-white px-2 py-2 pb-2 text-sm font-semibold hover:bg-orange-100'
       : 'text-decoration-none mx-2 cursor-pointer justify-start rounded-t-md px-2 py-2 text-sm font-medium hover:bg-orange-100 hover:bg-transparent'
   }
   onClick={onClick}
@@ -165,39 +165,33 @@ language="jsx"
     </div>
   }
   codeContent={`
-import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { motion } from 'framer-motion';
+import { useState } from 'react';
 
-const tabs = ['Home', 'Docs', 'Components', 'Hooks']
+const tabs = ['Home', 'Docs', 'Components', 'Hooks'];
 
-interface TabProps {
-  text: string
-  selected: boolean
-  setSelected: (text: string) => void
-}
-
-const Tab = ({ text, selected, setSelected }: TabProps) => {
+const Tab = ({ text, selected, setSelected }) => {
   return (
     <button
       onClick={() => setSelected(text)}
-      className={ (selected ? 'text-red-500' : ' hover:text-gray-900') + ' relative rounded-md  px-2 py-1 text-sm font-medium text-gray-500 transition-colors duration-300'}
+      className={(selected ? 'text-red-500' : 'hover:text-gray-900') + ' relative rounded-md  px-2 py-1 text-sm font-medium text-gray-500 transition-colors duration-300'}
     >
       <span className="relative z-10">{text}</span>
       {selected && (
         <motion.div
           className="absolute left-0 top-0 flex size-full items-end justify-center"
-          layoutId="linetab"
+          layoutId={customID + 'linetab'}
           transition={{ type: 'spring', duration: 0.4, bounce: 0, delay: 0.1 }}
         >
           <span className="z-0 h-[3px] w-[60%] rounded-t-full bg-red-500"></span>
         </motion.div>
       )}
     </button>
-  )
-}
+  );
+};
 
-const LineTabs = ({center} : {center ?: boolean}) => {
-  const [selected, setSelected] = useState<string>(tabs[0])
+const LineTabs = ({ center, customID }) => {
+  const [selected, setSelected] = useState(tabs[0]);
   return (
     <div className={(center ? 'justify-center ' : '') + ' border-black-500/25 mb-8 flex flex-wrap items-center gap-2 border-b-2'}>
       {tabs.map((tab, index) => (
@@ -206,14 +200,14 @@ const LineTabs = ({center} : {center ?: boolean}) => {
           selected={selected === tab}
           setSelected={setSelected}
           key={tab}
+          customID={customID}
         />
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default LineTabs
-
+export default LineTabs;
 `}
 language="jsx"
 />
@@ -231,44 +225,46 @@ by <a href="https://twitter.com/username_aiko" target="_blank" title='@username_
     </div>
   }
   codeContent={`
-import { useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
-import { ReactNode } from 'react'
-import { Activity, Category2, Home2, LanguageCircle } from 'iconsax-react'
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import {
+  Fingerprint,
+  Bolt,
+  Info,
+  CircleUserRound,
+  CircleDollarSign,
+} from 'lucide-react';
 
 const tabs = [
-  { title: 'Home', icon: <Home2 size={22} /> },
-  { title: 'Activities', icon: <Activity size={22} /> },
-  { title: 'Components', icon: <Category2 size={22} /> },
-  { title: 'Language', icon: <LanguageCircle size={22} /> },
+  { title: 'General', icon: <Bolt /> },
+  { title: 'About', icon: <Info /> },
+  { title: 'Billing', icon: <CircleDollarSign /> },
+  { title: 'Privacy', icon: <Fingerprint /> },
+  { title: 'Profile', icon: <CircleUserRound /> },
 ]
 
 const buttonVariants = {
-  initial: { gap: 0, paddingLeft: '.5rem', paddingRight: '.5rem' },
-  animate: (selected: boolean) => ({
+  initial: {
+    gap: 0,
+    paddingLeft: '.5rem',
+    paddingRight: '.5rem',
+  },
+  animate: (selected) => ({
     gap: selected ? '.5rem' : 0,
     paddingLeft: selected ? '1rem' : '.5rem',
     paddingRight: selected ? '1rem' : '.5rem',
   }),
-}
+};
 
 const spanVariants = {
   initial: { width: 0, opacity: 0 },
   animate: { width: 'auto', opacity: 1 },
   exit: { width: 0, opacity: 0 },
-}
+};
 
-const transition = { delay: 0.1, type: 'spring', bounce: 0, duration: 0.3 }
+const transition = { delay: 0.1, type: 'spring', bounce: 0, duration: 0.35 };
 
-interface TabProps {
-  text: string
-  selected: boolean
-  setSelected: (tab: Object) => void
-  children: ReactNode
-  index: number
-}
-
-const Tab = ({ text, selected, setSelected, index, children }: TabProps) => {
+const Tab = ({ text, selected, setSelected, index, children }) => {
   return (
     <motion.button
       variants={buttonVariants}
@@ -276,8 +272,9 @@ const Tab = ({ text, selected, setSelected, index, children }: TabProps) => {
       animate="animate"
       custom={selected}
       onClick={() => setSelected(tabs[index])}
+      transition={transition}
       className={(selected ? 'bg-red-500/15 text-red-500 ' : ' hover:text-gray-900' ) + 'relative flex items-center rounded-full px-4 py-2 text-sm font-medium text-gray-500 transition-colors duration-300'}
-    >
+      >
       {children}
       <AnimatePresence>
         {selected && (
@@ -294,13 +291,11 @@ const Tab = ({ text, selected, setSelected, index, children }: TabProps) => {
         )}
       </AnimatePresence>
     </motion.button>
-  )
-}
+  );
+};
 
-// IconTabs component
-const IconTabs = ({ center }: { center?: boolean }) => {
-  // State to manage selected tab
-  const [selected, setSelected] = useState<Object>(tabs[0])
+const IconTabs = ({ center }) => {
+  const [selected, setSelected] = useState(tabs[0]);
 
   return (
     <div
@@ -318,12 +313,76 @@ const IconTabs = ({ center }: { center?: boolean }) => {
         </Tab>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default IconTabs
+export default IconTabs;
+`}
+language="jsx"
+/>
+<div style={{ display: 'flex', width: '100%', height: '20px',  justifyContent: 'end' }}>
+by <a href="https://twitter.com/username_aiko" target="_blank" title='@username_aiko'>@username_aiko</a>
+</div>
+<div className="mt-10 border-t border-gray-200"></div>
 
+## Centered Tabs 
 
+<PreviewCodeTabs
+  previewContent={
+    <div className="w-full">
+      <LineTabs center customID="2" />
+    </div>
+  }
+  codeContent={`
+// To center Tabs on the LineTabs component, you need to set the "center" property to "true".
+// Example  <LineTabs center />
+
+// Remember to set a unique string as customID when using multiple LineTabs on the same page.
+// Example  <LineTabs center customID="AIKO"/>
+
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+
+const tabs = ['Home', 'Docs', 'Components', 'Hooks'];
+
+const Tab = ({ text, selected, setSelected }) => {
+  return (
+    <button
+      onClick={() => setSelected(text)}
+      className={(selected ? 'text-red-500' : 'hover:text-gray-900') + ' relative rounded-md  px-2 py-1 text-sm font-medium text-gray-500 transition-colors duration-300'}
+    >
+      <span className="relative z-10">{text}</span>
+      {selected && (
+        <motion.div
+          className="absolute left-0 top-0 flex size-full items-end justify-center"
+          layoutId={customID + 'linetab'}
+          transition={{ type: 'spring', duration: 0.4, bounce: 0, delay: 0.1 }}
+        >
+          <span className="z-0 h-[3px] w-[60%] rounded-t-full bg-red-500"></span>
+        </motion.div>
+      )}
+    </button>
+  );
+};
+
+const LineTabs = ({ center, customID }) => {
+  const [selected, setSelected] = useState(tabs[0]);
+  return (
+    <div className={(center ? 'justify-center ' : '') + ' border-black-500/25 mb-8 flex flex-wrap items-center gap-2 border-b-2'}>
+      {tabs.map((tab, index) => (
+        <Tab
+          text={tab}
+          selected={selected === tab}
+          setSelected={setSelected}
+          key={tab}
+          customID={customID}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default LineTabs;
 `}
 language="jsx"
 />
