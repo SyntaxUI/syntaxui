@@ -12,12 +12,6 @@ const data = [
   },
   {
     id: 2,
-    title: 'Heartbeat Button',
-    link: '/docs/animations/heartbeat-button',
-    component: <HeartbeatButton />,
-  },
-  {
-    id: 3,
     title: 'Hover Animations',
     link: '/docs/animations/hovers',
     component: <HoverTadaButton />,

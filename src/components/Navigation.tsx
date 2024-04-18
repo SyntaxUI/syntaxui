@@ -282,11 +282,6 @@ export const navigation: Array<NavGroup> = [
         title: 'Skewed Infinite Scroll',
         href: '/docs/animations/skewed-infinite-scroll',
       },
-
-      {
-        title: 'Heartbeat Button',
-        href: '/docs/animations/heartbeat-button',
-      },
       {
         title: 'Hover Animations',
         href: '/docs/animations/hovers',
