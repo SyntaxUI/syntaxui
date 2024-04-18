@@ -1,4 +1,3 @@
-import HeartbeatButton from '@/ui/animation/HeartbeatButton'
 import SkewedInfiniteScroll from '@/ui/animation/SkewedInfiniteScroll'
 import Link from 'next/link'
 import { HoverTadaButton } from './PreviewCode/HoverAnimationButtons'
