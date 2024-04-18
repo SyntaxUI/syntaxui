@@ -6,6 +6,11 @@ const data = [
     title: 'useVisible()',
     link: '/docs/hooks/useVisible',
   },
+  {
+    id: 2,
+    title: 'useMediaSizes()',
+    link: '/docs/hooks/useMediaSizes',
+  },
 ]
 
 const HooksCard = () => {
