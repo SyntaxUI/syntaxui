@@ -14,7 +14,6 @@ Free-to-use UI elements designed for rapid development.
         <div>Vercel</div>
       </td>
 
-
 ## Contributing
 
 Please read the [contributing guide](/CONTRIBUTING.md).
@@ -25,6 +24,7 @@ Please read the [contributing guide](/CONTRIBUTING.md).
 - Text Ticker - [Dries Augustyns](https://counter.driaug.com/)
 - Skewed Infinite Scroll - [Steven Tey](https://twitter.com/steventey/status/1740445963163255293)
 - useMediaSizes - [Ethan Pollack](https://epoll31.github.io)
+- LineTabs / IconTabs - [Aiko](https://twitter.com/username_aiko)
 
 ## License
 

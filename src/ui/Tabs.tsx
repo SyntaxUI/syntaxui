@@ -31,9 +31,10 @@ type TabsProps = {
   tabs: Tab[]
   activeTab: string
   onTabClick: (tabId: string) => void
+  center ?: boolean
 }
 
-export const Tabs = ({ tabs, activeTab, onTabClick }: TabsProps) => {
+export const Tabs = ({ tabs, activeTab, onTabClick, center }: TabsProps) => {
   return (
     <div className="mb-4 flex w-full">
       {tabs.map((tab) => (
