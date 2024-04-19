@@ -23,7 +23,7 @@ const Tab = ({ text, selected, setSelected, customID }: TabProps) => {
       <span className="relative z-10">{text}</span>
       {selected && (
         <motion.div
-          className="absolute left-0 top-0 flex size-full items-end justify-center"
+          className="absolute left-0 top-0 flex size-full h-full w-full items-end justify-center"
           layoutId={customID + 'linetab'}
           transition={{ type: 'spring', duration: 0.4, bounce: 0, delay: 0.1 }}
         >
