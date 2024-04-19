@@ -88,7 +88,7 @@ const IconTabs = ({ center }: { center?: boolean }) => {
     <div
       className={` ${
         center ? 'justify-center ' : ''
-      } border-black-500/25 mb-8 flex flex-wrap items-center gap-2 border-b-2 pb-2`}
+      } border-black-500/25 mb-8 flex flex-wrap items-center gap-2 border-b pb-2`}
     >
       {tabs.map((tab, index) => (
         <Tab

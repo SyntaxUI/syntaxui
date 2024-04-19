@@ -45,7 +45,7 @@ const LineTabs = ({ center, customID }: LineTabProps) => {
     <div
       className={` ${
         center ? 'justify-center ' : ''
-      } border-black-500/25 mb-8 flex flex-wrap items-center gap-2 border-b-2`}
+      } border-black-500/25 mb-8 flex flex-wrap items-center gap-2 border-b`}
     >
       {tabs.map((tab) => (
         <Tab
