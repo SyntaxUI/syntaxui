@@ -6,7 +6,6 @@ Free-to-use UI elements designed for rapid development.
 
 ### Sponsors
 
-
 <!--sponsors start-->
 <td align="center" valign="top">
         <a href="https://vercel.com" target="_blank">
@@ -14,14 +13,18 @@ Free-to-use UI elements designed for rapid development.
         </a><br />
         <div>Vercel</div>
       </td>
-      
 
 ## Contributing
 
 Please read the [contributing guide](/CONTRIBUTING.md).
 
 ## Credits
-Branding - [Amjad](https://twitter.com/amjaddsn/)
+
+- Branding - [Amjad](https://twitter.com/Amjaddsn)
+- Text Ticker - [Dries Augustyns](https://counter.driaug.com/)
+- Skewed Infinite Scroll - [Steven Tey](https://twitter.com/steventey/status/1740445963163255293)
+- LineTabs / IconTabs - [Aiko](https://twitter.com/username_aiko)
+- useMediaSizes - [Ethan Pollack](https://epoll31.github.io)
 
 ## License
 

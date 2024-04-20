@@ -294,7 +294,16 @@ export const navigation: Array<NavGroup> = [
   },
   {
     title: 'Hooks',
-    links: [{ title: 'useVisible()', href: '/docs/hooks/useVisible' }],
+    links: [
+      {
+        title: 'useVisible()',
+        href: '/docs/hooks/useVisible',
+      },
+      {
+        title: 'useMediaSizes()',
+        href: '/docs/hooks/useMediaSizes',
+      },
+    ],
   },
 ]
 
