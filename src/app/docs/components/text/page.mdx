@@ -2,13 +2,12 @@ import { TextTicker } from '@/components/PreviewCode/Text'
 
 export const metadata = {
   title: 'Text Ticker',
-  description:
-    'Create a text ticker component using Framer Motion and Tailwind CSS',
+  description: 'A Text ticker component using Framer Motion and Tailwind CSS',
 }
 
 # Text Ticker
 
-<div className="my-4"></div>
+<div className="my-4"></div>{' '}
 
 <Preview>
   <TextTicker />
@@ -16,49 +15,55 @@ export const metadata = {
 
 ### Code
 
-<CodeGroup title="TextTicker.jsx">
+<CodeGroup title="TextTicker.tsx">
 
 ```js {{ title: 'React' }}
-import { useEffect, useRef } from 'react'
-import { useInView, useMotionValue, useSpring } from 'framer-motion'
+import { useEffect, useRef } from 'react';
+import { useInView, useMotionValue, useSpring } from 'framer-motion';
 
-export default function TextTicker({ value, direction = 'up' }) {
-  const ref = useRef(null)
-  const motionValue = useMotionValue(direction === 'down' ? value : 0)
-  const springValue = useSpring(motionValue, { damping: 100, stiffness: 100 })
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+export default function Counter({
+  value,
+  direction = 'up',
+}: {
+  value: number;
+  direction?: 'up' | 'down';
+}) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const motionValue = useMotionValue(direction === 'down' ? value : 0);
+  const springValue = useSpring(motionValue, {
+    damping: 100,
+    stiffness: 100,
+  });
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   useEffect(() => {
     if (isInView) {
-      motionValue.set(direction === 'down' ? 0 : value)
+      motionValue.set(direction === 'down' ? 0 : value);
     }
-  }, [motionValue, isInView])
+  }, [motionValue, isInView]);
 
-  useEffect(() => {
-    const onChange = (latest) => {
-      if (ref.current) {
-        ref.current.textContent = Intl.NumberFormat('en-US').format(
-          latest.toFixed(0),
-        )
-      }
-    }
+  useEffect(
+    () =>
+      springValue.on('change', (latest) => {
+        if (ref.current) {
+          ref.current.textContent = Intl.NumberFormat('en-US').format(
+            latest.toFixed(0)
+          );
+        }
+      }),
+    [springValue]
+  );
 
-    springValue.on('change', onChange)
-
-    return () => {
-      springValue.off('change', onChange)
-    }
-  }, [springValue])
-
-  return <span ref={ref} />
+  return <span ref={ref} />;
 }
+
 ```
 
 </CodeGroup>
 
 ### Usage
 
-<CodeGroup title="page.jsx">
+<CodeGroup title="page.tsx">
 
 ```jsx
 import TextTicker from 'path-to-text-ticker-component'
@@ -66,7 +71,7 @@ import TextTicker from 'path-to-text-ticker-component'
 export const TextTicker = () => {
   return (
     <div className="text-2xl font-semibold tabular-nums tracking-tight">
-      <TextTicker value={1000} /> // use direction param for "up" or "down"
+      <TextTicker value={1000} /> {/* use direction param for "up" or "down" */}
     </div>
   )
 }
