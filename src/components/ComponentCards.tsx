@@ -15,13 +15,13 @@ const data = [
   {
     id: 3,
     title: 'Features',
-    image: '/images/ui/features.png',
+    image: '/images/ui/features.svg',
     link: '/docs/components/features',
   },
   {
     id: 4,
     title: 'Pricing',
-    image: '/images/ui/pricing.png',
+    image: '/images/ui/pricing.svg',
     link: '/docs/components/pricing',
   },
   {
@@ -39,7 +39,7 @@ const data = [
   {
     id: 4,
     title: 'Footer',
-    image: '/images/ui/footer.png',
+    image: '/images/ui/footer.svg',
     link: '/docs/components/footer',
   },
   {
@@ -83,7 +83,7 @@ const ComponentCards = () => {
                     height={200}
                     src={item.image}
                     alt={item.title}
-                    className="h-auto w-[150px] duration-300 ease-in-out group-hover:scale-110"
+                    className="h-auto md:w-[200px] duration-300 ease-in-out group-hover:scale-110 w-[150px]"
                   />
                 ) : item.component ? (
                   item.component
