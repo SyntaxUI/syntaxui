@@ -4,6 +4,7 @@ import React from 'react'
 import { OrbitingLoader } from '@/ui/Loader'
 import { TextTicker } from './PreviewCode/Text'
 import { ThreeDButton } from '@/ui/button'
+import { Toggle } from '@/ui/toggle'
 
 const data = [
   {
@@ -67,6 +68,12 @@ const data = [
     image: '/images/ui/breadcrumb.png',
     link: '/docs/components/breadcrumb',
   },
+  {
+    id: 3,
+    title: 'Toggle',
+    component: <Toggle />,
+    link: '/docs/components/toggle',
+  },
 ]
 
 const ComponentCards = () => {
@@ -83,7 +90,7 @@ const ComponentCards = () => {
                     height={200}
                     src={item.image}
                     alt={item.title}
-                    className="h-auto md:w-[200px] duration-300 ease-in-out group-hover:scale-110 w-[150px]"
+                    className="h-auto w-[150px] duration-300 ease-in-out group-hover:scale-110 md:w-[200px]"
                   />
                 ) : item.component ? (
                   item.component

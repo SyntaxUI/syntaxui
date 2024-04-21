@@ -1,0 +1,78 @@
+import PreviewCodeTabs from '@/components/CodePreview/page'
+import { FullToggle } from '@/ui/toggle'
+import Link from 'next/link'
+import { ChevronLeft } from 'lucide-react'
+
+export const metadata = {
+  title: 'Toggle',
+  description:
+    'A toggle switch where the handle takes up nearly the full height of the switch.',
+}
+
+<Link className="flex flex-row items-center" href="/docs/components/toggle">
+  <ChevronLeft size={17} />
+  Back
+</Link>
+
+# Full Toggle
+
+<PreviewCodeTabs
+  previewContent={
+    <div className="group flex w-full items-center justify-center gap-3">
+      <FullToggle />
+    </div>
+  }
+  codeContent={
+`'use client'
+
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+
+export const FullToggle = ({
+    onToggle,
+}: {
+    onToggle?: (toggled: boolean) => void
+}) => {
+    const [toggled, setToggled] = useState(true)
+
+    const handleToggle = () => {
+      const newState = !toggled
+      setToggled(newState)
+      if (onToggle) {
+        onToggle(newState)
+      }
+    }
+
+    return (
+        <motion.button
+            className="h-10 w-20 cursor-pointer rounded-full"
+            onClick={handleToggle}
+            variants={{
+                on: { backgroundColor: 'rgb(239, 68, 68)' }, // Tailwind bg-red-500
+                off: { backgroundColor: 'rgb(55, 65, 81)' }, // Tailwind bg-neutral-700
+            }}
+            animate={toggled ? 'on' : 'off'}
+            transition={{
+                type: 'spring',
+                stiffness: 500,
+                damping: 30,
+            }}
+        >
+          <motion.span
+              className="inline-block aspect-square h-full transform rounded-full bg-white shadow-lg "
+              variants={{
+                  on: { x: 20, opacity: 1, scale: 0.95 },
+                  off: { x: -20, opacity: 0.5, scale: 0.95 },
+              }}
+              animate={toggled ? 'on' : 'off'}
+              transition={{
+                  type: 'spring',
+                  stiffness: 500,
+                  damping: 30,
+              }}
+          />
+        </motion.button>
+    )
+}`}
+  language="tsx"
+/>
