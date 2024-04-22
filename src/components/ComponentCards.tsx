@@ -13,13 +13,13 @@ const data = [
     link: '/docs/components/button',
   },
   {
-    id: 3,
+    id: 2,
     title: 'Features',
     image: '/images/ui/features.svg',
     link: '/docs/components/features',
   },
   {
-    id: 4,
+    id: 3,
     title: 'Pricing',
     image: '/images/ui/pricing.svg',
     link: '/docs/components/pricing',
@@ -31,26 +31,25 @@ const data = [
     link: '/docs/components/loaders',
   },
   {
-    id: 2,
+    id: 5,
     title: 'Text',
     component: <TextTicker />,
     link: '/docs/components/text',
   },
   {
-    id: 4,
+    id: 6,
     title: 'Footer',
     image: '/images/ui/footer.svg',
     link: '/docs/components/footer',
   },
   {
-    id: 5,
+    id: 7,
     title: 'Input',
     image: '/images/ui/input.png',
     link: '/docs/components/input',
   },
-
   {
-    id: 4,
+    id: 8,
     title: 'Tab',
     image: '/images/ui/tabs.png',
     link: '/docs/components/tabs',
@@ -62,7 +61,7 @@ const data = [
   //   link: '/docs/components/badges',
   // },
   {
-    id: 2,
+    id: 9,
     title: 'Breadcrumb',
     image: '/images/ui/breadcrumb.png',
     link: '/docs/components/breadcrumb',
@@ -83,7 +82,7 @@ const ComponentCards = () => {
                     height={200}
                     src={item.image}
                     alt={item.title}
-                    className="h-auto md:w-[200px] duration-300 ease-in-out group-hover:scale-110 w-[150px]"
+                    className="h-auto w-[150px] duration-300 ease-in-out group-hover:scale-110 md:w-[200px]"
                   />
                 ) : item.component ? (
                   item.component
