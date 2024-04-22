@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ThreeDButton } from '@/ui/button'
 import HeartbeatButton from '@/ui/animation/HeartbeatButton'
+import { NeubrutalismButton } from '../CodePreview/Buttons'
 
 const data = [
   {
@@ -8,6 +9,12 @@ const data = [
     title: '3D Button',
     link: '/docs/components/button/3d-button',
     component: <ThreeDButton />,
+  },
+  {
+    id: 2,
+    title: 'Neubrutalism Button',
+    link: '/docs/components/button/neubrutalism-button',
+    component: <NeubrutalismButton />,
   },
   {
     id: 2,

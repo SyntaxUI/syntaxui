@@ -1,0 +1,42 @@
+import PreviewCodeTabs from '@/components/CodePreview/page'
+import Link from 'next/link'
+import { ChevronLeft } from 'lucide-react'
+import { NeubrutalismButton } from '@/components/CodePreview/Buttons'
+
+export const metadata = {
+  title: '3D Button',
+  description:
+    'A button which has a 3D effect and gives a press feeling when clicked.',
+}
+
+<Link className="flex flex-row items-center" href="/docs/components/button">
+  <ChevronLeft size={17} />
+  Back
+</Link>
+
+# 3D Button
+
+<PreviewCodeTabs
+  previewContent={
+    <div className="group flex w-full items-center justify-center gap-3">
+      <NeubrutalismButton />
+    </div>
+  }
+  codeContent={`
+export const NeubrutalismButton = () => {
+  return (
+    <button
+      onClick={() => console.log('SyntaxUI is the best!')}
+      className={'rounded-lg bg-gray-800 text-black'}
+    >
+      <span
+        className={"block -translate-x-1 -translate-y-1 rounded-lg border-2 border-[#222222] bg-[#fff0f2] px-4 py-1 text-sm font-medium tracking-tight transition-all hover:-translate-y-2 active:translate-x-0 active:translate-y-0"}
+      >
+        Syntax UI
+      </span>
+    </button>
+  )
+}
+`}
+  language="jsx"
+/>
