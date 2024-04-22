@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FullToggle, Toggle } from '@/ui/toggle'
+import { Toggle } from '@/components/PreviewCode/Toggle'
 
 const data = [
   {
@@ -7,12 +7,6 @@ const data = [
     title: 'Toggle',
     link: '/docs/components/toggle/toggle',
     component: <Toggle />,
-  },
-  {
-    id: 2,
-    title: 'Full Toggle',
-    link: '/docs/components/toggle/full-toggle',
-    component: <FullToggle />,
   },
 ]
 
