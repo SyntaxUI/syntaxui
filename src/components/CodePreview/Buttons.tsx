@@ -33,10 +33,10 @@ export const NeubrutalismButton = () => {
   return (
     <button
       onClick={() => console.log('SyntaxUI is the best!')}
-      className={'rounded-lg bg-[#222222] text-black'}
+      className={'group/button rounded-lg bg-[#222222] text-black'}
     >
       <span
-        className={`block -translate-x-1 -translate-y-1 rounded-lg border-2 border-[#222222] bg-[#fff0f2] px-4 py-1 text-sm font-medium tracking-tight transition-all hover:-translate-y-2 active:translate-x-0 active:translate-y-0`}
+        className={`block -translate-x-1 -translate-y-1 rounded-lg border-2 border-[#222222] bg-[#fff0f2] px-4 py-1 text-sm font-medium tracking-tight transition-all group-hover/button:-translate-y-2 group-active/button:translate-x-0 group-active/button:translate-y-0`}
       >
         Syntax UI
       </span>
