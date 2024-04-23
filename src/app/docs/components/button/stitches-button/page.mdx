@@ -1,0 +1,36 @@
+import PreviewCodeTabs from '@/components/CodePreview/page'
+import Link from 'next/link'
+import { ChevronLeft } from 'lucide-react'
+import StitchesButton from '@/ui/stitches-button'
+
+export const metadata = {
+  title: 'Stitches Button',
+
+}
+
+<Link className="flex flex-row items-center" href="/docs/components/button">
+  <ChevronLeft size={17} />
+  Back
+</Link>
+
+# Stitches Button
+
+<PreviewCodeTabs
+  previewContent={
+    <div className="group flex w-full items-center justify-center gap-3">
+      <StitchesButton />
+    </div>
+  }
+  codeContent={`
+    export const StitchesButton = () => {
+      return (
+        <button className="group relative rounded-lg border-2 border-red-500 bg-red-500 px-5 py-1 font-medium text-white duration-1000 hover:shadow-lg hover:shadow-red-500/50">
+          <span className="absolute left-0 top-0 size-full rounded-md border border-dashed border-red-50 shadow-inner shadow-white/30 group-active:shadow-white/10"></span>
+          <span className="absolute left-0 top-0 size-full rotate-180 rounded-md border-red-50 shadow-inner shadow-black/30 group-active:shadow-black/10"></span>
+          Syntax UI
+        </button>
+      )
+    }
+  `}
+  language="jsx"
+/>
