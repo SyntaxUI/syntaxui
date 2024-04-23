@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { ThreeDButton } from '@/ui/button'
 import HeartbeatButton from '@/ui/animation/HeartbeatButton'
 import { NeubrutalismButton } from '../CodePreview/Buttons'
-import StitchesButton from '@/ui/stitches-button'
+import StitchesButton from '@/components/CodePreview/stitches-button'
 
 const data = [
   {
