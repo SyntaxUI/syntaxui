@@ -25,7 +25,7 @@ const navigation = {
   ],
 }
 
-const Footer = () => {
+const TwoColumnFooter = () => {
   return (
     <footer
       aria-labelledby="footer-heading"
@@ -105,4 +105,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default TwoColumnFooter
