@@ -4,7 +4,7 @@ import {
   HoverJiggleButton,
   HoverPopButton,
   HoverVibrateButton,
-} from './PreviewCode/HoverAnimationButtons'
+} from './HoverAnimationButtons'
 
 const data = [
   {
