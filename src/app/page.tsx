@@ -1,6 +1,6 @@
 'use client'
 
-import AnimationCards from '@/components/Showcase/Animations/AnimationCards'
+import AnimationCards from '@/components/showcase/animations/AnimationCards'
 import ComponentCards from '@/components/ComponentCards'
 import EffectCards from '@/components/EffectCards'
 import { Footer } from '@/components/Footer'
