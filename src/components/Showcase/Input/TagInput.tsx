@@ -78,7 +78,7 @@ const TagInput: React.FC = () => {
           <button
             key={index}
             onClick={() => removeKeyword(index)}
-            className="animate-tag-input-scale-in active:animate-scale-out active:animate-tag-input-scale-out m-1 flex scale-0 transform items-center rounded-full bg-red-500 px-2 py-0 text-xs font-medium text-white transition duration-300 ease-in-out hover:scale-110"
+            className="active:animate-scale-out active:animate-tag-input-scale-out m-1 flex scale-0 transform animate-tag-input-scale-in items-center rounded-full bg-red-500 px-2 py-0 text-xs font-medium text-white transition duration-300 ease-in-out hover:scale-110"
           >
             {keyword}
             <X size={14} className="ml-1 cursor-pointer" />
