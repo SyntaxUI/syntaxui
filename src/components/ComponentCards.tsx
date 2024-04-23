@@ -4,6 +4,7 @@ import React from 'react'
 import { OrbitingLoader } from '@/ui/Loader'
 import { TextTicker } from './PreviewCode/Text'
 import { ThreeDButton } from '@/ui/button'
+import { Toggle } from '@/components/PreviewCode/Toggle'
 
 const data = [
   {
@@ -65,6 +66,12 @@ const data = [
     title: 'Breadcrumb',
     image: '/images/ui/breadcrumb.png',
     link: '/docs/components/breadcrumb',
+  },
+  {
+    id: 10,
+    title: 'Toggle',
+    component: <Toggle />,
+    link: '/docs/components/toggle',
   },
 ]
 

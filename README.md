@@ -24,7 +24,7 @@ Please read the [contributing guide](/CONTRIBUTING.md).
 - Text Ticker - [Dries Augustyns](https://counter.driaug.com/)
 - Skewed Infinite Scroll - [Steven Tey](https://twitter.com/steventey/status/1740445963163255293)
 - LineTabs / IconTabs - [Aiko](https://twitter.com/username_aiko)
-- useMediaSizes - [Ethan Pollack](https://epoll31.github.io)
+- Toggles / useMediaSizes - [Ethan Pollack](https://epoll31.github.io)
 
 ## License
 
