@@ -5,7 +5,7 @@ const data = [
   {
     id: 1,
     title: 'Simple Toggle',
-    link: '/docs/components/toggle/toggle',
+    link: '/docs/components/toggle/simple-toggle',
     component: <SimpleToggle />,
   },
 ]
