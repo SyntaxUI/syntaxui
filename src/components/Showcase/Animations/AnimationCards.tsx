@@ -1,6 +1,6 @@
-import SkewedInfiniteScroll from '@/ui/animation/SkewedInfiniteScroll'
+import SkewedInfiniteScroll from '@/components/showcase/animations/SkewedInfiniteScroll'
 import Link from 'next/link'
-import { HoverTadaButton } from './HoverAnimationButtons'
+import { HoverTadaButton } from './hover/HoverAnimationButtons'
 
 const data = [
   {
