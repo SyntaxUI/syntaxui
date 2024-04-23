@@ -1,14 +1,14 @@
 'use client'
-
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
-export const Toggle = ({
+export const SimpleToggle = ({
   onToggle,
 }: {
   onToggle?: (toggled: boolean) => void
 }) => {
   const [toggled, setToggled] = useState(true)
+  const springConfig = { type: 'spring', stiffness: 500, damping: 30 }
 
   const handleToggle = () => {
     const newState = !toggled
@@ -20,31 +20,20 @@ export const Toggle = ({
 
   return (
     <motion.button
-      className="h-10 w-20 cursor-pointer rounded-full"
+      className={`h-[25px] w-[45px] cursor-pointer rounded-full ${
+        toggled ? 'bg-red-500' : 'bg-gray-700/50'
+      }`}
       onClick={handleToggle}
-      variants={{
-        on: { backgroundColor: 'rgb(239, 68, 68)' }, // Tailwind bg-red-500
-        off: { backgroundColor: 'rgb(55, 65, 81)' }, // Tailwind bg-neutral-700
-      }}
-      animate={toggled ? 'on' : 'off'}
-      transition={{
-        type: 'spring',
-        stiffness: 500,
-        damping: 30,
-      }}
+      transition={springConfig}
     >
       <motion.span
-        className="inline-block aspect-square h-full transform rounded-full bg-white shadow-lg "
-        variants={{
-          on: { x: 20, opacity: 1, scale: 0.7 },
-          off: { x: -20, opacity: 0.5, scale: 0.6 },
+        className="inline-block aspect-square h-full transform rounded-full bg-white shadow-lg"
+        animate={{
+          x: toggled ? 10 : -10,
+          opacity: toggled ? 1 : 0.8,
+          scale: toggled ? 0.7 : 0.6,
         }}
-        animate={toggled ? 'on' : 'off'}
-        transition={{
-          type: 'spring',
-          stiffness: 500,
-          damping: 30,
-        }}
+        transition={springConfig}
       />
     </motion.button>
   )

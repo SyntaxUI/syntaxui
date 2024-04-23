@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import { Toggle } from '@/components/PreviewCode/Toggle'
+import { SimpleToggle } from '@/components/PreviewCode/Toggle'
 
 const data = [
   {
     id: 1,
-    title: 'Toggle',
+    title: 'Simple Toggle',
     link: '/docs/components/toggle/toggle',
-    component: <Toggle />,
+    component: <SimpleToggle />,
   },
 ]
 
