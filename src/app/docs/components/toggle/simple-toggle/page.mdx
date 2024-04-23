@@ -1,5 +1,5 @@
 import PreviewCodeTabs from '@/components/CodePreview/page'
-import { Toggle } from '@/components/PreviewCode/Toggle'
+import { SimpleToggle } from '@/components/PreviewCode/Toggle'
 import Link from 'next/link'
 import { ChevronLeft } from 'lucide-react'
 
@@ -18,7 +18,7 @@ export const metadata = {
 <PreviewCodeTabs
   previewContent={
     <div className="group flex w-full items-center justify-center gap-3">
-      <Toggle />
+      <SimpleToggle />
     </div>
   }
   codeContent={
