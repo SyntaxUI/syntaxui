@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
-export const SimpleToggle = ({
+const SimpleToggle = ({
   onToggle,
 }: {
   onToggle?: (toggled: boolean) => void
@@ -38,3 +38,5 @@ export const SimpleToggle = ({
     </motion.button>
   )
 }
+
+export default SimpleToggle
