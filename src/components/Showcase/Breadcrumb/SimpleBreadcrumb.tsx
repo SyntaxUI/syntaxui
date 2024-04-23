@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 
-export const Breadcrumb = () => {
+export const SimpleBreadcrumb = () => {
   const breadcrumbs = [
     { title: 'Home', path: '/' },
     { title: 'Category', path: '/category' },
@@ -41,4 +41,4 @@ export const Breadcrumb = () => {
   )
 }
 
-export default Breadcrumb
+export default SimpleBreadcrumb

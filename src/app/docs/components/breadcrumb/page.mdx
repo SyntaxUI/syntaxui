@@ -1,19 +1,5 @@
-import { OrangeBadge, BlueBadge, GreenBadge, RedBadge } from '@/ui/badges'
-import { CodeGroup } from '@/components/Code'
-import { RequiresTailwind } from '@/components/Requires'
-import { Breadcrumb } from '@/ui/Breadcrumb'
+import SimpleBreadcrumb from '@/Components/Showcase/Breadcrumb/SimpleBreadcrumb'
 import PreviewCodeTabs from '@/components/CodePreview/page'
-
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table'
-import { workerData } from 'worker_threads'
 
 export const metadata = {
   title: 'Breadcrumb',
@@ -23,10 +9,14 @@ export const metadata = {
 
 # Breadcrumb
 
+<div className="my-4"></div>
+
+## Simple Breadcrumb
+
 <PreviewCodeTabs
   previewContent={
     <div className="group flex w-full items-center justify-center">
-      <Breadcrumb />
+      <SimpleBreadcrumb />
     </div>
   }
   codeContent={`
