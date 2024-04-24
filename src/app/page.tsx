@@ -11,6 +11,7 @@ import GitHubIcon from '@/icons/github'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import MinimalCenteredFooter from '@/components/Showcase/Footer/MinimalCenteredFooter'
 
 const Home = () => {
   return (
@@ -107,6 +108,7 @@ const Home = () => {
           </div>
         </div>
         <Footer />
+        <MinimalCenteredFooter />
       </div>
     </>
   )
