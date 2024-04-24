@@ -27,13 +27,14 @@ When contributing to SyntaxUI, please follow these guidelines:
 ### Commit Messages
 
 Use the following conventions for commit messages:
-• feat: New features
-• fix: Bug fixes
-• docs: Documentation-only changes
-• style: Code formatting changes (whitespace, missing semi-colons, etc.)
-• refactor: Code changes that neither fix a bug nor add a feature
-• test: Adding missing tests
-• chore: Changes to the build process or auxiliary tools and libraries (e.g., documentation generation)
+
+- feat: New features
+- fix: Bug fixes
+- docs: Documentation-only changes
+- style: Code formatting changes (whitespace, missing semi-colons, etc.)
+- refactor: Code changes that neither fix a bug nor add a feature
+- test: Adding missing tests
+- chore: Changes to the build process or auxiliary tools and libraries (e.g., documentation generation)
 
 ### Code Quality
 
