@@ -1,6 +1,6 @@
 # Contributing to SyntaxUI
 
-Thank you for your interest in contributing to SyntaxUI! I welcome contributions from the community to help improve and enhance syntaxUI.
+Thank you for your interest in contributing to SyntaxUI! I welcome contributions from the community to help improve and enhance SyntaxUI.
 
 ## Getting Started
 
@@ -13,35 +13,45 @@ To get started with contributing to SyntaxUI, follow these steps:
 
 ## Guidelines for Contributions
 
-When contributing to syntaxUI, please follow these guidelines:
+When contributing to SyntaxUI, please follow these guidelines:
 
 ### Coding Standards
- - Adhere to the existing codebase's style, formatting, and naming conventions.
- - Components: Follow React's convention using PascalCase (first letter capitalized).
- - Files: For ﻿.ts files, use camelCase.
- -  Hooks: Use camelCase for hook names.
- 
+
+- Adhere to the existing codebase's style, formatting, and naming conventions.
+- Naming Conventions:
+  - Folders: Use camelCase (first letter lowercase).
+  - Component (tsx): Follow React's convention using PascalCase (first letter uppercase).
+  - Other: Use camelCase (first letter lowercase).
+    - Hooks: make sure the first word of your hook is 'use' (ex: useState)
+
 ### Commit Messages
+
 Use the following conventions for commit messages:
-	•	feat: New features
-	•	fix: Bug fixes
-	•	docs: Documentation-only changes
-	•	style: Code formatting changes (whitespace, missing semi-colons, etc.)
-	•	refactor: Code changes that neither fix a bug nor add a feature
-	•	test: Adding missing tests
-	•	chore: Changes to the build process or auxiliary tools and libraries (e.g., documentation generation)
+• feat: New features
+• fix: Bug fixes
+• docs: Documentation-only changes
+• style: Code formatting changes (whitespace, missing semi-colons, etc.)
+• refactor: Code changes that neither fix a bug nor add a feature
+• test: Adding missing tests
+• chore: Changes to the build process or auxiliary tools and libraries (e.g., documentation generation)
 
 ### Code Quality
+
 - Ensure your code is properly tested and does not introduce new bugs.
 
-### Adding a component
-If you are adding a component then please add it in `components/Showcase`, for eg. if you are making a Animated Features component then it should be 
+### Adding a animation, component, effect, or hook
+
+If you are adding a new feature then please add it in the appropriate folder in `src/showcase`. For example, if you are making a `NewToggle` component then you would add it to `src/showcase/components/toggle/NewToggle.tsx`
+
 ```
-app/
-└── components/
-    └── Showcase/
-        └── Features/
-            └── AnimatedFeatures.tsx
+src/
+└── showcase/
+    ├── animations/
+    ├── components/
+    │   └── toggle/
+    │       └── NewToggle.tsx
+    ├── effects/
+    └── hooks/
 ```
 
 ## Reporting Bugs
@@ -54,4 +64,4 @@ If you have an idea for a new feature or improvement, I'd love to hear about it!
 
 ## License
 
-By contributing to syntaxUI, you agree that your contributions will be licensed under the [MIT License](https://opensource.org/licenses/MIT).
+By contributing to SyntaxUI, you agree that your contributions will be licensed under the [MIT License](https://opensource.org/licenses/MIT).
