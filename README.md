@@ -2,7 +2,7 @@
 
 Build faster & Launch sooner with SyntaxUI. Get instant access to pre-built, Tailwind CSS-powered components and animations, featuring Framer Motion-enhanced interactions.
 
-![SyntaxUI](https://raw.githubusercontent.com/Ansub/syntaxUI/main/src/app/opengraph-image.png)
+![SyntaxUI](https://raw.githubusercontent.com/Ansub/SyntaxUI/main/public/images/banner.png)
 
 ## Getting Started
  1. Browse the components: Explore our collection of pre-built UI components.
