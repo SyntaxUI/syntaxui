@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import SimpleToggle from '../Showcase/Toggle/SimpleToggle'
+import SimpleToggle from '@/showcase/components/Toggle/SimpleToggle'
 
 const data = [
   {
