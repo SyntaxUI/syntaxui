@@ -4,7 +4,7 @@ import React from 'react'
 import { OrbitingLoader } from '@/ui/Loader'
 import { TextTicker } from './PreviewCode/Text'
 import { ThreeDButton } from '@/ui/button'
-import SimpleToggle from './Showcase/Toggle/SimpleToggle'
+import SimpleToggle from '@/showcase/components/Toggle/SimpleToggle'
 
 const data = [
   {
