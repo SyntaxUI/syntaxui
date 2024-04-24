@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
   :root {
     --shiki-color-text: theme('colors.white');
@@ -16,9 +20,11 @@
   }
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer utilities {
+  .buttonProps {
+    @apply rounded-lg bg-red-500 px-6 py-2 font-semibold text-white no-underline;
+  }
+}
 
 .prose code {
   background: transparent;
