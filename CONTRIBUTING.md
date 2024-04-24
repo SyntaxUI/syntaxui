@@ -19,7 +19,7 @@ When contributing to SyntaxUI, please follow these guidelines:
 
 - Adhere to the existing codebase's style, formatting, and naming conventions.
 - Naming Conventions:
-  - Component (jsx and tsx): Follow React's convention using PascalCase (first letter uppercase).
+  - Component (tsx): Follow React's convention using PascalCase (first letter uppercase).
   - Other: Use camelCase (first letter lowercase).
     - Hooks: make sure the first word of your hook is 'use' (ex: useState)
 
