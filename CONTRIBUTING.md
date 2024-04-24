@@ -1,10 +1,10 @@
-# Contributing to syntaxUI
+# Contributing to SyntaxUI
 
-Thank you for your interest in contributing to syntaxUI! I welcome contributions from the community to help improve and enhance syntaxUI.
+Thank you for your interest in contributing to SyntaxUI! I welcome contributions from the community to help improve and enhance syntaxUI.
 
 ## Getting Started
 
-To get started with contributing to syntaxUI, follow these steps:
+To get started with contributing to SyntaxUI, follow these steps:
 
 1. Fork the repository on GitHub.
 2. Clone your forked repository to your local machine using `git clone`.
@@ -13,23 +13,40 @@ To get started with contributing to syntaxUI, follow these steps:
 
 ## Guidelines for Contributions
 
-When contributing to syntaxUI, please keep the following guidelines in mind:
+When contributing to syntaxUI, please follow these guidelines:
 
-- Follow the code style, formatting, and naming conventions used in the existing codebase.
-- Write clear, concise, and meaningful commit messages using the following convention:
-  - **feat**: A new feature
-  - **fix**: A bug fix
-  - **docs**: Documentation only changes
-  - **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-  - **refactor**: A code change that neither fixes a bug nor adds a feature
-  - **test**: Adding missing tests
-  - **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
-- Ensure that your code is properly tested and does not introduce any new bugs.
-- Document any new features, changes, or improvements in the appropriate documentation files.
+### Coding Standards
+ - Adhere to the existing codebase's style, formatting, and naming conventions.
+ - Components: Follow React's convention using PascalCase (first letter capitalized).
+ - Files: For ﻿.ts files, use camelCase.
+ -  Hooks: Use camelCase for hook names.
+ 
+### Commit Messages
+Use the following conventions for commit messages:
+	•	feat: New features
+	•	fix: Bug fixes
+	•	docs: Documentation-only changes
+	•	style: Code formatting changes (whitespace, missing semi-colons, etc.)
+	•	refactor: Code changes that neither fix a bug nor add a feature
+	•	test: Adding missing tests
+	•	chore: Changes to the build process or auxiliary tools and libraries (e.g., documentation generation)
+
+### Code Quality
+- Ensure your code is properly tested and does not introduce new bugs.
+
+### Adding a component
+If you are adding a component then please add it in `components/Showcase`, for eg. if you are making a Animated Features component then it should be 
+```
+app/
+└── components/
+    └── Showcase/
+        └── Features/
+            └── AnimatedFeatures.tsx
+```
 
 ## Reporting Bugs
 
-If you encounter any bugs or issues while using syntaxUI, please report them by opening an issue on the [GitHub issue tracker](https://github.com/Ansub/syntaxUI/issues). When reporting a bug, please provide a clear description of the problem, steps to reproduce it, and any relevant code snippets or error messages.
+If you encounter any bugs or issues while using SyntaxUI, please report them by opening an issue on the [GitHub issue tracker](https://github.com/Ansub/syntaxUI/issues). When reporting a bug, please provide a clear description of the problem, steps to reproduce it, and any relevant code snippets or error messages.
 
 ## Feature Requests
 
