@@ -19,6 +19,7 @@ When contributing to SyntaxUI, please follow these guidelines:
 
 - Adhere to the existing codebase's style, formatting, and naming conventions.
 - Naming Conventions:
+  - Folders: Use camelCase (first letter lowercase).
   - Component (tsx): Follow React's convention using PascalCase (first letter uppercase).
   - Other: Use camelCase (first letter lowercase).
     - Hooks: make sure the first word of your hook is 'use' (ex: useState)
@@ -38,20 +39,19 @@ Use the following conventions for commit messages:
 
 - Ensure your code is properly tested and does not introduce new bugs.
 
-### Adding a component, effect, or hook
+### Adding a animation, component, effect, or hook
 
-If you are adding a new feature then please add it in the appropriate folder in `src/showcase`. For example, if you are making a `NewToggle` component then you would add it to `src/showcase/components/Toggle/NewToggle.tsx`
+If you are adding a new feature then please add it in the appropriate folder in `src/showcase`. For example, if you are making a `NewToggle` component then you would add it to `src/showcase/components/toggle/NewToggle.tsx`
 
 ```
 src/
 └── showcase/
+    ├── animations/
     ├── components/
-    │   └── Toggle/
+    │   └── toggle/
     │       └── NewToggle.tsx
     ├── effects/
-    │   └── ImageFade.tsx
     └── hooks/
-        └── useMediaSizes.ts
 ```
 
 ## Reporting Bugs
