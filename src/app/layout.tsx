@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default:
       'SyntaxUI - Stop coding from scratch. Build faster. Launch sooner.',
   },
-  description: 'Free-to-use UI elements designed for rapid development.',
+  description: `Get free access to pre-built, Tailwind CSS-powered components, animations and effects - brought to life using Framer Motion. Just copy, paste and you're ready to go!`,
 }
 
 export default async function RootLayout({
