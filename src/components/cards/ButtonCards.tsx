@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ThreeDButton } from '@/showcase/components/button/ThreeDButton'
+import ThreeDButton from '@/showcase/components/button/ThreeDButton'
 import HeartbeatButton from '@/showcase/components/button/HeartbeatButton'
 import NeubrutalismButton from '@/showcase/components/button/NeubrutalismButton'
 import StitchesButton from '@/showcase/components/button/StitchesButton'

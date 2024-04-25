@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-export const ThreeDButton = () => {
+const ThreeDButton = () => {
   return (
     <button
       className="group relative m-1 inline-flex cursor-pointer items-center justify-center overflow-hidden rounded-lg border-b-2 border-l-2 border-r-2 border-red-700 bg-gradient-to-tr from-red-600 to-red-500 px-4 py-1 text-white shadow-lg transition duration-100 ease-in-out active:translate-y-0.5 active:border-red-600 active:shadow-none"
@@ -13,3 +13,5 @@ export const ThreeDButton = () => {
     </button>
   )
 }
+
+export default ThreeDButton
