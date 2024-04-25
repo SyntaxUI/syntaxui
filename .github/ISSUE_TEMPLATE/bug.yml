@@ -1,5 +1,5 @@
 name: 🐛 Bug Report
-description: Submit a bug report to help us improve
+description: Submit a bug report to help improve SyntaxUI
 title: '[🐞 BUG]: '
 labels: [Bug]
 body:
@@ -18,7 +18,7 @@ body:
           4. Describe the expected and actual behavior.
           5. Provide details about your environment, including the react component or project file affected, Git branch, etc.
 
-        Thank you for helping us improve our project! 🙌
+        Thank you for helping us improve SyntaxUI! 🙌
 
   - type: textarea
     attributes:
