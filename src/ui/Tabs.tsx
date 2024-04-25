@@ -31,7 +31,7 @@ type TabsProps = {
   tabs: Tab[]
   activeTab: string
   onTabClick: (tabId: string) => void
-  center ?: boolean
+  center?: boolean
 }
 
 export const Tabs = ({ tabs, activeTab, onTabClick, center }: TabsProps) => {
