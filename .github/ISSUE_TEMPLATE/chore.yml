@@ -1,8 +1,7 @@
 name: 🧹 Chore Task
-about: Create a chore task for SyntaxUI
+description: Create a chore task for SyntaxUI
 title: '[🧹 Chore]: '
 labels: chore
-assignees: ''
 
 body:
   - type: markdown
