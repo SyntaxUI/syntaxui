@@ -1,8 +1,6 @@
-import Features from '../../../../ui/Features'
-import { CodeGroup } from '@/components/Code'
-import { RequiresTailwind, RequiresShadcn } from '@/components/Requires'
+import FeaturesGrid from '@/showcase/components/features/FeaturesGrid'
+import SpringAnimatedFeatures from '@/showcase/components/features/SpringAnimatedFeatures'
 import PreviewCodeTabs from '@/components/CodePreview/page'
-import SpringAnimatedFeatures from '@/components/PreviewCode/SpringAnimatedFeatures'
 
 export const metadata = {
   title: 'Features',
@@ -11,12 +9,14 @@ export const metadata = {
 
 # Features
 
-## Simple Features
+<div className="my-4"></div>
+
+## Features Grid
 
 <PreviewCodeTabs
   previewContent={
     <div className="group">
-      <Features />
+      <FeaturesGrid />
     </div>
   }
   codeContent={`
