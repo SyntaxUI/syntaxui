@@ -1,0 +1,79 @@
+name: 🐛 Bug Report
+description: Submit a bug report to help us improve
+title: '[🐞 BUG]: '
+labels: [Bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Welcome to the Bug Report template! 🚀
+        Please use this template to report any bugs or issues you encounter.
+
+        Fill in the information below to help us understand and resolve the problem quickly.
+
+        Instructions:
+          1. Provide a clear and concise description of the bug.
+          2. Specify the steps to reproduce the error.
+          3. Include screenshots if applicable.
+          4. Describe the expected and actual behavior.
+          5. Provide details about your environment, including the Vue component or project file affected, Git branch, etc.
+
+        Thank you for helping us improve our project! 🙌
+
+  - type: textarea
+    attributes:
+      label: Description 📝
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Link 🔗
+      description: Link to the page where the bug occurred.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce 🔄
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Screenshots 📸
+      description: If applicable, add screenshots to help explain the problem.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected Behavior 🤔
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Actual Behavior 😱
+      description: A clear and concise description of what actually happened.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Environment 🌍
+      description: Details about your environment, including the Vue component or project file affected, Git branch, etc.
+      placeholder: |
+        - Vue component: [e.g., `src/components/MyComponent.vue`]
+        - Git branch: [e.g., `main`]
+        - OS: [e.g., Windows 10]
+        - Browser: [e.g., Chrome, Safari]
+        - Version: [e.g., 22]
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Additional Information ℹ️
+      description: Add any other context about the problem here.
