@@ -2,6 +2,11 @@
 
 Build faster & Launch sooner with SyntaxUI. Get instant access to pre-built, Tailwind CSS-powered components and animations, featuring Framer Motion-enhanced interactions.
 
+[![Discord Follow](https://dcbadge.vercel.app/api/server/P8GXYyH3ZU?style=flat)](https://discord.com/invite/P8GXYyH3ZU)
+[![GitHub Repo stars](https://img.shields.io/github/stars/ansub/SyntaxUI?style=social)](https://github.com/ansub/SyntaxUI)
+[![Twitter Follow](https://img.shields.io/twitter/follow/justansub?style=social)](https://twitter.com/justansub)
+
+
 ![SyntaxUI](https://raw.githubusercontent.com/Ansub/SyntaxUI/main/public/images/banner.png)
 
 ## Getting Started
