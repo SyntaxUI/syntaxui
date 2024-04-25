@@ -1,10 +1,8 @@
 import Link from 'next/link'
-import {
-  HoverTadaButton,
-  HoverJiggleButton,
-  HoverPopButton,
-  HoverVibrateButton,
-} from './PreviewCode/HoverAnimationButtons'
+import { HoverTadaButton } from '@/showcase/animations/hover/HoverTadaButton'
+import { HoverJiggleButton } from '@/showcase/animations/hover/HoverJiggleButton'
+import { HoverPopButton } from '@/showcase/animations/hover/HoverPopButton'
+import { HoverVibrateButton } from '@/showcase/animations/hover/HoverVibrateButton'
 
 const data = [
   {

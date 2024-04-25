@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { OrbitingLoader } from '@/ui/Loader'
 import { TextTicker } from './PreviewCode/Text'
-import { ThreeDButton } from '@/ui/button'
+import { ThreeDButton } from '@/showcase/components/button/ThreeDButton'
 import SimpleToggle from '@/showcase/components/toggle/SimpleToggle'
 
 const data = [

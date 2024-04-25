@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
   :root {
     --shiki-color-text: theme('colors.white');
@@ -15,10 +19,6 @@
     display: none;
   }
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 .prose code {
   background: transparent;
