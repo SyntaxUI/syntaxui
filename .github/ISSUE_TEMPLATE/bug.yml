@@ -1,6 +1,6 @@
 name: 🐛 Bug Report
 description: Submit a bug report to help improve SyntaxUI
-title: '[🐞 BUG]: '
+title: '🐞: '
 labels: [Bug]
 body:
   - type: markdown
