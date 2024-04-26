@@ -1,28 +1,7 @@
-import Link from 'next/link'
-import { ChevronLeft } from 'lucide-react'
-import PreviewCodeTabs from '@/components/CodePreview/page'
-import OrbitingLoader from '@/showcase/components/loaders/OrbitingLoader'
-
-<Link className="flex flex-row items-center" href="/docs/components/loaders">
-  <ChevronLeft size={17} />
-  Back
-</Link>
-
-# Orbiting
-
-<div className="mt-4"></div>
-
-<PreviewCodeTabs
-  previewContent={
-    <div className="flex items-center justify-center py-3">
-      <OrbitingLoader />
-    </div>
-  }
-  codeContent={`
-
+'use client'
 import { motion } from 'framer-motion'
 
-export const OrbitingLoader = () => {
+export default function OrbitingLoader() {
   return (
     <div className="flex">
       <motion.div
@@ -59,7 +38,3 @@ export const OrbitingLoader = () => {
     </div>
   )
 }
-
-`}
-language="jsx"
-/>

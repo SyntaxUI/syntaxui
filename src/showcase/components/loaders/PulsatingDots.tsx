@@ -1,26 +1,7 @@
-import Link from 'next/link'
-import { ChevronLeft } from 'lucide-react'
-import PreviewCodeTabs from '@/components/CodePreview/page'
-import PulsatingDots from '@/showcase/components/loaders/PulsatingDots'
+'use client'
+import { motion } from 'framer-motion'
 
-<Link className="flex flex-row items-center" href="/docs/components/loaders">
-  <ChevronLeft size={17} />
-  Back
-</Link>
-
-# Pulsating Dots
-
-<div className="mt-4"></div>
-
-<PreviewCodeTabs
-  previewContent={
-    <div className="flex items-center justify-center py-3">
-      <PulsatingDots />
-    </div>
-  }
-  codeContent={`
-
-export const PulsatingDots = () => {
+export default function PulsatingDots() {
   return (
     <div className="flex items-center justify-center">
       <div className="flex space-x-2">
@@ -66,4 +47,3 @@ export const PulsatingDots = () => {
     </div>
   )
 }
-`} language="jsx" />
