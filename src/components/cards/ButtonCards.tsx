@@ -8,7 +8,7 @@ const data = [
   {
     id: 1,
     title: '3D Button',
-    link: '/docs/components/button/3d-button',
+    link: '/docs/components/button/three-d-button',
     component: <ThreeDButton />,
   },
   {
