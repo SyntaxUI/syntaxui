@@ -190,6 +190,28 @@ export default {
             opacity: '1',
           },
         },
+        'discord-button-angle': {
+          '0%': {
+            '--discord-button-angle': '0deg',
+          },
+          '50%': {
+            '--discord-button-angle': '180deg',
+          },
+          '100%': {
+            '--discord-button-angle': '360deg',
+          },
+        },
+        'discord-button-x': {
+          '0%': {
+            '--discord-button-x': '50px',
+          },
+          '50%': {
+            '--discord-button-x': '-50px',
+          },
+          '100%': {
+            '--discord-button-x': '50px',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -201,6 +223,8 @@ export default {
         'tag-input-scale-in': 'tag-input-scale-in 0.3s ease-in-out forwards',
         'hover-pop': 'hover-pop 0.5s ease-out',
         'hover-vibrate': 'hover-vibrate 0.4s ease-in-out',
+        'discord-button':
+          'discord-button-angle 6s linear infinite, discord-button-x 6s 0.5s ease-in-out infinite',
       },
     },
   },
