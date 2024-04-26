@@ -1,6 +1,8 @@
 name: ✨ Feature Request
 description: Suggest a new feature to enhance SyntaxUI
-title: '✨: '
+
+title: '[FEATURE]: '
+
 labels: [Enhancement]
 body:
   - type: markdown
