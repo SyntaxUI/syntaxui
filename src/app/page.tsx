@@ -1,17 +1,16 @@
 'use client'
 
-import AnimationCards from '@/components/cards/AnimationCards'
-import ComponentCards from '@/components/ComponentCards'
-import EffectCards from '@/components/EffectCards'
+import EffectCards from '@/showcase/cards/EffectCards'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
-import HooksCard from '@/components/HooksCards'
 import { Button } from '@/components/ui/button'
 import GitHubIcon from '@/icons/github'
+import AnimationCards from '@/showcase/cards/AnimationCards'
+import ComponentCards from '@/showcase/cards/ComponentCards'
+import HooksCard from '@/showcase/cards/HooksCards'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { cn } from '@/lib/utils'
 
 const DiscordButton = ({
   backgroundAnimation = false,
@@ -33,7 +32,7 @@ const DiscordButton = ({
       }}
     >
       {borderAnimation && (
-        <span className="animate-discord-button absolute inset-[-1000%] bg-[conic-gradient(from_calc(var(--discord-button-angle)+60deg)_at_calc(50%+var(--discord-button-x))_50%,transparent_50%,#5865F2_98%,transparent_100%)]"></span>
+        <span className="absolute inset-[-1000%] animate-discord-button bg-[conic-gradient(from_calc(var(--discord-button-angle)+60deg)_at_calc(50%+var(--discord-button-x))_50%,transparent_50%,#5865F2_98%,transparent_100%)]"></span>
       )}
       <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-[#5865F2] backdrop-blur ">
         <span>Join the Discord Family</span>
