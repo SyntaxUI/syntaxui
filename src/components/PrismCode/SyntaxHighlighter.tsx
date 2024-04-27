@@ -2,28 +2,10 @@
 
 import { Highlight } from 'prism-react-renderer';
 import theme from './Theme';
-import {
-  ReactNode,
-  createContext,
-  isValidElement,
-  useContext,
-  useEffect,
-  useState,
-} from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '../mdx';
 import { readFile } from '@/lib/readFile';
-
-// function extractText(node: ReactNode): string {
-//   if (typeof node === 'string') {
-//     return node;
-//   } else if (Array.isArray(node)) {
-//     return node.map(extractText).join('');
-//   } else if (isValidElement(node) && node.props.children) {
-//     return extractText(node.props.children);
-//   }
-//   return '';
-// }
 
 export const SyntaxHighlighter = (props: any) => {
   const { children: rawCode, className: rawLang, code: forceCode } = props;
@@ -179,6 +161,7 @@ export const CodeGroup = ({
     </CodeGroupContext.Provider>
   );
 };
+
 export const CodeGroupFromFile = ({
   title,
   path,
@@ -197,9 +180,11 @@ export const CodeGroupFromFile = ({
     console.log('fetching code');
     fetchCode();
   }, [path]);
+
+  const lang = path.split('.').pop() ?? '';
   return (
     <CodeGroup title={title}>
-      <SyntaxHighlighter className="language-js" path={path} code={code} />
+      <SyntaxHighlighter className={lang} path={path} code={code} />
     </CodeGroup>
   );
 };
