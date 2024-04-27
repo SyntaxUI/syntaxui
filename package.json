@@ -17,6 +17,7 @@
     "@mdx-js/react": "^3.0.0",
     "@next/mdx": "^14.0.4",
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-tabs": "^1.0.4",
     "@sindresorhus/slugify": "^2.1.1",
     "@tailwindcss/typography": "^0.5.10",
     "@types/mdx": "^2.0.8",
@@ -40,9 +41,11 @@
     "next": "^14.0.4",
     "next-themes": "^0.2.1",
     "posthog-js": "^1.118.0",
+    "raw-loader": "^4.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-highlight-words": "^0.20.0",
+    "rehype": "^13.0.1",
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.0",
     "remark-mdx": "^3.0.0",
@@ -54,6 +57,7 @@
     "typescript": "^5.3.3",
     "unist-util-filter": "^5.0.1",
     "unist-util-visit": "^5.0.0",
+    "zod": "^3.23.4",
     "zustand": "^4.3.2"
   },
   "devDependencies": {
