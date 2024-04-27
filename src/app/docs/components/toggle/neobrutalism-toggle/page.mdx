@@ -22,35 +22,36 @@ export const metadata = {
     </div>
   }
   codeContent={
-`import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+`'use client'
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 
 const NeobrutalismToggle = ({
   onToggle,
 }: {
-  onToggle?: (toggled: boolean) => void;
+  onToggle?: (toggled: boolean) => void
 }) => {
-  const [toggled, setToggled] = useState(true);
-  const springConfig = { type: 'spring', stiffness: 500, damping: 30 };
+  const [toggled, setToggled] = useState(true)
+  const springConfig = { type: 'spring', stiffness: 500, damping: 30 }
 
   const handleToggle = () => {
-    const newState = !toggled;
-    setToggled(newState);
+    const newState = !toggled
+    setToggled(newState)
     if (onToggle) {
-      onToggle(newState);
+      onToggle(newState)
     }
-  };
+  }
 
   return (
     <motion.button
-      className="relative h-[25px] w-[45px] translate-x-1 translate-y-1 cursor-pointer  rounded-full bg-[#222222]"
+      className={"relative h-[25px] w-[45px] translate-x-1 translate-y-1 cursor-pointer  rounded-full bg-[#222222]"}
       onClick={handleToggle}
     >
       <motion.span
-        className="flex h-full w-full items-center justify-center  rounded-full border-[2px]  border-[#222222] bg-[#ff527a] p-[2px]"
+        className={"flex h-full w-full items-center justify-center  rounded-full border-[2px]  border-[#222222]" + (toggled ? 'bg-[#ff527a]' : 'bg-gray-600') + ' p-[2px]'}
         variants={{
-          on: { x: -1, y: -1 },
-          off: { x: -3, y: -3 },
+          off: { x: 0, y: 0 },
+          on: { x: 3, y: -3 },
         }}
         initial={'off'}
         animate={toggled ? 'on' : 'off'}
@@ -68,8 +69,8 @@ const NeobrutalismToggle = ({
         />
       </motion.span>
     </motion.button>
-  );
-};
+  )
+}
 
-export default NeobrutalismToggle;
+export default NeobrutalismToggle
 `} language="tsx" />
