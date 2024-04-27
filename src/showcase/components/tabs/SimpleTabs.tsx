@@ -1,6 +1,6 @@
 'use client'
 
-import { Tabs } from '@/ui/Tabs'
+import { Tabs } from '@/components/reusable/Tabs'
 import { useState } from 'react'
 
 const SimpleTabs = () => {
