@@ -61,12 +61,12 @@ const data = [
   //   image: '/images/ui/badges.png',
   //   link: '/docs/components/badges',
   // },
-  {
-    id: 9,
-    title: 'Breadcrumb',
-    image: '/images/ui/breadcrumb.png',
-    link: '/docs/components/breadcrumb',
-  },
+  // {
+  //   id: 9,
+  //   title: 'Breadcrumb',
+  //   image: '/images/ui/breadcrumb.png',
+  //   link: '/docs/components/breadcrumb',
+  // },
   {
     id: 10,
     title: 'Toggle',
