@@ -12,6 +12,7 @@ import {
 } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '../mdx';
+import { readFile } from '@/lib/readFile';
 
 // function extractText(node: ReactNode): string {
 //   if (typeof node === 'string') {
@@ -25,9 +26,9 @@ import { Button } from '../mdx';
 // }
 
 export const SyntaxHighlighter = (props: any) => {
-  const { children: rawCode, className: rawLang } = props;
+  const { children: rawCode, className: rawLang, code: forceCode } = props;
   const lang = rawLang ? rawLang.replace('language-', '') : '';
-  const code = rawCode.trim();
+  const code = (forceCode ?? rawCode ?? '').trim();
 
   const inline = code.split('\n').length === 1;
 
@@ -45,7 +46,7 @@ export const SyntaxHighlighter = (props: any) => {
   }
 
   const children = (
-    <div className="relative">
+    <div className={'relative'}>
       <Highlight theme={theme} code={code} language={lang}>
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre style={style}>
@@ -66,12 +67,11 @@ export const SyntaxHighlighter = (props: any) => {
   );
 
   const inCodeGroup = useContext(CodeGroupContext);
-
   return (
     <div
       className={cn(
         'overflow-x-auto bg-zinc-900 p-4',
-        inCodeGroup ? '' : 'rounded-2xl',
+        inCodeGroup ? '' : 'mb-4 rounded-2xl',
       )}
     >
       {children}
@@ -156,14 +156,12 @@ export const CodeGroup = ({
   title?: string;
 }) => {
   const [minimized, setMinimized] = useState(false);
-  // const code = extractText(children);
-  // console.log('minimized', minimized);
 
   return (
     <CodeGroupContext.Provider value={true}>
       <div
         className={cn(
-          'relative max-h-[2000px] overflow-hidden rounded-2xl transition-[max-height] duration-500 ',
+          'relative mb-4 max-h-[2000px] overflow-hidden rounded-2xl transition-[max-height] duration-500 ',
           minimized ? 'max-h-[300px]' : '',
         )}
       >
@@ -179,5 +177,29 @@ export const CodeGroup = ({
         </Button>
       </div>
     </CodeGroupContext.Provider>
+  );
+};
+export const CodeGroupFromFile = ({
+  title,
+  path,
+}: {
+  title: string;
+  path: string;
+}) => {
+  const [code, setCode] = useState('');
+  useEffect(() => {
+    const fetchCode = async () => {
+      const code = await readFile(path);
+      setCode(code);
+      console.log('text', code);
+    };
+
+    console.log('fetching code');
+    fetchCode();
+  }, [path]);
+  return (
+    <CodeGroup title={title}>
+      <SyntaxHighlighter className="language-js" path={path} code={code} />
+    </CodeGroup>
   );
 };
