@@ -1,16 +1,16 @@
 import clsx from 'clsx';
-import Link from 'next/link';
 
 import { Heading } from '@/components/Heading';
 import { Prose } from '@/components/Prose';
 
+import Link from 'next/link';
 export const a = Link;
 export { Button } from '@/components/ui/button';
-export {
-  SyntaxHighlighter as code,
-  CodeGroup,
-  CodeGroupFromFile,
-} from '@/components/PrismCode/SyntaxHighlighter';
+export { default as code } from '@/components/code/SyntaxHighlighter';
+export { default as CodeGroup } from '@/components/code/CodeGroup';
+export { default as CodeGroupFromFile } from '@/components/code/CodeGroupFromFile';
+export { default as PreviewCodeGroup } from '@/components/code/PreviewCodeGroup';
+export { default as PreviewCodeGroupFromFile } from '@/components/code/PreviewCodeGroupFromFile';
 
 export function wrapper({ children }: { children: React.ReactNode }) {
   return (

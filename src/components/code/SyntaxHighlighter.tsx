@@ -2,19 +2,20 @@
 
 import { Highlight } from 'prism-react-renderer';
 import theme from './Theme';
-import { createContext, useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
-import { Button } from '../mdx';
-import { readFile } from '@/lib/readFile';
+import { CodeGroupContext } from './CodeGroup';
 
-export const SyntaxHighlighter = (props: any) => {
+export default function SyntaxHighlighter(props: any) {
+  const inCodeGroup = useContext(CodeGroupContext);
   const { children: rawCode, className: rawLang, code: forceCode } = props;
+
   const lang = rawLang ? rawLang.replace('language-', '') : '';
   const code = (forceCode ?? rawCode ?? '').trim();
 
   const inline = code.split('\n').length === 1;
 
-  if (inline) {
+  if (inline && !inCodeGroup) {
     return (
       <code
         style={{
@@ -48,7 +49,6 @@ export const SyntaxHighlighter = (props: any) => {
     </div>
   );
 
-  const inCodeGroup = useContext(CodeGroupContext);
   return (
     <div
       className={cn(
@@ -59,7 +59,7 @@ export const SyntaxHighlighter = (props: any) => {
       {children}
     </div>
   );
-};
+}
 
 function ClipboardIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -77,7 +77,7 @@ function ClipboardIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   );
 }
 
-export function CopyButton({ code }: { code: string }) {
+function CopyButton({ code }: { code: string }) {
   let [copyCount, setCopyCount] = useState(0);
   let copied = copyCount > 0;
 
@@ -127,64 +127,3 @@ export function CopyButton({ code }: { code: string }) {
     </button>
   );
 }
-
-const CodeGroupContext = createContext(false);
-
-export const CodeGroup = ({
-  children,
-  title,
-}: {
-  children: React.ReactNode;
-  title?: string;
-}) => {
-  const [minimized, setMinimized] = useState(false);
-
-  return (
-    <CodeGroupContext.Provider value={true}>
-      <div
-        className={cn(
-          'relative mb-4 max-h-[2000px] overflow-hidden rounded-2xl transition-[max-height] duration-500 ',
-          minimized ? 'max-h-[300px]' : '',
-        )}
-      >
-        <div className="border border-zinc-700  bg-zinc-800 px-5 py-3 text-xs font-semibold text-white">
-          {title}
-        </div>
-        <div className="">{children}</div>
-        <Button
-          className="w-xs absolute bottom-0 left-0 right-0 block rounded-2xl bg-transparent p-0 text-sm font-medium text-white"
-          onClick={() => setMinimized(!minimized)}
-        >
-          {minimized ? 'Expand' : 'Collapse'}
-        </Button>
-      </div>
-    </CodeGroupContext.Provider>
-  );
-};
-
-export const CodeGroupFromFile = ({
-  title,
-  path,
-}: {
-  title: string;
-  path: string;
-}) => {
-  const [code, setCode] = useState('');
-  useEffect(() => {
-    const fetchCode = async () => {
-      const code = await readFile(path);
-      setCode(code);
-      console.log('text', code);
-    };
-
-    console.log('fetching code');
-    fetchCode();
-  }, [path]);
-
-  const lang = path.split('.').pop() ?? '';
-  return (
-    <CodeGroup title={title}>
-      <SyntaxHighlighter className={lang} path={path} code={code} />
-    </CodeGroup>
-  );
-};

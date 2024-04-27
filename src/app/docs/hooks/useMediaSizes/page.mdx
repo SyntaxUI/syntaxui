@@ -1,5 +1,6 @@
 
-import {CodeGroup, CodeGroupFromFile} from '@/components/PrismCode/SyntaxHighlighter'
+import CodeGroup from '@/components/code/CodeGroup'
+import CodeGroupFromFile from '@/components/code/CodeGroupFromFile'
 
 export const metadata = {
   title: 'useMediaSizes Hook',
@@ -18,7 +19,6 @@ export const metadata = {
 here is an `inline coding test` does it work?
 
 <CodeGroupFromFile title="useMediaSizes.tsx from path" path="src/showcase/hooks/useMediaSizes.tsx"/>
-
 ```jsx
 import { useEffect, useMemo, useState } from "react";
 
@@ -68,7 +68,7 @@ export function useMediaSizes(customBreakpoints?: MediaBreakpoints): MediaSizes 
     return sizes;
 }
 ```
-clear
+
 <CodeGroup title="useMediaSizes.tsx">
 ```jsx
 import { useEffect, useMemo, useState } from "react";
