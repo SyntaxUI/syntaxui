@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import OrbitingLoader from '@/showcase/components/loaders/OrbitingLoader'
-import { TextTicker } from './PreviewCode/Text'
+import { TextTicker } from '@/showcase/components/text/text-ticker/TextTicker'
 import ThreeDButton from '@/showcase/components/button/ThreeDButton'
 import SimpleToggle from '@/showcase/components/toggle/SimpleToggle'
 
