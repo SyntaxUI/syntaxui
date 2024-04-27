@@ -7,10 +7,10 @@ import { Prose } from '@/components/Prose';
 export const a = Link;
 export { Button } from '@/components/ui/button';
 // export { CodeGroup, Code as code, Pre as pre } from '@/components/Code';
-export { CodeGroup } from '@/components/Code';
+// export { CodeGroup } from '@/components/Code';
 export {
   SyntaxHighlighter as code,
-  Wrapper,
+  CodeGroup,
 } from '@/components/PrismCode/SyntaxHighlighter';
 
 export function wrapper({ children }: { children: React.ReactNode }) {
