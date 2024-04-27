@@ -1,12 +1,12 @@
-type Tab = {
-  id: string
-  label: string
+export interface Tab {
+  id: string;
+  label: string;
 }
 
-type TabProps = {
-  label: string
-  isActive: boolean
-  onClick: () => void
+export interface TabProps {
+  label: string;
+  isActive: boolean;
+  onClick: () => void;
 }
 
 const Tab = ({ label, isActive, onClick }: TabProps) => {
@@ -24,14 +24,14 @@ const Tab = ({ label, isActive, onClick }: TabProps) => {
     >
       {label}
     </div>
-  )
-}
+  );
+};
 
-type TabsProps = {
-  tabs: Tab[]
-  activeTab: string
-  onTabClick: (tabId: string) => void
-  center?: boolean
+export interface TabsProps {
+  tabs: Tab[];
+  activeTab: string;
+  onTabClick: (tabId: string) => void;
+  center?: boolean;
 }
 
 export const Tabs = ({ tabs, activeTab, onTabClick, center }: TabsProps) => {
@@ -46,5 +46,5 @@ export const Tabs = ({ tabs, activeTab, onTabClick, center }: TabsProps) => {
         />
       ))}
     </div>
-  )
-}
+  );
+};
