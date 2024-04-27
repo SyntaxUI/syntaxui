@@ -1,9 +1,9 @@
 import { CodeGroup } from '@/components/Code'
+import {Wrapper} from '@/components/PrismCode/SyntaxHighlighter'
 
 export const metadata = {
   title: 'useMediaSizes Hook',
-  description:
-    '',
+  description: '',
 }
 
 # useMediaSizes() Hook
@@ -15,68 +15,89 @@ export const metadata = {
   This is particularly useful for determining the placement of components based on the size of the viewport.
 </div>
 
- <CodeGroup title="useMediaSizes.tsx">
 
-    ```jsx
-    import { useEffect, useMemo, useState } from "react";
+```jsx
+import { useEffect, useMemo, useState } from "react";
 
-    export interface MediaBreakpoints { [name: string]: number; }
+export interface MediaBreakpoints { [name: string]: number; }
+```
 
-    export interface MediaSizes { [name: string]: boolean; }
+<Wrapper>
+```jsx
+import { useEffect, useMemo, useState } from "react";
 
-    const defaultBreakpoints: MediaBreakpoints = {
-        sm: 640,
-        md: 768,
-        lg: 1024,
-        xl: 1280,
-    };
+export interface MediaBreakpoints { [name: string]: number; }
+```
+</Wrapper>
 
-    const breakpointsToSizes = (breakpoints: MediaBreakpoints) => Object.keys(breakpoints).reduce(
-        (acc, key) => ({
-            ...acc,
-            [key]: window.innerWidth > breakpoints[key],
-        }), {}
-    );
+{/* <SyntaxHighlighter>
 
-    const debounce = <F extends (...args: any[]) => any>(func: F, wait: number) => {
-        let timeout: string | number | NodeJS.Timeout | undefined;
-        return (...args: any) => {
-            if (timeout) {
-                clearTimeout(timeout);
-            }
-            timeout = setTimeout(() => func(args), wait);
+test
+
+</SyntaxHighlighter> */}
+
+ {/* <CodeGroup title="useMediaSizes.tsx">
+
+```jsx
+import { useEffect, useMemo, useState } from "react";
+
+export interface MediaBreakpoints { [name: string]: number; }
+
+export interface MediaSizes { [name: string]: boolean; }
+
+const defaultBreakpoints: MediaBreakpoints = {
+    sm: 640,
+    md: 768,
+    lg: 1024,
+    xl: 1280,
+};
+
+const breakpointsToSizes = (breakpoints: MediaBreakpoints) => Object.keys(breakpoints).reduce(
+    (acc, key) => ({
+        ...acc,
+        [key]: window.innerWidth > breakpoints[key],
+    }), {}
+);
+
+const debounce = <F extends (...args: any[]) => any>(func: F, wait: number) => {
+    let timeout: string | number | NodeJS.Timeout | undefined;
+    return (...args: any) => {
+        if (timeout) {
+            clearTimeout(timeout);
         }
+        timeout = setTimeout(() => func(args), wait);
     }
+}
 
-    export function useMediaSizes(customBreakpoints?: MediaBreakpoints): MediaSizes {
-        const breakpoints = useMemo(() => ({
-            ...defaultBreakpoints,
-            ...customBreakpoints,
-        }), [customBreakpoints]);
+export function useMediaSizes(customBreakpoints?: MediaBreakpoints): MediaSizes {
+    const breakpoints = useMemo(() => ({
+        ...defaultBreakpoints,
+        ...customBreakpoints,
+    }), [customBreakpoints]);
 
-        const [sizes, setSizes] = useState<MediaSizes>(window && breakpointsToSizes(breakpoints));
+    const [sizes, setSizes] = useState<MediaSizes>(window && breakpointsToSizes(breakpoints));
 
-        useEffect(() => {
-            if (!window) { return; }
+    useEffect(() => {
+        if (!window) { return; }
 
-            const handleResize = () => setSizes(breakpointsToSizes(breakpoints));
+        const handleResize = () => setSizes(breakpointsToSizes(breakpoints));
 
-            const debouncedHandleResize = debounce(handleResize, 100);
-            window.addEventListener("resize", debouncedHandleResize);
-            return () => window.removeEventListener("resize", debouncedHandleResize);
-        }, [breakpoints]);
+        const debouncedHandleResize = debounce(handleResize, 100);
+        window.addEventListener("resize", debouncedHandleResize);
+        return () => window.removeEventListener("resize", debouncedHandleResize);
+    }, [breakpoints]);
 
-        return sizes;
-    }
-````
-</CodeGroup>
+    return sizes;
+}
+```
+</CodeGroup> */}
 
 ### Example Usage
 The useMediaSizes() hook can be used to determine the placement of a certain component based on the size of the viewport. 
 In the example below, the LayoutComponent places the Menu component in the SideBar component when the viewport is greater than
 768px and in the MainContent component when the viewport is less than 768px.
 
-<CodeGroup title="LayoutComponent.tsx">
+{/* <CodeGroup title="LayoutComponent.tsx">
 
 ```jsx
 import React, { useRef } from 'react';
@@ -105,6 +126,4 @@ const LayoutComponent = () => {
 export default LayoutComponent;
 ````
 
-</CodeGroup
-
->
+</CodeGroup> */}

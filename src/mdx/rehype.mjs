@@ -1,9 +1,9 @@
-import { slugifyWithCounter } from '@sindresorhus/slugify'
-import * as acorn from 'acorn'
-import { toString } from 'mdast-util-to-string'
-import { mdxAnnotations } from 'mdx-annotations'
-import shiki from 'shiki'
-import { visit } from 'unist-util-visit'
+import { slugifyWithCounter } from '@sindresorhus/slugify';
+import * as acorn from 'acorn';
+import { toString } from 'mdast-util-to-string';
+import { mdxAnnotations } from 'mdx-annotations';
+import shiki from 'shiki';
+import { visit } from 'unist-util-visit';
 
 function rehypeParseCodeBlocks() {
   return (tree) => {
@@ -12,59 +12,59 @@ function rehypeParseCodeBlocks() {
         parentNode.properties.language = node.properties.className[0]?.replace(
           /^language-/,
           '',
-        )
+        );
       }
-    })
-  }
+    });
+  };
 }
 
-let highlighter
+// let highlighter;
 
-function rehypeShiki() {
-  return async (tree) => {
-    highlighter =
-      highlighter ?? (await shiki.getHighlighter({ theme: 'css-variables' }))
+// function rehypeShiki() {
+//   return async (tree) => {
+//     highlighter =
+//       highlighter ?? (await shiki.getHighlighter({ theme: 'css-variables' }));
 
-    visit(tree, 'element', (node) => {
-      if (node.tagName === 'pre' && node.children[0]?.tagName === 'code') {
-        let codeNode = node.children[0]
-        let textNode = codeNode.children[0]
+//     visit(tree, 'element', (node) => {
+//       if (node.tagName === 'pre' && node.children[0]?.tagName === 'code') {
+//         let codeNode = node.children[0];
+//         let textNode = codeNode.children[0];
 
-        node.properties.code = textNode.value
+//         node.properties.code = textNode.value;
 
-        if (node.properties.language) {
-          let tokens = highlighter.codeToThemedTokens(
-            textNode.value,
-            node.properties.language,
-          )
+//         if (node.properties.language) {
+//           let tokens = highlighter.codeToThemedTokens(
+//             textNode.value,
+//             node.properties.language,
+//           );
 
-          textNode.value = shiki.renderToHtml(tokens, {
-            elements: {
-              pre: ({ children }) => children,
-              code: ({ children }) => children,
-              line: ({ children }) => `<span>${children}</span>`,
-            },
-          })
-        }
-      }
-    })
-  }
-}
+//           textNode.value = shiki.renderToHtml(tokens, {
+//             elements: {
+//               pre: ({ children }) => children,
+//               code: ({ children }) => children,
+//               line: ({ children }) => `<span>${children}</span>`,
+//             },
+//           });
+//         }
+//       }
+//     });
+//   };
+// }
 
 function rehypeSlugify() {
   return (tree) => {
-    let slugify = slugifyWithCounter()
+    let slugify = slugifyWithCounter();
     visit(tree, 'element', (node) => {
       if (node.tagName === 'h2' && !node.properties.id) {
-        node.properties.id = slugify(toString(node))
+        node.properties.id = slugify(toString(node));
       }
-    })
-  }
+    });
+  };
 }
 
 function rehypeAddMDXExports(getExports) {
   return (tree) => {
-    let exports = Object.entries(getExports(tree))
+    let exports = Object.entries(getExports(tree));
 
     for (let [name, value] of exports) {
       for (let node of tree.children) {
@@ -72,11 +72,11 @@ function rehypeAddMDXExports(getExports) {
           node.type === 'mdxjsEsm' &&
           new RegExp(`export\\s+const\\s+${name}\\s*=`).test(node.value)
         ) {
-          return
+          return;
         }
       }
 
-      let exportStr = `export const ${name} = ${value}`
+      let exportStr = `export const ${name} = ${value}`;
 
       tree.children.push({
         type: 'mdxjsEsm',
@@ -87,13 +87,13 @@ function rehypeAddMDXExports(getExports) {
             ecmaVersion: 'latest',
           }),
         },
-      })
+      });
     }
-  }
+  };
 }
 
 function getSections(node) {
-  let sections = []
+  let sections = [];
 
   for (let child of node.children ?? []) {
     if (child.type === 'element' && child.tagName === 'h2') {
@@ -101,19 +101,19 @@ function getSections(node) {
         title: ${JSON.stringify(toString(child))},
         id: ${JSON.stringify(child.properties.id)},
         ...${child.properties.annotation}
-      }`)
+      }`);
     } else if (child.children) {
-      sections.push(...getSections(child))
+      sections.push(...getSections(child));
     }
   }
 
-  return sections
+  return sections;
 }
 
 export const rehypePlugins = [
   mdxAnnotations.rehype,
   rehypeParseCodeBlocks,
-  rehypeShiki,
+  // rehypeShiki,
   rehypeSlugify,
   [
     rehypeAddMDXExports,
@@ -121,4 +121,4 @@ export const rehypePlugins = [
       sections: `[${getSections(tree).join()}]`,
     }),
   ],
-]
+];

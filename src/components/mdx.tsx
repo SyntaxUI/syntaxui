@@ -1,12 +1,17 @@
-import clsx from 'clsx'
-import Link from 'next/link'
+import clsx from 'clsx';
+import Link from 'next/link';
 
-import { Heading } from '@/components/Heading'
-import { Prose } from '@/components/Prose'
+import { Heading } from '@/components/Heading';
+import { Prose } from '@/components/Prose';
 
-export const a = Link
-export { Button } from '@/components/ui/button'
-export { CodeGroup, Code as code, Pre as pre } from '@/components/Code'
+export const a = Link;
+export { Button } from '@/components/ui/button';
+// export { CodeGroup, Code as code, Pre as pre } from '@/components/Code';
+export { CodeGroup } from '@/components/Code';
+export {
+  SyntaxHighlighter as code,
+  Wrapper,
+} from '@/components/PrismCode/SyntaxHighlighter';
 
 export function wrapper({ children }: { children: React.ReactNode }) {
   return (
@@ -14,14 +19,14 @@ export function wrapper({ children }: { children: React.ReactNode }) {
       <Prose className="flex-auto">{children}</Prose>
       <footer className="mx-auto mt-16 w-full max-w-2xl lg:max-w-5xl"></footer>
     </article>
-  )
+  );
 }
 
 export const h2 = function H2(
   props: Omit<React.ComponentPropsWithoutRef<typeof Heading>, 'level'>,
 ) {
-  return <Heading level={2} {...props} />
-}
+  return <Heading level={2} {...props} />;
+};
 
 function InfoIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -36,7 +41,7 @@ function InfoIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
       />
       <circle cx="8" cy="4" r=".5" fill="none" />
     </svg>
-  )
+  );
 }
 
 export function Note({ children }: { children: React.ReactNode }) {
@@ -47,7 +52,7 @@ export function Note({ children }: { children: React.ReactNode }) {
         {children}
       </div>
     </div>
-  )
+  );
 }
 
 export function Row({ children }: { children: React.ReactNode }) {
@@ -55,15 +60,15 @@ export function Row({ children }: { children: React.ReactNode }) {
     <div className="grid grid-cols-1 items-start gap-x-16 gap-y-10 xl:max-w-none xl:grid-cols-2">
       {children}
     </div>
-  )
+  );
 }
 
 export function Col({
   children,
   sticky = false,
 }: {
-  children: React.ReactNode
-  sticky?: boolean
+  children: React.ReactNode;
+  sticky?: boolean;
 }) {
   return (
     <div
@@ -74,7 +79,7 @@ export function Col({
     >
       {children}
     </div>
-  )
+  );
 }
 
 export function Properties({ children }: { children: React.ReactNode }) {
@@ -87,7 +92,7 @@ export function Properties({ children }: { children: React.ReactNode }) {
         {children}
       </ul>
     </div>
-  )
+  );
 }
 
 export function Property({
@@ -95,9 +100,9 @@ export function Property({
   children,
   type,
 }: {
-  name: string
-  children: React.ReactNode
-  type?: string
+  name: string;
+  children: React.ReactNode;
+  type?: string;
 }) {
   return (
     <li className="m-0 px-0 py-4 first:pt-0 last:pb-0">
@@ -120,7 +125,7 @@ export function Property({
         </dd>
       </dl>
     </li>
-  )
+  );
 }
 
 export function Preview({ children }: { children: React.ReactNode }) {
@@ -128,5 +133,5 @@ export function Preview({ children }: { children: React.ReactNode }) {
     <div className="group inline-flex w-full items-center justify-center gap-3 rounded-lg border py-8 sm:max-lg:block">
       {children}
     </div>
-  )
+  );
 }
