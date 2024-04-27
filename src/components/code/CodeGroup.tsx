@@ -46,10 +46,10 @@ export default function CodeGroup({
   const [minimized, setMinimized] = useState(false);
   const codeRef = useRef<HTMLDivElement>(null);
 
-  const canExpand = useMemo(() => {
-    if (!codeRef.current) return false;
-    return codeRef.current.clientHeight > 300;
-  }, [codeRef.current]);
+  console.log(children);
+
+  // const canExpand = (codeRef.current?.clientHeight ?? 0) > 300;
+  // console.log('canExpand', codeRef.current?.clientHeight);
 
   return (
     <CodeGroupContext.Provider value={true}>
@@ -63,14 +63,14 @@ export default function CodeGroup({
           {title}
         </div>
         <div ref={codeRef}>{children}</div>
-        {canExpand && (
-          <Button
-            className="w-xs absolute bottom-0 left-0 right-0 block rounded-2xl bg-transparent p-0 text-sm font-medium text-white"
-            onClick={() => setMinimized(!minimized)}
-          >
-            {minimized ? 'Expand' : 'Collapse'}
-          </Button>
-        )}
+        {/* {canExpand && ( */}
+        <Button
+          className="w-xs absolute bottom-0 left-0 right-0 block rounded-2xl bg-transparent p-0 text-sm font-medium text-white"
+          onClick={() => setMinimized(!minimized)}
+        >
+          {minimized ? 'Expand' : 'Collapse'}
+        </Button>
+        {/* )} */}
       </div>
     </CodeGroupContext.Provider>
   );

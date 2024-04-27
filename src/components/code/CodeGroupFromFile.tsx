@@ -16,10 +16,10 @@ export default function CodeGroupFromFile({
     const fetchCode = async () => {
       const code = await readFile(path);
       setCode(code);
-      console.log('text', code);
+      // console.log('text', code);
     };
 
-    console.log('fetching code');
+    // console.log('fetching code');
     fetchCode();
   }, [path]);
 
