@@ -36,4 +36,8 @@ Contributions are welcome! If you'd like to add new components or features, Plea
 
 ## License
 
-Licensed under the [MIT license](https://git.new/syntax/blob/main/LICENSE).
+Licensed under the [MIT license](https://github.com/ansub/syntaxui/blob/main/LICENSE).
+
+## Credits
+
+[List of people](https://github.com/Ansub/SyntaxUI/blob/main/credits.md) who helped build the components or from whom I have taken the components.
