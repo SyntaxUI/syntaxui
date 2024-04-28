@@ -3,6 +3,7 @@
 import { CopyButton } from '@/components/icons/CopyButton'
 import { Icons } from '@/components/icons/Icons'
 import AnimatedTabs from '@/components/reusable/AnimatedTabs'
+import { codeToHtml } from '@/lib/codeToHtml'
 import { cn } from '@/lib/utils'
 import { Code, Eye } from 'lucide-react'
 import * as React from 'react'
@@ -64,6 +65,15 @@ export function ComponentPreview({
   }, [path])
 
   const [selectedTab, setSelectedTab] = React.useState('preview')
+
+  const [code, setCode] = React.useState<string>('')
+  React.useEffect(() => {
+    const loadCode = async () => {
+      const code = await codeToHtml(codeString, 'tsx')
+      setCode(code)
+    }
+    loadCode()
+  }, [codeString])
 
   return (
     <div
@@ -129,13 +139,18 @@ export function ComponentPreview({
                 className="text-foreground hover:bg-muted hover:text-foreground absolute right-2 top-4 h-7 w-7 opacity-100 [&_svg]:size-3.5"
               />
             </div>
-            <SyntaxHighlighter
+            {/* <SyntaxHighlighter
               wrapLongLines
               language="tsx"
               customStyle={{ fontSize: 14 }}
             >
               {codeString}
-            </SyntaxHighlighter>
+            </SyntaxHighlighter> */}
+            <div
+              dangerouslySetInnerHTML={{
+                __html: code,
+              }}
+            ></div>
           </div>
         </div>
       )}

@@ -15,6 +15,7 @@ import { create } from 'zustand'
 
 import { Tag } from '@/components/Tag'
 import { Button } from './mdx'
+import { codeToHtml } from '@/lib/codeToHtml'
 
 const languageNames: Record<string, string> = {
   js: 'JavaScript',
@@ -373,6 +374,8 @@ export function Code({
         '`Code` children must be a string when nested inside a `CodeGroup`.',
       )
     }
+    // const code = codeToHtml(children, props.className ?? '')
+
     return <code {...props} dangerouslySetInnerHTML={{ __html: children }} />
   }
 
