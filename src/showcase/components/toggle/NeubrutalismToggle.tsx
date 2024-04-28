@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
-const NeobrutalismToggle = ({
+const NeubrutalismToggle = ({
   onToggle,
 }: {
   onToggle?: (toggled: boolean) => void
@@ -50,4 +50,4 @@ const NeobrutalismToggle = ({
   )
 }
 
-export default NeobrutalismToggle
+export default NeubrutalismToggle
