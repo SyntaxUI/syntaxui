@@ -6,6 +6,7 @@ import { CopyButton } from '@/components/icons/CopyButton'
 import { Icons } from '@/components/icons/Icons'
 import { cn } from '@/lib/utils'
 import AnimatedTabs from '@/components/reusable/AnimatedTabs'
+import { Eye, Code } from 'lucide-react'
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string
@@ -64,6 +65,7 @@ export function ComponentPreview({
         selected={selectedTab}
         setSelected={setSelectedTab}
         customID={name}
+        icons={[Eye, Code]}
       />
       {selectedTab === 'preview' && (
         <div className="relative rounded-md border">
@@ -103,9 +105,7 @@ export function ComponentPreview({
       )}
       {selectedTab === 'code' && (
         <div className="flex flex-col space-y-4">
-          <div className="w-full rounded-md [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
-            {codeString}
-          </div>
+          <div className="w-full rounded-md border p-4">{codeString}</div>
         </div>
       )}
     </div>

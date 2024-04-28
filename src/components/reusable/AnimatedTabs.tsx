@@ -24,11 +24,19 @@ const Tab = ({
         ' relative rounded-md px-2 py-1 text-sm font-medium text-gray-500 transition-colors duration-300'
       }
     >
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center space-x-1">
         {Icon && (
-          <Icon className={selected ? 'h-5 w-5 text-red-500' : 'h-5 w-5'} />
+          <Icon
+            className={
+              selected ? 'h-4 w-4 text-red-500' : 'h-4 w-4 text-gray-400'
+            }
+          />
         )}
-        <span className="relative z-10 capitalize">{text}</span>
+        <span
+          className={`relative z-10 capitalize ${selected ? 'text-red-500' : 'text-gray-400'}`}
+        >
+          {text}
+        </span>
       </div>
       {selected && (
         <motion.div
@@ -64,7 +72,7 @@ const AnimatedTabs = ({
     <div
       className={
         (center ? 'justify-center ' : '') +
-        'flex flex-wrap items-center gap-2 border-b border-gray-500/25 bg-white pb-1'
+        'flex flex-wrap items-center gap-2 border-gray-500/25 bg-white pb-1'
       }
     >
       {tabs?.map((tab, index) => (
