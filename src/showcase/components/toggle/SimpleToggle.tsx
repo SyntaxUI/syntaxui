@@ -18,7 +18,7 @@ const SimpleToggle = ({
   }
 
   return (
-    <motion.button
+    <button
       className={`h-[25px] w-[45px] cursor-pointer rounded-full ${
         toggled ? 'bg-red-500' : 'bg-gray-700/50'
       }`}
@@ -33,7 +33,7 @@ const SimpleToggle = ({
         }}
         transition={{ type: 'spring', stiffness: 500, damping: 30 }}
       />
-    </motion.button>
+    </button>
   )
 }
 
