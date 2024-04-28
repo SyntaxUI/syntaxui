@@ -19,15 +19,17 @@ const NeobrutalismToggle = ({
   }
 
   return (
-    <motion.button
-      className={`relative h-[25px] w-[45px] translate-x-1 translate-y-1 cursor-pointer  rounded-full bg-[#222222]`}
+    <button
+      className={
+        'relative h-[25px] w-[45px] translate-x-1 translate-y-1 cursor-pointer  rounded-full bg-[#222222]'
+      }
       onClick={handleToggle}
     >
       <motion.span
-        className="flex h-full w-full items-center justify-center  rounded-full border-[2px]  border-[#222222] bg-[#ff527a] p-[2px]"
+        className={`flex h-full w-full items-center justify-center  rounded-full border-[2px]  border-[#222222] ${toggled ? 'bg-[#ff527a]' : 'bg-gray-400'} p-[2px]`}
         variants={{
-          on: { x: -1, y: -1 },
-          off: { x: -3, y: -3 },
+          off: { x: 0, y: 0 },
+          on: { x: 3, y: -3 },
         }}
         initial={'off'}
         animate={toggled ? 'on' : 'off'}
@@ -44,7 +46,7 @@ const NeobrutalismToggle = ({
           transition={springConfig}
         />
       </motion.span>
-    </motion.button>
+    </button>
   )
 }
 

@@ -8,7 +8,6 @@ const SimpleToggle = ({
   onToggle?: (toggled: boolean) => void
 }) => {
   const [toggled, setToggled] = useState(true)
-  const springConfig = { type: 'spring', stiffness: 500, damping: 30 }
 
   const handleToggle = () => {
     const newState = !toggled
@@ -24,7 +23,6 @@ const SimpleToggle = ({
         toggled ? 'bg-red-500' : 'bg-gray-700/50'
       }`}
       onClick={handleToggle}
-      transition={springConfig}
     >
       <motion.span
         className="inline-block aspect-square h-full transform rounded-full bg-white shadow-lg"
@@ -33,7 +31,7 @@ const SimpleToggle = ({
           opacity: toggled ? 1 : 0.8,
           scale: toggled ? 0.7 : 0.6,
         }}
-        transition={springConfig}
+        transition={{ type: 'spring', stiffness: 500, damping: 30 }}
       />
     </motion.button>
   )
