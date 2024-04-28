@@ -1,33 +1,8 @@
-import Link from 'next/link'
-import { ChevronLeft } from 'lucide-react'
-import PreviewCodeTabs from '@/components/CodePreview/page'
-import BounceLoader from '@/showcase/components/loaders/BounceLoader'
-
-<Link className="flex flex-row items-center" href="/docs/components/loaders">
-  <ChevronLeft size={17} />
-  Back
-</Link>
-
-# Bounce
-
-<div className="mt-4"></div>
-
-<PreviewCodeTabs
-  previewContent={
-    <div className="group">
-      <BounceLoader />
-    </div>
-  }
-  codeContent={`
-const BounceLoader = () => {
-  return (
-    <div className="flex items-center justify-center space-x-2">
-      <div className="h-5 w-5 animate-bounce rounded-full bg-red-500 [animation-delay:-0.3s]"></div>
-      <div className="h-5 w-5 animate-bounce rounded-full bg-red-500 [animation-delay:-0.13s]"></div>
-      <div className="h-5 w-5 animate-bounce rounded-full bg-red-500"></div>
-    </div>
-  )
+export const metadata = {
+    title: 'Bounce Loader',
+    description: 'A loader animation that bounces back and forth.',
 }
-`}
-  language="jsx"
-/>
+
+
+<BackButton href="/docs/components/loaders" />
+<ComponentPreview path="components/loaders/BounceLoader" />
