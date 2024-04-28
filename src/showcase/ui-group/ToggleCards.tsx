@@ -1,12 +1,12 @@
-import NeobrutalismToggle from '@/showcase/components/toggle/NeobrutalismToggle';
-import SimpleToggle from '@/showcase/components/toggle/SimpleToggle';
-import Link from 'next/link';
+import NeobrutalismToggle from '@/showcase/components/toggle/NeubrutalismToggle'
+import SimpleToggle from '@/showcase/components/toggle/SimpleToggle'
+import Link from 'next/link'
 
 interface ToggleCardProps {
-  title: string;
-  link: string;
-  component: React.JSX.Element;
-  hide?: boolean;
+  title: string
+  link: string
+  component: React.JSX.Element
+  hide?: boolean
 }
 const data: ToggleCardProps[] = [
   {
@@ -16,10 +16,10 @@ const data: ToggleCardProps[] = [
   },
   {
     title: 'Neobrutalism Toggle',
-    link: '/docs/components/toggle/neobrutalism-toggle',
+    link: '/docs/components/toggle/neubrutalism-toggle',
     component: <NeobrutalismToggle />,
   },
-];
+]
 
 const ButtonCards = () => {
   return (
@@ -39,7 +39,7 @@ const ButtonCards = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ButtonCards;
+export default ButtonCards

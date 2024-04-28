@@ -18,10 +18,6 @@ const SimpleTabs = () => {
   return (
     <div>
       <Tabs tabs={tabs} activeTab={activeTab} onTabClick={handleTabClick} />
-      {activeTab === 'ansub' && <div>Ansub is working on syntaxUI</div>}
-      {activeTab === 'syntax' && (
-        <div>syntaxUI is for people who want to start rapid development.</div>
-      )}
     </div>
   )
 }
