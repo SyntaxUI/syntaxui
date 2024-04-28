@@ -1,22 +1,22 @@
-'use client';
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+'use client'
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 
 const NeobrutalismToggle = ({
   onToggle,
 }: {
-  onToggle?: (toggled: boolean) => void;
+  onToggle?: (toggled: boolean) => void
 }) => {
-  const [toggled, setToggled] = useState(true);
-  const springConfig = { type: 'spring', stiffness: 500, damping: 30 };
+  const [toggled, setToggled] = useState(true)
+  const springConfig = { type: 'spring', stiffness: 500, damping: 30 }
 
   const handleToggle = () => {
-    const newState = !toggled;
-    setToggled(newState);
+    const newState = !toggled
+    setToggled(newState)
     if (onToggle) {
-      onToggle(newState);
+      onToggle(newState)
     }
-  };
+  }
 
   return (
     <motion.button
@@ -45,7 +45,7 @@ const NeobrutalismToggle = ({
         />
       </motion.span>
     </motion.button>
-  );
-};
+  )
+}
 
-export default NeobrutalismToggle;
+export default NeobrutalismToggle

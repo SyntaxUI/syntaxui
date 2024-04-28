@@ -1,3 +1,5 @@
+'use client'
+
 import { CopyButton } from '@/components/icons/CopyButton'
 import { Icons } from '@/components/icons/Icons'
 import AnimatedTabs from '@/components/reusable/AnimatedTabs'
@@ -66,13 +68,13 @@ export function ComponentPreview({
   return (
     <div
       className={cn(
-        'group relative my-4 flex w-full max-w-5xl flex-col space-y-2',
+        'group relative my-10 flex w-full max-w-5xl flex-col space-y-2',
         className,
       )}
       {...props}
     >
-      <div className="flex flex-row items-center justify-between">
-        <h2 className="text-md font-medium text-gray-800">{name}</h2>
+      <div className="flex items-center justify-between">
+        <h2 className="text-md m-0 font-medium text-gray-800">{name}</h2>
         <AnimatedTabs
           tabs={['preview', 'code']}
           selected={selectedTab}
@@ -127,7 +129,11 @@ export function ComponentPreview({
                 className="text-foreground hover:bg-muted hover:text-foreground absolute right-2 top-4 h-7 w-7 opacity-100 [&_svg]:size-3.5"
               />
             </div>
-            <SyntaxHighlighter language="tsx" customStyle={{ fontSize: 14 }}>
+            <SyntaxHighlighter
+              wrapLongLines
+              language="tsx"
+              customStyle={{ fontSize: 14 }}
+            >
               {codeString}
             </SyntaxHighlighter>
           </div>
