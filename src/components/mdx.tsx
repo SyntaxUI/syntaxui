@@ -7,6 +7,8 @@ import { Prose } from '@/components/Prose'
 export const a = Link
 export { Button } from '@/components/ui/button'
 export { CodeGroup, Code as code, Pre as pre } from '@/components/Code'
+export { ComponentPreview } from '@/components/ComponentPreview'
+export { BackButton } from '@/components/BackButton'
 
 export function wrapper({ children }: { children: React.ReactNode }) {
   return (

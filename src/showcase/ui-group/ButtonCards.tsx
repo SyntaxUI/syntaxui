@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import ThreeDButton from '@/showcase/components/button/ThreeDButton'
+import ThreeDButton from '@/showcase/components/button/3DButton'
 import HeartbeatButton from '@/showcase/components/button/HeartbeatButton'
 import NeubrutalismButton from '@/showcase/components/button/NeubrutalismButton'
 import StitchesButton from '@/showcase/components/button/StitchesButton'
@@ -8,7 +8,7 @@ const data = [
   {
     id: 1,
     title: '3D Button',
-    link: '/docs/components/button/three-d-button',
+    link: '/docs/components/button/3d-button',
     component: <ThreeDButton />,
   },
   {
