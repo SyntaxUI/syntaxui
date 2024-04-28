@@ -139,13 +139,6 @@ export function ComponentPreview({
                 className="text-foreground hover:bg-muted hover:text-foreground absolute right-2 top-4 h-7 w-7 opacity-100 [&_svg]:size-3.5"
               />
             </div>
-            {/* <SyntaxHighlighter
-              wrapLongLines
-              language="tsx"
-              customStyle={{ fontSize: 14 }}
-            >
-              {codeString}
-            </SyntaxHighlighter> */}
             <div
               dangerouslySetInnerHTML={{
                 __html: code,
