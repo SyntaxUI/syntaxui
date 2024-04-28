@@ -92,13 +92,25 @@ heartbeat-button/
 
 Please use other `page.mdx` files as guides when creating a new page.
 
-##### ComponentPreview
+###### ComponentPreview
 
 `<ComponentPreview>` is a component that we made that makes it very simple to add in the preview/code tab group that you see on most of our docs.
 
 You can use it by passing in a `path` that is relative to `src/showcase/`.
 
 For example, if we wanted to display a tab for a preview of our HeartbeatButton component and a tab for the code of that button we would add `<ComponentPreview path="components/button/HeartbeatButton" />` into the appropriate `page.mdx`.
+
+##### Adding the Feature to a UI Group
+
+We have several UI Groups in `src/showcase/ui-group/` that each contain an array of features. Add your new feature to the end of that array by continuing the pattern.
+
+##### Creating Navigation Links
+
+If you are creating a new feature type you must also add it the our Navigation system. More precisely, if you want to add a new feature that does not already have a subfolder, then this step applies.
+
+- The Button subfolder already exists in our system, so adding a new button will not change the navigation and therefore you can skip this step
+
+In `src/components/Navigation.tsx` there is array named `navigation`. Please add the appropriate new `NavGroup` to this array, making sure to continue the pre-existing patterns.
 
 ## Reporting Bugs
 
