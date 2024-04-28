@@ -5,7 +5,8 @@ import { Icons } from '@/components/icons/Icons'
 import AnimatedTabs from '@/components/reusable/AnimatedTabs'
 import { codeToHtml } from '@/lib/codeToHtml'
 import { cn } from '@/lib/utils'
-import { Code, Eye } from 'lucide-react'
+import { Code as CodeIcon, Eye } from 'lucide-react'
+import Code from '@/components/code/Code'
 import * as React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
@@ -90,7 +91,7 @@ export function ComponentPreview({
           selected={selectedTab}
           setSelected={setSelectedTab}
           customID={path}
-          icons={[Eye, Code]}
+          icons={[Eye, CodeIcon]}
         />
       </div>
       {selectedTab === 'preview' && (
@@ -132,7 +133,7 @@ export function ComponentPreview({
       {selectedTab === 'code' && (
         <div className="relative w-full">
           <div>
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <CopyButton
                 value={codeString}
                 variant="outline"
@@ -143,7 +144,8 @@ export function ComponentPreview({
               dangerouslySetInnerHTML={{
                 __html: code,
               }}
-            ></div>
+            ></div> */}
+            <Code code={codeString} language="tsx" />
           </div>
         </div>
       )}
