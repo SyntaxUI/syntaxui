@@ -5,7 +5,6 @@ import { cn } from '@/lib/utils'
 import { Code, Eye } from 'lucide-react'
 import * as React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { agate, dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   path: string
@@ -43,7 +42,7 @@ export function ComponentPreview({
         <p className="text-muted-foreground text-sm">
           Component{' '}
           <code className="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
-            {name}
+            {path}
           </code>{' '}
           not found.
         </p>
@@ -53,7 +52,9 @@ export function ComponentPreview({
 
   const codeString = React.useMemo(() => {
     try {
-      return require(`!!raw-loader!../showcase/${path}.tsx`).default
+      const code = require(`!!raw-loader!../showcase/${path}.tsx`).default
+      const filteredCode = code.replace(/'use client'\n/, '')
+      return filteredCode
     } catch (error) {
       console.error(`Failed to load code for component ${path}:`, error)
       return null
@@ -126,15 +127,7 @@ export function ComponentPreview({
                 className="text-foreground hover:bg-muted hover:text-foreground absolute right-2 top-2 h-7 w-7 opacity-100 [&_svg]:size-3.5"
               />
             </div>
-            <SyntaxHighlighter
-              language="jsx"
-              style={dracula}
-              wrapLongLines
-              customStyle={{
-                background: 'black',
-                fontSize: 12,
-              }}
-            >
+            <SyntaxHighlighter language="tsx" customStyle={{ fontSize: 14 }}>
               {codeString}
             </SyntaxHighlighter>
           </div>
