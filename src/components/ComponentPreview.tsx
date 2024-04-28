@@ -124,7 +124,7 @@ export function ComponentPreview({
               <CopyButton
                 value={codeString}
                 variant="outline"
-                className="text-foreground hover:bg-muted hover:text-foreground absolute right-2 top-2 h-7 w-7 opacity-100 [&_svg]:size-3.5"
+                className="text-foreground hover:bg-muted hover:text-foreground absolute right-2 top-4 h-7 w-7 opacity-100 [&_svg]:size-3.5"
               />
             </div>
             <SyntaxHighlighter language="tsx" customStyle={{ fontSize: 14 }}>
