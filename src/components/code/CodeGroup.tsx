@@ -12,28 +12,6 @@ import {
 } from 'react'
 import { Button } from '../mdx'
 
-interface CodeBlock {
-  language?: string
-  code: string
-}
-function extractCodeBlock(markdown: string) {
-  // Regular expression to find a single code block, capturing optional language and code content
-  const regex = /```(\w+)?\s*([\s\S]*?)```|`([^`]+)`/
-  const match = regex.exec(markdown)
-
-  if (match) {
-    if (match[1]) {
-      // Fenced code block with language
-      return { language: match[1], code: match[2].trim() }
-    } else if (match[3]) {
-      // Inline code block (no language specified)
-      return { language: undefined, code: match[3].trim() }
-    }
-  }
-
-  return undefined // No code block found
-}
-
 export const CodeGroupContext = createContext(false)
 
 export default function CodeGroup({
@@ -53,13 +31,15 @@ export default function CodeGroup({
     <CodeGroupContext.Provider value={true}>
       <div
         className={cn(
-          'relative mb-4 max-h-[2000px] overflow-hidden rounded-2xl transition-[max-height] duration-500 ',
+          'relative mb-4 max-h-full overflow-hidden rounded-2xl transition-[max-height] duration-500 ',
           minimized ? 'max-h-[300px]' : '',
         )}
       >
-        <div className="border border-zinc-700  bg-zinc-800 px-5 py-3 text-xs font-semibold text-white">
-          {title}
-        </div>
+        {title && (
+          <div className="border border-zinc-700  bg-zinc-800 px-5 py-3 text-xs font-semibold text-white">
+            {title}
+          </div>
+        )}
         <div ref={codeRef}>{children}</div>
         {/* {canExpand && ( */}
         <Button

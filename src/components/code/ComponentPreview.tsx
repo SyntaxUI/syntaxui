@@ -1,12 +1,11 @@
 'use client'
 
-import { CopyButton } from '@/components/icons/CopyButton'
+import { CopyButton } from './CopyButton'
 import { Icons } from '@/components/icons/Icons'
 import AnimatedTabs from '@/components/reusable/AnimatedTabs'
 import { cn } from '@/lib/utils'
 import { Code as CodeIcon, Eye } from 'lucide-react'
 import Code, { RawCode } from '@/components/code/Code'
-import CodeGroup from '@/components/code/CodeGroup'
 import * as React from 'react'
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -86,15 +85,7 @@ export function ComponentPreview({
       </div>
       {selectedTab === 'preview' && (
         <div className="relative rounded-md border">
-          <div className="flex items-center justify-between p-4">
-            <div className="flex items-center gap-2">
-              <CopyButton
-                value={codeString}
-                variant="outline"
-                className="text-foreground hover:bg-muted hover:text-foreground absolute right-2 top-2 h-7 w-7 opacity-100 [&_svg]:size-3.5"
-              />
-            </div>
-          </div>
+          <CopyButton value={codeString} />
           <div>
             <div
               className={cn(
@@ -122,9 +113,7 @@ export function ComponentPreview({
       )}
       {selectedTab === 'code' && (
         <div className="relative w-full">
-          <CodeGroup title={name}>
-            <Code code={codeString} language="tsx" />
-          </CodeGroup>
+          <Code code={codeString} language="tsx" />
         </div>
       )}
     </div>

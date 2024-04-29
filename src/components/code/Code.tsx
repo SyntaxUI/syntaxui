@@ -4,6 +4,7 @@ import codeToHtml from '@/lib/codeToHtml'
 import { Suspense, useContext, useEffect, useMemo, useState } from 'react'
 import { CodeGroupContext } from './CodeGroup'
 import { cn } from '@/lib/utils'
+import { CopyButton } from './CopyButton'
 
 export default function Code({
   code: rawCode,
@@ -78,7 +79,7 @@ export function RawCode({
   return <Code code={rawCode} language={rawLang} />
 }
 
-function ClipboardIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+export function ClipboardIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 20 20" aria-hidden="true" {...props}>
       <path
@@ -91,56 +92,5 @@ function ClipboardIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
         d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"
       />
     </svg>
-  )
-}
-
-function CopyButton({ value }: { value: string }) {
-  let [copyCount, setCopyCount] = useState(0)
-  let copied = copyCount > 0
-
-  useEffect(() => {
-    if (copyCount > 0) {
-      let timeout = setTimeout(() => setCopyCount(0), 1000)
-      return () => {
-        clearTimeout(timeout)
-      }
-    }
-  }, [copyCount])
-
-  return (
-    <button
-      type="button"
-      className={cn(
-        'group/button obackdrop-blur absolute right-2 top-2 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium transition focus:opacity-100',
-        copied
-          ? 'bg-red-400/10 ring-1 ring-inset ring-red-400/20'
-          : 'bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5',
-      )}
-      onClick={() => {
-        window.navigator.clipboard.writeText(value).then(() => {
-          setCopyCount((count) => count + 1)
-        })
-      }}
-    >
-      <span
-        aria-hidden={copied}
-        className={cn(
-          'pointer-events-none flex items-center gap-0.5 text-zinc-400 transition duration-300',
-          copied && '-translate-y-1.5 opacity-0',
-        )}
-      >
-        <ClipboardIcon className="h-5 w-5 fill-zinc-500/20 stroke-zinc-500 transition-colors group-hover/button:stroke-zinc-400" />
-        Copy
-      </span>
-      <span
-        aria-hidden={!copied}
-        className={cn(
-          'pointer-events-none absolute inset-0 flex items-center justify-center text-red-400 transition duration-300',
-          !copied && 'translate-y-1.5 opacity-0',
-        )}
-      >
-        Copied!
-      </span>
-    </button>
   )
 }
