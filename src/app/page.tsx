@@ -27,7 +27,7 @@ const DiscordButton = () => {
     >
       <span className="absolute inset-[-1000%] animate-discord-button bg-[conic-gradient(from_calc(var(--discord-button-angle)+60deg)_at_calc(50%+var(--discord-button-x))_50%,transparent_50%,#5865F2_98%,transparent_100%)]"></span>
       <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-[#5865F2] backdrop-blur ">
-        <span>Join the Discord Family</span>
+        <span>Join the Discord</span>
         <svg
           viewBox="0 0 256 199"
           width="16"
