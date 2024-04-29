@@ -1,7 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { readFile } from '@/lib/readFile'
-import SyntaxHighlighter from './SyntaxHighlighter'
 import CodeGroup from './CodeGroup'
 import Code from './Code'
 

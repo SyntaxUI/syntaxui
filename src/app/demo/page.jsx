@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { ComponentPreview } from '@/components/ComponentPreview'
+import { ComponentPreview } from '@/components/code/ComponentPreview'
 
 export default function Demo() {
   return (
