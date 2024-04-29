@@ -12,13 +12,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const DiscordButton = ({
-  backgroundAnimation = false,
-  borderAnimation = false,
-}: {
-  backgroundAnimation?: boolean
-  borderAnimation?: boolean
-}) => {
+const DiscordButton = () => {
   return (
     <motion.button
       className="relative mb-8 inline-flex overflow-hidden  rounded-full p-[1px] ring-1 ring-inset ring-blue-700/10"
@@ -31,9 +25,7 @@ const DiscordButton = ({
         window.open('https://discord.gg/P8GXYyH3ZU', '_blank')
       }}
     >
-      {borderAnimation && (
-        <span className="absolute inset-[-1000%] animate-discord-button bg-[conic-gradient(from_calc(var(--discord-button-angle)+60deg)_at_calc(50%+var(--discord-button-x))_50%,transparent_50%,#5865F2_98%,transparent_100%)]"></span>
-      )}
+      <span className="absolute inset-[-1000%] animate-discord-button bg-[conic-gradient(from_calc(var(--discord-button-angle)+60deg)_at_calc(50%+var(--discord-button-x))_50%,transparent_50%,#5865F2_98%,transparent_100%)]"></span>
       <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-[#5865F2] backdrop-blur ">
         <span>Join the Discord Family</span>
         <svg
@@ -48,13 +40,6 @@ const DiscordButton = ({
             fill="#5865F2"
           />
         </svg>
-        {backgroundAnimation && (
-          <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-30 blur-lg"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 5, repeat: Infinity, ease: 'linear' }}
-          ></motion.div>
-        )}
       </span>
     </motion.button>
   )
@@ -67,7 +52,7 @@ const Home = () => {
         <Header />
         <div className="my-[8rem] flex h-full flex-col items-center justify-center gap-4 px-3">
           <div className="flex w-full flex-col items-center justify-center gap-2">
-            <DiscordButton borderAnimation />
+            <DiscordButton />
             <Image
               src="/images/syntaxUI.svg"
               alt="syntaxUI"
