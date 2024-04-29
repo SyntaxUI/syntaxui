@@ -92,13 +92,15 @@ heartbeat-button/
 
 Please use other `page.mdx` files as guides when creating a new page.
 
-###### ComponentPreview
+###### Code Previews
 
-`<ComponentPreview>` is a component that we made that makes it very simple to add in the preview/code tab group that you see on most of our docs.
-
-You can use it by passing in a `path` that is relative to `src/showcase/`.
-
-For example, if we wanted to display a tab for a preview of our HeartbeatButton component and a tab for the code of that button we would add `<ComponentPreview path="components/button/HeartbeatButton" />` into the appropriate `page.mdx`.
+- **ComponentPreview**: the simplest way to display a tab group with a component preview and code. Please use this whenever applicable.
+  - You can use it by passing in a `path` that is relative to `src/showcase/`.
+  - For example, if you wanted to display a tab for a preview of our HeartbeatButton component and a tab for the code of that button you would add `<ComponentPreview path="components/button/HeartbeatButton" />` into the appropriate `page.mdx`.
+- **CodeGroup**: a way to display just code (for example, hooks that do not have component previews) with a title.
+  - You can use this by adding `<CodeGroup title="filename">```insert code here inside backticks```</CodeGroup>`
+- **PreviewCodeGroup**: a way to display a tab group with a component preview and code where you want to explicitly specify the title, preview, code, and language.
+  - Check out `/src/docs/animations/hovers/jiggle/page.mdx` for an example.
 
 ##### Adding the Feature to a UI Group
 
