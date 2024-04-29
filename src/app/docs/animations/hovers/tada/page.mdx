@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { HoverTadaButton } from '@/showcase/animations/hover/HoverTadaButton'
 import { ChevronLeft } from 'lucide-react'
-import PreviewCodeTabs from '@/components/CodePreview/page'
+import PreviewCodeGroup from '@/components/code/PreviewCodeGroup'
 
 <Link className="flex flex-row items-center" href="/docs/animations/hovers">
   <ChevronLeft size={17} />
@@ -12,14 +12,15 @@ import PreviewCodeTabs from '@/components/CodePreview/page'
 
 <div className="mt-4"></div>
 
-<PreviewCodeTabs
-  previewContent={
+<PreviewCodeGroup
+  title="Tada"
+  preview={
     <div className="group flex w-full items-center justify-center">
       <HoverTadaButton />
     </div>
   }
-  codeContent={`
-  {
+  code={`
+{
   animation: {
     "hover-tada": "hover-tada 1s ease-in-out"
   },
@@ -57,9 +58,10 @@ import PreviewCodeTabs from '@/components/CodePreview/page'
       },
       "100%": {
         "transform": "scale(1) rotate(0)"
-      }
+      },
     },
   }
-}`}
+}
+`}
   language="javascript"
 />

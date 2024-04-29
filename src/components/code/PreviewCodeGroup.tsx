@@ -2,8 +2,8 @@
 
 import { Tabs } from '@/components/reusable/Tabs'
 import { useState } from 'react'
-import SyntaxHighlighter from './SyntaxHighlighter'
 import CodeGroup from './CodeGroup'
+import Code from './Code'
 
 export default function PreviewCodeGroup({
   code,
@@ -40,7 +40,7 @@ export default function PreviewCodeGroup({
         <div className="rounded-2xl border p-6">{preview}</div>
       ) : (
         <CodeGroup title={title}>
-          <SyntaxHighlighter code={code} className={language} />
+          <Code code={code} language={language} />
         </CodeGroup>
       )}
     </div>

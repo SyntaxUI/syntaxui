@@ -9,15 +9,11 @@ import { Prose } from '@/components/Prose'
 export const a = Link
 export { BackButton } from '@/components/BackButton'
 export { Button } from '@/components/ui/button'
-// export { CodeGroup, Code as code, Pre as pre } from '@/components/Code'
-// export { Code as code, Pre as pre } from '@/components/NewCode'
-export { ComponentPreview } from '@/components/ComponentPreview'
-// export { default as code } from '@/components/code/SyntaxHighlighter'
+export { ComponentPreview } from '@/components/code/ComponentPreview'
 export { RawCode as code } from '@/components/code/Code'
 export { default as CodeGroup } from '@/components/code/CodeGroup'
 export { default as CodeGroupFromFile } from '@/components/code/CodeGroupFromFile'
 export { default as PreviewCodeGroup } from '@/components/code/PreviewCodeGroup'
-export { default as PreviewCodeGroupFromFile } from '@/components/code/PreviewCodeGroupFromFile'
 
 export function wrapper({ children }: { children: React.ReactNode }) {
   return (

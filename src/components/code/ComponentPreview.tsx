@@ -3,12 +3,11 @@
 import { CopyButton } from '@/components/icons/CopyButton'
 import { Icons } from '@/components/icons/Icons'
 import AnimatedTabs from '@/components/reusable/AnimatedTabs'
-import { codeToHtml } from '@/lib/codeToHtml'
 import { cn } from '@/lib/utils'
 import { Code as CodeIcon, Eye } from 'lucide-react'
-import Code from '@/components/code/Code'
+import Code, { RawCode } from '@/components/code/Code'
+import CodeGroup from '@/components/code/CodeGroup'
 import * as React from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   path: string
@@ -38,16 +37,16 @@ export function ComponentPreview({
 
   const Preview = React.useMemo(() => {
     try {
-      const Component = require(`../showcase/${path}.tsx`).default
+      const Component = require(`../../showcase/${path}.tsx`).default
       return <Component />
     } catch (error) {
       console.error(`Failed to load component ${path}:`, error)
       return (
         <p className="text-muted-foreground text-sm">
           Component{' '}
-          <code className="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
+          <RawCode className="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
             {path}
-          </code>{' '}
+          </RawCode>{' '}
           not found.
         </p>
       )
@@ -56,7 +55,7 @@ export function ComponentPreview({
 
   const codeString = React.useMemo(() => {
     try {
-      const code = require(`!!raw-loader!../showcase/${path}.tsx`).default
+      const code = require(`!!raw-loader!../../showcase/${path}.tsx`).default
       const filteredCode = code.replace(/'use client'\n/, '')
       return filteredCode
     } catch (error) {
@@ -66,15 +65,6 @@ export function ComponentPreview({
   }, [path])
 
   const [selectedTab, setSelectedTab] = React.useState('preview')
-
-  const [code, setCode] = React.useState<string>('')
-  React.useEffect(() => {
-    const loadCode = async () => {
-      const code = await codeToHtml(codeString, 'tsx')
-      setCode(code)
-    }
-    loadCode()
-  }, [codeString])
 
   return (
     <div
@@ -132,21 +122,9 @@ export function ComponentPreview({
       )}
       {selectedTab === 'code' && (
         <div className="relative w-full">
-          <div>
-            {/* <div className="flex items-center gap-2">
-              <CopyButton
-                value={codeString}
-                variant="outline"
-                className="text-foreground hover:bg-muted hover:text-foreground absolute right-2 top-4 h-7 w-7 opacity-100 [&_svg]:size-3.5"
-              />
-            </div>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: code,
-              }}
-            ></div> */}
+          <CodeGroup title={name}>
             <Code code={codeString} language="tsx" />
-          </div>
+          </CodeGroup>
         </div>
       )}
     </div>

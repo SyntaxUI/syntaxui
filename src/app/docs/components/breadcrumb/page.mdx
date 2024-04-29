@@ -1,5 +1,5 @@
 import SimpleBreadcrumb from '@/showcase/components/breadcrumb/SimpleBreadcrumb'
-import PreviewCodeTabs from '@/components/CodePreview/page'
+import PreviewCodeGroup from '@/components/code/PreviewCodeGroup'
 
 export const metadata = {
   title: 'Breadcrumb',
@@ -13,13 +13,14 @@ export const metadata = {
 
 ## Simple Breadcrumb
 
-<PreviewCodeTabs
-  previewContent={
+<PreviewCodeGroup
+  title="Simple Breadcrumb"
+  preview={
     <div className="group flex w-full items-center justify-center">
       <SimpleBreadcrumb />
     </div>
   }
-  codeContent={`
+  code={`
     import Link from 'next/link'
     import { ChevronRight } from 'lucide-react'
 

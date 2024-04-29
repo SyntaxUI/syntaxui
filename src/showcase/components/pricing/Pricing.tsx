@@ -7,7 +7,8 @@ import { useState } from 'react'
 const pricingPlans = [
   {
     name: 'Basic',
-    description: 'Start with essential tools to boost your online presence.',
+    description:
+      'Start with essential tools to boost your online presence. Use the basics now!',
     monthlyPrice: 69,
     annualPrice: 49,
     features: [
@@ -38,7 +39,7 @@ const pricingPlans = [
   {
     name: 'Premium',
     description:
-      'Ultimate customization and dedicated support for enterprises.',
+      'Ultimate customization and dedicated support for enterprises. Get the best now!',
     monthlyPrice: 2499,
     annualPrice: 1666,
     features: [
