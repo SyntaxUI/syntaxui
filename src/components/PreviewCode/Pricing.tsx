@@ -148,9 +148,8 @@ const Pricing = () => {
   )
 }
 
-const BackgroundShift = ({ key }: { key: string }) => (
+const BackgroundShift = () => (
   <motion.span
-    key={key}
     layoutId="bg-shift"
     className="absolute inset-0 -z-10 rounded-lg bg-red-500"
     initial={{ opacity: 0, scale: 0.8 }}
