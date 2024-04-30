@@ -38,3 +38,8 @@
   inherits: false;
   initial-value: 0;
 }
+@property --shimmer-button-x {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0;
+}

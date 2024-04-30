@@ -212,6 +212,14 @@ export default {
             '--discord-button-x': '50px',
           },
         },
+        'shimmer-button': {
+          from: {
+            '--shimmer-button-x': '-100%',
+          },
+          to: {
+            '--shimmer-button-x': '200%',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -225,6 +233,8 @@ export default {
         'hover-vibrate': 'hover-vibrate 0.4s ease-in-out',
         'discord-button':
           'discord-button-angle 6s linear infinite, discord-button-x 6s 0.5s ease-in-out infinite',
+        'shimmer-button':
+          'shimmer-button 3s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950)',
       },
     },
   },

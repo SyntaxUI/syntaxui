@@ -1,0 +1,101 @@
+import ShimmerButton from '@//showcase/components/button/ShimmerButton'
+import { RequiresTailwind } from '@/components/Requires'
+import Link from 'next/link'
+import { ChevronLeft } from 'lucide-react'
+
+export const metadata = {
+  title: 'Shimmer Button',
+  description: 'A Button that gives a shimmer effect, built using Tailwind CSS for React, Framer Motion, and React based libraries like Next.js',
+}
+
+<Link className="flex flex-row items-center" href="/docs/components/button">
+  <ChevronLeft size={17} />
+  Back
+</Link>
+
+# Shimmer Button
+
+<div className="my-4"></div>
+
+<Preview>
+  <ShimmerButton />
+</Preview>
+
+Step 1. Add the `@property` to your CSS
+
+<CodeGroup title="styles.css">
+```css
+@property --shimmer-button-x {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0;
+}
+```
+</CodeGroup>
+
+Step 2. Add the animation to your `tailwind.config.js`
+
+<CodeGroup title="tailwind.config.js">
+
+```js {{ title: 'React' }}
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        'shimmer-button': 'shimmer-button 3s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950)',
+      },
+      keyframes: {
+        'shimmer-button': {
+          from: {
+            '--shimmer-button-x': '-100%',
+          },
+          to: {
+            '--shimmer-button-x': '200%',
+          },
+        },
+      },
+    },
+  },
+}
+```
+
+</CodeGroup>
+
+Step 3. Use the component ✨
+
+<CodeGroup title="ShimmerButton.tsx">
+
+```tsx
+import React from 'react'
+import { motion } from 'framer-motion'
+
+const ShimmerButton = () => {
+  return (
+    <motion.button
+      className="animate-shimmer-button inline-flex overflow-hidden rounded-lg bg-[linear-gradient(120deg,#fb3b53_calc(var(--shimmer-button-x)-25%),#f6f6f6_var(--shimmer-button-x),#fb3b53_calc(var(--shimmer-button-x)+25%))] *:[--border:0.125rem]"
+      initial={{
+        scale: 1,
+      }}
+      whileTap={{
+        scale: 0.95,
+      }}
+      whileHover={{
+        scale: 1.05,
+      }}
+      transition={{
+        stiffness: 500,
+        damping: 20,
+        type: 'spring',
+      }}
+    >
+      <span className="m-[var(--border)] rounded-[calc(0.5rem-var(--border))] bg-[#f8607b]/90 px-[calc(1rem-var(--border))] py-[calc(0.25rem-var(--border))] text-[#f6f6f6] backdrop-blur-sm">
+        Syntax UI
+      </span>
+    </motion.button>
+  )
+}
+
+export default ShimmerButton
+```
+
+</CodeGroup>
