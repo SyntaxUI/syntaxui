@@ -1,4 +1,4 @@
-import NeobrutalismToggle from '@/showcase/components/toggle/NeubrutalismToggle'
+import NeubrutalismToggle from '@/showcase/components/toggle/NeubrutalismToggle'
 import SimpleToggle from '@/showcase/components/toggle/SimpleToggle'
 import Link from 'next/link'
 
@@ -15,9 +15,9 @@ const data: ToggleCardProps[] = [
     component: <SimpleToggle />,
   },
   {
-    title: 'Neobrutalism Toggle',
+    title: 'Neubrutalism Toggle',
     link: '/docs/components/toggle/neubrutalism-toggle',
-    component: <NeobrutalismToggle />,
+    component: <NeubrutalismToggle />,
   },
 ]
 
