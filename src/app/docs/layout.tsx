@@ -18,8 +18,12 @@ export default async function RootLayout({
   let allSections = Object.fromEntries(allSectionsEntries)
 
   return (
-    <div className="flex min-h-full w-full bg-white antialiased dark:bg-zinc-900">
-      <Layout allSections={allSections}>{children}</Layout>
-    </div>
+    <html lang="en" className="h-full" suppressHydrationWarning>
+      <body className="flex min-h-full bg-white antialiased dark:bg-zinc-900">
+        <div className="w-full">
+          <Layout allSections={allSections}>{children}</Layout>
+        </div>
+      </body>
+    </html>
   )
 }
