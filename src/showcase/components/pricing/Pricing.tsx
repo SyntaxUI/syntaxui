@@ -7,8 +7,7 @@ import { useState } from 'react'
 const pricingPlans = [
   {
     name: 'Basic',
-    description:
-      'Start with essential tools to boost your online presence. Use the basics now!',
+    description: 'Start with essential tools to boost your online presence.',
     monthlyPrice: 69,
     annualPrice: 49,
     features: [
@@ -39,7 +38,7 @@ const pricingPlans = [
   {
     name: 'Premium',
     description:
-      'Ultimate customization and dedicated support for enterprises. Get the best now!',
+      'Ultimate customization and dedicated support for enterprises.',
     monthlyPrice: 2499,
     annualPrice: 1666,
     features: [
@@ -102,10 +101,10 @@ const Pricing = () => {
           key={index}
           className="w-full rounded-xl border-[1px] border-gray-300 bg-white p-6 text-left"
         >
-          <p className="mb-1 text-sm font-medium uppercase text-red-500">
+          <p className="mb-1 mt-0 text-sm font-medium uppercase text-red-500">
             {plan.name}
           </p>
-          <p className="mb-6 text-sm text-gray-600">{plan.description}</p>
+          <p className="my-0 mb-6 text-sm text-gray-600">{plan.description}</p>
           <div className="mb-8 overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.p
@@ -113,7 +112,7 @@ const Pricing = () => {
                 initial={{ y: -50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ type: 'spring', stiffness: 100 }}
-                className="text-3xl font-semibold text-gray-900"
+                className="my-0 text-3xl font-semibold text-gray-900"
               >
                 <span>
                   {billingCycle === 'M' ? plan.monthlyPrice : plan.annualPrice}
@@ -142,7 +141,7 @@ const Pricing = () => {
   )
 
   return (
-    <section className="relative w-full overflow-hidden bg-white px-4 py-12 text-black lg:px-8 lg:py-12">
+    <section className="relative w-full overflow-hidden bg-white py-12 text-black lg:px-2 lg:py-12">
       <Heading />
       <PricingCards />
     </section>

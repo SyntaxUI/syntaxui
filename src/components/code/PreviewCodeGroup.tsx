@@ -2,19 +2,16 @@
 
 import { Tabs } from '@/components/reusable/Tabs'
 import { useState } from 'react'
-import CodeGroup from './CodeGroup'
 import Code from './Code'
 
 export default function PreviewCodeGroup({
   code,
   language,
   preview,
-  title,
 }: {
   code: string
   language: string
   preview: React.ReactNode
-  title?: string
 }) {
   const [activeTab, setActiveTab] = useState('preview')
 
@@ -39,9 +36,7 @@ export default function PreviewCodeGroup({
       {activeTab === 'preview' ? (
         <div className="rounded-2xl border p-6">{preview}</div>
       ) : (
-        <CodeGroup title={title}>
-          <Code code={code} language={language} />
-        </CodeGroup>
+        <Code code={code} language={language} />
       )}
     </div>
   )
