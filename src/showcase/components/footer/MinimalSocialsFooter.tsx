@@ -48,7 +48,7 @@ const SocialLink = ({
 
 const MinimalSocialsFooter = () => {
   return (
-    <div className="flex flex-col items-center justify-between gap-5 border-t border-gray-900/5 pt-8 sm:flex-row dark:border-white/5">
+    <div className="flex w-full flex-col items-center justify-between gap-5 border-t border-gray-900/5 pt-8 sm:flex-row dark:border-white/5">
       <p className="text-xs text-gray-600 dark:text-gray-400">
         Copyright © {new Date().getFullYear()}{' '}
         <a href="https://twitter.com/justansub" className="underline">

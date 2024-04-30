@@ -21,7 +21,7 @@ export default function CodeGroup({
   children: React.ReactNode
   title?: string
 }) {
-  const [minimized, setMinimized] = useState(false)
+  const [minimized, setMinimized] = useState(true)
   const codeRef = useRef<HTMLDivElement>(null)
 
   // const canExpand = (codeRef.current?.clientHeight ?? 0) > 300;
@@ -31,7 +31,7 @@ export default function CodeGroup({
     <CodeGroupContext.Provider value={true}>
       <div
         className={cn(
-          'relative mb-4 max-h-full overflow-hidden rounded-2xl transition-[max-height] duration-500 ',
+          'relative mb-4 mt-8 max-h-full overflow-hidden rounded-2xl transition-[max-height] duration-500',
           minimized ? 'max-h-[300px]' : '',
         )}
       >
