@@ -31,10 +31,9 @@ If applicable, please include screenshots or GIFs to demonstrate the changes mad
 Please check the boxes that apply:
 
 - [ ] I have tested the changes locally
+- [ ] I ran `npm run build` and build is successful
 - [ ] I have added necessary documentation (if applicable)
-- [ ] I have updated the README (if applicable)
-- [ ] I have added tests to cover the changes (if applicable)
-- [ ] All new and existing tests passed
+- [ ] I have updated the credits.md file (if applicable)
 
 ## Additional Context
 
