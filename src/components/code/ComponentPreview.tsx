@@ -1,12 +1,12 @@
 'use client'
 
-import { CopyButton } from '@/components/icons/CopyButton'
+import { CopyButton } from './CopyButton'
 import { Icons } from '@/components/icons/Icons'
 import AnimatedTabs from '@/components/reusable/AnimatedTabs'
 import { cn } from '@/lib/utils'
-import { Code, Eye } from 'lucide-react'
+import { Code as CodeIcon, Eye } from 'lucide-react'
+import Code, { RawCode } from '@/components/code/Code'
 import * as React from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   path: string
@@ -36,16 +36,16 @@ export function ComponentPreview({
 
   const Preview = React.useMemo(() => {
     try {
-      const Component = require(`../showcase/${path}.tsx`).default
+      const Component = require(`../../showcase/${path}.tsx`).default
       return <Component />
     } catch (error) {
       console.error(`Failed to load component ${path}:`, error)
       return (
         <p className="text-muted-foreground text-sm">
           Component{' '}
-          <code className="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
+          <RawCode className="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
             {path}
-          </code>{' '}
+          </RawCode>{' '}
           not found.
         </p>
       )
@@ -54,7 +54,7 @@ export function ComponentPreview({
 
   const codeString = React.useMemo(() => {
     try {
-      const code = require(`!!raw-loader!../showcase/${path}.tsx`).default
+      const code = require(`!!raw-loader!../../showcase/${path}.tsx`).default
       const filteredCode = code.replace(/'use client'\n/, '')
       return filteredCode
     } catch (error) {
@@ -80,20 +80,12 @@ export function ComponentPreview({
           selected={selectedTab}
           setSelected={setSelectedTab}
           customID={path}
-          icons={[Eye, Code]}
+          icons={[Eye, CodeIcon]}
         />
       </div>
       {selectedTab === 'preview' && (
         <div className="relative rounded-md border">
-          <div className="flex items-center justify-between p-4">
-            <div className="flex items-center gap-2">
-              <CopyButton
-                value={codeString}
-                variant="outline"
-                className="text-foreground hover:bg-muted hover:text-foreground absolute right-2 top-2 h-7 w-7 opacity-100 [&_svg]:size-3.5"
-              />
-            </div>
-          </div>
+          <CopyButton value={codeString} />
           <div>
             <div
               className={cn(
@@ -121,22 +113,7 @@ export function ComponentPreview({
       )}
       {selectedTab === 'code' && (
         <div className="relative w-full">
-          <div>
-            <div className="flex items-center gap-2">
-              <CopyButton
-                value={codeString}
-                variant="outline"
-                className="text-foreground hover:bg-muted hover:text-foreground absolute right-2 top-4 h-7 w-7 opacity-100 [&_svg]:size-3.5"
-              />
-            </div>
-            <SyntaxHighlighter
-              wrapLongLines
-              language="tsx"
-              customStyle={{ fontSize: 14 }}
-            >
-              {codeString}
-            </SyntaxHighlighter>
-          </div>
+          <Code code={codeString} language="tsx" />
         </div>
       )}
     </div>

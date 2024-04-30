@@ -7,10 +7,13 @@ import { Heading } from '@/components/Heading'
 import { Prose } from '@/components/Prose'
 
 export const a = Link
-export { Button } from '@/components/ui/button'
-export { CodeGroup, Code as code, Pre as pre } from '@/components/Code'
-export { ComponentPreview } from '@/components/ComponentPreview'
 export { BackButton } from '@/components/BackButton'
+export { Button } from '@/components/ui/button'
+export { ComponentPreview } from '@/components/code/ComponentPreview'
+export { RawCode as code } from '@/components/code/Code'
+export { default as CodeGroup } from '@/components/code/CodeGroup'
+export { default as CodeGroupFromFile } from '@/components/code/CodeGroupFromFile'
+export { default as PreviewCodeGroup } from '@/components/code/PreviewCodeGroup'
 
 export function wrapper({ children }: { children: React.ReactNode }) {
   return (
