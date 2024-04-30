@@ -1,29 +1,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
+<!-- Main URL -->
 <loc>https://syntaxui.com/</loc>
 <lastmod>2024-04-09T16:04:47+00:00</lastmod>
 <priority>1.00</priority>
 </url>
 <url>
+<!-- Docs URL -->
 <loc>https://syntaxui.com/docs</loc>
 <lastmod>2024-04-09T16:04:47+00:00</lastmod>
 <priority>0.80</priority>
 </url>
+<!-- Components URL -->
 <url>
+<loc>https://syntaxui.com/docs/components</loc>
+<lastmod>2024-04-09T16:04:47+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<!-- Buttons URL -->
+<url>
+<loc>https://syntaxui.com/docs/components/button</loc>
+<lastmod>2024-04-09T16:04:47+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://syntaxui.com/docs/components/button/3d-button</loc>
+<lastmod>2024-04-09T16:04:47+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://syntaxui.com/docs/components/button/neubrutalism-button</loc>
+<lastmod>2024-04-09T16:04:47+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://syntaxui.com/docs/components/button/heartbeat-button</loc>
+<lastmod>2024-04-09T16:04:47+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://syntaxui.com/docs/components/button/stitches-button</loc>
+<lastmod>2024-04-09T16:04:47+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<!-- Features URL -->
 <loc>https://syntaxui.com/docs/components/features</loc>
 <lastmod>2024-04-09T16:04:47+00:00</lastmod>
 <priority>0.80</priority>
 </url>
+<!-- Pricing URL -->
 <url>
 <loc>https://syntaxui.com/docs/components/pricing</loc>
 <lastmod>2024-04-09T16:04:47+00:00</lastmod>
 <priority>0.80</priority>
 </url>
+<!-- Loaders URL -->
 <url>
 <loc>https://syntaxui.com/docs/components/loaders</loc>
 <lastmod>2024-04-09T16:04:47+00:00</lastmod>
 <priority>0.80</priority>
 </url>
+<url>
+<loc>https://syntaxui.com/docs/components/loaders/classic</loc>
+<lastmod>2024-04-09T16:04:47+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://syntaxui.com/docs/components/loaders/bounce</loc>
+<lastmod>2024-04-09T16:04:47+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://syntaxui.com/docs/components/loaders/orbiting</loc>
+<lastmod>2024-04-09T16:04:47+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://syntaxui.com/docs/components/loaders/staggered-fade</loc>
+<lastmod>2024-04-09T16:04:47+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://syntaxui.com/docs/components/loaders/pulsating-dots</loc>
+<lastmod>2024-04-09T16:04:47+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://syntaxui.com/docs/components/loaders/ripple</loc>
+<lastmod>2024-04-09T16:04:47+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<!-- Text URL -->
 <url>
 <loc>https://syntaxui.com/docs/components/text</loc>
 <lastmod>2024-04-09T16:04:47+00:00</lastmod>
@@ -41,11 +109,6 @@
 </url>
 <url>
 <loc>https://syntaxui.com/docs/components/tabs</loc>
-<lastmod>2024-04-09T16:04:47+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://syntaxui.com/docs/components/breadcrumb</loc>
 <lastmod>2024-04-09T16:04:47+00:00</lastmod>
 <priority>0.80</priority>
 </url>
@@ -91,16 +154,6 @@
 </url>
 <url>
 <loc>https://syntaxui.com/docs/components/loaders/staggered-fade</loc>
-<lastmod>2024-04-09T16:04:47+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://syntaxui.com/docs/components/loaders/neon-glow</loc>
-<lastmod>2024-04-09T16:04:47+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://syntaxui.com/docs/components/loaders/pulsating-gradient</loc>
 <lastmod>2024-04-09T16:04:47+00:00</lastmod>
 <priority>0.64</priority>
 </url>
