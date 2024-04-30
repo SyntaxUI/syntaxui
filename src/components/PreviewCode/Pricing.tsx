@@ -77,7 +77,7 @@ const Pricing = () => {
           }`}
         >
           Monthly
-          {billingCycle === 'M' && <BackgroundShift key="monthly" />}
+          {billingCycle === 'M' && <BackgroundShift shiftKey="monthly" />}
         </button>
         <button
           onClick={() => setBillingCycle('A')}
@@ -88,7 +88,7 @@ const Pricing = () => {
           }`}
         >
           Annual
-          {billingCycle === 'A' && <BackgroundShift key="annual" />}
+          {billingCycle === 'A' && <BackgroundShift shiftKey="annual" />}
         </button>
       </div>
     </div>
@@ -148,9 +148,9 @@ const Pricing = () => {
   )
 }
 
-const BackgroundShift = ({ key }: { key: string }) => (
+const BackgroundShift = ({ shiftKey }: { shiftKey: string }) => (
   <motion.span
-    key={key}
+    key={shiftKey}
     layoutId="bg-shift"
     className="absolute inset-0 -z-10 rounded-lg bg-red-500"
     initial={{ opacity: 0, scale: 0.8 }}
