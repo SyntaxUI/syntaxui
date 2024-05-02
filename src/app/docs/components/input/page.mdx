@@ -82,8 +82,8 @@ const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 setInputValue(event.target.value)
 }
 // Adds the keyword when the input loses focus, if there's a keyword to add
-const handleBlur = () => {
-if (inputValue.trim() !== '') {
+const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
+if (inputValue.trim() !== '' && event.relatedTarget?.tagName !== 'BUTTON') {
 const newKeywords = [...keywords, inputValue.trim()]
 setKeywords(newKeywords)
 onKeywordsChange(newKeywords)
@@ -121,7 +121,7 @@ return (
       onChange={handleChange}
       onKeyDown={handleKeyDown}
       onPaste={handlePaste}
-      onBlur={handleBlur}
+      onBlur={(e) => handleBlur(e)}
       className="my-1 flex-1 text-sm outline-none"
       placeholder="Type keyword and press Enter..."
     />
