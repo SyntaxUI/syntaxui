@@ -1,16 +1,15 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
 import OrbitingLoader from '@/showcase/components/loaders/OrbitingLoader'
 import { TextTicker } from '@/showcase/components/text/text-ticker/TextTicker'
-import ThreeDButton from '@/showcase/components/button/3DButton'
 import SimpleToggle from '@/showcase/components/toggle/SimpleToggle'
+import Image from 'next/image'
+import Link from 'next/link'
+import HeartbeatButton from '../components/button/HeartbeatButton'
 
 const data = [
   {
     id: 1,
     title: 'Button',
-    component: <ThreeDButton />,
+    component: <HeartbeatButton />,
     link: '/docs/components/button',
   },
   {
