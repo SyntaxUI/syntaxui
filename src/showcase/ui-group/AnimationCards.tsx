@@ -1,6 +1,7 @@
 import SkewedInfiniteScroll from '@/showcase/animations/SkewedInfiniteScroll'
 import Link from 'next/link'
 import { HoverTadaButton } from '@/showcase/animations/hover/HoverTadaButton'
+import SideInfiniteScroll from '@/showcase/animations/SideInfiniteScroll'
 
 const data = [
   {
@@ -8,6 +9,12 @@ const data = [
     title: 'Skewed Infinite Scroll',
     link: '/docs/animations/skewed-infinite-scroll',
     component: <SkewedInfiniteScroll />,
+  },
+  {
+    id: 1,
+    title: 'Side Infinite Scroll',
+    link: '/docs/animations/side-infinite-scroll',
+    component: <SideInfiniteScroll />,
   },
   {
     id: 2,
