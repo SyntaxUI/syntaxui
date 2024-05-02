@@ -48,6 +48,7 @@ Make sure to create an issue for feature that you would like to contribute.
 
 This will help in the following ways:
 
+- If you're planning to add a new component, make sure it aligns with the opinionated standards and style of SyntaxUI. We strive to maintain consistency throughout the library.
 - If a similar feature is currently under development, we will not have duplicates
 - If a similar feature has already been implemented and removed, it will save you time
 - It will help us stay aware of what our _awesome_ contributors are working on
