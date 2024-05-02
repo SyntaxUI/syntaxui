@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const ShimmerButton = () => {
   return (
     <motion.button
-      className="inline-flex overflow-hidden rounded-lg bg-[linear-gradient(120deg,#fb3b53_calc(var(--shimmer-button-x)-25%),#f6f6f6_var(--shimmer-button-x),#fb3b53_calc(var(--shimmer-button-x)+25%))] [--shimmer-button-x:0%] *:[--border:0.125rem]"
+      className="inline-flex overflow-hidden rounded-lg bg-[linear-gradient(120deg,#fb3b53_calc(var(--shimmer-button-x)-25%),#f6f6f6_var(--shimmer-button-x),#fb3b53_calc(var(--shimmer-button-x)+25%))] [--shimmer-button-x:0%]"
       initial={
         {
           scale: 1,
@@ -34,7 +34,7 @@ const ShimmerButton = () => {
         scale: 1.05,
       }}
     >
-      <span className="m-[var(--border)] rounded-[calc(0.5rem-var(--border))] bg-[#f8607b]/90 px-[calc(1rem-var(--border))] py-[calc(0.25rem-var(--border))] text-[#f6f6f6] backdrop-blur-sm">
+      <span className="m-[0.125rem] rounded-[calc(0.5rem-0.125rem)] bg-[#f8607b]/90 px-[calc(1rem-0.125rem)] py-[0.125rem] text-[#f6f6f6] backdrop-blur-sm">
         Syntax UI
       </span>
     </motion.button>
