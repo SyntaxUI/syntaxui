@@ -15,8 +15,8 @@ const TagInput: React.FC = () => {
   // Handles adding new keyword on Enter or comma press, and keyword removal on Backspace
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (
-      event.key === 'Enter' ||
-      (event.key === ',' && inputValue.trim() !== '')
+      (event.key === 'Enter' || event.key === ',') &&
+      inputValue.trim() !== ''
     ) {
       event.preventDefault()
       const newKeywords = [...keywords, inputValue.trim()]
