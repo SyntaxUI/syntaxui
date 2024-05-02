@@ -11,16 +11,16 @@ const data = [
     component: <SkewedInfiniteScroll />,
   },
   {
-    id: 1,
-    title: 'Side Infinite Scroll',
-    link: '/docs/animations/side-infinite-scroll',
-    component: <SideInfiniteScroll />,
-  },
-  {
     id: 2,
     title: 'Hover Animations',
     link: '/docs/animations/hovers',
     component: <HoverTadaButton />,
+  },
+  {
+    id: 3,
+    title: 'Side Infinite Scroll',
+    link: '/docs/animations/side-infinite-scroll',
+    component: <SideInfiniteScroll />,
   },
 ]
 

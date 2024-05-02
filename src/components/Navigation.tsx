@@ -289,6 +289,10 @@ export const navigation: Array<NavGroup> = [
         title: 'Hover Animations',
         href: '/docs/animations/hovers',
       },
+      {
+        title: 'Side Infinite Scroll',
+        href: '/docs/animations/side-infinite-scroll',
+      },
     ],
   },
   {
