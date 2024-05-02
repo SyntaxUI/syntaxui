@@ -93,7 +93,7 @@ setInputValue('')
 
 // Removes a keyword from the list
 const removeKeyword = (indexToRemove: number) => {
-const newKeywords = keywords.filter((\_, index) => index !== indexToRemove)
+const newKeywords = keywords.filter((_, index) => index !== indexToRemove)
 setKeywords(newKeywords)
 onKeywordsChange(newKeywords)
 }
