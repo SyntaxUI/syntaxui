@@ -22,6 +22,21 @@ const formatName = (path: string) => {
   return componentName.replace(/([a-z])([A-Z])/g, '$1 $2')
 }
 
+/**
+ * This is a component preview component that accepts a `path: string` and `children: React.ReactNode`.
+ * It will render the component preview with a preview and code tab.
+ *
+ * @params path: string - the path to the component file relative to `src/showcase`
+ * @params children: React.ReactNode - the children to render
+ * @params className?: string - the class name to apply to the component
+ * @params extractClassname?: boolean - whether to extract the class name from the component
+ * @params extractedClassNames?: string - the extracted class names from the component
+ * @params align?: 'center' | 'start' | 'end' - the alignment of the component preview
+ * @params description?: string - the description of the component
+ * @params ...props: React.HTMLAttributes<HTMLDivElement> - the rest of the props to apply to the component
+ *
+ * @example view `src/app/docs/components/button/3d-button/page.mdx`
+ */
 export function ComponentPreview({
   path,
   children,
