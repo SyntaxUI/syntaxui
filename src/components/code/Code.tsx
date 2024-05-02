@@ -15,8 +15,10 @@ import { CopyButton } from './CopyButton'
  * - else, if the code is a single line, it will render as an inline code block
  * - else, it will render as a multi-line code block
  *
- * @prop code: string - the code to render
- * @prop language: string - the language of the code
+ * @params code: string - the code to render
+ * @params language: string - the language of the code
+ *
+ * @example view `src/components/code/CodeGroupFromFile.tsx`
  */
 export default function Code({
   code: rawCode,
@@ -83,8 +85,10 @@ export default function Code({
  * and a language as `children: string`.
  * It will render the code block as a `Code` component.
  *
- * @prop children: string - the language of the code
- * @prop className: string - the code to render
+ * @params children: string - the language of the code
+ * @params className: string - the code to render
+ *
+ * @example view any pair of ``` or ` in `src/app/docs/`
  */
 export function RawCode({
   children: rawCode,

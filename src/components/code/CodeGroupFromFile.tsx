@@ -9,8 +9,10 @@ import Code from './Code'
  * It will load the code from the file path and renders a `CodeGroup` for the title
  * and a `Code` component for the code.
  *
- * @prop path: string - the path to the code file
- * @prop title?: string - the title of the code block
+ * @params path: string - the path to the code file
+ * @params title?: string - the title of the code block
+ *
+ * @example `<CodeGroupFromFile title="filename" path="src/showcase/..." />`
  */
 export default function CodeGroupFromFile({
   path,

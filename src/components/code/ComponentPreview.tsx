@@ -26,14 +26,16 @@ const formatName = (path: string) => {
  * This is a component preview component that accepts a `path: string` and `children: React.ReactNode`.
  * It will render the component preview with a preview and code tab.
  *
- * @prop path: string - the path to the component file relative to `src/showcase`
- * @prop children: React.ReactNode - the children to render
- * @prop className?: string - the class name to apply to the component
- * @prop extractClassname?: boolean - whether to extract the class name from the component
- * @prop extractedClassNames?: string - the extracted class names from the component
- * @prop align?: 'center' | 'start' | 'end' - the alignment of the component preview
- * @prop description?: string - the description of the component
- * @props ...props: React.HTMLAttributes<HTMLDivElement> - the rest of the props to apply to the component
+ * @params path: string - the path to the component file relative to `src/showcase`
+ * @params children: React.ReactNode - the children to render
+ * @params className?: string - the class name to apply to the component
+ * @params extractClassname?: boolean - whether to extract the class name from the component
+ * @params extractedClassNames?: string - the extracted class names from the component
+ * @params align?: 'center' | 'start' | 'end' - the alignment of the component preview
+ * @params description?: string - the description of the component
+ * @params ...props: React.HTMLAttributes<HTMLDivElement> - the rest of the props to apply to the component
+ *
+ * @example view `src/app/docs/components/button/3d-button/page.mdx`
  */
 export function ComponentPreview({
   path,

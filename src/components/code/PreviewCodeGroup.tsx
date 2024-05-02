@@ -10,9 +10,11 @@ import Code from './Code'
  * Serves as an alternative to `ComponentPreview` for code previews where you need to specify the content directly.
  * You should prefer `ComponentPreview` whenever possible.
  *
- * @prop preview: React.ReactNode - the preview to render
- * @prop language: string - the language of the code
- * @prop code: string - the code to render
+ * @params preview: React.ReactNode - the preview to render
+ * @params language: string - the language of the code
+ * @params code: string - the code to render
+ *
+ * @example view `src/app/docs/animations/hovers/jiggle/page.mdx`
  */
 export default function PreviewCodeGroup({
   code,
