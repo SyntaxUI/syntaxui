@@ -6,6 +6,18 @@ import { CodeGroupContext } from './CodeGroup'
 import { cn } from '@/lib/utils'
 import { CopyButton } from './CopyButton'
 
+/**
+ * This is a code block component that accepts `code: string` and a `language: string`.
+ * It will render the code block with syntax highlighting and a copy button.
+ *
+ * Render Types:
+ * - if in a CodeGroup, it will style accordingly in a multi-line code block
+ * - else, if the code is a single line, it will render as an inline code block
+ * - else, it will render as a multi-line code block
+ *
+ * @prop code: string - the code to render
+ * @prop language: string - the language of the code
+ */
 export default function Code({
   code: rawCode,
   language: rawLang,
@@ -66,6 +78,14 @@ export default function Code({
   )
 }
 
+/**
+ * This is a raw code block component that accepts code as `className: string`
+ * and a language as `children: string`.
+ * It will render the code block as a `Code` component.
+ *
+ * @prop children: string - the language of the code
+ * @prop className: string - the code to render
+ */
 export function RawCode({
   children: rawCode,
   className: rawLang,
@@ -73,24 +93,5 @@ export function RawCode({
   children: string
   className: string
 }) {
-  console.log('rawCode', rawCode)
-  console.log('rawLang', rawLang)
-
   return <Code code={rawCode} language={rawLang} />
-}
-
-export function ClipboardIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 20 20" aria-hidden="true" {...props}>
-      <path
-        strokeWidth="0"
-        d="M5.5 13.5v-5a2 2 0 0 1 2-2l.447-.894A2 2 0 0 1 9.737 4.5h.527a2 2 0 0 1 1.789 1.106l.447.894a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2Z"
-      />
-      <path
-        fill="none"
-        strokeLinejoin="round"
-        d="M12.5 6.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2m5 0-.447-.894a2 2 0 0 0-1.79-1.106h-.527a2 2 0 0 0-1.789 1.106L7.5 6.5m5 0-1 1h-3l-1-1"
-      />
-    </svg>
-  )
 }

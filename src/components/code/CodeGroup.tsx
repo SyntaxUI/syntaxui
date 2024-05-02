@@ -14,6 +14,13 @@ import { Button } from '../mdx'
 
 export const CodeGroupContext = createContext(false)
 
+/**
+ * This is a code group component that accepts `children` which should be a `RawCode` or a `Code` component and an optional `title: string`.
+ * It will render the code with a title and a button to expand/collapse the code block.
+ *
+ * @prop children: React.ReactNode - the code block to render
+ * @prop title?: string - the title of the code block
+ */
 export default function CodeGroup({
   children,
   title,

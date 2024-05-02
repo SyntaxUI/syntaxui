@@ -4,12 +4,20 @@ import { readFile } from '@/lib/readFile'
 import CodeGroup from './CodeGroup'
 import Code from './Code'
 
+/**
+ * This is a code group component that accepts a `title: string` and a `path: string`.
+ * It will load the code from the file path and renders a `CodeGroup` for the title
+ * and a `Code` component for the code.
+ *
+ * @prop path: string - the path to the code file
+ * @prop title?: string - the title of the code block
+ */
 export default function CodeGroupFromFile({
-  title,
   path,
+  title,
 }: {
-  title: string
   path: string
+  title?: string
 }) {
   const [code, setCode] = useState('')
   useEffect(() => {
