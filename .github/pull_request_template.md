@@ -1,11 +1,3 @@
----
-name: Pull Request
-about: Create a pull request syntaxUI
-title: ''
-labels: ''
-assignees: ''
----
-
 ## Description
 
 Please provide a brief description of the changes made in this pull request.
