@@ -1,6 +1,6 @@
 'use client'
 
-import { RawCode } from '@/components/code/Code'
+import Code, { RawCode } from '@/components/code/Code'
 import { Icons } from '@/components/icons/Icons'
 import AnimatedTabs from '@/components/reusable/AnimatedTabs'
 import { cn } from '@/lib/utils'
@@ -116,10 +116,7 @@ export function ComponentPreview({
       )}
       {selectedTab === 'code' && (
         <div className="relative w-full">
-          <CopyButton value={codeString} className="top-5" />
-          <SyntaxHighlighter language="jsx" wrapLines wrapLongLines>
-            {codeString}
-          </SyntaxHighlighter>
+          <Code language="tsx" code={codeString} />
         </div>
       )}
     </div>
