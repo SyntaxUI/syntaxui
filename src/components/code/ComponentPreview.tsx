@@ -116,7 +116,6 @@ export function ComponentPreview({
       )}
       {selectedTab === 'code' && (
         <div className="relative w-full">
-          <CopyButton value={codeString} className="top-5" />
           <Code language="tsx" code={codeString} />
         </div>
       )}

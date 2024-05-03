@@ -56,6 +56,7 @@ export default function Code({
         inCodeGroup ? 'rounded-b-lg rounded-t-none' : 'rounded-lg',
       )}
     >
+      <CopyButton value={code} className="z-10 border-none" />
       <SyntaxHighlighter language={lang} wrapLines wrapLongLines style={theme}>
         {code}
       </SyntaxHighlighter>
