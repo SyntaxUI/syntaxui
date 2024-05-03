@@ -1,10 +1,13 @@
 'use client'
 
-import codeToHtml from '@/lib/codeToHtml'
-import { Suspense, useContext, useEffect, useMemo, useState } from 'react'
+import { useContext, useEffect, useMemo, useState } from 'react'
 import { CodeGroupContext } from './CodeGroup'
 import { cn } from '@/lib/utils'
 import { CopyButton } from './CopyButton'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { dark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import theme from './theme'
+import { gruvboxDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 /**
  * This is a code block component that accepts `code: string` and a `language: string`.
@@ -32,17 +35,11 @@ export default function Code({
     return (rawCode ?? '').trim().split('\n').length === 1 && !inCodeGroup
   }, [inCodeGroup])
 
-  const [code, setCode] = useState<string | undefined>(undefined)
-  useEffect(() => {
-    const loadCode = async () => {
-      const html = await codeToHtml(
-        (rawCode ?? '').trim(),
-        rawLang ? rawLang.replaceAll('language-', '') : '',
-      )
-      setCode(html)
-    }
-    loadCode()
-  }, [rawCode, rawLang])
+  const lang = useMemo(
+    () => (rawLang ? rawLang.replace('language-', '') : 'plaintext'),
+    [rawLang],
+  )
+  const code = useMemo(() => rawCode.trim(), [rawCode])
 
   if (inline) {
     return (
@@ -59,23 +56,9 @@ export default function Code({
         inCodeGroup ? 'rounded-b-lg rounded-t-none' : 'rounded-lg',
       )}
     >
-      {code === undefined ? (
-        <div className="p-4 text-white">Loading...</div>
-      ) : (
-        <>
-          <div
-            className="text-wrap p-4"
-            dangerouslySetInnerHTML={{ __html: code }}
-            style={{
-              scrollbarColor: ' #d4d4d4 transparent',
-            }}
-          ></div>
-          <CopyButton
-            value={rawCode}
-            // className="text-foreground hover:bg-muted hover:text-foreground absolute right-2 top-2 h-7 w-7 opacity-100 [&_svg]:size-3.5"
-          />
-        </>
-      )}
+      <SyntaxHighlighter language={lang} wrapLines wrapLongLines style={theme}>
+        {code}
+      </SyntaxHighlighter>
     </div>
   )
 }
