@@ -1,12 +1,13 @@
 'use client'
 
-import { CopyButton } from './CopyButton'
+import { RawCode } from '@/components/code/Code'
 import { Icons } from '@/components/icons/Icons'
 import AnimatedTabs from '@/components/reusable/AnimatedTabs'
 import { cn } from '@/lib/utils'
 import { Code as CodeIcon, Eye } from 'lucide-react'
-import Code, { RawCode } from '@/components/code/Code'
 import * as React from 'react'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { CopyButton } from './CopyButton'
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   path: string
@@ -128,7 +129,10 @@ export function ComponentPreview({
       )}
       {selectedTab === 'code' && (
         <div className="relative w-full">
-          <Code code={codeString} language="tsx" />
+          <CopyButton value={codeString} className="top-5" />
+          <SyntaxHighlighter language="jsx" wrapLines wrapLongLines>
+            {codeString}
+          </SyntaxHighlighter>
         </div>
       )}
     </div>
