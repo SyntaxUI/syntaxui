@@ -4,6 +4,7 @@ import HeartbeatButton from '@/showcase/components/button/HeartbeatButton'
 import NeubrutalismButton from '@/showcase/components/button/NeubrutalismButton'
 import StitchesButton from '@/showcase/components/button/StitchesButton'
 import ShimmerButton from '@/showcase/components/button/ShimmerButton'
+import GradientBorderButton from '../components/button/GradientBorderButton'
 
 const data = [
   {
@@ -35,6 +36,12 @@ const data = [
     title: 'Shimmer Button',
     link: '/docs/components/button/shimmer-button',
     component: <ShimmerButton />,
+  },
+  {
+    id: 6,
+    title: 'Gradient Border Button',
+    link: '/docs/components/button/gradient-border-button',
+    component: <GradientBorderButton />,
   },
 ]
 
