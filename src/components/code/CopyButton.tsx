@@ -19,7 +19,7 @@ export function CopyButton({ value }: { value: string }) {
     <button
       type="button"
       className={cn(
-        'group/button obackdrop-blur absolute right-2 top-2 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium transition focus:opacity-100',
+        'group/button absolute right-2 top-2 overflow-hidden rounded-full border py-1 pl-2 pr-3 text-2xs font-medium backdrop-blur transition focus:opacity-100',
         copied
           ? 'bg-red-400/10 ring-1 ring-inset ring-red-400/20'
           : 'bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5',
