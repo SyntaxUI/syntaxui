@@ -6,8 +6,9 @@ import NeubrutalismButton from '@/showcase/components/button/NeubrutalismButton'
 import ShimmerButton from '@/showcase/components/button/ShimmerButton'
 import StitchesButton from '@/showcase/components/button/StitchesButton'
 import Link from 'next/link'
-import GradientFillButton from '../components/button/GradientFillButton'
-import BorderGlowButton from '../components/button/BorderGlowButton'
+import GradientFillButton from '@/showcase/components/button/GradientFillButton'
+import BorderGlowButton from '@/showcase/components/button/BorderGlowButton'
+import ShineButton from '@/showcase/components/button/ShineButton'
 
 const data = [
   {
@@ -63,6 +64,12 @@ const data = [
     title: 'Gradient Border',
     link: '/docs/components/button/gradient-border-button',
     component: <GradientBorderButton />,
+  },
+  {
+    id: 10,
+    title: 'Shine Button',
+    link: '/docs/components/button/shine-button',
+    component: <ShineButton />,
   },
 ]
 
