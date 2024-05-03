@@ -6,6 +6,7 @@
 - LineTabs - [Aiko](https://twitter.com/username_aiko)
 - IconTabs - [Aiko](https://twitter.com/username_aiko)
 - Simple Toggle - [Ethan Pollack](https://epoll31.github.io)
+- Labeled Toggle - [Aiko](https://twitter.com/username_aiko)
 - useMediaSizes - [Ethan Pollack](https://epoll31.github.io)
 - Stitches Button - [Saud](https://twitter.com/via_saud)
 - Neubrutalism Toggle - [Ethan Pollack](https://epoll31.github.io)
