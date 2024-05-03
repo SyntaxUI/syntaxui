@@ -10,3 +10,4 @@
 - Stitches Button - [Saud](https://twitter.com/via_saud)
 - Neubrutalism Toggle - [Ethan Pollack](https://epoll31.github.io)
 - Shimmer Button - [Ethan Pollack](https://epoll31.github.io)
+- Border Rotate Button - [Ethan Pollack](https://epoll31.github.io)
