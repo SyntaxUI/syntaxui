@@ -11,7 +11,6 @@ import HooksCard from '@/showcase/ui-group/HooksCards'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import LabeledToggle from '@/showcase/components/toggle/LabeledToggle'
 
 const DiscordButton = () => {
   return (
