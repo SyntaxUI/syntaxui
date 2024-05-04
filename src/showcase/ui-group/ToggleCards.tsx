@@ -1,6 +1,7 @@
 import NeubrutalismToggle from '@/showcase/components/toggle/NeubrutalismToggle'
 import SimpleToggle from '@/showcase/components/toggle/SimpleToggle'
 import Link from 'next/link'
+import LabeledToggle from '../components/toggle/LabeledToggle'
 
 interface ToggleCardProps {
   title: string
@@ -18,6 +19,11 @@ const data: ToggleCardProps[] = [
     title: 'Neubrutalism Toggle',
     link: '/docs/components/toggle/neubrutalism-toggle',
     component: <NeubrutalismToggle />,
+  },
+  {
+    title: 'Labeled Toggle',
+    link: '/docs/components/toggle/labeled-toggle',
+    component: <LabeledToggle />,
   },
 ]
 
