@@ -31,7 +31,7 @@ const NeubrutalismToggle = ({
           off: { x: 0, y: 0 },
           on: { x: 3, y: -3 },
         }}
-        initial={'off'}
+        initial={toggled ? 'on' : 'off'}
         animate={toggled ? 'on' : 'off'}
         transition={springConfig}
       >
@@ -41,7 +41,7 @@ const NeubrutalismToggle = ({
             on: { x: 10 },
             off: { x: -10 },
           }}
-          initial={'off'}
+          initial={toggled ? 'on' : 'off'}
           animate={toggled ? 'on' : 'off'}
           transition={springConfig}
         />

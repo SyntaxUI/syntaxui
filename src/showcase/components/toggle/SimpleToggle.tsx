@@ -26,11 +26,15 @@ const SimpleToggle = ({
     >
       <motion.span
         className="inline-block aspect-square h-full transform rounded-full bg-white shadow-lg"
-        animate={{
-          x: toggled ? 10 : -10,
-          opacity: toggled ? 1 : 0.8,
-          scale: toggled ? 0.7 : 0.6,
+        variants={{
+          animate: {
+            x: toggled ? 10 : -10,
+            opacity: toggled ? 1 : 0.8,
+            scale: toggled ? 0.7 : 0.6,
+          },
         }}
+        initial="animate"
+        animate="animate"
         transition={{ type: 'spring', stiffness: 500, damping: 30 }}
       />
     </button>
