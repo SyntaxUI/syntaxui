@@ -2,22 +2,22 @@
 import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
-// /Set disableText to true to remove the labels.
-
-// the state of toggled should be:
-// const [toggled, setToggled] = useState<boolean>(ON || false);
-// I changed it for the sake of a good preview.
+/**
+ - onToggle: Callback function called when the toggle state changes.
+ - initialToggleOn (default: true): Initial state of the toggle.
+ - disableText (default: true): Set to true to hide the "ON" and "OFF" labels.
+ */
 
 const LabeledToggle = ({
   onToggle,
-  ON,
+  initialToggleOn = true,
   disableText,
 }: {
   onToggle?: (toggled: boolean) => void
-  ON?: boolean
+  initialToggleOn?: boolean
   disableText?: boolean
 }) => {
-  const [toggled, setToggled] = useState<boolean>(ON || true)
+  const [toggled, setToggled] = useState<boolean>(initialToggleOn || false)
   const springConfig = { type: 'spring', stiffness: 500, damping: 30 }
 
   const handleToggle = () => {
