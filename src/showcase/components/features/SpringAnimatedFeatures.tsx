@@ -44,7 +44,8 @@ const ProjectsData = [
 const SpringAnimatedFeatures = () => {
   return (
     <div>
-      <div className="grid w-full grid-cols-1 md:grid-cols-3">
+      <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-3">
+        {' '}
         {ProjectsData.map((project) => {
           return (
             <motion.div
