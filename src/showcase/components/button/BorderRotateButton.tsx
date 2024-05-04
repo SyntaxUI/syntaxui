@@ -8,14 +8,14 @@ const BorderRotateButton = () => {
       className="relative flex overflow-hidden rounded-full"
       initial={{
         scale: 1,
-        padding: '2px',
+        padding: '3px',
       }}
       whileTap={{
         scale: 0.95,
-        padding: '1px',
+        padding: '0px',
       }}
       whileHover={{
-        padding: '2px',
+        padding: '0px',
         scale: 1.05,
       }}
       transition={{
@@ -53,7 +53,7 @@ const BorderRotateButton = () => {
         }}
       />
 
-      <span className="rounded-full bg-[#fb3b53] px-4 py-1 text-xs text-[#f6f6f6] backdrop-blur-sm">
+      <span className="rounded-full bg-[#bd1212] px-4 py-1 text-xs text-[#f6f6f6] backdrop-blur-sm">
         Syntax UI
       </span>
     </motion.button>
