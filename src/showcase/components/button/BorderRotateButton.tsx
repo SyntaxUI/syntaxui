@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 const BorderRotateButton = () => {
   return (
     <motion.button
-      className="relative inline-flex overflow-hidden rounded-full p-[2px] ring-1 ring-inset ring-blue-700/10"
+      className="relative inline-flex overflow-hidden rounded-full p-[2px]"
       initial={{
         scale: 1,
         padding: '2px',
@@ -48,7 +48,6 @@ const BorderRotateButton = () => {
             duration: 6,
             repeat: Infinity,
             ease: [0.445, 0.05, 0.55, 0.95],
-            // ease: 'easeInOut',
             times: [0, 0.5, 1],
           },
         }}
