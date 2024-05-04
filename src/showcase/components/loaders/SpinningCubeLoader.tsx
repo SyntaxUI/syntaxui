@@ -1,5 +1,5 @@
 'use client'
-import { motion } from 'framer-motion'
+import { m, LazyMotion, domAnimation } from 'framer-motion'
 
 export default function SpinningCubeLoader() {
   const cubeVariants = {
@@ -16,12 +16,14 @@ export default function SpinningCubeLoader() {
 
   return (
     <div className="flex items-center justify-center">
-      <motion.div
-        className="h-16 w-16 rounded-2xl bg-red-500"
-        variants={cubeVariants}
-        animate="spin"
-        style={{ perspective: 200 }}
-      ></motion.div>
+      <LazyMotion features={domAnimation}>
+        <m.div
+          className="h-16 w-16 rounded-2xl bg-red-500"
+          variants={cubeVariants}
+          animate="spin"
+          style={{ perspective: 200 }}
+        ></m.div>
+      </LazyMotion>
     </div>
   )
 }

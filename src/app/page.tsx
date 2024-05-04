@@ -8,13 +8,14 @@ import GitHubIcon from '@/icons/github'
 import AnimationCards from '@/showcase/ui-group/AnimationCards'
 import ComponentCards from '@/showcase/ui-group/ComponentCards'
 import HooksCard from '@/showcase/ui-group/HooksCards'
-import { motion } from 'framer-motion'
+import { m, LazyMotion, domAnimation } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 
 const DiscordButton = () => {
   return (
-    <motion.button
+    <LazyMotion features={domAnimation}>
+    <m.button
       className="relative mb-8 inline-flex overflow-hidden  rounded-full p-[1px] ring-1 ring-inset ring-blue-700/10"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -41,7 +42,8 @@ const DiscordButton = () => {
           />
         </svg>
       </span>
-    </motion.button>
+    </m.button>
+    </LazyMotion>
   )
 }
 

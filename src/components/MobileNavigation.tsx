@@ -10,7 +10,7 @@ import {
 } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { Dialog, Transition } from '@headlessui/react'
-import { motion } from 'framer-motion'
+import { m, LazyMotion, domAnimation } from 'framer-motion'
 import { create } from 'zustand'
 
 import { Header } from '@/components/Header'
@@ -120,12 +120,14 @@ function MobileNavigationDialog({
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
           >
-            <motion.div
-              layoutScroll
-              className="fixed bottom-0 left-0 top-14 w-full overflow-y-auto bg-white px-4 pb-4 pt-6 shadow-lg shadow-zinc-900/10 ring-1 ring-zinc-900/7.5 min-[416px]:max-w-sm sm:px-6 sm:pb-10 dark:bg-zinc-900 dark:ring-zinc-800"
-            >
-              <Navigation />
-            </motion.div>
+            <LazyMotion features={domAnimation}>
+              <m.div
+                layoutScroll
+                className="fixed bottom-0 left-0 top-14 w-full overflow-y-auto bg-white px-4 pb-4 pt-6 shadow-lg shadow-zinc-900/10 ring-1 ring-zinc-900/7.5 min-[416px]:max-w-sm sm:px-6 sm:pb-10 dark:bg-zinc-900 dark:ring-zinc-800"
+              >
+                <Navigation />
+              </m.div>
+            </LazyMotion>
           </Transition.Child>
         </Dialog.Panel>
       </Dialog>

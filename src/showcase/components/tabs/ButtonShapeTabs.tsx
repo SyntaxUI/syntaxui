@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { m, LazyMotion, domAnimation } from 'framer-motion'
 import { useState } from 'react'
 
 const tabs = ['Home', 'Docs', 'Components', 'Effects']
@@ -21,11 +21,13 @@ const Tab = ({ text, selected, setSelected }: TabProps) => {
     >
       <span className="relative z-10">{text}</span>
       {selected && (
-        <motion.span
-          layoutId="tab"
-          transition={{ type: 'spring', duration: 0.4 }}
-          className="absolute inset-0 z-0 rounded-md bg-red-500"
-        ></motion.span>
+        <LazyMotion features={domAnimation}>
+          <m.span
+            layoutId="tab"
+            transition={{ type: 'spring', duration: 0.4 }}
+            className="absolute inset-0 z-0 rounded-md bg-red-500"
+          ></m.span>
+        </LazyMotion>
       )}
     </button>
   )

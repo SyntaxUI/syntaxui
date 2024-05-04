@@ -1,5 +1,5 @@
 'use client'
-import { motion } from 'framer-motion'
+import { m, LazyMotion, domAnimation } from 'framer-motion'
 
 export default function StaggeredFadeLoader() {
   const circleVariants = {
@@ -10,19 +10,20 @@ export default function StaggeredFadeLoader() {
   return (
     <div className="flex items-center justify-center space-x-2">
       {[...Array(3)].map((_, index) => (
-        <motion.div
-          key={index}
-          className="h-4 w-4 rounded-full bg-red-500"
-          variants={circleVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{
-            duration: 0.9,
-            delay: index * 0.2,
-            repeat: Infinity,
-            repeatType: 'reverse',
-          }}
-        ></motion.div>
+        <LazyMotion features={domAnimation} key={index}>
+          <m.div
+            className="h-4 w-4 rounded-full bg-red-500"
+            variants={circleVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{
+              duration: 0.9,
+              delay: index * 0.2,
+              repeat: Infinity,
+              repeatType: 'reverse',
+            }}
+          ></m.div>
+        </LazyMotion>
       ))}
     </div>
   )

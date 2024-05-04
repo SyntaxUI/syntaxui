@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import { m, LazyMotion, domAnimation } from 'framer-motion'
 
 const SimpleToggle = ({
   onToggle,
@@ -24,19 +24,21 @@ const SimpleToggle = ({
       }`}
       onClick={handleToggle}
     >
-      <motion.span
-        className="inline-block aspect-square h-full transform rounded-full bg-white shadow-lg"
-        variants={{
-          animate: {
-            x: toggled ? 10 : -10,
-            opacity: toggled ? 1 : 0.8,
-            scale: toggled ? 0.7 : 0.6,
-          },
-        }}
-        initial="animate"
-        animate="animate"
-        transition={{ type: 'spring', stiffness: 500, damping: 30 }}
-      />
+      <LazyMotion features={domAnimation}>
+        <m.span
+          className="inline-block aspect-square h-full transform rounded-full bg-white shadow-lg"
+          variants={{
+            animate: {
+              x: toggled ? 10 : -10,
+              opacity: toggled ? 1 : 0.8,
+              scale: toggled ? 0.7 : 0.6,
+            },
+          }}
+          initial="animate"
+          animate="animate"
+          transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+        />
+      </LazyMotion>
     </button>
   )
 }

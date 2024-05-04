@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { m, LazyMotion, domAnimation } from 'framer-motion'
 
 interface TabProps {
   text: string
@@ -39,13 +39,20 @@ const Tab = ({
         </span>
       </div>
       {selected && (
-        <motion.div
-          className="absolute bottom-0 left-0 top-1 flex size-full items-end justify-center"
-          layoutId={customID + 'linetab'}
-          transition={{ type: 'spring', duration: 0.4, bounce: 0, delay: 0.1 }}
-        >
-          <span className="z-0 h-[3px] w-[60%] rounded-t-full bg-red-500/80"></span>
-        </motion.div>
+        <LazyMotion features={domAnimation}>
+          <m.div
+            className="absolute bottom-0 left-0 top-1 flex size-full items-end justify-center"
+            layoutId={customID + 'linetab'}
+            transition={{
+              type: 'spring',
+              duration: 0.4,
+              bounce: 0,
+              delay: 0.1,
+            }}
+          >
+            <span className="z-0 h-[3px] w-[60%] rounded-t-full bg-red-500/80"></span>
+          </m.div>
+        </LazyMotion>
       )}
     </button>
   )

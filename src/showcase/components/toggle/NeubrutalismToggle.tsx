@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import { m, LazyMotion, domAnimation } from 'framer-motion'
 
 const NeubrutalismToggle = ({
   onToggle,
@@ -25,27 +25,29 @@ const NeubrutalismToggle = ({
       }
       onClick={handleToggle}
     >
-      <motion.span
-        className={`flex h-full w-full items-center justify-center  rounded-full border-[2px]  border-[#222222] ${toggled ? 'bg-[#ff527a]' : 'bg-gray-400'} p-[2px]`}
-        variants={{
-          off: { x: 0, y: 0 },
-          on: { x: 3, y: -3 },
-        }}
-        initial={toggled ? 'on' : 'off'}
-        animate={toggled ? 'on' : 'off'}
-        transition={springConfig}
-      >
-        <motion.span
-          className="aspect-square h-full transform rounded-full border-[2px] border-[#222222] bg-white shadow-lg"
+      <LazyMotion features={domAnimation}>
+        <m.span
+          className={`flex h-full w-full items-center justify-center  rounded-full border-[2px]  border-[#222222] ${toggled ? 'bg-[#ff527a]' : 'bg-gray-400'} p-[2px]`}
           variants={{
-            on: { x: 10 },
-            off: { x: -10 },
+            off: { x: 0, y: 0 },
+            on: { x: 3, y: -3 },
           }}
           initial={toggled ? 'on' : 'off'}
           animate={toggled ? 'on' : 'off'}
           transition={springConfig}
-        />
-      </motion.span>
+        >
+          <m.span
+            className="aspect-square h-full transform rounded-full border-[2px] border-[#222222] bg-white shadow-lg"
+            variants={{
+              on: { x: 10 },
+              off: { x: -10 },
+            }}
+            initial={toggled ? 'on' : 'off'}
+            animate={toggled ? 'on' : 'off'}
+            transition={springConfig}
+          />
+        </m.span>
+      </LazyMotion>
     </button>
   )
 }

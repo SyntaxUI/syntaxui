@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { m, LazyMotion, domAnimation } from 'framer-motion'
 import Image from 'next/image'
 
 const ProjectsData = [
@@ -48,7 +48,8 @@ const SpringAnimatedFeatures = () => {
         {' '}
         {ProjectsData.map((project) => {
           return (
-            <motion.div
+            <LazyMotion features={domAnimation} key={project.id}>
+            <m.div
               whileHover={{
                 y: -8,
               }}
@@ -56,7 +57,6 @@ const SpringAnimatedFeatures = () => {
                 type: 'spring',
                 bounce: 0.7,
               }}
-              key={project.id}
               className="mt-5 text-left"
             >
               <a target="_blank" rel="noopener noreferrer" href={project.link}>
@@ -74,7 +74,8 @@ const SpringAnimatedFeatures = () => {
                   {project.description}
                 </div>
               </a>
-            </motion.div>
+            </m.div>
+            </LazyMotion>
           )
         })}
       </div>
