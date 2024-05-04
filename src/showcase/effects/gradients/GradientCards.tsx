@@ -1,7 +1,8 @@
 'use client'
-import { Copy } from 'lucide-react'
-import { toast } from 'sonner'
 import { motion } from 'framer-motion'
+import { Check, Copy } from 'lucide-react'
+import { useState } from 'react'
+import { toast } from 'sonner'
 
 const data = [
   {
@@ -37,8 +38,12 @@ const data = [
 ]
 
 const GradientCards = () => {
+  const [copied, setCopied] = useState(false)
+
   const copyGradient = (gradient: string) => {
     navigator.clipboard.writeText(gradient)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 500)
     toast.success('Gradient copied to clipboard!')
   }
 
@@ -48,23 +53,26 @@ const GradientCards = () => {
         {data.map((item) => (
           <motion.div
             key={item.id}
-            className="group relative no-underline"
+            className="group no-underline"
             whileTap={{ scale: 0.95 }}
           >
             <div
-              className="overflow group rounded-xl border border-gray-200 transition-all ease-in-out hover:cursor-pointer"
+              className="overflow group relative rounded-xl border border-gray-200 transition-all ease-in-out hover:cursor-pointer"
               onClick={() => copyGradient(item.gradient)}
             >
               <div
-                className={`flex h-[9rem] items-center justify-center rounded-t-xl border-b text-xs text-gray-400 transition-all ease-in-out group-hover:bg-gray-100 md:h-[12rem] ${item.gradient}`}
-              ></div>
+                className={`relative flex h-[9rem] items-center justify-center rounded-t-xl border-b text-xs text-gray-400 transition-all ease-in-out group-hover:bg-gray-100 md:h-[12rem] ${item.gradient}`}
+              >
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  {copied ? (
+                    <Check className="text-2xl text-white" />
+                  ) : (
+                    <Copy className="text-2xl text-white" />
+                  )}
+                </div>
+              </div>
               <div className="w-full p-4 text-sm font-medium text-gray-800">
                 {item.title}
-              </div>
-            </div>
-            <div className="pointer-events-none absolute right-2 top-2 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              <div className="rounded-full border bg-white px-2 text-sm text-xs text-gray-900">
-                Click to copy
               </div>
             </div>
           </motion.div>

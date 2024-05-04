@@ -29,7 +29,7 @@ export default async function RootLayout({
           {children}
           <Analytics />
           <SpeedInsights />
-          <Toaster position="top-right" />
+          <Toaster position="bottom-center" />
         </Providers>
       </body>
     </html>

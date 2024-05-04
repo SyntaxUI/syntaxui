@@ -293,7 +293,13 @@ export const navigation: Array<NavGroup> = [
   },
   {
     title: 'Effects',
-    links: [{ title: 'Image Fade', href: '/docs/effects/image-fade' }],
+    links: [
+      {
+        title: 'Gradients',
+        href: '/docs/effects/gradients',
+      },
+      { title: 'Image Fade', href: '/docs/effects/image-fade' },
+    ],
   },
   {
     title: 'Hooks',
