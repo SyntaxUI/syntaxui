@@ -6,12 +6,14 @@ import AnimatedTabs from '@/components/reusable/AnimatedTabs'
 import { cn } from '@/lib/utils'
 import { Code as CodeIcon, Eye } from 'lucide-react'
 import * as React from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { CopyButton } from './CopyButton'
+import TailwindCSS from '../Logos/Tailwind'
+import FramerLogo from '../Logos/Framer'
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   path: string
   align?: 'center' | 'start' | 'end'
+  usingFramer?: boolean
 }
 
 const formatName = (path: string) => {
@@ -24,6 +26,7 @@ const formatName = (path: string) => {
  * ComponentPreview renders a component preview with a preview and code tab.
  *
  * @param {string} path - The path to the component relative to `src/showcase`.
+ * @param {boolean} usingFramer - Whether the component is using Framer Motion.
  * Example: "components/button/3DButton"
  *
  * Usage: <ComponentPreview path="components/button/3DButton" />
@@ -33,6 +36,7 @@ export function ComponentPreview({
   path,
   className,
   align = 'center',
+  usingFramer,
   ...props
 }: ComponentPreviewProps) {
   const name = formatName(path)
@@ -77,7 +81,19 @@ export function ComponentPreview({
       {...props}
     >
       <div className="flex items-center justify-between">
-        <h2 className="text-md m-0 font-medium text-gray-800">{name}</h2>
+        <div className="flex items-center gap-2">
+          <h2 className="text-md m-0 font-medium text-gray-800">{name}</h2>
+          <div className="flex items-center justify-center gap-x-2">
+            <div>
+              <TailwindCSS />
+            </div>
+            {usingFramer && (
+              <div>
+                <FramerLogo />
+              </div>
+            )}
+          </div>
+        </div>
         <AnimatedTabs
           tabs={['preview', 'code']}
           selected={selectedTab}

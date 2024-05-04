@@ -1,13 +1,11 @@
-import Link from 'next/link'
 import ThreeDButton from '@/showcase/components/button/3DButton'
+import BorderRotateButton from '@/showcase/components/button/BorderRotateButton'
+import GradientBorderButton from '@/showcase/components/button/GradientBorderButton'
 import HeartbeatButton from '@/showcase/components/button/HeartbeatButton'
 import NeubrutalismButton from '@/showcase/components/button/NeubrutalismButton'
-import StitchesButton from '@/showcase/components/button/StitchesButton'
 import ShimmerButton from '@/showcase/components/button/ShimmerButton'
-import GradientBorderButton from '@/showcase/components/button/GradientBorderButton'
-import BorderRotateButton from '@/showcase/components/button/BorderRotateButton'
-import TailwindLogo from '@/components/Logos/Tailwind'
-import FramerLogo from '@/components/Logos/Framer'
+import StitchesButton from '@/showcase/components/button/StitchesButton'
+import Link from 'next/link'
 
 const data = [
   {
@@ -39,7 +37,6 @@ const data = [
     title: 'Shimmer Button',
     link: '/docs/components/button/shimmer-button',
     component: <ShimmerButton />,
-    usingFramer: true,
   },
   {
     id: 6,
@@ -52,7 +49,6 @@ const data = [
     title: 'Border Rotate Button',
     link: '/docs/components/button/border-rotate-button',
     component: <BorderRotateButton />,
-    usingFramer: true,
   },
 ]
 
@@ -69,17 +65,6 @@ const ButtonCards = () => {
               <div className="flex items-center justify-between px-3 py-4">
                 <div className="text-sm font-medium text-gray-800">
                   {item.title}
-                </div>
-                {/* Icons */}
-                <div className="flex items-center justify-center gap-x-2">
-                  <div>
-                    <TailwindLogo />
-                  </div>
-                  {item.usingFramer && (
-                    <div>
-                      <FramerLogo />
-                    </div>
-                  )}
                 </div>
               </div>
             </div>
