@@ -19,15 +19,20 @@ const SimpleToggle = ({
 
   return (
     <motion.button
-      className={`flex h-[25px] w-[45px] cursor-pointer items-center rounded-full p-[2px] ${
-        toggled ? 'bg-red-500' : 'bg-gray-700/50'
-      }`}
+      className={`flex h-[25px] w-[45px] cursor-pointer items-center rounded-full p-[2px]`}
       onClick={handleToggle}
+      animate={{ backgroundColor: toggled ? '#fb3a5d' : '#24252d50' }}
+      transition={{ duration: 0.2 }}
     >
       <motion.span
-        className="h-[20px] w-[20px] rounded-full bg-white shadow-lg"
+        className="rounded-full bg-white shadow-lg"
         layout
-        style={{ marginLeft: toggled ? '20px' : '0px' }}
+        transition={{ duration: 0.2 }}
+        style={{
+          width: toggled ? '19px' : '16px',
+          height: toggled ? '19px' : '16px',
+          marginLeft: toggled ? '20px' : '2px',
+        }}
       />
     </motion.button>
   )
