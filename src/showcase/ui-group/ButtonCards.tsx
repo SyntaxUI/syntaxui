@@ -6,6 +6,8 @@ import StitchesButton from '@/showcase/components/button/StitchesButton'
 import ShimmerButton from '@/showcase/components/button/ShimmerButton'
 import GradientBorderButton from '@/showcase/components/button/GradientBorderButton'
 import BorderRotateButton from '@/showcase/components/button/BorderRotateButton'
+import TailwindLogo from '@/components/Logos/Tailwind'
+import FramerLogo from '@/components/Logos/Framer'
 
 const data = [
   {
@@ -37,6 +39,7 @@ const data = [
     title: 'Shimmer Button',
     link: '/docs/components/button/shimmer-button',
     component: <ShimmerButton />,
+    usingFramer: true,
   },
   {
     id: 6,
@@ -49,6 +52,7 @@ const data = [
     title: 'Border Rotate Button',
     link: '/docs/components/button/border-rotate-button',
     component: <BorderRotateButton />,
+    usingFramer: true,
   },
 ]
 
@@ -62,8 +66,21 @@ const ButtonCards = () => {
               <div className="flex h-[9rem] items-center justify-center overflow-hidden rounded-t-xl border-b bg-gray-50 text-xs text-gray-400 transition-all ease-in-out group-hover:bg-gray-100 md:h-[12rem]">
                 {item.component}
               </div>
-              <div className="w-full p-4 text-sm font-medium text-gray-800">
-                {item.title}
+              <div className="flex items-center justify-between px-3 py-4">
+                <div className="text-sm font-medium text-gray-800">
+                  {item.title}
+                </div>
+                {/* Icons */}
+                <div className="flex items-center justify-center gap-x-2">
+                  <div>
+                    <TailwindLogo />
+                  </div>
+                  {item.usingFramer && (
+                    <div>
+                      <FramerLogo />
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </Link>
