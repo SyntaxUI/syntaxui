@@ -1,7 +1,7 @@
+import LabeledToggle from '@/showcase/components/toggle/LabeledToggle'
 import NeubrutalismToggle from '@/showcase/components/toggle/NeubrutalismToggle'
 import SimpleToggle from '@/showcase/components/toggle/SimpleToggle'
 import Link from 'next/link'
-import LabeledToggle from '../components/toggle/LabeledToggle'
 
 interface ToggleCardProps {
   title: string
