@@ -12,7 +12,7 @@ const ProjectsData = [
     image: 'https://ansubkhan.com/images/projects/syntaxUI.svg',
   },
   {
-    id: 1,
+    id: 2,
     name: 'Prettyfolio',
     description: 'A curated collection of portfolios for inspiration.',
     link: 'https://prettyfolio.com',
