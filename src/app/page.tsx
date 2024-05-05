@@ -16,7 +16,7 @@ import posthog from 'posthog-js'
 const DiscordButton = () => {
   return (
     <motion.button
-      className="relative mb-8 inline-flex overflow-hidden  rounded-full p-[1px] ring-1 ring-inset ring-blue-700/10"
+      className="relative mb-8 inline-flex overflow-hidden rounded-full p-[1px] ring-1 ring-inset ring-blue-700/10"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
@@ -29,11 +29,7 @@ const DiscordButton = () => {
     >
       <span className="absolute inset-[-1000%] animate-discord-button bg-[conic-gradient(from_calc(var(--discord-button-angle)+60deg)_at_calc(50%+var(--discord-button-x))_50%,transparent_50%,#fb3a5d_98%,transparent_100%)]"></span>
       <span className="inline-flex items-center gap-2 rounded-full bg-red-100 px-3 py-1 text-[12px] font-medium uppercase text-red-500 backdrop-blur">
-        <span>
-          {posthog.getFeatureFlag('meeting_button')
-            ? 'Request a Component'
-            : 'Want a Website?'}
-        </span>
+        <span>Request a Component</span>
       </span>
     </motion.button>
   )
