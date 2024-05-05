@@ -30,16 +30,16 @@ export default function Code({
   code: string
   language: string
 }) {
+  const code = useMemo(() => (rawCode ?? '').trim(), [rawCode])
   const inCodeGroup = useContext(CodeGroupContext)
   const inline = useMemo(() => {
-    return (rawCode ?? '').trim().split('\n').length === 1 && !inCodeGroup
-  }, [inCodeGroup])
+    return code.trim().split('\n').length === 1 && !inCodeGroup
+  }, [inCodeGroup, code])
 
   const lang = useMemo(
     () => (rawLang ? rawLang.replace('language-', '') : 'plaintext'),
     [rawLang],
   )
-  const code = useMemo(() => rawCode.trim(), [rawCode])
 
   if (inline) {
     return (

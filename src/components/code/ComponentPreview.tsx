@@ -19,6 +19,7 @@ import {
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   path: string
   align?: 'center' | 'start' | 'end'
+  preview?: React.ReactNode
   usingFramer?: boolean
 }
 
@@ -32,22 +33,28 @@ const formatName = (path: string) => {
  * ComponentPreview renders a component preview with a preview and code tab.
  *
  * @param {string} path - The path to the component relative to `src/showcase`.
- * @param {boolean} usingFramer - Whether the component is using Framer Motion.
  * Example: "components/button/3DButton"
+ * @param {boolean} usingFramer - Whether the component is using Framer Motion.
+ * @param {React.ReactNode} preview - optional preview to render a component directly instead of using path.
  *
- * Usage: <ComponentPreview path="components/button/3DButton" />
+ * Usage with path: `<ComponentPreview path="components/button/3DButton" />`
+ *
+ * Usage with preview: `<ComponentPreview path="components/button/3DButton" preview={<3DButton />} />`
  */
 
 export function ComponentPreview({
   path,
   className,
   align = 'center',
+  preview,
   usingFramer,
   ...props
 }: ComponentPreviewProps) {
   const name = formatName(path)
 
   const Preview = React.useMemo(() => {
+    if (preview) return preview
+
     try {
       const Component = require(`../../showcase/${path}.tsx`).default
       return <Component />
@@ -63,7 +70,7 @@ export function ComponentPreview({
         </p>
       )
     }
-  }, [path])
+  }, [path, preview])
 
   const codeString = React.useMemo(() => {
     try {
