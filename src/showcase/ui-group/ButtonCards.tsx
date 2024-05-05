@@ -6,6 +6,7 @@ import NeubrutalismButton from '@/showcase/components/button/NeubrutalismButton'
 import ShimmerButton from '@/showcase/components/button/ShimmerButton'
 import StitchesButton from '@/showcase/components/button/StitchesButton'
 import Link from 'next/link'
+import GradientFillButton from '../components/button/GradientFillButton'
 
 const data = [
   {
@@ -49,6 +50,12 @@ const data = [
     title: 'Border Rotate Button',
     link: '/docs/components/button/border-rotate-button',
     component: <BorderRotateButton />,
+  },
+  {
+    id: 8,
+    title: 'Gradient Fill Button',
+    link: '/docs/components/button/gradient-fill-button',
+    component: <GradientFillButton />,
   },
 ]
 
