@@ -51,12 +51,12 @@ export default function CodeGroup({
         )}
         <div ref={codeRef}>{children}</div>
         {/* {canExpand && ( */}
-        <Button
-          className="w-xs absolute bottom-0 left-0 right-0 block rounded-2xl bg-transparent p-0 text-sm font-medium text-white"
+        <a
+          className="w-xs absolute bottom-0 left-2 right-0 block rounded-2xl bg-transparent p-0 text-sm font-medium text-white no-underline cursor-pointer"
           onClick={() => setMinimized(!minimized)}
         >
           {minimized ? 'Expand' : 'Collapse'}
-        </Button>
+        </a>
         {/* )} */}
       </div>
     </CodeGroupContext.Provider>
