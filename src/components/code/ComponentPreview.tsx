@@ -6,12 +6,12 @@ import AnimatedTabs from '@/components/reusable/AnimatedTabs'
 import { cn } from '@/lib/utils'
 import { Code as CodeIcon, Eye } from 'lucide-react'
 import * as React from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { CopyButton } from './CopyButton'
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   path: string
   align?: 'center' | 'start' | 'end'
+  preview?: React.ReactNode
 }
 
 const formatName = (path: string) => {
@@ -33,11 +33,14 @@ export function ComponentPreview({
   path,
   className,
   align = 'center',
+  preview,
   ...props
 }: ComponentPreviewProps) {
   const name = formatName(path)
 
   const Preview = React.useMemo(() => {
+    if (preview) return preview
+
     try {
       const Component = require(`../../showcase/${path}.tsx`).default
       return <Component />
@@ -53,7 +56,7 @@ export function ComponentPreview({
         </p>
       )
     }
-  }, [path])
+  }, [path, preview])
 
   const codeString = React.useMemo(() => {
     try {
