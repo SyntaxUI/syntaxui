@@ -1,21 +1,18 @@
 'use client'
 
-import { ReactNode, useEffect, useRef } from 'react'
+import { ReactNode, useEffect, useRef, useState } from 'react'
 
 const BorderGlow = ({ children }: { children: ReactNode }) => {
-  // TODO: fix default position
   const ref = useRef<HTMLDivElement>(null)
-  const id = useRef<string>(Math.random().toString(36).substring(2, 9))
+  const [mousePosition, setMousePosition] = useState({ x: '-100%', y: '-100%' })
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!ref.current) return
-
       const rect = ref.current.getBoundingClientRect()
       const x = e.clientX - rect.left
       const y = e.clientY - rect.top
-      document.documentElement.style.setProperty(`--x-${id.current}`, `${x}px`)
-      document.documentElement.style.setProperty(`--y-${id.current}`, `${y}px`)
+      setMousePosition({ x: `${x}px`, y: `${y}px` })
     }
     document.addEventListener('mousemove', handleMouseMove)
     return () => {
@@ -23,19 +20,14 @@ const BorderGlow = ({ children }: { children: ReactNode }) => {
     }
   }, [ref.current])
 
-  useEffect(() => {
-    document.documentElement.style.setProperty(`--x-${id.current}`, `-100%`)
-    document.documentElement.style.setProperty(`--y-${id.current}`, `-100%`)
-  }, [])
-
   return (
     <div
       className="relative overflow-hidden rounded-xl bg-[#e5e7eb]"
       ref={ref}
       style={
         {
-          '--x': `var(--x-${id.current})`,
-          '--y': `var(--y-${id.current})`,
+          '--x': mousePosition.x,
+          '--y': mousePosition.y,
         } as any
       }
     >
