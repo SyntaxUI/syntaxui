@@ -97,11 +97,30 @@ export function ComponentPreview({
         <div className="flex items-center gap-2">
           <h2 className="text-md m-0 font-medium text-gray-800">{name}</h2>
           <div className="flex items-center justify-center gap-x-2">
-            <div>
+            <TooltipProvider>
+              <Tooltip delayDuration={0}>
+                <TooltipTrigger>
+                  <TailwindCSS />
+                </TooltipTrigger>
+                <TooltipContent className="m-0 p-0 text-sm">
+                  <p className="m-0 p-1">
+                    This component requires{' '}
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.framer.com/motion/"
+                    >
+                      Tailwind CSS
+                    </a>
+                  </p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            {usingFramer && (
               <TooltipProvider>
                 <Tooltip delayDuration={0}>
                   <TooltipTrigger>
-                    <TailwindCSS />
+                    <FramerLogo />
                   </TooltipTrigger>
                   <TooltipContent className="m-0 p-0 text-sm">
                     <p className="m-0 p-1">
@@ -111,35 +130,12 @@ export function ComponentPreview({
                         rel="noreferrer"
                         href="https://www.framer.com/motion/"
                       >
-                        Tailwind CSS
+                        Framer Motion
                       </a>
                     </p>
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
-            </div>
-            {usingFramer && (
-              <div>
-                <TooltipProvider>
-                  <Tooltip delayDuration={0}>
-                    <TooltipTrigger>
-                      <FramerLogo />
-                    </TooltipTrigger>
-                    <TooltipContent className="m-0 p-0 text-sm">
-                      <p className="m-0 p-1">
-                        This component requires{' '}
-                        <a
-                          target="_blank"
-                          rel="noreferrer"
-                          href="https://www.framer.com/motion/"
-                        >
-                          Framer Motion
-                        </a>
-                      </p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-              </div>
             )}
           </div>
         </div>

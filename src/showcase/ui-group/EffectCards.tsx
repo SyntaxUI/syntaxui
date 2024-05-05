@@ -9,6 +9,12 @@ const data = [
     image: '/images/ui/image-fade.png',
     link: '/docs/effects/image-fade',
   },
+  {
+    id: 2,
+    title: 'Gradients',
+    image: '/images/ui/gradients.png',
+    link: '/docs/effects/gradients',
+  },
 ]
 
 const EffectCards = () => {
