@@ -34,9 +34,12 @@ const formatName = (path: string) => {
  *
  * @param {string} path - The path to the component relative to `src/showcase`.
  * @param {boolean} usingFramer - Whether the component is using Framer Motion.
+ * @param {React.ReactNode} preview - Optional preview to render instead of the component.
  * Example: "components/button/3DButton"
  *
  * Usage: <ComponentPreview path="components/button/3DButton" />
+ *
+ * Usage: <ComponentPreview path="components/button/3DButton" preview={<3DButton />} />
  */
 
 export function ComponentPreview({
