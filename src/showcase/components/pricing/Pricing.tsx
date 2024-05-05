@@ -10,6 +10,7 @@ const pricingPlans = [
     description: 'Start with essential tools to boost your online presence.',
     monthlyPrice: 69,
     annualPrice: 49,
+    link: 'https://github.com/ansub/syntaxUI',
     features: [
       'SEO Strategy & Topic Recommendations',
       'Competitor Analysis to stand out',
@@ -26,6 +27,7 @@ const pricingPlans = [
       'Unlock enhanced features and premium content to supercharge your business.',
     monthlyPrice: 299,
     annualPrice: 199,
+    link: 'https://github.com/ansub/syntaxUI',
     features: [
       'Everything in Basic plan',
       'Get 25 premium blogs',
@@ -41,6 +43,7 @@ const pricingPlans = [
       'Ultimate customization and dedicated support for enterprises.',
     monthlyPrice: 2499,
     annualPrice: 1666,
+    link: 'https://github.com/ansub/syntaxUI',
     features: [
       'Everything in Professional plan',
       'Get Unlimited premium blogs',
@@ -115,7 +118,7 @@ const Pricing = () => {
                 className="my-0 text-3xl font-semibold text-gray-900"
               >
                 <span>
-                  {billingCycle === 'M' ? plan.monthlyPrice : plan.annualPrice}
+                  ${billingCycle === 'M' ? plan.monthlyPrice : plan.annualPrice}
                 </span>
                 <span className="text-sm font-medium">
                   /{billingCycle === 'M' ? 'month' : 'year'}
@@ -124,6 +127,9 @@ const Pricing = () => {
             </AnimatePresence>
             <motion.button
               whileTap={{ scale: 0.985 }}
+              onClick={() => {
+                window.open(plan.link)
+              }}
               className="mt-8 w-full rounded-lg bg-red-500 py-2 text-sm font-medium text-white hover:bg-red-500/90"
             >
               Get Started

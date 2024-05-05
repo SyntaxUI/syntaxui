@@ -9,7 +9,7 @@ const ThreeDButton = () => {
       onClick={() => console.log('Hello')}
     >
       <span className="absolute h-0 w-0 rounded-full bg-white opacity-10 transition-all duration-300 ease-out group-hover:h-32 group-hover:w-32"></span>
-      <span className="relative font-medium">Syntax UI</span>
+      <span className="relative font-medium">SyntaxUI</span>
     </button>
   )
 }

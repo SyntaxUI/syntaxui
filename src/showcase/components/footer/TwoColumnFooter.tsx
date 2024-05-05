@@ -97,7 +97,7 @@ const TwoColumnFooter = () => {
         </div>
         <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-xs leading-5 text-gray-700">
-            &copy; 2024 Syntax UI. All rights reserved.
+            &copy; 2024 SyntaxUI. All rights reserved.
           </p>
         </div>
       </div>

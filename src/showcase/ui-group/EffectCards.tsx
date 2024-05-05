@@ -12,6 +12,12 @@ const data = [
   },
   {
     id: 2,
+    title: 'Gradients',
+    image: '/images/ui/gradients.png',
+    link: '/docs/effects/gradients',
+  },
+  {
+    id: 3,
     title: 'Border Glow',
     preview: (
       <div className="flex flex-col gap-2">
