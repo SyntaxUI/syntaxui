@@ -29,7 +29,11 @@ const DiscordButton = () => {
     >
       <span className="absolute inset-[-1000%] animate-discord-button bg-[conic-gradient(from_calc(var(--discord-button-angle)+60deg)_at_calc(50%+var(--discord-button-x))_50%,transparent_50%,#fb3a5d_98%,transparent_100%)]"></span>
       <span className="inline-flex items-center gap-2 rounded-full bg-red-100 px-3 py-1 text-[12px] font-medium uppercase text-red-500 backdrop-blur">
-        <span>Request a Component</span>
+        <span>
+          {posthog.getFeatureFlag('meeting_button')
+            ? 'Request a Component'
+            : 'Want a Website?'}
+        </span>
       </span>
     </motion.button>
   )
