@@ -15,10 +15,7 @@ const GradientFillButton = () => {
       whileTap={{
         scale: 0.95,
       }}
-      whileHover={{
-        border: 'none',
-      }}
-      className="relative overflow-hidden whitespace-nowrap rounded-md border-[1px] border-gray-600/20 bg-transparent px-5 py-1.5 text-xs font-medium text-gray-600/50 transition-colors duration-500 hover:border-red-100 hover:text-white"
+      className="relative overflow-hidden whitespace-nowrap rounded-md border-[1px] border-red-500/20 bg-red-100 px-5 py-1.5 text-xs font-medium text-red-500 transition-colors duration-500 hover:border-red-500 hover:text-white"
     >
       <span className="relative z-10">SyntaxUI</span>
       <AnimatePresence>
