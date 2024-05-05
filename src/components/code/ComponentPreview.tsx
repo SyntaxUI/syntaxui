@@ -7,11 +7,20 @@ import { cn } from '@/lib/utils'
 import { Code as CodeIcon, Eye } from 'lucide-react'
 import * as React from 'react'
 import { CopyButton } from './CopyButton'
+import TailwindCSS from '../Logos/Tailwind'
+import FramerLogo from '../Logos/Framer'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip'
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   path: string
   align?: 'center' | 'start' | 'end'
   preview?: React.ReactNode
+  usingFramer?: boolean
 }
 
 const formatName = (path: string) => {
@@ -24,6 +33,7 @@ const formatName = (path: string) => {
  * ComponentPreview renders a component preview with a preview and code tab.
  *
  * @param {string} path - The path to the component relative to `src/showcase`.
+ * @param {boolean} usingFramer - Whether the component is using Framer Motion.
  * Example: "components/button/3DButton"
  *
  * Usage: <ComponentPreview path="components/button/3DButton" />
@@ -34,6 +44,7 @@ export function ComponentPreview({
   className,
   align = 'center',
   preview,
+  usingFramer,
   ...props
 }: ComponentPreviewProps) {
   const name = formatName(path)
@@ -80,7 +91,55 @@ export function ComponentPreview({
       {...props}
     >
       <div className="flex items-center justify-between">
-        <h2 className="text-md m-0 font-medium text-gray-800">{name}</h2>
+        <div className="flex items-center gap-2">
+          <h2 className="text-md m-0 font-medium text-gray-800">{name}</h2>
+          <div className="flex items-center justify-center gap-x-2">
+            <div>
+              <TooltipProvider>
+                <Tooltip delayDuration={0}>
+                  <TooltipTrigger>
+                    <TailwindCSS />
+                  </TooltipTrigger>
+                  <TooltipContent className="m-0 p-0 text-sm">
+                    <p className="m-0 p-1">
+                      This component requires{' '}
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://www.framer.com/motion/"
+                      >
+                        Tailwind CSS
+                      </a>
+                    </p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            </div>
+            {usingFramer && (
+              <div>
+                <TooltipProvider>
+                  <Tooltip delayDuration={0}>
+                    <TooltipTrigger>
+                      <FramerLogo />
+                    </TooltipTrigger>
+                    <TooltipContent className="m-0 p-0 text-sm">
+                      <p className="m-0 p-1">
+                        This component requires{' '}
+                        <a
+                          target="_blank"
+                          rel="noreferrer"
+                          href="https://www.framer.com/motion/"
+                        >
+                          Framer Motion
+                        </a>
+                      </p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </div>
+            )}
+          </div>
+        </div>
         <AnimatedTabs
           tabs={['preview', 'code']}
           selected={selectedTab}

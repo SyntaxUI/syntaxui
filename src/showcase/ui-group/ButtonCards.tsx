@@ -1,10 +1,12 @@
-import Link from 'next/link'
 import ThreeDButton from '@/showcase/components/button/3DButton'
+import BorderRotateButton from '@/showcase/components/button/BorderRotateButton'
+import GradientBorderButton from '@/showcase/components/button/GradientBorderButton'
 import HeartbeatButton from '@/showcase/components/button/HeartbeatButton'
 import NeubrutalismButton from '@/showcase/components/button/NeubrutalismButton'
-import StitchesButton from '@/showcase/components/button/StitchesButton'
 import ShimmerButton from '@/showcase/components/button/ShimmerButton'
-import GradientBorderButton from '../components/button/GradientBorderButton'
+import StitchesButton from '@/showcase/components/button/StitchesButton'
+import Link from 'next/link'
+import GradientFillButton from '../components/button/GradientFillButton'
 
 const data = [
   {
@@ -43,6 +45,18 @@ const data = [
     link: '/docs/components/button/gradient-border-button',
     component: <GradientBorderButton />,
   },
+  {
+    id: 7,
+    title: 'Border Rotate Button',
+    link: '/docs/components/button/border-rotate-button',
+    component: <BorderRotateButton />,
+  },
+  {
+    id: 8,
+    title: 'Gradient Fill Button',
+    link: '/docs/components/button/gradient-fill-button',
+    component: <GradientFillButton />,
+  },
 ]
 
 const ButtonCards = () => {
@@ -55,8 +69,10 @@ const ButtonCards = () => {
               <div className="flex h-[9rem] items-center justify-center overflow-hidden rounded-t-xl border-b bg-gray-50 text-xs text-gray-400 transition-all ease-in-out group-hover:bg-gray-100 md:h-[12rem]">
                 {item.component}
               </div>
-              <div className="w-full p-4 text-sm font-medium text-gray-800">
-                {item.title}
+              <div className="flex items-center justify-between px-3 py-4">
+                <div className="text-sm font-medium text-gray-800">
+                  {item.title}
+                </div>
               </div>
             </div>
           </Link>

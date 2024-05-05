@@ -35,7 +35,7 @@ const ShimmerButton = () => {
       }}
     >
       <span className="m-[0.125rem] rounded-[calc(0.5rem-0.125rem)] bg-[#fb3b53] px-4 py-1 text-xs text-[#f6f6f6] backdrop-blur-sm">
-        Syntax UI
+        SyntaxUI
       </span>
     </motion.button>
   )
