@@ -8,7 +8,7 @@ const SimpleTabs = () => {
 
   const tabs = [
     { id: 'ansub', label: 'Ansub' },
-    { id: 'syntax', label: 'Syntax UI' },
+    { id: 'syntax', label: 'SyntaxUI' },
   ]
 
   const handleTabClick = (tabId: string) => {

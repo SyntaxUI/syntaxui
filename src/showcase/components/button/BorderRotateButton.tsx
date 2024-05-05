@@ -54,7 +54,7 @@ const BorderRotateButton = () => {
       />
 
       <span className="rounded-full bg-[#bd1212] px-4 py-1 text-xs text-[#f6f6f6] backdrop-blur-sm">
-        Syntax UI
+        SyntaxUI
       </span>
     </motion.button>
   )
