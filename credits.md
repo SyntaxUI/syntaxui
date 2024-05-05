@@ -12,3 +12,4 @@
 - Shimmer Button - [Ethan Pollack](https://epoll31.github.io)
 - Border Rotate Button - [Ethan Pollack](https://epoll31.github.io)
 - Labeled Toggle - [Aiko](https://twitter.com/username_aiko)
+- Border Glow Effect - [Ethan Pollack](https://epoll31.github.io)
