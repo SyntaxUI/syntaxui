@@ -6,9 +6,18 @@ const GradientFillButton = () => {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <button
+    <motion.button
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      initial={{
+        scale: 1,
+      }}
+      whileTap={{
+        scale: 0.95,
+      }}
+      whileHover={{
+        border: 'none',
+      }}
       className="relative overflow-hidden whitespace-nowrap rounded-md border-[1px] border-gray-600/20 bg-transparent px-5 py-1.5 text-xs font-medium text-gray-600/50 transition-colors duration-500 hover:border-red-100 hover:text-white"
     >
       <span className="relative z-10">SyntaxUI</span>
@@ -24,11 +33,11 @@ const GradientFillButton = () => {
               stiffness: 150,
               damping: 20,
             }}
-            className="absolute inset-0 z-0 bg-gradient-to-r from-red-600 to-red-500"
+            className="absolute inset-0 z-0 bg-gradient-to-t from-red-600 to-red-500"
           />
         )}
       </AnimatePresence>
-    </button>
+    </motion.button>
   )
 }
 
