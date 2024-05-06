@@ -108,7 +108,7 @@ export function ComponentPreview({
                     <a
                       target="_blank"
                       rel="noreferrer"
-                      href="https://www.framer.com/motion/"
+                      href="https://tailwindcss.com/"
                     >
                       Tailwind CSS
                     </a>
