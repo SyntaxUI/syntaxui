@@ -12,57 +12,57 @@ import BorderGlowButton from '../components/button/BorderGlowButton'
 const data = [
   {
     id: 1,
-    title: '3D Button',
+    title: '3D',
     link: '/docs/components/button/3d-button',
     component: <ThreeDButton />,
   },
   {
     id: 2,
-    title: 'Neubrutalism Button',
+    title: 'Neubrutalism',
     link: '/docs/components/button/neubrutalism-button',
     component: <NeubrutalismButton />,
   },
   {
     id: 3,
-    title: 'Heartbeat Button',
+    title: 'Heartbeat',
     link: '/docs/components/button/heartbeat-button',
     component: <HeartbeatButton />,
   },
   {
     id: 4,
-    title: 'Stitches Button',
+    title: 'Stitches',
     link: '/docs/components/button/stitches-button',
     component: <StitchesButton />,
   },
   {
     id: 5,
-    title: 'Shimmer Button',
+    title: 'Shimmer',
     link: '/docs/components/button/shimmer-button',
     component: <ShimmerButton />,
   },
   {
     id: 6,
-    title: 'Gradient Border Button',
-    link: '/docs/components/button/gradient-border-button',
-    component: <GradientBorderButton />,
-  },
-  {
-    id: 7,
-    title: 'Border Rotate Button',
+    title: 'Border Rotate',
     link: '/docs/components/button/border-rotate-button',
     component: <BorderRotateButton />,
   },
   {
+    id: 7,
+    title: 'Border Glow',
+    link: '/docs/components/button/border-glow-button',
+    component: <BorderGlowButton />,
+  },
+  {
     id: 8,
-    title: 'Gradient Fill Button',
+    title: 'Gradient Fill',
     link: '/docs/components/button/gradient-fill-button',
     component: <GradientFillButton />,
   },
   {
     id: 9,
-    title: 'Border Glow',
-    link: '/docs/components/button/border-glow-button',
-    component: <BorderGlowButton />,
+    title: 'Gradient Border',
+    link: '/docs/components/button/gradient-border-button',
+    component: <GradientBorderButton />,
   },
 ]
 
