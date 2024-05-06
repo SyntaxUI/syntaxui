@@ -13,3 +13,4 @@
 - Border Rotate Button - [Ethan Pollack](https://epoll31.github.io)
 - Labeled Toggle - [Aiko](https://twitter.com/username_aiko)
 - Border Glow Button - [Ethan Pollack](https://epoll31.github.io)
+- Shine Button - [Shriprasanna](https://twitter.com/shriprasanna007)
