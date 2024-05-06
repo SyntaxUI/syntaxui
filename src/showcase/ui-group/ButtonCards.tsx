@@ -7,6 +7,7 @@ import ShimmerButton from '@/showcase/components/button/ShimmerButton'
 import StitchesButton from '@/showcase/components/button/StitchesButton'
 import Link from 'next/link'
 import GradientFillButton from '../components/button/GradientFillButton'
+import BorderGlowButton from '../components/button/BorderGlowButton'
 
 const data = [
   {
@@ -56,6 +57,12 @@ const data = [
     title: 'Gradient Fill Button',
     link: '/docs/components/button/gradient-fill-button',
     component: <GradientFillButton />,
+  },
+  {
+    id: 9,
+    title: 'Border Glow',
+    link: '/docs/components/button/border-glow-button',
+    component: <BorderGlowButton />,
   },
 ]
 
