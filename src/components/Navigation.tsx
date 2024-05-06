@@ -299,10 +299,6 @@ export const navigation: Array<NavGroup> = [
         href: '/docs/effects/gradients',
       },
       { title: 'Image Fade', href: '/docs/effects/image-fade' },
-      {
-        title: 'Border Glow',
-        href: '/docs/effects/border-glow',
-      },
     ],
   },
   {
