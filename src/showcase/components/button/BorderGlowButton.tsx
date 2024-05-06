@@ -19,14 +19,13 @@ const BorderGlowButton = () => {
     return () => {
       document.removeEventListener('mousemove', handleMouseMove)
     }
-  }, [ref.current])
+  }, [])
 
   return (
     <motion.button
       className="relative overflow-hidden rounded-lg bg-[#e5e7eb]"
       ref={ref}
       initial={{ scale: 1 }}
-      whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       transition={{
         type: 'spring',
