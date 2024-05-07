@@ -1,7 +1,5 @@
 'use client'
 
-import React from 'react'
-
 const ShineButton = () => {
   return (
     <button className="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-red-500 px-4 py-1.5 text-xs font-normal text-white transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-red-500/30">

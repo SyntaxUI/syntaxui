@@ -1,7 +1,5 @@
 'use client'
 
-import React from 'react'
-
 const StitchesButton = () => {
   return (
     <button className="group relative rounded-lg border-2 border-red-500 bg-red-500 px-5 py-1 font-medium text-white duration-1000 hover:shadow-lg hover:shadow-red-500/50">

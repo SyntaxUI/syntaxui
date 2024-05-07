@@ -1,7 +1,5 @@
 'use client'
 
-import React from 'react'
-
 const GradientBorderButton = () => {
   return (
     <button className="font-regular rounded-full border bg-gradient-to-b from-red-500 to-blue-500 p-[3px] text-white transition-all duration-300 ease-in-out hover:scale-105">

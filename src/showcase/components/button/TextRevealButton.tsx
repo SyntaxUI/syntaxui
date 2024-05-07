@@ -1,7 +1,5 @@
 'use client'
 
-import React from 'react'
-
 const TextRevealButton = () => {
   return (
     <button className="group/button relative inline-flex h-7 w-7 items-center justify-center overflow-hidden rounded-full bg-red-500 font-medium text-white transition-all duration-300 hover:w-24">
