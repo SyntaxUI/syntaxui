@@ -1,30 +1,35 @@
-name: 🐛 Bug Report
-description: Submit a bug report to help improve SyntaxUI
+name: ✨ Feature Request
+description: Suggest a new feature to enhance SyntaxUI
 
-title: '[BUG]: '
+title: '[FEATURE]: '
 
-labels: [Bug]
+labels: [Enhancement]
 body:
   - type: markdown
     attributes:
       value: |
-        Fill in the information below to help us understand and resolve the problem quickly.
+
+        Fill in the information below to help us understand and evaluate your feature request.
 
   - type: textarea
     attributes:
-      label: Description 📝
-      description: A clear and concise description of what the bug is.
+      label: Feature Description 📝
+      description: A clear and concise description of the new feature.
     validations:
       required: true
-  - type: input
-    attributes:
-      label: Link 🔗
-      description: Link to the page where the bug occurred.
-    validations:
-      required: false
   - type: textarea
     attributes:
-      label: Screenshots 📸
-      description: If applicable, add screenshots to help explain the problem.
+      label: Motivation 🌟
+      description: Explain the motivation behind the feature request.
     validations:
       required: true
+  - type: textarea
+    attributes:
+      label: Expected Behavior 🤔
+      description: Specify the expected behavior of the new feature.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Additional Information ℹ️
+      description: Add any other information or context about the feature request.
