@@ -21,7 +21,7 @@ body:
     attributes:
       label: Additional Information ℹ️
       description: Add any other information or context about the feature request.
- - type: textarea
+  - type: textarea
     attributes:
       label: Screenshots 📸
       description: add screenshot of the feature if you have any.
