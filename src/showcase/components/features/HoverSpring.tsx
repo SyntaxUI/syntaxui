@@ -41,10 +41,10 @@ const ProjectsData = [
   },
 ]
 
-const SpringAnimatedFeatures = () => {
+const HoverSpring = () => {
   return (
     <div>
-      <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-3">
+      <div className="grid w-full grid-cols-1 gap-x-10 md:grid-cols-3">
         {ProjectsData.map((project) => {
           return (
             <motion.div
@@ -81,4 +81,4 @@ const SpringAnimatedFeatures = () => {
   )
 }
 
-export default SpringAnimatedFeatures
+export default HoverSpring
