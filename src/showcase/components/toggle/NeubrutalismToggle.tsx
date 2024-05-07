@@ -24,10 +24,10 @@ const NeubrutalismToggle = ({
       onClick={handleToggle}
     >
       <span
-        className={`flex h-full w-full items-center justify-center rounded-full border-[2px]  border-[#222222] ${toggled ? 'translate-x-[3px] translate-y-[-3px] bg-[#ff527a]' : ' bg-gray-400'} p-[2px] transition-all`}
+        className={`flex h-full w-full items-center justify-center rounded-full border-[2px]  border-[#222222] ${toggled ? 'translate-x-[3px] translate-y-[-3px] bg-[#ff527a]' : ' bg-gray-300'} p-[2px] transition-all duration-300`}
       >
         <span
-          className={`aspect-square h-full transform rounded-full border-[2px] border-[#222222] bg-white shadow-lg ${toggled ? 'translate-x-[10px]' : 'translate-x-[-10px]'} transition-all`}
+          className={`aspect-square h-full transform rounded-full border-[2px] border-[#222222] bg-white shadow-lg ${toggled ? 'translate-x-[10px]' : 'translate-x-[-10px]'} transition-all duration-300`}
         />
       </span>
     </button>
