@@ -1,4 +1,4 @@
-name: ✨ Feature/Component Request
+name: ✨ Feature Request
 description: Suggest a new Feature or Component to enhance SyntaxUI
 
 title: '[FEATURE]: '
@@ -9,7 +9,6 @@ body:
     attributes:
       value: |
         Fill in the information below to help us understand and evaluate your feature or component request.
-
   - type: textarea
     attributes:
       label: Feature/Component Description 📝
