@@ -14,4 +14,4 @@
 - Labeled Toggle - [Aiko](https://twitter.com/username_aiko)
 - Border Glow Button - [Ethan Pollack](https://epoll31.github.io)
 - Shine Button - [Shriprasanna](https://twitter.com/shriprasanna007)
-- Text Revel Button - [Shriprasanna](https://twitter.com/shriprasanna007)
+- Text Reveal Button - [Shriprasanna](https://twitter.com/shriprasanna007)

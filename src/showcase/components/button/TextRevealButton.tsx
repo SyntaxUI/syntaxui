@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-const TextRevelButton = () => {
+const TextRevealButton = () => {
   return (
     <button className="group/button relative inline-flex h-7 w-7 items-center justify-center overflow-hidden rounded-full bg-red-500 font-medium text-white transition-all duration-300 hover:w-24">
       <p className="inline-flex whitespace-nowrap text-xs opacity-0 transition-all duration-200 group-hover/button:-translate-x-2.5 group-hover/button:opacity-100">
@@ -21,4 +21,4 @@ const TextRevelButton = () => {
   )
 }
 
-export default TextRevelButton
+export default TextRevealButton

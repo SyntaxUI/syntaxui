@@ -9,7 +9,7 @@ import Link from 'next/link'
 import GradientFillButton from '@/showcase/components/button/GradientFillButton'
 import BorderGlowButton from '@/showcase/components/button/BorderGlowButton'
 import ShineButton from '@/showcase/components/button/ShineButton'
-import TextRevelButton from '../components/button/TextRevelButton'
+import TextRevealButton from '../components/button/TextRevealButton'
 
 const data = [
   {
@@ -75,8 +75,8 @@ const data = [
   {
     id: 11,
     title: 'Text Revel',
-    link: '/docs/components/button/text-revel-button',
-    component: <TextRevelButton />,
+    link: '/docs/components/button/text-reveal-button',
+    component: <TextRevealButton />,
   },
 ]
 
