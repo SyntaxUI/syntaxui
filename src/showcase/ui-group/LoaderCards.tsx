@@ -21,53 +21,53 @@ interface LoaderCardProps {
 const data: LoaderCardProps[] = [
   {
     title: 'Classic',
-    link: '/docs/components/loaders/classic',
+    link: '/components/loaders/classic',
     component: <ClassicLoader />,
   },
   {
     title: 'Bounce',
-    link: '/docs/components/loaders/bounce',
+    link: '/components/loaders/bounce',
     component: <BounceLoader />,
   },
   {
     title: 'Orbiting',
-    link: '/docs/components/loaders/orbiting',
+    link: '/components/loaders/orbiting',
     component: <OrbitingLoader />,
   },
   {
     title: 'Staggered Fade',
-    link: '/docs/components/loaders/staggered-fade',
+    link: '/components/loaders/staggered-fade',
     component: <StaggeredFadeLoader />,
   },
   {
     title: 'Rotating Dots',
-    link: '/docs/components/loaders/rotating-dots',
+    link: '/components/loaders/rotating-dots',
     component: <RotatingDotsLoader />,
   },
   {
     title: 'Spinning Cube',
-    link: '/docs/components/loaders/spinning-cube',
+    link: '/components/loaders/spinning-cube',
     component: <SpinningCubeLoader />,
   },
   {
     title: 'Pulsating Dots',
-    link: '/docs/components/loaders/pulsating-dots',
+    link: '/components/loaders/pulsating-dots',
     component: <PulsatingDots />,
   },
   {
     title: 'Ripple',
-    link: '/docs/components/loaders/ripple',
+    link: '/components/loaders/ripple',
     component: <RippleLoader />,
   },
   {
     title: 'Neon Glow',
-    link: '/docs/components/loaders/neon-glow',
+    link: '/components/loaders/neon-glow',
     component: <NeonGlowLoader />,
     hide: true,
   },
   {
     title: 'Pulsating Gradient',
-    link: '/docs/components/loaders/pulsating-gradient',
+    link: '/components/loaders/pulsating-gradient',
     component: <PulsatingGradientLoader />,
     hide: true,
   },

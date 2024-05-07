@@ -6,13 +6,13 @@ const data = [
   {
     id: 1,
     title: 'Skewed Infinite Scroll',
-    link: '/docs/animations/skewed-infinite-scroll',
+    link: '/animations/skewed-infinite-scroll',
     component: <SkewedInfiniteScroll />,
   },
   {
     id: 2,
     title: 'Hover Animations',
-    link: '/docs/animations/hovers',
+    link: '/animations/hovers',
     component: <HoverTadaButton />,
   },
 ]

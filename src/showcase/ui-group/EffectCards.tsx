@@ -7,13 +7,13 @@ const data = [
     id: 1,
     title: 'Image Fade',
     image: '/images/ui/image-fade.png',
-    link: '/docs/effects/image-fade',
+    link: '/effects/image-fade',
   },
   {
     id: 2,
     title: 'Gradients',
     image: '/images/ui/gradients.png',
-    link: '/docs/effects/gradients',
+    link: '/effects/gradients',
   },
 ]
 
