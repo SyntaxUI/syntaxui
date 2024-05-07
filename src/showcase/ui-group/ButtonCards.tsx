@@ -67,7 +67,7 @@ const data = [
   },
   {
     id: 10,
-    title: 'Shine Button',
+    title: 'Shine',
     link: '/docs/components/button/shine-button',
     component: <ShineButton />,
   },
