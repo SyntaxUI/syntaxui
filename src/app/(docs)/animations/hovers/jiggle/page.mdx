@@ -1,0 +1,42 @@
+import Link from 'next/link'
+import { HoverJiggleButton } from '@/showcase/animations/hover/HoverJiggleButton'
+import { ChevronLeft } from 'lucide-react'
+import PreviewCodeGroup from '@/components/code/PreviewCodeGroup'
+
+<Link className="flex flex-row items-center" href="/animations/hovers">
+  <ChevronLeft size={17} />
+  Back
+</Link>
+
+# Jiggle
+
+<div className="mt-4"></div>
+
+<PreviewCodeGroup
+  preview={
+    <div className="group flex w-full items-center justify-center">
+      <HoverJiggleButton />
+    </div>
+  }
+  code={`
+{
+  animation: {
+    "hover-jiggle": "hover-jiggle 03s ease-in-out"
+  },
+  keyframes: {
+    'hover-jiggle': {
+      '0%': {
+        transform: 'rotate(-4deg)',
+      },
+      '50%': {
+        transform: 'rotate(4deg)',
+      },
+      '100%': {
+        transform: 'rotate(-4deg)',
+      },
+    },
+  }
+}
+`}
+  language="js"
+/>

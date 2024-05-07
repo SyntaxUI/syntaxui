@@ -4,12 +4,12 @@ const data = [
   {
     id: 1,
     title: 'useVisible()',
-    link: '/docs/hooks/useVisible',
+    link: '/hooks/useVisible',
   },
   {
     id: 2,
     title: 'useMediaSizes()',
-    link: '/docs/hooks/useMediaSizes',
+    link: '/hooks/useMediaSizes',
   },
 ]
 

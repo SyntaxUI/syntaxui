@@ -62,7 +62,7 @@ const Home = () => {
             </div>
           </div>
           <div className="flex items-center space-x-4">
-            <Link href="/docs">
+            <Link href="/components">
               <Button className="bg-red-500 hover:bg-red-500/90">
                 Get Started
               </Button>

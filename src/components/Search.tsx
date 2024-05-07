@@ -45,10 +45,12 @@ function useAutocomplete({ close }: { close: () => void }) {
       return
     }
 
-    router.push(itemUrl)
+    const visibleUrl = itemUrl.replace('(docs)/', '')
+
+    router.push(visibleUrl)
 
     if (
-      itemUrl ===
+      visibleUrl ===
       window.location.pathname + window.location.search + window.location.hash
     ) {
       close()
