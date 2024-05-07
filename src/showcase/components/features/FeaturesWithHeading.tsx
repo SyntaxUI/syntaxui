@@ -1,5 +1,5 @@
 'use client'
-import { Sparkles, Code, Palette } from 'lucide-react'
+import { Sparkles, Code, Palette, Clock, Command, Feather } from 'lucide-react'
 
 interface Feature {
   id: number
@@ -37,28 +37,28 @@ const FeaturesData: Feature[] = [
     name: 'Responsive',
     description:
       'SyntaxUI components are designed to be responsive and work seamlessly across devices.',
-    icon: <Sparkles size={iconSize} />,
+    icon: <Feather size={iconSize} />,
   },
   {
     id: 5,
     name: 'Accessible',
     description:
       'SyntaxUI prioritizes accessibility, ensuring that your components are usable by everyone.',
-    icon: <Sparkles size={iconSize} />,
+    icon: <Command size={iconSize} />,
   },
   {
     id: 6,
     name: 'Regularly Updated',
     description:
       'SyntaxUI is actively maintained and regularly updated with new features and improvements.',
-    icon: <Sparkles size={iconSize} />,
+    icon: <Clock size={iconSize} />,
   },
 ]
 
 const FeaturesGrid = () => {
   return (
     <div>
-      <div className="mt-8 grid w-full grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid w-full grid-cols-2 gap-12 md:grid-cols-2 lg:grid-cols-3">
         {FeaturesData.map((feature) => {
           return (
             <div key={feature.id} className="width-fit text-left">
