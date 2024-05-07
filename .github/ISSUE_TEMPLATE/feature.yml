@@ -19,17 +19,11 @@ body:
       required: true
   - type: textarea
     attributes:
-      label: Motivation 🌟
-      description: Explain the motivation behind the feature request.
-    validations:
-      required: true
-  - type: textarea
-    attributes:
-      label: Expected Behavior 🤔
-      description: Specify the expected behavior of the new feature.
-    validations:
-      required: true
-  - type: textarea
-    attributes:
       label: Additional Information ℹ️
       description: Add any other information or context about the feature request.
+ - type: textarea
+    attributes:
+      label: Screenshots 📸
+      description: add screenshot of the feature if you have any.
+    validations:
+      required: false
