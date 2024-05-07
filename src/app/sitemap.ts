@@ -25,6 +25,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         urls.push({
           url: `https://syntaxui.com${adjustedUrl || '/'}`,
           lastModified: new Date().toISOString(),
+          priority: 1,
+          changeFrequency: 'daily',
         })
       }
     })
