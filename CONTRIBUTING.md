@@ -72,17 +72,17 @@ src/
 
 ##### Creating page in `docs`
 
-In `src/app/docs/` we have the following folder layout that we use to separate out the major feature types.
+In `src/app/(docs)/` we have the following folder layout that we use to separate out the major feature types.
 
 ```
-src/app/docs/
+src/app/(docs)/
 ├─ animations/
 ├─ components/
 ├─ effects/
 └─ hooks/
 ```
 
-Within these, we further distinguish between minor feature types using appropriate groups based on the type of feature and the specific name of the feature. For example, the HeartbeatButton is in `components/button/heartbeat-button/`. Note: within `docs/`, folder names use kebab case.
+Within these, we further distinguish between minor feature types using appropriate groups based on the type of feature and the specific name of the feature. For example, the HeartbeatButton is in `components/button/heartbeat-button/`. Note: within `(docs)/`, folder names use kebab case.
 
 When creating a page for a specific feature, we use [mdx](https://mdxjs.com/). For example, the docs page for HearbeatButton will look like this.
 
@@ -99,7 +99,7 @@ Please use other `page.mdx` files as guides when creating a new page.
   - You can use it by passing in a `path` that is relative to `src/showcase/`.
   - For example, if you wanted to display a tab for a preview of our HeartbeatButton component and a tab for the code of that button you would add `<ComponentPreview path="components/button/HeartbeatButton" />` into the appropriate `page.mdx`.
 - **PreviewCodeGroup**: a way to display a tab group with a component preview and code where you want to explicitly specify the preview, code, and language.
-  - Check out `/src/docs/animations/hovers/jiggle/page.mdx` for an example.
+  - Check out `/src/(docs)/animations/hovers/jiggle/page.mdx` for an example.
 - **CodeGroup**: a way to display just code (for example, hooks that do not have component previews) with a title.
   - You can use this by adding `<CodeGroup title="filename">```insert code here inside backticks```</CodeGroup>`
 - **CodeGroupFromFile**: a way to display just code (for example, hooks that do not have component previews) with a title where the code is read from a file, instead of an internal code block.

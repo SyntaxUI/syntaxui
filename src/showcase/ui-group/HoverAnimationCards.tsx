@@ -8,25 +8,25 @@ const data = [
   {
     id: 1,
     title: 'Tada',
-    link: '/docs/animations/hovers/tada',
+    link: '/animations/hovers/tada',
     component: <HoverTadaButton />,
   },
   {
     id: 2,
     title: 'Jiggle',
-    link: '/docs/animations/hovers/jiggle',
+    link: '/animations/hovers/jiggle',
     component: <HoverJiggleButton />,
   },
   {
     id: 3,
     title: 'Pop',
-    link: '/docs/animations/hovers/pop',
+    link: '/animations/hovers/pop',
     component: <HoverPopButton />,
   },
   {
     id: 4,
     title: 'Vibrate',
-    link: '/docs/animations/hovers/vibrate',
+    link: '/animations/hovers/vibrate',
     component: <HoverVibrateButton />,
   },
 ]

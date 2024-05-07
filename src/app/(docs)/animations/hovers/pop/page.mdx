@@ -1,0 +1,42 @@
+import Link from 'next/link'
+import { HoverPopButton } from '@/showcase/animations/hover/HoverPopButton'
+import { ChevronLeft } from 'lucide-react'
+import PreviewCodeGroup from '@/components/code/PreviewCodeGroup'
+
+<Link className="flex flex-row items-center" href="/animations/hovers">
+  <ChevronLeft size={17} />
+  Back
+</Link>
+
+# Pop
+
+<div className="mt-4"></div>
+
+<PreviewCodeGroup
+  preview={
+    <div className="group flex w-full items-center justify-center">
+      <HoverPopButton />
+    </div>
+  }
+  code={`
+{
+  animation: {
+    'hover-pop': 'hover-pop 0.5s ease-out',
+  },
+  keyframes: {
+    'hover-pop': {
+      '0%': {
+        transform: 'scale(1)',
+      },
+      '50%': {
+        transform: 'scale(1.07)',
+      },
+      '100%': {
+        transform: 'scale(1)',
+      },
+    },
+  }
+}
+`}
+  language="js"
+/>

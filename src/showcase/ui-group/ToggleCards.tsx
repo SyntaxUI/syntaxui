@@ -12,17 +12,17 @@ interface ToggleCardProps {
 const data: ToggleCardProps[] = [
   {
     title: 'Simple Toggle',
-    link: '/docs/components/toggle/simple-toggle',
+    link: '/components/toggle/simple-toggle',
     component: <SimpleToggle />,
   },
   {
     title: 'Neubrutalism Toggle',
-    link: '/docs/components/toggle/neubrutalism-toggle',
+    link: '/components/toggle/neubrutalism-toggle',
     component: <NeubrutalismToggle />,
   },
   {
     title: 'Labeled Toggle',
-    link: '/docs/components/toggle/labeled-toggle',
+    link: '/components/toggle/labeled-toggle',
     component: <LabeledToggle />,
   },
 ]
