@@ -95,7 +95,7 @@ export const Header = forwardRef<
         </ul>
       </div>
       {/* <Search /> */}
-      <div className="flex items-center gap-5 lg:hidden">
+      <div className="flex items-center gap-3 lg:hidden">
         {pathname === '/' ? null : <MobileNavigation />}
         <Link
           href="/"
