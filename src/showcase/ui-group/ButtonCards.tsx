@@ -9,6 +9,7 @@ import Link from 'next/link'
 import GradientFillButton from '@/showcase/components/button/GradientFillButton'
 import BorderGlowButton from '@/showcase/components/button/BorderGlowButton'
 import ShineButton from '@/showcase/components/button/ShineButton'
+import TextRevelButton from '../components/button/TextRevelButton'
 
 const data = [
   {
@@ -70,6 +71,12 @@ const data = [
     title: 'Shine',
     link: '/components/button/shine-button',
     component: <ShineButton />,
+  },
+  {
+    id: 11,
+    title: 'Text Revel Button',
+    link: '/docs/components/button/text-revel-button',
+    component: <TextRevelButton />,
   },
 ]
 
