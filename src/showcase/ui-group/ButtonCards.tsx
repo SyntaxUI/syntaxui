@@ -74,7 +74,7 @@ const data = [
   },
   {
     id: 11,
-    title: 'Text Revel Button',
+    title: 'Text Revel',
     link: '/docs/components/button/text-revel-button',
     component: <TextRevelButton />,
   },
