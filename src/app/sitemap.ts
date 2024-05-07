@@ -18,15 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         // Recursively search subdirectories
         readDirectory(filePath, `${baseUrl}/${file}`)
       } else if (file.endsWith('page.tsx') || file.endsWith('page.mdx')) {
-        // Determine priority based on the URL depth
-        const depth = baseUrl.split('/').filter(Boolean).length // count the slashes
-        let priority: number
-        if (baseUrl === '') {
-          priority = 1.0 // root
-        } else {
-          priority = 0.8
-        }
-
         // Adjust path by removing "/(docs)"
         const adjustedUrl = baseUrl.replace('/(docs)', '')
 
@@ -34,7 +25,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         urls.push({
           url: `https://syntaxui.com${adjustedUrl || '/'}`,
           lastModified: new Date().toISOString(),
-          priority,
         })
       }
     })
@@ -42,9 +32,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Initialize the recursive search
   readDirectory(rootDir, '')
-
-  // Sort URLs by priority, descending
-  urls.sort((a, b) => b.priority! - a.priority!)
 
   return urls
 }
