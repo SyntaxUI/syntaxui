@@ -25,7 +25,7 @@ function TopLevelNavItem({
     <li>
       <Link
         href={href}
-        className="text-sm leading-5 text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+        className="whitespace-nowrap text-sm leading-5 text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
       >
         {children}
       </Link>
@@ -95,7 +95,7 @@ export const Header = forwardRef<
         </ul>
       </div>
       {/* <Search /> */}
-      <div className="flex items-center gap-5 lg:hidden">
+      <div className="flex items-center gap-3 lg:hidden">
         {pathname === '/' ? null : <MobileNavigation />}
         <Link
           href="/"
@@ -109,7 +109,7 @@ export const Header = forwardRef<
             width={100}
             height={100}
           />
-          <div className="text-md font-medium text-gray-800">
+          <div className="text-md hidden font-medium text-gray-800 md:inline">
             Syntax<span className="text-[10px] font-bold text-red-500">UI</span>
           </div>{' '}
         </Link>
