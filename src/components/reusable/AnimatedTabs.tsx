@@ -72,7 +72,7 @@ const AnimatedTabs = ({
     <div
       className={
         (center ? 'justify-center ' : '') +
-        'flex flex-wrap items-center gap-2 border-gray-500/25 bg-white pb-1'
+        'flex  items-center gap-2 border-gray-500/25 bg-white pb-1 w-full justify-end '
       }
     >
       {tabs?.map((tab, index) => (
