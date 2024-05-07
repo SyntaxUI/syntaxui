@@ -301,19 +301,19 @@ export const navigation: Array<NavGroup> = [
       { title: 'Image Fade', href: '/docs/effects/image-fade' },
     ],
   },
-  {
-    title: 'Hooks',
-    links: [
-      {
-        title: 'useVisible()',
-        href: '/docs/hooks/useVisible',
-      },
-      {
-        title: 'useMediaSizes()',
-        href: '/docs/hooks/useMediaSizes',
-      },
-    ],
-  },
+  // {
+  //   title: 'Hooks',
+  //   links: [
+  //     {
+  //       title: 'useVisible()',
+  //       href: '/docs/hooks/useVisible',
+  //     },
+  //     {
+  //       title: 'useMediaSizes()',
+  //       href: '/docs/hooks/useMediaSizes',
+  //     },
+  //   ],
+  // },
 ]
 
 export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {

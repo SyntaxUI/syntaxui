@@ -97,12 +97,12 @@ const Home = () => {
             </h1>
             <EffectCards />
           </div>
-          <div>
+          {/* <div>
             <h1 className="mb-4 w-full text-left text-lg font-semibold">
               Hooks
             </h1>
             <HooksCard />
-          </div>
+          </div> */}
         </div>
         <Footer />
       </div>
