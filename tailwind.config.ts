@@ -1,8 +1,7 @@
+import headlessuiPlugin from '@headlessui/tailwindcss'
+import typographyPlugin from '@tailwindcss/typography'
 import { type Config } from 'tailwindcss'
 import typographyStyles from './typography'
-import typographyPlugin from '@tailwindcss/typography'
-import headlessuiPlugin from '@headlessui/tailwindcss'
-import { transform } from 'next/dist/build/swc'
 
 export default {
   content: ['./src/**/*.{js,mjs,jsx,ts,tsx,mdx}'],
@@ -212,6 +211,14 @@ export default {
             '--discord-button-x': '50px',
           },
         },
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        },
+        'logo-cloud': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(calc(-100% - 4rem))' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -225,6 +232,8 @@ export default {
         'hover-vibrate': 'hover-vibrate 0.4s ease-in-out',
         'discord-button':
           'discord-button-angle 6s linear infinite, discord-button-x 6s 0.5s ease-in-out infinite',
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+        'logo-cloud': 'logo-cloud 30s linear infinite',
       },
     },
   },

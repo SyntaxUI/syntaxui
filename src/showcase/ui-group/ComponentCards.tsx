@@ -4,6 +4,7 @@ import SimpleToggle from '@/showcase/components/toggle/SimpleToggle'
 import Image from 'next/image'
 import Link from 'next/link'
 import HeartbeatButton from '../components/button/HeartbeatButton'
+import AnimatedLogoCloud from '../components/logo-cloud/AnimatedLogoCloud'
 
 const data = [
   {
@@ -72,6 +73,12 @@ const data = [
     component: <SimpleToggle />,
     link: '/components/toggle',
   },
+  {
+    id: 11,
+    title: 'Logo Cloud',
+    component: <AnimatedLogoCloud />,
+    link: '/components/logo-cloud',
+  },
 ]
 
 const ComponentCards = () => {
@@ -81,7 +88,7 @@ const ComponentCards = () => {
         {data.map((item) => (
           <Link href={item.link} key={item.id} className="no-underline">
             <div className="overflow group rounded-xl border border-white ring-1 ring-zinc-200 transition-all ease-in-out hover:cursor-pointer">
-              <div className="flex h-[9rem] items-center justify-center rounded-t-xl border-b bg-gray-50 text-xs text-gray-400 transition-all ease-in-out group-hover:bg-gray-100 md:h-[12rem]">
+              <div className="flex h-[9rem] items-center justify-center overflow-hidden rounded-t-xl border-b bg-gray-50 text-xs text-gray-400 transition-all ease-in-out group-hover:bg-gray-100 md:h-[12rem]">
                 {item.image ? (
                   <Image
                     width={200}
