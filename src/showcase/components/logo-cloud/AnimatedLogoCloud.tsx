@@ -1,5 +1,3 @@
-import React from 'react'
-
 // Instructions for integrating continuous logo animation in Tailwind CSS:
 // Add the following configurations to the `extend` section of your `tailwind.config.js`:
 // 1. Keyframes for 'logo-cloud' animation that continuously moves logos from right to left:
@@ -48,7 +46,7 @@ const AnimatedLogoCloud = () => {
   return (
     <div className="py-14">
       <div className="mx-auto max-w-6xl px-4 md:px-8">
-        <div className="group relative mt-6 flex overflow-hidden p-2">
+        <div className="group relative mt-6 flex gap-6 overflow-hidden p-2">
           {Array(5)
             .fill(null)
             .map((index) => (
