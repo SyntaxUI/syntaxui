@@ -259,7 +259,10 @@ export const navigation: Array<NavGroup> = [
         title: 'Loaders',
         href: '/components/loaders',
       },
-
+      {
+        title: 'Logo Cloud',
+        href: '/components/logo-cloud',
+      },
       {
         title: 'Pricing',
         href: '/components/pricing',
