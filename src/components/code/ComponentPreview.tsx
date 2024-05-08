@@ -93,8 +93,8 @@ export function ComponentPreview({
       )}
       {...props}
     >
-      <div className="flex flex-col md:flex-row items-center justify-between">
-        <div className="flex items-center w-full justify-between md:justify-start  gap-2">
+      <div className="flex flex-col items-center justify-between md:flex-row">
+        <div className="flex w-full items-center justify-between gap-2  md:justify-start">
           <h2 className="text-md m-0 font-medium text-gray-800">{name}</h2>
           <div className="flex items-center justify-center gap-x-2">
             <TooltipProvider>
@@ -153,7 +153,7 @@ export function ComponentPreview({
           <div>
             <div
               className={cn(
-                'preview flex min-h-[250px] w-full justify-center p-10',
+                'preview flex min-h-[250px] w-full justify-center overflow-hidden p-10',
                 {
                   'items-center': align === 'center',
                   'items-start': align === 'start',
