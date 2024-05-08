@@ -44,8 +44,8 @@ const logos = [
 
 const AnimatedLogoCloud = () => {
   return (
-    <div className="py-14">
-      <div className="mx-auto max-w-6xl px-4 md:px-8">
+    <div className="py-12">
+      <div className="mx-auto max-w-4xl px-4 md:px-8">
         <div className="group relative mt-6 flex gap-6 overflow-hidden p-2">
           {Array(5)
             .fill(null)
@@ -64,8 +64,6 @@ const AnimatedLogoCloud = () => {
                 ))}
               </div>
             ))}
-          <div className="from-background pointer-events-none absolute inset-y-0 left-0 h-full w-1/3 bg-gradient-to-r"></div>
-          <div className="from-background pointer-events-none absolute inset-y-0 right-0 h-full w-1/3 bg-gradient-to-l"></div>
         </div>
       </div>
     </div>
