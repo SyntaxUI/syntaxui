@@ -13,32 +13,32 @@
 //    }
 
 const logos = [
-  { name: 'Prime', url: 'https://svgl.app/library/prime-video.svg' },
-  { name: 'Trustpilot', url: 'https://svgl.app/library/trustpilot.svg' },
+  { name: 'Prime', url: '/images/logos/prime-video.svg' },
+  { name: 'Trustpilot', url: '/images/logos/trustpilot.svg' },
   {
     name: 'Webflow',
-    url: 'https://svgl.app/library/webflow.svg',
+    url: '/images/logos/webflow.svg',
   },
 
   {
     name: 'Airbnb',
-    url: 'https://svgl.app/library/airbnb-wordmark.svg',
+    url: '/images/logos/airbnb-wordmark.svg',
   },
   {
     name: 'Tina',
-    url: 'https://svgl.app/library/tina_wordmark.svg',
+    url: '/images/logos/tina_wordmark.svg',
   },
   {
     name: 'Stackoverflow',
-    url: 'https://svgl.app/library/stackoverflow_wordmark.svg',
+    url: '/images/logos/stackoverflow_wordmark.svg',
   },
   {
     name: 'mistral',
-    url: 'https://svgl.app/library/mistral-ai_wordmark.svg',
+    url: '/images/logos/mistral-ai_wordmark.svg',
   },
   {
     name: 'Google',
-    url: 'https://svgl.app/library/google-wordmark.svg',
+    url: '/images/logos/google-wordmark.svg',
   },
 ]
 
@@ -52,7 +52,7 @@ const AnimatedLogoCloud = () => {
             .map((index) => (
               <div
                 key={index}
-                className="animate-logo-cloud flex shrink-0 flex-row justify-around gap-6"
+                className="flex shrink-0 animate-logo-cloud flex-row justify-around gap-6"
               >
                 {logos.map((logo, key) => (
                   <img
