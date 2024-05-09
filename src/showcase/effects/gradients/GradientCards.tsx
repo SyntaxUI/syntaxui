@@ -35,6 +35,11 @@ const data = [
     title: 'Emerald',
     gradient: 'bg-gradient-to-r from-green-500 via-teal-500 to-blue-500',
   },
+  {
+    id: 7,
+    title: 'Evening Surf',
+    gradient: 'bg-gradient-to-r from-[#fa8cff] via-[#9182ff] to-[#0476ff]',
+  },
 ]
 
 const GradientCards = () => {
