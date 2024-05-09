@@ -13,32 +13,38 @@
 //    }
 
 const logos = [
-  { name: 'Prime', url: '/images/logos/prime-video.svg' },
-  { name: 'Trustpilot', url: '/images/logos/trustpilot.svg' },
+  {
+    name: 'Prime',
+    url: 'https://res.cloudinary.com/dfhp33ufc/image/upload/v1715276558/logos/t2awrrfzdvmg1chnzyfr.svg',
+  },
+  {
+    name: 'Trustpilot',
+    url: 'https://res.cloudinary.com/dfhp33ufc/image/upload/v1715276558/logos/tkfspxqmjflfllbuqxsi.svg',
+  },
   {
     name: 'Webflow',
-    url: '/images/logos/webflow.svg',
+    url: 'https://res.cloudinary.com/dfhp33ufc/image/upload/v1715276560/logos/nymiivu48d5lywhf9rpf.svg',
   },
 
   {
     name: 'Airbnb',
-    url: '/images/logos/airbnb-wordmark.svg',
+    url: 'https://res.cloudinary.com/dfhp33ufc/image/upload/v1715276558/logos/pmblusboe7vkw8vxdknx.svg',
   },
   {
     name: 'Tina',
-    url: '/images/logos/tina_wordmark.svg',
+    url: 'https://res.cloudinary.com/dfhp33ufc/image/upload/v1715276560/logos/afqhiygywyphuou6xtxc.svg',
   },
   {
     name: 'Stackoverflow',
-    url: '/images/logos/stackoverflow_wordmark.svg',
+    url: 'https://res.cloudinary.com/dfhp33ufc/image/upload/v1715276558/logos/ts1j4mkooxqmscgptafa.svg',
   },
   {
     name: 'mistral',
-    url: '/images/logos/mistral-ai_wordmark.svg',
+    url: 'https://res.cloudinary.com/dfhp33ufc/image/upload/v1715276558/logos/tyos2ayezryjskox3wzs.svg',
   },
   {
     name: 'Google',
-    url: '/images/logos/google-wordmark.svg',
+    url: 'https://res.cloudinary.com/dfhp33ufc/image/upload/v1715276558/logos/cx0ejhkaovjogeuowbgs.svg',
   },
 ]
 
