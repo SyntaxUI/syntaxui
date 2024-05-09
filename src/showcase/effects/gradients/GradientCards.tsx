@@ -15,16 +15,7 @@ const data = [
     title: 'Ocean',
     gradient: 'bg-gradient-to-r from-blue-500 via-teal-500 to-green-500',
   },
-  {
-    id: 3,
-    title: 'Lavender',
-    gradient: 'bg-gradient-to-r from-purple-500 via-pink-500 to-red-500',
-  },
-  {
-    id: 4,
-    title: 'Firefly',
-    gradient: 'bg-gradient-to-r from-yellow-500 via-green-500 to-teal-500',
-  },
+
   {
     id: 5,
     title: 'Peachy',
