@@ -39,20 +39,20 @@ const IconToggle = ({
           {toggled ? (
             <motion.div
               key="check"
-              initial={{ opacity: 0, rotate: -180, scale: 0.5 }}
+              initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, rotate: 0, scale: 1 }}
-              exit={{ opacity: 0, rotate: 180, scale: 0.5 }}
-              transition={{ duration: 0.2 }}
+              exit={{ opacity: 0, scale: 0.5 }}
+              transition={{ duration: 0.1 }}
             >
               <Check size={13} strokeWidth={3} className="text-red-500" />
             </motion.div>
           ) : (
             <motion.div
               key="x"
-              initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
+              initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, rotate: 0, scale: 1 }}
-              exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
-              transition={{ duration: 0.2 }}
+              exit={{ opacity: 0, scale: 0.5 }}
+              transition={{ duration: 0.1 }}
             >
               <X size={13} strokeWidth={3} className="text-[#24252d50]" />
             </motion.div>
