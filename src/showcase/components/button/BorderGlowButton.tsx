@@ -22,7 +22,7 @@ const BorderGlowButton = () => {
 
   return (
     <button
-      className="relative overflow-hidden rounded-lg bg-[#e5e7eb] transform active:scale-95"
+      className="relative overflow-hidden rounded-lg bg-[#e5e7eb] transform transition-transform ease-in-out active:scale-90"
       ref={ref}
     >
       <span
