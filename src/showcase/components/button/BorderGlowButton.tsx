@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 
 const BorderGlowButton = () => {
@@ -22,16 +21,9 @@ const BorderGlowButton = () => {
   }, [])
 
   return (
-    <motion.button
-      className="relative overflow-hidden rounded-lg bg-[#e5e7eb]"
+    <button
+      className="relative overflow-hidden rounded-lg bg-[#e5e7eb] transform active:scale-95"
       ref={ref}
-      initial={{ scale: 1 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{
-        type: 'spring',
-        stiffness: 500,
-        damping: 20,
-      }}
     >
       <span
         className={`absolute z-0 h-28 w-28 -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(#fb3b53_0%,transparent_70%)] `}
@@ -45,7 +37,7 @@ const BorderGlowButton = () => {
       <div className="relative z-10 m-[1px] rounded-[calc(0.5rem-1px)] bg-white/90  px-4 py-1 text-xs text-[#fb3b53] backdrop-blur-sm">
         SyntaxUI
       </div>
-    </motion.button>
+    </button>
   )
 }
 
