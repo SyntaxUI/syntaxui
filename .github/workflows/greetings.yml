@@ -24,9 +24,9 @@ jobs:
 
             [@Ansub](https://github.com/Ansub) will review your issue soon and provide feedback. In the meantime, feel free to join the [discord](https://discord.com/invite/P8GXYyH3ZU) community, It's a great place to discuss the project, ask questions, and connect with other contributors.
           pr-message: |
-            Awesome work, @${{ github.actor }}! 🎉 Thank you for submitting pull request.
+            Awesome work, @${{ github.actor }}! 🎉 Thank you for your contribution and efforts to enhance SyntaxUI. 
 
-            We truly appreciate your contribution and efforts to enhance our project. [@Ansub](https://github.com/Ansub) will review your changes soon and provide feedback.
+            [@Ansub](https://github.com/Ansub) will review your changes soon and provide feedback.
 
             Feel free to join the [Discord](https://discord.com/invite/P8GXYyH3ZU) community to engage with other contributors.
 
