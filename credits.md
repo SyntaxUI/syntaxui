@@ -1,4 +1,5 @@
 ### Credits
+
 - Branding - [Amjad](https://twitter.com/Amjaddsn)
 - [Text Ticker](https://syntaxui.com/components/text) - [Dries Augustyns](https://counter.driaug.com/)
 - [Skewed Infinite Scroll](https://syntaxui.com/animations/skewed-infinite-scroll) - [Steven Tey](https://twitter.com/steventey/status/1740445963163255293)
