@@ -43,7 +43,7 @@ const Home = () => {
   return (
     <>
       <div className="flex h-screen w-full flex-col items-center justify-between text-center">
-        <Header />
+        {/* <Header /> */}
         <div className="my-[8rem] flex h-full flex-col items-center justify-center gap-4 px-3">
           <div className="flex w-full flex-col items-center justify-center gap-2">
             <DiscordButton />
