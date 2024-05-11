@@ -32,7 +32,7 @@ const nextConfig = {
     ]
   },
   images: {
-    domains: ['ansubkhan.com'],
+    domains: ['ansubkhan.com', 'images.unsplash.com'],
   },
 }
 
