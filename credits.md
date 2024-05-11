@@ -1,5 +1,7 @@
 ### Credits
-
+- [CI greetings Bot setup](https://github.com/Ansub/SyntaxUI/pull/182) - [Daksh Singh Rathore](https://twitter.com/dakshsinghrath9)
+- [Issue btns and corresponding forms](https://github.com/Ansub/SyntaxUI/pull/72) - [Daksh Singh Rathore](https://twitter.com/dakshsinghrath9)
+- [Automated Issue labeling](https://github.com/Ansub/SyntaxUI/pull/78) - [Daksh Singh Rathore](https://twitter.com/dakshsinghrath9)
 - Branding - [Amjad](https://twitter.com/Amjaddsn)
 - [Text Ticker](https://syntaxui.com/components/text) - [Dries Augustyns](https://counter.driaug.com/)
 - [Skewed Infinite Scroll](https://syntaxui.com/animations/skewed-infinite-scroll) - [Steven Tey](https://twitter.com/steventey/status/1740445963163255293)
