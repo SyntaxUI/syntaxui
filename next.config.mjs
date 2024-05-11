@@ -32,7 +32,12 @@ const nextConfig = {
     ]
   },
   images: {
-    domains: ['ansubkhan.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'ansubkhan.com',
+      },
+    ],
   },
 }
 
