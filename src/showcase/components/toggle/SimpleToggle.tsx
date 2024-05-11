@@ -19,7 +19,7 @@ const SimpleToggle = ({
 
   return (
     <button
-      className={`flex h-[25px] w-[45px] cursor-pointer items-center rounded-full p-[3px] duration-200`}
+      className={`flex h-[25px] w-[45px] cursor-pointer items-center rounded-full p-[4px] duration-200`}
       onClick={handleToggle}
       style={{
         backgroundColor: toggled ? '#fb3a5d' : '#24252d50',
@@ -27,7 +27,7 @@ const SimpleToggle = ({
       }}
     >
       <motion.span
-        className="size-[19px] rounded-full bg-white shadow-lg"
+        className="h-full aspect-square rounded-full bg-white shadow-lg"
         layout
         transition={{ duration: 0.2 }}
         animate={{

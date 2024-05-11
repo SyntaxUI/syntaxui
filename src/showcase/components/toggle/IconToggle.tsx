@@ -28,7 +28,7 @@ const IconToggle = ({
       }}
     >
       <motion.div
-        className="flex aspect-square size-[19px] items-center justify-center rounded-full bg-white shadow-lg"
+        className="flex aspect-square h-full items-center justify-center rounded-full bg-white shadow-lg"
         layout
         transition={{ duration: 0.2 }}
         animate={{
