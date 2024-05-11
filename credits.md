@@ -15,5 +15,5 @@
 - [Shine Button](https://syntaxui.com/components/button/shine-button) - [Shriprasanna](https://twitter.com/shriprasanna007)
 - [Text Reveal Button](https://syntaxui.com/components/button/text-reveal-button) - [Shriprasanna](https://twitter.com/shriprasanna007)
 - [CI greetings Bot](https://github.com/Ansub/SyntaxUI/pull/182) - [Daksh Singh Rathore](https://twitter.com/dakshsinghrath9)
-- [Issue btns & Forms](https://github.com/Ansub/SyntaxUI/pull/72) - [Daksh Singh Rathore](https://twitter.com/dakshsinghrath9)
+- [Issue Template](https://github.com/Ansub/SyntaxUI/pull/72) - [Daksh Singh Rathore](https://twitter.com/dakshsinghrath9)
 - [Automated Issue labeling](https://github.com/Ansub/SyntaxUI/pull/78) - [Daksh Singh Rathore](https://twitter.com/dakshsinghrath9)
