@@ -19,20 +19,20 @@ const IconToggle = ({
   }
 
   return (
-    <motion.button
-      className={`flex h-[25px] w-[45px] cursor-pointer items-center rounded-full p-[2px]`}
+    <button
+      className={`flex h-[25px] w-[45px] cursor-pointer items-center rounded-full p-[3px] justify-start duration-200`}
       onClick={handleToggle}
-      animate={{ backgroundColor: toggled ? '#fb3a5d' : '#24252d50' }}
-      transition={{ duration: 0.2 }}
+      style={{
+        backgroundColor: toggled ? '#fb3a5d' : '#24252d50',
+        justifyContent: toggled ? 'end' : 'start',
+      }}
     >
-      <motion.span
-        className="flex items-center justify-center rounded-full bg-white shadow-lg"
+      <motion.div
+        className="flex aspect-square h-full items-center justify-center rounded-full bg-white shadow-lg"
         layout
         transition={{ duration: 0.2 }}
-        style={{
-          width: toggled ? '19px' : '16px',
-          height: toggled ? '19px' : '16px',
-          marginLeft: toggled ? '20px' : '2px',
+        animate={{
+          scale: toggled ? 1 : 0.9,
         }}
       >
         <AnimatePresence mode="wait">
@@ -40,7 +40,7 @@ const IconToggle = ({
             <motion.div
               key="check"
               initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, rotate: 0, scale: 1 }}
+              animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.5 }}
               transition={{ duration: 0.1 }}
             >
@@ -50,7 +50,7 @@ const IconToggle = ({
             <motion.div
               key="x"
               initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, rotate: 0, scale: 1 }}
+              animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.5 }}
               transition={{ duration: 0.1 }}
             >
@@ -58,8 +58,8 @@ const IconToggle = ({
             </motion.div>
           )}
         </AnimatePresence>
-      </motion.span>
-    </motion.button>
+      </motion.div>
+    </button>
   )
 }
 
