@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import React from 'react'
 
 interface NavigationItem {
@@ -63,18 +62,18 @@ const Footer: React.FC = () => {
         <nav className="flex flex-wrap justify-center">
           {navigation.main.map((item) => (
             <div key={item.name} className="px-5 py-2">
-              <Link
+              <a
                 href={item.href}
                 className="text-sm text-gray-600 hover:text-gray-800"
               >
                 {item.name}
-              </Link>
+              </a>
             </div>
           ))}
         </nav>
         <div className="mt-5 flex justify-center space-x-6">
           {navigation.social.map((item) => (
-            <Link
+            <a
               key={item.name}
               href={item.href}
               className="text-gray-600 hover:text-gray-800"
@@ -83,7 +82,7 @@ const Footer: React.FC = () => {
               {item.icon && (
                 <item.icon className="h-5 w-5" aria-hidden="true" />
               )}
-            </Link>
+            </a>
           ))}
         </div>
         <p className="mt-6 text-center text-sm text-gray-600">
