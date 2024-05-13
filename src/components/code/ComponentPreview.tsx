@@ -15,6 +15,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
+import Link from 'next/link'
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   path: string
@@ -105,13 +106,13 @@ export function ComponentPreview({
                 <TooltipContent className="m-0 p-0 text-sm">
                   <p className="m-0 p-1">
                     This component requires{' '}
-                    <a
+                    <Link
                       target="_blank"
                       rel="noreferrer"
                       href="https://tailwindcss.com/"
                     >
                       Tailwind CSS
-                    </a>
+                    </Link>
                   </p>
                 </TooltipContent>
               </Tooltip>
@@ -125,13 +126,13 @@ export function ComponentPreview({
                   <TooltipContent className="m-0 p-0 text-sm">
                     <p className="m-0 p-1">
                       This component requires{' '}
-                      <a
+                      <Link
                         target="_blank"
                         rel="noreferrer"
                         href="https://www.framer.com/motion/"
                       >
                         Framer Motion
-                      </a>
+                      </Link>
                     </p>
                   </TooltipContent>
                 </Tooltip>

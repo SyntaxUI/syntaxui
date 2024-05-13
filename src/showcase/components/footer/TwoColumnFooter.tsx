@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 
 const navigation = {
   connect: [
@@ -82,12 +81,12 @@ const TwoColumnFooter = () => {
                 <div className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
                     <div key={item.name}>
-                      <Link
+                      <a
                         href={item.href}
                         className="text-sm leading-6 text-gray-700 hover:text-gray-900"
                       >
                         {item.name}
-                      </Link>
+                      </a>
                     </div>
                   ))}
                 </div>
