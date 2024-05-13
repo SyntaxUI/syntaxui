@@ -62,14 +62,14 @@ const TwoColumnFooter = () => {
               <div className="mt-6 space-y-4">
                 {navigation.connect.map((item) => (
                   <div key={item.name}>
-                    <a
+                    <Link
                       href={item.href}
                       target="_blank"
                       rel="noreferrer"
                       className="text-sm leading-6 text-gray-700 hover:text-gray-900"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </div>

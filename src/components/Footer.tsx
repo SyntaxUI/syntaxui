@@ -82,10 +82,10 @@ function SocialLink({
   children: React.ReactNode
 }) {
   return (
-    <a href={href} target="_blank" rel="noreferrer" className="group">
+    <Link href={href} target="_blank" rel="noreferrer" className="group">
       <span className="sr-only">{children}</span>
       <Icon className="h-5 w-5 fill-zinc-700 transition group-hover:fill-zinc-900 dark:group-hover:fill-zinc-500" />
-    </a>
+    </Link>
   )
 }
 
@@ -94,9 +94,13 @@ function SmallPrint() {
     <div className="flex flex-col items-center justify-between gap-5 border-t border-zinc-900/5 pt-8 sm:flex-row dark:border-white/5">
       <p className="text-xs text-zinc-600 dark:text-zinc-400">
         Building in public by{' '}
-        <a href="https://twitter.com/justansub" className="underline">
+        <Link
+          target="_blank"
+          href="https://twitter.com/justansub"
+          className="underline"
+        >
           Ansub
-        </a>
+        </Link>
       </p>
       <div className="flex gap-4">
         <SocialLink href="https://twitter.com/justansub" icon={XIcon}>

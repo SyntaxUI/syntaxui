@@ -129,30 +129,30 @@ export const Header = forwardRef<
           <MobileSearch />
           {/* <ThemeToggle /> */}
 
-          <a
+          <Link
             href="https://twitter.com/justansub"
             target="_blank"
             rel="noreferrer"
             className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex"
           >
             <XIcon className="h-4 w-4" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://discord.gg/P8GXYyH3ZU"
             target="_blank"
             rel="noreferrer"
             className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex"
           >
             <DiscordIcon className="h-4 w-4" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://github.com/ansub/ui"
             target="_blank"
             rel="noreferrer"
             className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex"
           >
             <GitHubIcon className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
       </div>
     </motion.div>
