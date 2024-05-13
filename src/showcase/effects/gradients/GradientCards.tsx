@@ -6,30 +6,37 @@ import { toast } from 'sonner'
 
 const data = [
   {
-    id: 1,
     title: 'Sunset',
-    gradient: 'bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500',
+    gradient: 'bg-gradient-to-r from-[#fb3a5d] via-[#f97316] to-[#eab308]',
   },
   {
-    id: 2,
-    title: 'Ocean',
-    gradient: 'bg-gradient-to-r from-blue-500 via-teal-500 to-green-500',
+    title: 'Tangerine',
+    gradient: 'bg-gradient-to-r from-[#fcd34d] via-[#fbbf24] to-[#f59e0b]',
+  },
+  {
+    title: 'Sunrise',
+    gradient: 'bg-gradient-to-r from-[#fef08a] via-[#fde047] to-[#facc15]',
   },
 
   {
-    id: 5,
-    title: 'Peachy',
-    gradient: 'bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500',
-  },
-  {
-    id: 6,
-    title: 'Emerald',
-    gradient: 'bg-gradient-to-r from-green-500 via-teal-500 to-blue-500',
-  },
-  {
-    id: 7,
     title: 'Evening Surf',
     gradient: 'bg-gradient-to-r from-[#fa8cff] via-[#9182ff] to-[#0476ff]',
+  },
+  {
+    title: 'Jet',
+    gradient: 'bg-gradient-to-r from-[#bfdbfe] to-[#a5f3fc]',
+  },
+  {
+    title: 'Lavender',
+    gradient: 'bg-gradient-to-r from-[#e9d5ff] via-[#d8b4fe] to-[#c084fc]',
+  },
+  {
+    title: 'Electric Blue',
+    gradient: 'bg-gradient-to-r from-[#93c5fd] via-[#60a5fa] to-[#3b82f6]',
+  },
+  {
+    title: 'Mint',
+    gradient: 'bg-gradient-to-r from-[#6ee7b7] via-[#34d399] to-[#10b981]',
   },
 ]
 
@@ -46,9 +53,9 @@ const GradientCards = () => {
   return (
     <div>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {data.map((item) => (
+        {data.map((item, index) => (
           <motion.div
-            key={item.id}
+            key={index}
             className="group no-underline"
             whileTap={{ scale: 0.95 }}
           >
