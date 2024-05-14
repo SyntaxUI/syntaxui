@@ -57,7 +57,7 @@ const Home = () => {
             <span className="max-w-lg text-3xl font-bold tracking-tight md:max-w-2xl md:text-5xl">
               Stop coding from scratch. Build faster. Launch sooner.
             </span>
-            <div className="text-gray-600">
+            <div className="text-gray-600 dark:text-gray-600">
               Free-to-use UI elements designed for rapid development.
             </div>
           </div>
@@ -67,7 +67,11 @@ const Home = () => {
                 Get Started
               </Button>
             </Link>
-            <Link href="https://git.new/syntax" target="_blank" rel="noreferrer">
+            <Link
+              href="https://git.new/syntax"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Button variant={'outline'} className="gap-1">
                 <div className="h-5 w-5 text-gray-800">
                   <GitHubIcon />

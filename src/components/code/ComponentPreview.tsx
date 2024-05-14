@@ -96,7 +96,9 @@ export function ComponentPreview({
     >
       <div className="flex flex-col items-center justify-between md:flex-row">
         <div className="flex w-full items-center justify-between gap-2  md:justify-start">
-          <h2 className="text-md m-0 font-medium text-gray-800">{name}</h2>
+          <h2 className="text-md m-0 font-medium text-gray-800 dark:text-white">
+            {name}
+          </h2>
           <div className="flex items-center justify-center gap-x-2">
             <TooltipProvider>
               <Tooltip delayDuration={0}>
