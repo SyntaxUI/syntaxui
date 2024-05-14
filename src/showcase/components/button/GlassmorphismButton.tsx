@@ -33,7 +33,7 @@ const GlassmorphismButton = () => {
         Syntax UI
       </span>
       <motion.span
-        className=" text-large absolute flex h-full w-full items-center justify-center rounded-lg border border-[rgba(255,255,255,0.18)] bg-gradient-to-tl from-[rgba(254,202,202,0.5)] to-[rgba(252,165,165,0.5)] font-bold  text-black text-opacity-70 shadow backdrop-blur-[2px]"
+        className="text-large absolute flex h-full w-full items-center justify-center text-nowrap rounded-lg border border-[rgba(255,255,255,0.18)] bg-gradient-to-tl from-[rgba(254,202,202,0.5)] to-[rgba(252,165,165,0.5)] px-4 py-2 font-bold  text-black text-opacity-70 shadow backdrop-blur-[2px]"
         transition={{
           type: 'spring',
           stiffness: 500,
