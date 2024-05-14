@@ -82,7 +82,7 @@ const data = [
   {
     id: 12,
     title: 'Glassmorphism Button',
-    link: '',
+    link: '/components/button/glassmorphism-button',
     component: <GlassmorphismButton />,
   },
 ]
