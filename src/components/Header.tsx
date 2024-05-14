@@ -134,7 +134,7 @@ export const Header = forwardRef<
             href="https://twitter.com/justansub"
             target="_blank"
             rel="noreferrer"
-            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex"
+            className="hidden items-center gap-1 rounded-lg fill-gray-600 p-2 text-sm transition-all duration-300  ease-in-out hover:bg-gray-100 md:flex dark:fill-zinc-100 dark:hover:bg-gray-700"
           >
             <XIcon className="h-4 w-4" />
           </Link>
@@ -142,7 +142,7 @@ export const Header = forwardRef<
             href="https://discord.gg/P8GXYyH3ZU"
             target="_blank"
             rel="noreferrer"
-            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex"
+            className="hidden items-center gap-1 rounded-lg fill-gray-600 p-2 text-sm transition-all duration-300  ease-in-out hover:bg-gray-100 md:flex dark:fill-zinc-100 dark:hover:bg-gray-700"
           >
             <DiscordIcon className="h-4 w-4" />
           </Link>
@@ -150,7 +150,7 @@ export const Header = forwardRef<
             href="https://github.com/ansub/ui"
             target="_blank"
             rel="noreferrer"
-            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex"
+            className="hidden items-center gap-1 rounded-lg fill-gray-600 p-2 text-sm transition-all duration-300  ease-in-out hover:bg-gray-100 md:flex dark:fill-zinc-100 dark:hover:bg-gray-700"
           >
             <GitHubIcon className="h-4 w-4" />
           </Link>
