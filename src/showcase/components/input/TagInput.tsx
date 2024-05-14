@@ -15,8 +15,8 @@ const TagInput: React.FC = () => {
   // Handles adding new keyword on Enter or comma press, and keyword removal on Backspace
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (
-      event.key === 'Enter' ||
-      (event.key === ',' && inputValue.trim() !== '')
+      (event.key === 'Enter' || event.key === ',') &&
+      inputValue.trim() !== ''
     ) {
       event.preventDefault()
       const newKeywords = [...keywords, inputValue.trim()]
@@ -52,8 +52,8 @@ const TagInput: React.FC = () => {
     setInputValue(event.target.value)
   }
   // Adds the keyword when the input loses focus, if there's a keyword to add
-  const handleBlur = () => {
-    if (inputValue.trim() !== '') {
+  const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
+    if (inputValue.trim() !== '' && event.relatedTarget?.tagName !== 'BUTTON') {
       const newKeywords = [...keywords, inputValue.trim()]
       setKeywords(newKeywords)
       onKeywordsChange(newKeywords)
@@ -90,7 +90,7 @@ const TagInput: React.FC = () => {
           onChange={handleChange}
           onKeyDown={handleKeyDown}
           onPaste={handlePaste}
-          onBlur={handleBlur}
+          onBlur={(e) => handleBlur(e)}
           className="my-1 flex-1 text-sm outline-none"
           placeholder="Type keyword and press Enter..."
         />

@@ -8,7 +8,6 @@ const SimpleToggle = ({
   onToggle?: (toggled: boolean) => void
 }) => {
   const [toggled, setToggled] = useState(true)
-  const springConfig = { type: 'spring', stiffness: 500, damping: 30 }
 
   const handleToggle = () => {
     const newState = !toggled
@@ -19,23 +18,23 @@ const SimpleToggle = ({
   }
 
   return (
-    <motion.button
-      className={`h-[25px] w-[45px] cursor-pointer rounded-full ${
-        toggled ? 'bg-red-500' : 'bg-gray-700/50'
-      }`}
+    <button
+      className={`flex h-[25px] w-[45px] cursor-pointer items-center rounded-full p-[4px] duration-200`}
       onClick={handleToggle}
-      transition={springConfig}
+      style={{
+        backgroundColor: toggled ? '#fb3a5d' : '#24252d50',
+        justifyContent: toggled ? 'end' : 'start',
+      }}
     >
       <motion.span
-        className="inline-block aspect-square h-full transform rounded-full bg-white shadow-lg"
+        className="h-full aspect-square rounded-full bg-white shadow-lg"
+        layout
+        transition={{ duration: 0.2 }}
         animate={{
-          x: toggled ? 10 : -10,
-          opacity: toggled ? 1 : 0.8,
-          scale: toggled ? 0.7 : 0.6,
+          scale: toggled ? 1 : 0.8,
         }}
-        transition={springConfig}
       />
-    </motion.button>
+    </button>
   )
 }
 

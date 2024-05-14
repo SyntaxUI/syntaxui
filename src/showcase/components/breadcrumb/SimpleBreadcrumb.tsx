@@ -3,9 +3,9 @@ import { ChevronRight } from 'lucide-react'
 
 export const SimpleBreadcrumb = () => {
   const breadcrumbs = [
-    { title: 'Home', path: '/' },
-    { title: 'Category', path: '/category' },
-    { title: 'Subcategory', path: '/category/subcategory' },
+    { title: 'Home', path: '#' },
+    { title: 'Category', path: '#' },
+    { title: 'Subcategory', path: '#' },
     { title: 'Item' },
   ]
 

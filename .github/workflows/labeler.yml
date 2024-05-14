@@ -1,0 +1,64 @@
+name: Label Issues
+
+on:
+  issues:
+    types:
+      - reopened
+      - opened
+
+jobs:
+  label_issues:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Check Issue Type
+        run: |
+          # Extract issue title and body
+          # Custom logic for label classification
+          if echo "${TITLE}" | grep -qiE "bug|error|issue|fix"; then
+            echo "Adding **'bug'** label..."
+            gh issue edit "${NUMBER}" --add-label "bug"
+          fi
+          if echo "${TITLE}" | grep -qiE "chore|maintenance|cleanup|refactor"; then
+            echo "Adding **'chore'** label..."
+            gh issue edit "${NUMBER}" --add-label "chore"
+          fi
+          if echo "${TITLE}" | grep -qiE "documentation|docs|typo"; then
+            echo "Adding **'documentation'** label..."
+            gh issue edit "${NUMBER}" --add-label "documentation"
+          fi
+          if echo "${TITLE}" | grep -qiE "duplicate|identical|matching"; then
+            echo "Adding **'duplicate'** label..."
+            gh issue edit "${NUMBER}" --add-label "duplicate"
+          fi
+          if echo "${TITLE}" | grep -qiE "enhancement|feature|feat"; then
+            echo "Adding **'enhancement'** label..."
+            gh issue edit "${NUMBER}" --add-label "enhancement"
+          fi
+          if echo "${TITLE}" | grep -qiE "good first issue|beginner friendly issues"; then
+            echo "Adding **'good first issue'** label..."
+            gh issue edit "${NUMBER}" --add-label "good first issue"
+          fi
+          if echo "${TITLE}" | grep -qiE "help wanted|urgent"; then
+            echo "Adding **'help wanted'** label..."
+            gh issue edit "${NUMBER}" --add-label "help wanted"
+          fi
+          if echo "${TITLE}" | grep -qiE "invalid"; then
+            echo "Adding **'invalid'** label..."
+            gh issue edit "${NUMBER}" --add-label "invalid"
+          fi
+          if echo "${TITLE}" | grep -qiE "question|doubt"; then
+            echo "Adding **'question'** label..."
+            gh issue edit "${NUMBER}" --add-label "question"
+          fi
+          if echo "${TITLE}" | grep -qiE "wontfix|won't fix"; then
+            echo "Adding **'wontfix'** label..."
+            gh issue edit "${NUMBER}" --add-label "wontfix"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUMBER: ${{ github.event.issue.number }}
+          TITLE: ${{ github.event.issue.title }}
+          BODY: ${{ github.event.issue.body }}
+          GH_REPO: ${{ github.repository }}

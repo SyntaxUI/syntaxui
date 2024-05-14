@@ -1,3 +1,5 @@
+'use client'
+
 import clsx from 'clsx'
 import Link from 'next/link'
 
@@ -5,8 +7,13 @@ import { Heading } from '@/components/Heading'
 import { Prose } from '@/components/Prose'
 
 export const a = Link
+export { BackButton } from '@/components/BackButton'
 export { Button } from '@/components/ui/button'
-export { CodeGroup, Code as code, Pre as pre } from '@/components/Code'
+export { ComponentPreview } from '@/components/code/ComponentPreview'
+export { RawCode as code } from '@/components/code/Code'
+export { default as CodeGroup } from '@/components/code/CodeGroup'
+export { default as CodeGroupFromFile } from '@/components/code/CodeGroupFromFile'
+export { default as PreviewCodeGroup } from '@/components/code/PreviewCodeGroup'
 
 export function wrapper({ children }: { children: React.ReactNode }) {
   return (
@@ -125,7 +132,7 @@ export function Property({
 
 export function Preview({ children }: { children: React.ReactNode }) {
   return (
-    <div className="group inline-flex w-full items-center justify-center gap-3 rounded-lg border py-8">
+    <div className="group inline-flex w-full items-center justify-center gap-3 rounded-lg border py-8 sm:max-lg:block">
       {children}
     </div>
   )

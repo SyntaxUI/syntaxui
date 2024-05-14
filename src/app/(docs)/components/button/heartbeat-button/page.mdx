@@ -1,0 +1,72 @@
+import HeartbeatButton from '@//showcase/components/button/HeartbeatButton'
+
+export const metadata = {
+  title: 'Heartbeat Button',
+  description: 'A Button that gives an effect of heartbeat, built using Tailwind CSS for React and React based libraries like Next.js',
+}
+
+<BackButton href="/components/button" />
+
+# Heartbeat Button
+
+<div className="my-4"></div>
+
+<Preview>
+  <HeartbeatButton />
+</Preview>
+
+Step 1. Add this to your `tailwind.config.js`
+
+<CodeGroup title="tailwind.config.js">
+
+```js {{ title: 'React' }}
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        buttonheartbeat: 'buttonheartbeat 2s infinite ease-in-out',
+      },
+      keyframes: {
+        buttonheartbeat: {
+          '0%': {
+            'box-shadow': '0 0 0 0 theme("colors.red.500")',
+            transform: 'scale(1)',
+          },
+          '50%': {
+            'box-shadow': '0 0 0 7px theme("colors.red.500/0")',
+            transform: 'scale(1.05)',
+          },
+          '100%': {
+            'box-shadow': '0 0 0 0 theme("colors.red.500/0")',
+            transform: 'scale(1)',
+          },
+        },
+      },
+    },
+  },
+}
+```
+
+</CodeGroup>
+
+Step 2. Use the component ✨
+
+<CodeGroup title="HeartbeatButton.js">
+
+```jsx
+import React from 'react'
+
+const HeartbeatButton = () => {
+  return (
+    <div>
+      <button className="m-9 animate-buttonheartbeat rounded-md bg-red-500 px-4 py-1 text-sm font-semibold text-white">
+        SyntaxUI
+      </button>
+    </div>
+  )
+}
+
+export default HeartbeatButton
+```
+
+</CodeGroup>

@@ -233,49 +233,51 @@ function NavigationGroup({
 export const navigation: Array<NavGroup> = [
   {
     title: 'Getting Started',
-    links: [{ title: 'Introduction', href: '/docs' }],
+    links: [{ title: 'Introduction', href: '/components' }],
   },
   {
     title: 'Components',
     links: [
-      // { title: 'Badges', href: '/docs/components/badges' },
       {
         title: 'Button',
-        href: '/docs/components/button',
+        href: '/components/button',
       },
-      { title: 'Breadcrumb', href: '/docs/components/breadcrumb' },
+      // { title: 'Breadcrumb', href: '/components/breadcrumb' },
       {
         title: 'Features',
-        href: '/docs/components/features',
+        href: '/components/features',
       },
       {
         title: 'Footer',
-        href: '/docs/components/footer',
+        href: '/components/footer',
       },
       {
         title: 'Input',
-        href: '/docs/components/input',
+        href: '/components/input',
       },
       {
         title: 'Loaders',
-        href: '/docs/components/loaders',
+        href: '/components/loaders',
       },
-
+      {
+        title: 'Logo Cloud',
+        href: '/components/logo-cloud',
+      },
       {
         title: 'Pricing',
-        href: '/docs/components/pricing',
+        href: '/components/pricing',
       },
       {
         title: 'Tabs',
-        href: '/docs/components/tabs',
+        href: '/components/tabs',
       },
       {
         title: 'Text',
-        href: '/docs/components/text',
+        href: '/components/text',
       },
       {
         title: 'Toggle',
-        href: '/docs/components/toggle',
+        href: '/components/toggle',
       },
     ],
   },
@@ -284,31 +286,37 @@ export const navigation: Array<NavGroup> = [
     links: [
       {
         title: 'Skewed Infinite Scroll',
-        href: '/docs/animations/skewed-infinite-scroll',
+        href: '/animations/skewed-infinite-scroll',
       },
       {
         title: 'Hover Animations',
-        href: '/docs/animations/hovers',
+        href: '/animations/hovers',
       },
     ],
   },
   {
     title: 'Effects',
-    links: [{ title: 'Image Fade', href: '/docs/effects/image-fade' }],
-  },
-  {
-    title: 'Hooks',
     links: [
       {
-        title: 'useVisible()',
-        href: '/docs/hooks/useVisible',
+        title: 'Gradients',
+        href: '/effects/gradients',
       },
-      {
-        title: 'useMediaSizes()',
-        href: '/docs/hooks/useMediaSizes',
-      },
+      { title: 'Image Fade', href: '/effects/image-fade' },
     ],
   },
+  // {
+  //   title: 'Hooks',
+  //   links: [
+  //     {
+  //       title: 'useVisible()',
+  //       href: '/hooks/useVisible',
+  //     },
+  //     {
+  //       title: 'useMediaSizes()',
+  //       href: '/hooks/useMediaSizes',
+  //     },
+  //   ],
+  // },
 ]
 
 export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {

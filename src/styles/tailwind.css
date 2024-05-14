@@ -4,15 +4,21 @@
 
 @layer base {
   :root {
-    --shiki-color-text: theme('colors.white');
-    --shiki-token-constant: theme('colors.red.300');
-    --shiki-token-string: theme('colors.red.300');
-    --shiki-token-comment: theme('colors.zinc.500');
-    --shiki-token-keyword: theme('colors.sky.300');
-    --shiki-token-parameter: theme('colors.pink.300');
-    --shiki-token-function: theme('colors.violet.300');
-    --shiki-token-string-expression: theme('colors.red.300');
-    --shiki-token-punctuation: theme('colors.zinc.200');
+    --prism-color-text: theme('colors.white');
+    --prism-token-constant: theme('colors.red.300');
+    --prism-token-string: theme('colors.red.300');
+    --prism-token-comment: theme('colors.zinc.500');
+    --prism-token-keyword: theme('colors.sky.300');
+    --prism-token-parameter: theme('colors.pink.300');
+    --prism-token-function: theme('colors.violet.300');
+    --prism-token-property: theme('colors.red.100');
+    --prism-token-string-expression: theme('colors.red.300');
+    --prism-token-punctuation: theme('colors.zinc.200');
+    --prism-token-tag: theme('colors.green.200');
+    --prism-token-attr-name: theme('colors.violet.200');
+    --prism-token-attr-value: theme('colors.red.300');
+    --prism-token-class-name: theme('colors.green.200');
+    --prism-token-property-access: theme('colors.green.200');
   }
 
   [inert] ::-webkit-scrollbar {
@@ -26,4 +32,15 @@
   color: #ffffff;
   box-shadow: none;
   font-size: 14px;
+}
+@property --discord-button-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@property --discord-button-x {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
 }

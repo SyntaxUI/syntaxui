@@ -24,10 +24,20 @@ const nextConfig = {
         destination: 'https://git.new/syntax',
         permanent: true,
       },
+      {
+        source: '/discord',
+        destination: 'https://discord.com/invite/P8GXYyH3ZU',
+        permanent: true,
+      },
     ]
   },
   images: {
-    domains: ['ansubkhan.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'ansubkhan.com',
+      },
+    ],
   },
 }
 

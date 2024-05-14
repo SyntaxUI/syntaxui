@@ -1,0 +1,70 @@
+import SimpleBreadcrumb from '@/showcase/components/breadcrumb/SimpleBreadcrumb'
+import PreviewCodeGroup from '@/components/code/PreviewCodeGroup'
+
+export const metadata = {
+  title: 'Breadcrumb',
+  description:
+    'A breadcrumb is a navigation aid that helps users keep track of their location within a website or web application.',
+}
+
+# Breadcrumb
+
+<div className="my-4"></div>
+
+## Simple Breadcrumb
+
+<PreviewCodeGroup
+  preview={
+    <div className="group flex w-full items-center justify-center">
+      <SimpleBreadcrumb />
+    </div>
+  }
+  code={`
+    import Link from 'next/link'
+    import { ChevronRight } from 'lucide-react'
+
+    export const Breadcrumb = () => {
+      const breadcrumbs = [
+        { title: 'Home', path: '/' },
+        { title: 'Category', path: '/category' },
+        { title: 'Subcategory', path: '/category/subcategory' },
+        { title: 'Item' },
+      ]
+
+      return (
+        <nav aria-label="breadcrumb" className="flex">
+          <div className="flex items-center space-x-1">
+            {breadcrumbs.map((breadcrumb, index) => {
+              const isLast = index === breadcrumbs.length - 1
+              return (
+                <div
+                  key={index}
+                  className={\`\${
+                    isLast ? 'text-black' : 'text-gray-500'
+                  } font-regular flex items-center font-medium\`}
+                >
+                  {breadcrumb.path && !isLast ? (
+                    <Link href={breadcrumb.path}>
+                      <span className="hover:underline">{breadcrumb.title}</span>
+                    </Link>
+                  ) : (
+                    <span>{breadcrumb.title}</span>
+                  )}
+                  {!isLast && (
+                    <span className="mx-1">
+                      <ChevronRight size={16} />
+                    </span>
+                  )}
+                </div>
+              )
+            })}
+          </div>
+        </nav>
+      )
+    }
+
+    export default Breadcrumb
+
+`}
+language="jsx"
+/>

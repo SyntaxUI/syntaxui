@@ -25,7 +25,7 @@ function TopLevelNavItem({
     <li>
       <Link
         href={href}
-        className="text-sm leading-5 text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+        className="whitespace-nowrap text-sm leading-5 text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
       >
         {children}
       </Link>
@@ -88,14 +88,14 @@ export const Header = forwardRef<
           </div>
         </Link>
         <ul role="list" className="flex w-full items-center gap-4">
-          <TopLevelNavItem href="/docs">Get Started</TopLevelNavItem>
+          <TopLevelNavItem href="/components">Get Started</TopLevelNavItem>
           <TopLevelNavItem href="https://discord.gg/P8GXYyH3ZU">
             Community
           </TopLevelNavItem>
         </ul>
       </div>
       {/* <Search /> */}
-      <div className="flex items-center gap-5 lg:hidden">
+      <div className="flex items-center gap-3 lg:hidden">
         {pathname === '/' ? null : <MobileNavigation />}
         <Link
           href="/"
@@ -109,7 +109,7 @@ export const Header = forwardRef<
             width={100}
             height={100}
           />
-          <div className="text-md font-medium text-gray-800">
+          <div className="text-md hidden font-medium text-gray-800 md:inline">
             Syntax<span className="text-[10px] font-bold text-red-500">UI</span>
           </div>{' '}
         </Link>
@@ -129,30 +129,30 @@ export const Header = forwardRef<
           <MobileSearch />
           {/* <ThemeToggle /> */}
 
-          <a
+          <Link
             href="https://twitter.com/justansub"
             target="_blank"
             rel="noreferrer"
             className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex"
           >
             <XIcon className="h-4 w-4" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://discord.gg/P8GXYyH3ZU"
             target="_blank"
             rel="noreferrer"
             className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex"
           >
             <DiscordIcon className="h-4 w-4" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://github.com/ansub/ui"
             target="_blank"
             rel="noreferrer"
             className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex"
           >
             <GitHubIcon className="h-4 w-4" />
-          </a>
+          </Link>
         </div>
       </div>
     </motion.div>

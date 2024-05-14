@@ -1,22 +1,15 @@
 name: ✨ Feature Request
 description: Suggest a new feature to enhance SyntaxUI
-title: '[✨ FEATURE]: '
+
+title: '[FEATURE]: '
+
 labels: [Enhancement]
 body:
   - type: markdown
     attributes:
       value: |
-        # Welcome to the Feature Request template! 🚀
-        Please use this template to suggest new features or improvements to enhance SyntaxUI.
 
         Fill in the information below to help us understand and evaluate your feature request.
-
-        Instructions:
-          1. Provide a clear and concise description of the new feature.
-          2. Explain the motivation behind the feature request.
-          3. Specify the expected behavior.
-
-        Thank you for contributing to the growth of SyntaxUI! 🙌
 
   - type: textarea
     attributes:
@@ -26,17 +19,7 @@ body:
       required: true
   - type: textarea
     attributes:
-      label: Motivation 🌟
-      description: Explain the motivation behind the feature request.
+      label: Screenshots 📸
+      description: add screenshot of the feature if you have any.
     validations:
-      required: true
-  - type: textarea
-    attributes:
-      label: Expected Behavior 🤔
-      description: Specify the expected behavior of the new feature.
-    validations:
-      required: true
-  - type: textarea
-    attributes:
-      label: Additional Information ℹ️
-      description: Add any other information or context about the feature request.
+      required: false
