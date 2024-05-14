@@ -3,21 +3,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 const GlassmorphismButton = () => {
-  const [state, setState] = useState('normal')
-
-  const variants = {
-    normal: {
-      left: '0.3rem',
-      top: '-0.3rem',
-    },
-    hover: {
-      top: '-0.5rem',
-    },
-    tap: {
-      left: '0.125rem',
-      top: '-0.125rem',
-    },
-  }
+  const [state, setState] = useState<'normal' | 'hover' | 'tap'>('normal')
 
   return (
     <button
@@ -39,7 +25,19 @@ const GlassmorphismButton = () => {
           stiffness: 500,
           damping: 20,
         }}
-        variants={variants}
+        variants={{
+          normal: {
+            left: '0.3rem',
+            top: '-0.3rem',
+          },
+          hover: {
+            top: '-0.5rem',
+          },
+          tap: {
+            left: '0.125rem',
+            top: '-0.125rem',
+          },
+        }}
         initial="normal"
         animate={state}
       >
