@@ -56,7 +56,7 @@ const AnimatedLogoCloud = () => {
           className="group relative mt-6 flex gap-6 overflow-hidden p-2"
           style={{
             maskImage:
-              'linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 90%)',
+              'linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 95%)',
           }}
         >
           {Array(5)
