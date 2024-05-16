@@ -28,8 +28,9 @@ const logos = [
 const StaticLogoCloud = () => {
   return (
     <div className="w-full py-12">
-      <div className="flex w-full items-center justify-center px-4 md:px-8">
-        <div className="group relative mt-6 flex gap-6 p-2">
+      <div className="flex w-full flex-col items-center justify-center px-4 md:px-8">
+        <div className="font-medium uppercase">Sponsored by</div>
+        <div className="group relative flex gap-6 px-2">
           <div className="flex shrink-0 flex-row justify-around gap-6">
             {logos.map((logo, key) => (
               <img
