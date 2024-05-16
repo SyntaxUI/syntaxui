@@ -14,6 +14,14 @@
 
 const logos = [
   {
+    name: 'Vercel',
+    url: 'https://res.cloudinary.com/dfhp33ufc/image/upload/v1715881430/vercel_wordmark_dark_mhv8u8.svg',
+  },
+  {
+    name: 'Nextjs',
+    url: 'https://res.cloudinary.com/dfhp33ufc/image/upload/v1715881475/nextjs_logo_dark_gfkf8m.svg',
+  },
+  {
     name: 'Prime',
     url: 'https://res.cloudinary.com/dfhp33ufc/image/upload/v1715276558/logos/t2awrrfzdvmg1chnzyfr.svg',
   },
@@ -42,10 +50,6 @@ const logos = [
     name: 'mistral',
     url: 'https://res.cloudinary.com/dfhp33ufc/image/upload/v1715276558/logos/tyos2ayezryjskox3wzs.svg',
   },
-  {
-    name: 'Google',
-    url: 'https://res.cloudinary.com/dfhp33ufc/image/upload/v1715276558/logos/cx0ejhkaovjogeuowbgs.svg',
-  },
 ]
 
 const AnimatedLogoCloud = () => {
@@ -70,7 +74,7 @@ const AnimatedLogoCloud = () => {
                   <img
                     key={key}
                     src={logo.url}
-                    className="h-10 w-28 px-2"
+                    className="h-10 w-28 px-2 brightness-0"
                     alt={`${logo.name}`}
                   />
                 ))}
