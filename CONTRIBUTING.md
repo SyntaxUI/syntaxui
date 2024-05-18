@@ -65,7 +65,6 @@ src/
     │  └─ toggle/
     │     └─ NewToggle.tsx
     ├─ effects/
-    └─ hooks/
 ```
 
 #### How to get it displayed on the site?
@@ -79,7 +78,6 @@ src/app/(docs)/
 ├─ animations/
 ├─ components/
 ├─ effects/
-└─ hooks/
 ```
 
 Within these, we further distinguish between minor feature types using appropriate groups based on the type of feature and the specific name of the feature. For example, the HeartbeatButton is in `components/button/heartbeat-button/`. Note: within `(docs)/`, folder names use kebab case.
@@ -100,9 +98,9 @@ Please use other `page.mdx` files as guides when creating a new page.
   - For example, if you wanted to display a tab for a preview of our HeartbeatButton component and a tab for the code of that button you would add `<ComponentPreview path="components/button/HeartbeatButton" />` into the appropriate `page.mdx`.
 - **PreviewCodeGroup**: a way to display a tab group with a component preview and code where you want to explicitly specify the preview, code, and language.
   - Check out `/src/(docs)/animations/hovers/jiggle/page.mdx` for an example.
-- **CodeGroup**: a way to display just code (for example, hooks that do not have component previews) with a title.
+- **CodeGroup**: a way to display just code with a title.
   - You can use this by adding `<CodeGroup title="filename">```insert code here inside backticks```</CodeGroup>`
-- **CodeGroupFromFile**: a way to display just code (for example, hooks that do not have component previews) with a title where the code is read from a file, instead of an internal code block.
+- **CodeGroupFromFile**: a way to display just code with a title where the code is read from a file, instead of an internal code block.
   - You can use this by adding `<CodeGroupFromFile title="filename" path="src/showcase/..." />`
 
 ##### Adding the Feature to a UI Group

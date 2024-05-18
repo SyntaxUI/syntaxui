@@ -7,7 +7,6 @@ import { Button } from '@/components/ui/button'
 import GitHubIcon from '@/icons/github'
 import AnimationCards from '@/showcase/ui-group/AnimationCards'
 import ComponentCards from '@/showcase/ui-group/ComponentCards'
-import HooksCard from '@/showcase/ui-group/HooksCards'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -67,7 +66,11 @@ const Home = () => {
                 Get Started
               </Button>
             </Link>
-            <Link href="https://git.new/syntax" target="_blank" rel="noreferrer">
+            <Link
+              href="https://git.new/syntax"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Button variant={'outline'} className="gap-1">
                 <div className="h-5 w-5 text-gray-800">
                   <GitHubIcon />
@@ -97,12 +100,6 @@ const Home = () => {
             </h1>
             <EffectCards />
           </div>
-          {/* <div>
-            <h1 className="mb-4 w-full text-left text-lg font-semibold">
-              Hooks
-            </h1>
-            <HooksCard />
-          </div> */}
         </div>
         <Footer />
       </div>
