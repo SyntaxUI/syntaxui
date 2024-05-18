@@ -3,6 +3,7 @@ import NeubrutalismToggle from '@/showcase/components/toggle/NeubrutalismToggle'
 import SimpleToggle from '@/showcase/components/toggle/SimpleToggle'
 import Link from 'next/link'
 import IconToggle from '@/showcase/components/toggle/IconToggle'
+import SlideToggle from '../components/toggle/SlideToggle'
 
 interface ToggleCardProps {
   title: string
@@ -30,6 +31,11 @@ const data: ToggleCardProps[] = [
     title: 'Icon Toggle',
     link: '/components/toggle/icon-toggle',
     component: <IconToggle />,
+  },
+  {
+    title: 'Slide Toggle',
+    link: '/components/toggle/slide-toggle',
+    component: <SlideToggle isToggled />,
   },
 ]
 
