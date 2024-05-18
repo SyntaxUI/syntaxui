@@ -10,7 +10,6 @@
 - [Stitches Button](https://syntaxui.com/components/button/stitches-button) - [Saud](https://twitter.com/via_saud)
 - [Neubrutalism Toggle](https://syntaxui.com/components/button/neubrutalism-button) - [Ethan Pollack](https://epoll31.github.io)
 - [Shimmer Button](https://syntaxui.com/components/button/shimmer-button) - [Ethan Pollack](https://epoll31.github.io)
-- [Border Rotate Button](https://syntaxui.com/components/button/border-rotate-button) - [Ethan Pollack](https://epoll31.github.io)
 - [Labeled Toggle](https://syntaxui.com/components/toggle/labeled-toggle) - [Aiko](https://twitter.com/username_aiko)
 - [Border Glow Button](https://syntaxui.com/components/button/border-glow-button) - [Ethan Pollack](https://epoll31.github.io)
 - [Shine Button](https://syntaxui.com/components/button/shine-button) - [Shriprasanna](https://twitter.com/shriprasanna007)

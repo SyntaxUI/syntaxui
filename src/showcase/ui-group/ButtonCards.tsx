@@ -1,5 +1,4 @@
 import ThreeDButton from '@/showcase/components/button/3DButton'
-import BorderRotateButton from '@/showcase/components/button/BorderRotateButton'
 import GradientBorderButton from '@/showcase/components/button/GradientBorderButton'
 import HeartbeatButton from '@/showcase/components/button/HeartbeatButton'
 import NeubrutalismButton from '@/showcase/components/button/NeubrutalismButton'
@@ -41,12 +40,6 @@ const data = [
     title: 'Shimmer',
     link: '/components/button/shimmer-button',
     component: <ShimmerButton />,
-  },
-  {
-    id: 6,
-    title: 'Border Rotate',
-    link: '/components/button/border-rotate-button',
-    component: <BorderRotateButton />,
   },
   {
     id: 7,
