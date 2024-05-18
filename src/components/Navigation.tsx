@@ -46,12 +46,12 @@ function NavLink({
         'flex justify-between gap-2 py-1 pr-3 text-sm transition',
         isAnchorLink ? 'pl-7' : 'pl-4',
         active
-          ? 'text-zinc-900 dark:text-white'
-          : 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white',
+          ? 'text-gray-900 dark:text-white'
+          : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white',
       )}
     >
       <span className="truncate">{children}</span>
-      {tag && <Tag variant="small">{tag}</Tag>}
+      {tag && <Tag>{tag}</Tag>}
     </Link>
   )
 }
