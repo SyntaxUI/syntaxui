@@ -3,7 +3,7 @@ import NeubrutalismToggle from '@/showcase/components/toggle/NeubrutalismToggle'
 import SimpleToggle from '@/showcase/components/toggle/SimpleToggle'
 import Link from 'next/link'
 import IconToggle from '@/showcase/components/toggle/IconToggle'
-import SlideToggle from '../components/toggle/SlideToggle'
+import SlideTogglePreview from '../components/toggle/SlideToggle'
 
 interface ToggleCardProps {
   title: string
@@ -35,7 +35,7 @@ const data: ToggleCardProps[] = [
   {
     title: 'Slide Toggle',
     link: '/components/toggle/slide-toggle',
-    component: <SlideToggle />,
+    component: <SlideTogglePreview />,
   },
 ]
 
