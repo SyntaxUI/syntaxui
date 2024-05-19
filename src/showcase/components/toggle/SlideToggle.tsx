@@ -1,8 +1,3 @@
-// onLabel takes a string that will be displayed when the toggle is on.
-// offLabel takes a string that will be displayed when the toggle is off.
-
-// Don't forget to remove the exports at the end of the file before usage.
-
 'use client'
 import React, { useState, useContext, createContext, ReactNode } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -20,11 +15,70 @@ interface SlideToggleContextType {
 
 const SlideToggleContext = createContext<SlideToggleContextType | null>(null)
 
+interface LabelProps {
+  children: ReactNode
+  isOn: boolean
+}
+
+const Label: React.FC<LabelProps> = ({ children, isOn }) => {
+  const context = useContext(SlideToggleContext)
+
+  if (!context) {
+    throw new Error('Context Error!')
+  }
+
+  const { toggled } = context
+
+  return (
+    <AnimatePresence initial={false}>
+      {(isOn && toggled) || (!isOn && !toggled) ? (
+        <motion.div
+          initial={{
+            x: isOn ? -20 : 20,
+            opacity: 0,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+          }}
+          exit={{
+            x: isOn ? -20 : 20,
+            opacity: 0,
+            transition: {
+              type: 'spring',
+              delay: 0.0,
+              bounce: 0,
+              duration: 0.3,
+            },
+          }}
+          transition={{
+            type: 'spring',
+            delay: 0.1,
+            bounce: 0,
+            duration: 0.6,
+          }}
+          className={`absolute ${
+            isOn ? 'left-0 z-10' : 'right-0'
+          } p-2 ${isOn ? 'pr-[25px]' : 'pl-[25px]'}`}
+        >
+          <span
+            className={`text-nowrap text-xs font-medium tracking-tight ${
+              isOn ? 'text-white' : 'fill-black/40 text-black/40'
+            }`}
+          >
+            {children}
+          </span>
+        </motion.div>
+      ) : null}
+    </AnimatePresence>
+  )
+}
+
 const SlideToggle: React.FC<SlideToggleProps> = ({
   onToggle,
   offLabel = 'OFF',
   onLabel = 'ON',
-  isToggled,
+  isToggled = true,
 }) => {
   const [toggled, setToggled] = useState(isToggled || false)
   const handleToggle = () => {
@@ -36,7 +90,7 @@ const SlideToggle: React.FC<SlideToggleProps> = ({
   return (
     <SlideToggleContext.Provider value={{ toggled }}>
       <motion.button
-        className="relative flex h-[25px] min-w-[45px] cursor-pointer items-center overflow-hidden rounded-full bg-gray-500/50 outline-offset-2 duration-200 focus-within:outline-red-500/70"
+        className="relative flex h-[25px] min-w-[45px] cursor-pointer items-center overflow-hidden rounded-full bg-gray-600/50 outline-offset-2 duration-200 focus-within:outline-red-500/70"
         onClick={handleToggle}
         style={{
           justifyContent: toggled ? 'end' : 'start',
@@ -69,8 +123,8 @@ const SlideToggle: React.FC<SlideToggleProps> = ({
         />
         {onLabel && offLabel && (
           <>
-            <OFFLabel>{offLabel}</OFFLabel>
-            <ONLabel>{onLabel}</ONLabel>
+            <Label isOn={false}>{offLabel}</Label>
+            <Label isOn={true}>{onLabel}</Label>
             <div className="pointer-events-none select-none p-2 pr-[25px] opacity-0">
               <span className="text-nowrap">{onLabel}</span>
               <br />
@@ -80,102 +134,6 @@ const SlideToggle: React.FC<SlideToggleProps> = ({
         )}
       </motion.button>
     </SlideToggleContext.Provider>
-  )
-}
-
-const OFFLabel = ({ children }: { children: ReactNode }) => {
-  const context = useContext(SlideToggleContext)
-
-  if (!context) {
-    throw new Error('Context Error!')
-  }
-
-  const { toggled } = context
-
-  return (
-    <AnimatePresence initial={false}>
-      {!toggled && (
-        <motion.div
-          initial={{
-            x: 20,
-            opacity: 0,
-          }}
-          animate={{
-            x: 0,
-            opacity: 1,
-          }}
-          exit={{
-            x: 20,
-            opacity: 0,
-            transition: {
-              type: 'spring',
-              delay: 0.0,
-              bounce: 0,
-              duration: 0.3,
-            },
-          }}
-          transition={{
-            type: 'spring',
-            delay: 0.1,
-            bounce: 0,
-            duration: 0.6,
-          }}
-          className="absolute right-0 p-2 pl-[25px]"
-        >
-          <span className="text-nowrap fill-black/40 text-xs font-medium tracking-tight text-black/40">
-            {children}
-          </span>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  )
-}
-
-const ONLabel = ({ children }: { children: ReactNode }) => {
-  const context = useContext(SlideToggleContext)
-
-  if (!context) {
-    throw new Error('Context Error!')
-  }
-
-  const { toggled } = context
-
-  return (
-    <AnimatePresence initial={false}>
-      {toggled && (
-        <motion.div
-          initial={{
-            x: -20,
-            opacity: 0,
-          }}
-          animate={{
-            x: 0,
-            opacity: 1,
-          }}
-          exit={{
-            x: -20,
-            opacity: 0,
-            transition: {
-              type: 'spring',
-              delay: 0.0,
-              bounce: 0,
-              duration: 0.3,
-            },
-          }}
-          transition={{
-            type: 'spring',
-            delay: 0.1,
-            bounce: 0,
-            duration: 0.6,
-          }}
-          className="absolute left-0 z-10 p-2 pr-[25px] "
-        >
-          <span className=" text-nowrap text-xs font-medium tracking-tight text-white">
-            {children}
-          </span>
-        </motion.div>
-      )}
-    </AnimatePresence>
   )
 }
 
