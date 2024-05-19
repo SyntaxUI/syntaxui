@@ -22,6 +22,7 @@ If applicable, please include screenshots or GIFs to demonstrate the changes mad
 
 Please check the boxes that apply:
 
+- [ ] I have rebased my branch on top of the latest `main` branch.
 - [ ] I have tested the changes locally
 - [ ] I ran `npm run build` and build is successful
 - [ ] I have added necessary documentation (if applicable)
