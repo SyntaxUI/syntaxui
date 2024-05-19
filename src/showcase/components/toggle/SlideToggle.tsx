@@ -4,19 +4,14 @@
 // Don't forget to remove the exports at the end of the file before usage.
 
 'use client'
-import React, {
-  useState,
-  useContext,
-  createContext,
-  ReactNode,
-} from 'react'
+import React, { useState, useContext, createContext, ReactNode } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 
 interface SlideToggleProps {
   onToggle?: (toggled: boolean) => void
   onLabel?: string
   offLabel?: string
-  isToggled? : boolean
+  isToggled?: boolean
 }
 
 interface SlideToggleContextType {
@@ -27,8 +22,8 @@ const SlideToggleContext = createContext<SlideToggleContextType | null>(null)
 
 const SlideToggle: React.FC<SlideToggleProps> = ({
   onToggle,
-  offLabel,
-  onLabel,
+  offLabel = 'OFF',
+  onLabel = 'ON',
   isToggled,
 }) => {
   const [toggled, setToggled] = useState(isToggled || false)
@@ -77,9 +72,9 @@ const SlideToggle: React.FC<SlideToggleProps> = ({
             <OFFLabel>{offLabel}</OFFLabel>
             <ONLabel>{onLabel}</ONLabel>
             <div className="pointer-events-none select-none p-2 pr-[25px] opacity-0">
-              <span className="text-transparent text-nowrap">{onLabel}</span>
+              <span className="text-nowrap">{onLabel}</span>
               <br />
-              <span className="text-transparent text-nowrap">{offLabel}</span>
+              <span className="text-nowrap text-transparent">{offLabel}</span>
             </div>
           </>
         )}
@@ -96,7 +91,6 @@ const OFFLabel = ({ children }: { children: ReactNode }) => {
   }
 
   const { toggled } = context
-
 
   return (
     <AnimatePresence initial={false}>
@@ -128,7 +122,9 @@ const OFFLabel = ({ children }: { children: ReactNode }) => {
           }}
           className="absolute right-0 p-2 pl-[25px]"
         >
-          <span className="fill-black/40 text-black/40 text-nowrap">{children}</span>
+          <span className="text-nowrap fill-black/40 text-xs font-medium tracking-tight text-black/40">
+            {children}
+          </span>
         </motion.div>
       )}
     </AnimatePresence>
@@ -172,18 +168,15 @@ const ONLabel = ({ children }: { children: ReactNode }) => {
             bounce: 0,
             duration: 0.6,
           }}
-          className="absolute left-0 z-10 p-2 pr-[25px]"
+          className="absolute left-0 z-10 p-2 pr-[25px] "
         >
-          <span className=" text-white text-nowrap">{children}</span>
+          <span className=" text-nowrap text-xs font-medium tracking-tight text-white">
+            {children}
+          </span>
         </motion.div>
       )}
     </AnimatePresence>
   )
 }
 
-// Uncomment this!
-// export default SlideToggle
-
-// Remove this!
-const SlideTogglePreview = () => <SlideToggle onLabel='Live' offLabel='Go live' isToggled/>;
-export default SlideTogglePreview;
+export default SlideToggle
