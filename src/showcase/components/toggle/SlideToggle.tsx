@@ -1,6 +1,8 @@
 // onLabel takes a string that will be displayed when the toggle is on.
 // offLabel takes a string that will be displayed when the toggle is off.
 
+// Don't forget to remove the exports at the end of the file before usage.
+
 'use client'
 import React, {
   useState,
@@ -27,7 +29,7 @@ const SlideToggle: React.FC<SlideToggleProps> = ({
   onToggle,
   offLabel,
   onLabel,
-  isToggled = true,
+  isToggled,
 }) => {
   const [toggled, setToggled] = useState(isToggled || false)
   const handleToggle = () => {
@@ -90,14 +92,14 @@ const OFFLabel = ({ children }: { children: ReactNode }) => {
   const context = useContext(SlideToggleContext)
 
   if (!context) {
-    throw new Error(':D')
+    throw new Error('Context Error!')
   }
 
   const { toggled } = context
 
 
   return (
-    <AnimatePresence>
+    <AnimatePresence initial={false}>
       {!toggled && (
         <motion.div
           initial={{
@@ -137,13 +139,13 @@ const ONLabel = ({ children }: { children: ReactNode }) => {
   const context = useContext(SlideToggleContext)
 
   if (!context) {
-    throw new Error(':D')
+    throw new Error('Context Error!')
   }
 
   const { toggled } = context
 
   return (
-    <AnimatePresence>
+    <AnimatePresence initial={false}>
       {toggled && (
         <motion.div
           initial={{
@@ -179,4 +181,9 @@ const ONLabel = ({ children }: { children: ReactNode }) => {
   )
 }
 
-export default SlideToggle
+// Uncomment this!
+// export default SlideToggle
+
+// Remove this!
+const SlideTogglePreview = () => <SlideToggle onLabel='Live' offLabel='Go live' isToggled/>;
+export default SlideTogglePreview;
