@@ -35,7 +35,7 @@ const data: ToggleCardProps[] = [
   {
     title: 'Slide Toggle',
     link: '/components/toggle/slide-toggle',
-    component: <SlideToggle isToggled />,
+    component: <SlideToggle />,
   },
 ]
 
