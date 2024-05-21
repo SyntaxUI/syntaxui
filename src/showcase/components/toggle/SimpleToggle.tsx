@@ -1,10 +1,8 @@
 'use client'
 import React, { useState } from 'react'
-import { type ClassValue, clsx } from 'clsx'
-import { twMerge } from 'tailwind-merge'
 
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+export function cn(...classNames: string[]) {
+  return classNames.filter(Boolean).join(' ')
 }
 
 const SimpleToggle = ({
