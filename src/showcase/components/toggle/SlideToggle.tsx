@@ -76,8 +76,8 @@ const Label: React.FC<LabelProps> = ({ children, isOn }) => {
 
 const SlideToggle: React.FC<SlideToggleProps> = ({
   onToggle,
-  offLabel = 'GO LIVE',
-  onLabel = 'LIVE NOW',
+  offLabel,
+  onLabel,
   isToggled = true,
 }) => {
   const [toggled, setToggled] = useState(isToggled || false)
