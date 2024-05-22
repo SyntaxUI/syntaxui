@@ -190,14 +190,25 @@ export function ComponentPreview({
       )}
       {selectedTab === 'code' && (
         <div className="relative w-full">
-          {/* <p>
-            Make sure to add <RawCode className="">@/utils/cn.ts</RawCode> to
-            your project.
-          </p> */}
-          <CodeGroup title="@/utils/cn.ts" noExpand>
-            <RawCode className="tsx">{cnString}</RawCode>
+          {usingCn && (
+            <>
+              <p className="-mb-6 text-lg">Install dependencies</p>
+              <CodeGroup noExpand>
+                <Code
+                  language="bash"
+                  code={`npm i clsx tailwind-merge${usingFramer ? ' framer-motion' : ''}`}
+                />
+              </CodeGroup>
+              <p className="-mb-6 text-lg">Add util file</p>
+              <CodeGroup title="utils/cn.ts" noExpand>
+                <RawCode className="tsx">{cnString}</RawCode>
+              </CodeGroup>
+              <p className="-mb-6 text-lg">Copy the source code</p>
+            </>
+          )}
+          <CodeGroup noExpand>
+            <Code language="tsx" code={codeString} />
           </CodeGroup>
-          <Code language="tsx" code={codeString} />
         </div>
       )}
     </div>
