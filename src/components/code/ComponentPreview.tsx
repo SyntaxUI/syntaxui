@@ -3,7 +3,7 @@
 import Code, { RawCode } from '@/components/code/Code'
 import { Icons } from '@/components/icons/Icons'
 import AnimatedTabs from '@/components/reusable/AnimatedTabs'
-import { cn } from '@/lib/utils'
+import cn from '@/utils/cn'
 import { Code as CodeIcon, Eye } from 'lucide-react'
 import * as React from 'react'
 import { CopyButton } from './CopyButton'
@@ -16,12 +16,14 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip'
 import Link from 'next/link'
+import CodeGroup from './CodeGroup'
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   path: string
   align?: 'center' | 'start' | 'end'
   preview?: React.ReactNode
   usingFramer?: boolean
+  usingCn?: boolean
 }
 
 const formatName = (path: string) => {
@@ -36,6 +38,7 @@ const formatName = (path: string) => {
  * @param {string} path - The path to the component relative to `src/showcase`.
  * Example: "components/button/3DButton"
  * @param {boolean} usingFramer - Whether the component is using Framer Motion.
+ * @param {boolean} usingCn - Whether the component is using the `cn` function.
  * @param {React.ReactNode} preview - optional preview to render a component directly instead of using path.
  *
  * Usage with path: `<ComponentPreview path="components/button/3DButton" />`
@@ -49,6 +52,7 @@ export function ComponentPreview({
   align = 'center',
   preview,
   usingFramer,
+  usingCn,
   ...props
 }: ComponentPreviewProps) {
   const name = formatName(path)
@@ -83,6 +87,14 @@ export function ComponentPreview({
       return null
     }
   }, [path])
+  const cnString = React.useMemo(() => {
+    try {
+      return require(`!!raw-loader!../../utils/cn.ts`).default
+    } catch (error) {
+      console.error(`Failed to load code for the cn function:`, error)
+      return null
+    }
+  }, [])
 
   const [selectedTab, setSelectedTab] = React.useState('preview')
 
@@ -178,6 +190,13 @@ export function ComponentPreview({
       )}
       {selectedTab === 'code' && (
         <div className="relative w-full">
+          {/* <p>
+            Make sure to add <RawCode className="">@/utils/cn.ts</RawCode> to
+            your project.
+          </p> */}
+          <CodeGroup title="@/utils/cn.ts" noExpand>
+            <RawCode className="tsx">{cnString}</RawCode>
+          </CodeGroup>
           <Code language="tsx" code={codeString} />
         </div>
       )}
