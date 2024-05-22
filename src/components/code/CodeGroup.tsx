@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@/lib/utils'
+import cn from '@/utils/cn'
 import {
   createContext,
   createRef,
@@ -20,27 +20,29 @@ export const CodeGroupContext = createContext(false)
  *
  * @params children: React.ReactNode - the code block to render
  * @params title?: string - the title of the code block
+ * @params noExpand?: boolean - if true, the code block will not be collapsible
  *
  * @example view `src/app/docs/animations/skewed-infinite-scroll/page.mdx`
  */
 export default function CodeGroup({
   children,
   title,
+  noExpand,
 }: {
   children: React.ReactNode
   title?: string
+  noExpand?: boolean
 }) {
-  const [minimized, setMinimized] = useState(true)
+  const [minimized, setMinimized] = useState<boolean | undefined>(
+    noExpand ? undefined : true,
+  )
   const codeRef = useRef<HTMLDivElement>(null)
-
-  // const canExpand = (codeRef.current?.clientHeight ?? 0) > 300;
-  // console.log('canExpand', codeRef.current?.clientHeight);
 
   return (
     <CodeGroupContext.Provider value={true}>
       <div
         className={cn(
-          'relative mb-4 mt-8 max-h-full overflow-hidden rounded-2xl transition-[max-height] duration-500',
+          'relative mb-4 mt-8 max-h-full overflow-hidden rounded-lg transition-[max-height] duration-500',
           minimized ? 'max-h-[300px]' : '',
         )}
       >
@@ -50,14 +52,14 @@ export default function CodeGroup({
           </div>
         )}
         <div ref={codeRef}>{children}</div>
-        {/* {canExpand && ( */}
-        <button
-          className="absolute bottom-0 block w-full rounded-2xl  bg-[#18181b50] py-2 text-sm font-medium text-white hover:text-red-500"
-          onClick={() => setMinimized(!minimized)}
-        >
-          {minimized ? 'Expand' : 'Collapse'}
-        </button>
-        {/* )} */}
+        {!noExpand && (
+          <button
+            className="absolute bottom-0 block w-full rounded-2xl  bg-[#18181b50] py-2 text-sm font-medium text-white hover:text-red-500"
+            onClick={() => setMinimized(!minimized)}
+          >
+            {minimized ? 'Expand' : 'Collapse'}
+          </button>
+        )}
       </div>
     </CodeGroupContext.Provider>
   )
