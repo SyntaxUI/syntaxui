@@ -192,18 +192,24 @@ export function ComponentPreview({
         <div className="relative w-full">
           {usingCn && (
             <>
-              <p className="-mb-6 text-lg">Install dependencies</p>
+              <p className="-mb-6 text-lg">
+                <span className="font-bold">Step 1:</span> Install dependencies
+              </p>
               <CodeGroup noExpand>
                 <Code
                   language="bash"
                   code={`npm i clsx tailwind-merge${usingFramer ? ' framer-motion' : ''}`}
                 />
               </CodeGroup>
-              <p className="-mb-6 text-lg">Add util file</p>
+              <p className="-mb-6 text-lg">
+                <span className="font-bold">Step 2:</span> Add util file
+              </p>
               <CodeGroup title="utils/cn.ts" noExpand>
                 <RawCode className="tsx">{cnString}</RawCode>
               </CodeGroup>
-              <p className="-mb-6 text-lg">Copy the source code</p>
+              <p className="-mb-6 text-lg">
+                <span className="font-bold">Step 3:</span> Copy the source code
+              </p>
             </>
           )}
           <CodeGroup noExpand>
