@@ -55,19 +55,6 @@ export function ComponentPreview({
   usingCn,
   ...props
 }: ComponentPreviewProps) {
-  if (usingCn) {
-    return (
-      <ComponentPreviewUsingCn
-        path={path}
-        className={className}
-        align={align}
-        preview={preview}
-        usingFramer={usingFramer}
-        {...props}
-      />
-    )
-  }
-
   const name = formatName(path)
 
   const Preview = React.useMemo(() => {
@@ -103,6 +90,18 @@ export function ComponentPreview({
 
   const [selectedTab, setSelectedTab] = React.useState('preview')
 
+  if (usingCn) {
+    return (
+      <ComponentPreviewUsingCn
+        path={path}
+        className={className}
+        align={align}
+        preview={preview}
+        usingFramer={usingFramer}
+        {...props}
+      />
+    )
+  }
   return (
     <div
       className={cn(
