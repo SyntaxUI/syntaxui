@@ -2,7 +2,7 @@
 
 import { useContext, useEffect, useMemo, useState } from 'react'
 import { CodeGroupContext } from './CodeGroup'
-import cn from '@/utils/cn'
+import { cn } from '@/lib/utils'
 import { CopyButton } from './CopyButton'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/hljs'

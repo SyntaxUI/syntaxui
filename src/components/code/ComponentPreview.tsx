@@ -3,7 +3,7 @@
 import Code, { RawCode } from '@/components/code/Code'
 import { Icons } from '@/components/icons/Icons'
 import AnimatedTabs from '@/components/reusable/AnimatedTabs'
-import cn from '@/utils/cn'
+import { cn } from '@/lib/utils'
 import { Code as CodeIcon, Eye } from 'lucide-react'
 import * as React from 'react'
 import { CopyButton } from './CopyButton'
@@ -243,7 +243,7 @@ function ComponentPreviewUsingCn({
   }, [path])
   const cnString = React.useMemo(() => {
     try {
-      return require(`!!raw-loader!../../utils/cn.ts`).default
+      return require(`!!raw-loader!../../lib/utils.ts`).default
     } catch (error) {
       console.error(`Failed to load code for the cn function:`, error)
       return null
@@ -343,7 +343,7 @@ function ComponentPreviewUsingCn({
         <p className="-mb-6 text-lg">
           <span className="font-bold">Step 2:</span> Add util file
         </p>
-        <CodeGroup title="utils/cn.ts" noExpand>
+        <CodeGroup title="lib/utils.ts" noExpand>
           <RawCode className="tsx">{cnString}</RawCode>
         </CodeGroup>
         <p className="-mb-6 text-lg">
