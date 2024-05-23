@@ -18,3 +18,4 @@
 - [CI greetings Bot](https://github.com/Ansub/SyntaxUI/pull/182) - [Daksh Singh Rathore](https://twitter.com/dakshsinghrath9)
 - [Issue Template](https://github.com/Ansub/SyntaxUI/pull/72) - [Daksh Singh Rathore](https://twitter.com/dakshsinghrath9)
 - [Automated Issue labeling](https://github.com/Ansub/SyntaxUI/pull/78) - [Daksh Singh Rathore](https://twitter.com/dakshsinghrath9)
+- [Four Column Responsive Footer](https://github.com/Ansub/SyntaxUI/pull/197) - [Subhadeep Roy](https://www.linkedin.com/feed/)
