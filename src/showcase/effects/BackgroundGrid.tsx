@@ -1,6 +1,4 @@
-export function cn(...classNames: (string | undefined)[]) {
-  return classNames.filter(Boolean).join(' ')
-}
+import { cn } from '@/lib/utils'
 
 export default function BackgroundGrid({
   color = 'black',
