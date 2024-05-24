@@ -16,12 +16,14 @@ import {
   TooltipTrigger,
 } from '@/components/ui/tooltip'
 import Link from 'next/link'
+import CodeGroup from './CodeGroup'
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   path: string
   align?: 'center' | 'start' | 'end'
   preview?: React.ReactNode
   usingFramer?: boolean
+  usingCn?: boolean
 }
 
 const formatName = (path: string) => {
@@ -36,6 +38,7 @@ const formatName = (path: string) => {
  * @param {string} path - The path to the component relative to `src/showcase`.
  * Example: "components/button/3DButton"
  * @param {boolean} usingFramer - Whether the component is using Framer Motion.
+ * @param {boolean} usingCn - Whether the component is using the `cn` function.
  * @param {React.ReactNode} preview - optional preview to render a component directly instead of using path.
  *
  * Usage with path: `<ComponentPreview path="components/button/3DButton" />`
@@ -49,6 +52,7 @@ export function ComponentPreview({
   align = 'center',
   preview,
   usingFramer,
+  usingCn,
   ...props
 }: ComponentPreviewProps) {
   const name = formatName(path)
@@ -86,6 +90,18 @@ export function ComponentPreview({
 
   const [selectedTab, setSelectedTab] = React.useState('preview')
 
+  if (usingCn) {
+    return (
+      <ComponentPreviewUsingCn
+        path={path}
+        className={className}
+        align={align}
+        preview={preview}
+        usingFramer={usingFramer}
+        {...props}
+      />
+    )
+  }
   return (
     <div
       className={cn(
@@ -183,6 +199,162 @@ export function ComponentPreview({
           <Code language="tsx" code={codeString} />
         </div>
       )}
+    </div>
+  )
+}
+
+function ComponentPreviewUsingCn({
+  path,
+  className,
+  align = 'center',
+  preview,
+  usingFramer,
+  ...props
+}: Omit<ComponentPreviewProps, 'usingCn'>) {
+  const name = formatName(path)
+
+  const Preview = React.useMemo(() => {
+    if (preview) return preview
+
+    try {
+      const Component = require(`../../showcase/${path}.tsx`).default
+      return <Component />
+    } catch (error) {
+      console.error(`Failed to load component ${path}:`, error)
+      return (
+        <p className="text-muted-foreground text-sm">
+          Component{' '}
+          <RawCode className="bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm">
+            {path}
+          </RawCode>{' '}
+          not found.
+        </p>
+      )
+    }
+  }, [path, preview])
+
+  const codeString = React.useMemo(() => {
+    try {
+      const code = require(`!!raw-loader!../../showcase/${path}.tsx`).default
+      const filteredCode = code.replace(/'use client'\n/, '')
+      return filteredCode
+    } catch (error) {
+      console.error(`Failed to load code for component ${path}:`, error)
+      return null
+    }
+  }, [path])
+  const cnString = React.useMemo(() => {
+    try {
+      return require(`!!raw-loader!../../lib/utils.ts`).default
+    } catch (error) {
+      console.error(`Failed to load code for the cn function:`, error)
+      return null
+    }
+  }, [])
+
+  return (
+    <div
+      className={cn(
+        'group relative my-10 flex w-full max-w-5xl flex-col space-y-2',
+        className,
+      )}
+      {...props}
+    >
+      <div className="flex flex-col items-center justify-between md:flex-row">
+        <div className="flex w-full items-center justify-between gap-2  md:justify-start">
+          <h2 className="text-md m-0 font-medium text-gray-800">{name}</h2>
+          <div className="flex items-center justify-center gap-x-2">
+            <TooltipProvider>
+              <Tooltip delayDuration={0}>
+                <TooltipTrigger>
+                  <TailwindCSS />
+                </TooltipTrigger>
+                <TooltipContent className="m-0 p-0 text-sm">
+                  <p className="m-0 p-1">
+                    This component requires{' '}
+                    <Link
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://tailwindcss.com/"
+                    >
+                      Tailwind CSS
+                    </Link>
+                  </p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+            {usingFramer && (
+              <TooltipProvider>
+                <Tooltip delayDuration={0}>
+                  <TooltipTrigger>
+                    <FramerLogo />
+                  </TooltipTrigger>
+                  <TooltipContent className="m-0 p-0 text-sm">
+                    <p className="m-0 p-1">
+                      This component requires{' '}
+                      <Link
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://www.framer.com/motion/"
+                      >
+                        Framer Motion
+                      </Link>
+                    </p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            )}
+          </div>
+        </div>
+      </div>
+      <div className="relative rounded-md border">
+        <div>
+          <div
+            className={cn(
+              'preview flex min-h-[250px] w-full justify-center overflow-hidden p-10',
+              {
+                'items-center': align === 'center',
+                'items-start': align === 'start',
+                'items-end': align === 'end',
+              },
+            )}
+          >
+            <React.Suspense
+              fallback={
+                <div className="text-muted-foreground flex items-center text-sm">
+                  <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+                  Loading...
+                </div>
+              }
+            >
+              {Preview}
+            </React.Suspense>
+          </div>
+        </div>
+      </div>
+      <div className="relative w-full">
+        <p className="-mb-6 text-lg">
+          <span className="font-bold">Step 1:</span> Install dependencies
+        </p>
+        <CodeGroup noExpand>
+          <Code
+            language="bash"
+            code={`npm i clsx tailwind-merge${usingFramer ? ' framer-motion' : ''}`}
+          />
+        </CodeGroup>
+        <p className="-mb-6 text-lg">
+          <span className="font-bold">Step 2:</span> Add util file
+        </p>
+        <CodeGroup title="lib/utils.ts" noExpand>
+          <RawCode className="tsx">{cnString}</RawCode>
+        </CodeGroup>
+        <p className="-mb-6 text-lg">
+          <span className="font-bold">Step 3:</span> Copy the source code
+        </p>
+        <CodeGroup noExpand>
+          <Code language="tsx" code={codeString} />
+        </CodeGroup>
+      </div>
     </div>
   )
 }
