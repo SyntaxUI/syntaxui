@@ -1,9 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-
-export function cn(...classNames: string[]) {
-  return classNames.filter(Boolean).join(' ')
-}
+import { cn } from '@/lib/utils'
 
 const SimpleToggle = ({
   onToggle,
