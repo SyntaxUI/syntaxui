@@ -22,7 +22,7 @@ export default function Counter({
     if (isInView) {
       motionValue.set(direction === 'down' ? 0 : value)
     }
-  }, [motionValue, isInView])
+  }, [motionValue, isInView, value, direction])
 
   useEffect(
     () =>
