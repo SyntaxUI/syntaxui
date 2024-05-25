@@ -41,11 +41,7 @@ export function ThemeToggle() {
 
   useEffect(() => {
     setMounted(true)
-  }, [])
-
-  useEffect(() => {
-    console.log(otherTheme)
-  })
+  }, [setMounted])
 
   return (
     <button
