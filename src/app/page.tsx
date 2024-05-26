@@ -1,18 +1,16 @@
 'use client'
 
-import EffectCards from '@/showcase/ui-group/EffectCards'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Button } from '@/components/ui/button'
 import GitHubIcon from '@/icons/github'
 import AnimationCards from '@/showcase/ui-group/AnimationCards'
 import ComponentCards from '@/showcase/ui-group/ComponentCards'
+import EffectCards from '@/showcase/ui-group/EffectCards'
 import { motion } from 'framer-motion'
+import { ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import posthog from 'posthog-js'
-import { ChevronRight } from 'lucide-react'
-import Testimonals from '@/showcase/components/testimonial/TestimonialGrid'
 
 const DiscordButton = () => {
   return (
@@ -24,14 +22,15 @@ const DiscordButton = () => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       onClick={() => {
-        window.open('https://cal.com/ansub/15')
-        posthog.capture('meeting_button_clicked')
+        // window.open('https://cal.com/ansub/15')
+        window.open('https://discord.com/invite/P8GXYyH3ZU')
+        // posthog.capture('meeting_button_clicked')
       }}
     >
       <span className="absolute inset-[-1000%] animate-discord-button bg-[conic-gradient(from_calc(var(--discord-button-angle)+60deg)_at_calc(50%+var(--discord-button-x))_50%,transparent_50%,#fb3a5d_98%,transparent_100%)]"></span>
       <span className="inline-flex items-center gap-2 rounded-full bg-red-100 px-3 py-1 text-[12px] font-medium uppercase text-red-500 backdrop-blur">
         <span>
-          Request a Component
+          Join the Discord
           <ChevronRight className="inline-block h-4 w-4 text-red-400" />
         </span>
       </span>
@@ -61,7 +60,6 @@ const Home = () => {
               Free-to-use UI elements designed for rapid development.
             </div>
           </div>
-          <Testimonals />
           <div className="flex items-center space-x-4">
             <Link href="/components">
               <Button className="bg-red-500 hover:bg-red-500/90">
