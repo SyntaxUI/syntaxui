@@ -6,7 +6,6 @@
 - [LineTabs](https://syntaxui.com/components/tabs) - [Aiko](https://twitter.com/username_aiko)
 - [IconTabs](https://syntaxui.com/components/tabs) - [Aiko](https://twitter.com/username_aiko)
 - [Simple Toggle](https://syntaxui.com/components/toggle/simple-toggle) - [Ethan Pollack](https://epoll31.github.io)
-- useMediaSizes - [Ethan Pollack](https://epoll31.github.io)
 - [Stitches Button](https://syntaxui.com/components/button/stitches-button) - [Saud](https://twitter.com/via_saud)
 - [Neubrutalism Toggle](https://syntaxui.com/components/button/neubrutalism-button) - [Ethan Pollack](https://epoll31.github.io)
 - [Shimmer Button](https://syntaxui.com/components/button/shimmer-button) - [Ethan Pollack](https://epoll31.github.io)
