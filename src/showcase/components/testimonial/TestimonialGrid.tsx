@@ -34,7 +34,7 @@ const TestimonialCard: FC<TestimonalCardProps> = ({
           </p>
         </div>
       </div>
-      <p className="text-left text-sm font-light text-gray-600 md:text-base">
+      <p className="mt-0 text-left text-sm font-light text-gray-600 md:text-base">
         {description}
       </p>
     </div>
@@ -43,7 +43,7 @@ const TestimonialCard: FC<TestimonalCardProps> = ({
 
 const Testimonals = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-5">
+    <div className="flex flex-col items-center justify-center gap-5 py-12">
       <h1 className="mb-1 max-w-2xl text-center text-2xl font-semibold tracking-tighter text-gray-900 md:text-4xl">
         Why people love SyntaxUI
       </h1>

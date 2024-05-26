@@ -230,7 +230,6 @@ export const navigation: Array<NavGroup> = [
       {
         title: 'Features',
         href: '/components/features',
-        tag: 'New',
       },
       {
         title: 'Footer',
@@ -256,6 +255,11 @@ export const navigation: Array<NavGroup> = [
       {
         title: 'Tabs',
         href: '/components/tabs',
+      },
+      {
+        title: 'Testimonial',
+        href: '/components/testimonial',
+        tag: 'new',
       },
       {
         title: 'Text',
