@@ -210,6 +210,7 @@ function ComponentPreviewUsingCn({
   ...props
 }: Omit<ComponentPreviewProps, 'usingCn'>) {
   const name = formatName(path)
+  const nameWithoutSpace = name.replace(/\s/g, '')
 
   const Preview = React.useMemo(() => {
     if (preview) return preview
@@ -331,8 +332,8 @@ function ComponentPreviewUsingCn({
         </div>
       </div>
       <div className="relative w-full">
-        <p className="-mb-6 text-lg">
-          <span className="font-bold">Step 1:</span> Install dependencies
+        <p className="text-md -mb-6">
+          <span className="font-semibold">Step 1:</span> Install dependencies
         </p>
         <CodeGroup noExpand>
           <Code
@@ -340,16 +341,16 @@ function ComponentPreviewUsingCn({
             code={`npm i clsx tailwind-merge${usingFramer ? ' framer-motion' : ''}`}
           />
         </CodeGroup>
-        <p className="-mb-6 text-lg">
-          <span className="font-bold">Step 2:</span> Add util file
+        <p className="text-medium -mb-6">
+          <span className="font-semibold">Step 2:</span> Add util file
         </p>
         <CodeGroup title="lib/utils.ts" noExpand>
           <RawCode className="tsx">{cnString}</RawCode>
         </CodeGroup>
-        <p className="-mb-6 text-lg">
-          <span className="font-bold">Step 3:</span> Copy the source code
+        <p className="text-medium -mb-6">
+          <span className="font-semibold">Step 3:</span> Copy the source code
         </p>
-        <CodeGroup noExpand>
+        <CodeGroup title={`${nameWithoutSpace}.tsx`} noExpand>
           <Code language="tsx" code={codeString} />
         </CodeGroup>
       </div>
