@@ -12,6 +12,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import posthog from 'posthog-js'
 import { ChevronRight } from 'lucide-react'
+import Testimonals from '@/showcase/components/testimonial/TestimonialGrid'
 
 const DiscordButton = () => {
   return (
@@ -60,6 +61,7 @@ const Home = () => {
               Free-to-use UI elements designed for rapid development.
             </div>
           </div>
+          <Testimonals />
           <div className="flex items-center space-x-4">
             <Link href="/components">
               <Button className="bg-red-500 hover:bg-red-500/90">

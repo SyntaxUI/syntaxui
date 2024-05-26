@@ -19,22 +19,22 @@ const TestimonialCard: FC<TestimonalCardProps> = ({
       className={`card-shadow relative flex h-auto max-w-[22rem] flex-col items-start justify-center overflow-hidden rounded-2xl border border-[#F5F5F5] bg-white p-5 shadow-sm`}
     >
       <div className="absolute right-0 top-0 h-24 w-24 rounded-2xl bg-gradient-to-r from-[#fb3a5d]  to-[#fb3a5d] opacity-20 blur-3xl"></div>
-      <div className="mb-3 flex flex-row gap-3">
+      <div className="mb-0 flex h-fit flex-row items-center gap-3">
         <Image
-          className="block h-11 w-11 rounded-full object-cover"
+          className="m-0 block h-11 w-11 rounded-full object-cover"
           src={image}
           alt={image}
           width={120}
           height={80}
         />
-        <div className="flex flex-col items-start">
-          <h3 className="mb-0 text-base font-medium text-gray-900">{name}</h3>
-          <p className="font-regular mt-0 text-center text-sm text-gray-600">
+        <div className="mb-0 flex h-fit flex-col items-start">
+          <h3 className="m-0 text-base font-medium text-gray-900">{name}</h3>
+          <p className="font-regular m-0 text-center text-sm text-gray-600">
             {profession}
           </p>
         </div>
       </div>
-      <p className="mt-0 text-left text-sm font-light text-gray-600 md:text-base">
+      <p className="mb-0 mt-3 text-left text-sm font-light text-gray-600 md:text-base">
         {description}
       </p>
     </div>
