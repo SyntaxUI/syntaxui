@@ -16,25 +16,25 @@ function CSPostHogProvider({ children }: { children: React.ReactNode }) {
 }
 
 function ThemeWatcher() {
-  let { resolvedTheme, setTheme } = useTheme()
+  // let { resolvedTheme, setTheme } = useTheme()
 
-  useEffect(() => {
-    let media = window.matchMedia('(prefers-color-scheme: dark)')
+  // useEffect(() => {
+  //   let media = window.matchMedia('(prefers-color-scheme: dark)')
 
-    function onMediaChange() {
-      let systemTheme = media.matches ? 'dark' : 'light'
-      if (resolvedTheme === systemTheme) {
-        setTheme('light')
-      }
-    }
+  //   function onMediaChange() {
+  //     let systemTheme = media.matches ? 'dark' : 'light'
+  //     // if (resolvedTheme === systemTheme) {
+  //     //   setTheme('light')
+  //     // }
+  //   }
 
-    onMediaChange()
-    media.addEventListener('change', onMediaChange)
+  //   onMediaChange()
+  //   media.addEventListener('change', onMediaChange)
 
-    return () => {
-      media.removeEventListener('change', onMediaChange)
-    }
-  }, [resolvedTheme, setTheme])
+  //   return () => {
+  //     media.removeEventListener('change', onMediaChange)
+  //   }
+  // }, [resolvedTheme, setTheme])
 
   return null
 }

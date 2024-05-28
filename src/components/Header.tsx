@@ -13,6 +13,7 @@ import XIcon from '@/icons/x'
 import DiscordIcon from '@/icons/discord'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import { ThemeToggle } from './ThemeToggle'
 
 function TopLevelNavItem({
   href,
@@ -127,7 +128,7 @@ export const Header = forwardRef<
         {/* <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10 md:dark:bg-white/15" /> */}
         <div className="flex items-center gap-2">
           <MobileSearch />
-          {/* <ThemeToggle /> */}
+          <ThemeToggle />
 
           <Link
             href="https://twitter.com/justansub"
