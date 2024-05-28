@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import HeartbeatButton from '../components/button/HeartbeatButton'
 import AnimatedLogoCloud from '../components/logo-cloud/AnimatedLogoCloud'
+import Card from './Card'
 
 const data = [
   {
@@ -70,24 +71,19 @@ const ComponentCards = () => {
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {data.map((item, index) => (
           <Link href={item.link} key={index} className="no-underline">
-            <div className="overflow group rounded-xl border border-white ring-1 ring-zinc-200 transition-all ease-in-out hover:cursor-pointer">
-              <div className="flex h-[9rem] items-center justify-center overflow-hidden rounded-t-xl border-b bg-gray-50 text-xs text-gray-400 transition-all ease-in-out group-hover:bg-gray-100 md:h-[12rem]">
-                {item.image ? (
-                  <Image
-                    width={200}
-                    height={200}
-                    src={item.image}
-                    alt={item.title}
-                    className="h-auto w-[150px] duration-300 ease-in-out group-hover:scale-110 md:w-[200px]"
-                  />
-                ) : item.component ? (
-                  item.component
-                ) : null}
-              </div>
-              <div className="w-full p-4 text-sm font-medium text-gray-800">
-                {item.title}
-              </div>
-            </div>
+            <Card title={item.title}>
+              {item.image ? (
+                <Image
+                  width={200}
+                  height={200}
+                  src={item.image}
+                  alt={item.title}
+                  className="h-auto w-[150px] duration-300 ease-in-out group-hover:scale-110 md:w-[200px]"
+                />
+              ) : item.component ? (
+                item.component
+              ) : null}
+            </Card>
           </Link>
         ))}
       </div>

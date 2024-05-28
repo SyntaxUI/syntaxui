@@ -10,6 +10,7 @@ import ClassicLoader from '@/showcase/components/loaders/ClassicLoader'
 import BounceLoader from '@/showcase/components/loaders/BounceLoader'
 import NeonGlowLoader from '@/showcase/components/loaders/NeonGlowLoader'
 import PulsatingGradientLoader from '@/showcase/components/loaders/PulsatingGradientLoader'
+import Card from './Card'
 
 interface LoaderCardProps {
   title: string
@@ -80,14 +81,15 @@ export default function LoaderCards() {
         .filter((item) => !item.hide)
         .map((item, i) => (
           <Link href={item.link} key={i}>
-            <div className="overflow group group rounded-xl border border-white ring-1 ring-zinc-200 transition-all ease-in-out hover:cursor-pointer">
+            {/* <div className="overflow group group rounded-xl border border-white ring-1 ring-zinc-200 transition-all ease-in-out hover:cursor-pointer">
               <div className="flex h-[9rem] items-center justify-center overflow-hidden rounded-t-xl border-b bg-gray-50 text-xs text-gray-400 transition-all ease-in-out group-hover:bg-gray-100 md:h-[12rem]">
                 {item.component}
               </div>
               <div className="w-full p-4 text-sm font-medium text-gray-800">
                 {item.title}
               </div>
-            </div>
+            </div> */}
+            <Card title={item.title}>{item.component}</Card>
           </Link>
         ))}
     </div>

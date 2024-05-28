@@ -8,6 +8,7 @@ import ShimmerButton from '@/showcase/components/button/ShimmerButton'
 import ShineButton from '@/showcase/components/button/ShineButton'
 import StitchesButton from '@/showcase/components/button/StitchesButton'
 import TextRevealButton from '../components/button/TextRevealButton'
+import Card from './Card'
 
 const data = [
   {
@@ -63,7 +64,7 @@ const ButtonCards = () => {
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {data.map((item, index) => (
           <Link href={item.link} key={index} className="no-underline">
-            <div className="overflow group rounded-xl border border-white ring-1 ring-zinc-200 transition-all ease-in-out hover:cursor-pointer">
+            {/* <div className="overflow group rounded-xl border border-white ring-1 ring-zinc-200 transition-all ease-in-out hover:cursor-pointer">
               <div className="flex h-[9rem] items-center justify-center overflow-hidden rounded-t-xl border-b bg-gray-50 text-xs text-gray-400 transition-all ease-in-out group-hover:bg-gray-100 md:h-[12rem]">
                 {item.component}
               </div>
@@ -72,7 +73,8 @@ const ButtonCards = () => {
                   {item.title}
                 </div>
               </div>
-            </div>
+            </div> */}
+            <Card title={item.title}>{item.component}</Card>
           </Link>
         ))}
       </div>
