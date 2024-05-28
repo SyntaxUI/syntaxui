@@ -123,11 +123,12 @@ export function ComponentPreview({
                 </TooltipTrigger>
                 <TooltipContent className="m-0 p-0 text-sm">
                   <p className="m-0 p-1">
-                    This component requires
+                    This component requires{' '}
                     <Link
                       target="_blank"
                       rel="noreferrer"
                       href="https://tailwindcss.com/"
+                      className="text-red-500 no-underline hover:text-red-500"
                     >
                       Tailwind CSS
                     </Link>
@@ -139,15 +140,16 @@ export function ComponentPreview({
               <TooltipProvider>
                 <Tooltip delayDuration={0}>
                   <TooltipTrigger>
-                    <FramerLogo />
+                    <FramerLogo className="text-black dark:text-white" />
                   </TooltipTrigger>
                   <TooltipContent className="m-0 p-0 text-sm">
                     <p className="m-0 p-1">
-                      This component requires
+                      This component requires{' '}
                       <Link
                         target="_blank"
                         rel="noreferrer"
                         href="https://www.framer.com/motion/"
+                        className="text-red-500 no-underline hover:text-red-500"
                       >
                         Framer Motion
                       </Link>
@@ -279,6 +281,7 @@ function ComponentPreviewUsingCn({
                       target="_blank"
                       rel="noreferrer"
                       href="https://tailwindcss.com/"
+                      className="text-red-500 no-underline hover:text-red-500"
                     >
                       Tailwind CSS
                     </Link>
@@ -290,7 +293,7 @@ function ComponentPreviewUsingCn({
               <TooltipProvider>
                 <Tooltip delayDuration={0}>
                   <TooltipTrigger>
-                    <FramerLogo />
+                    <FramerLogo className="text-black dark:text-white" />
                   </TooltipTrigger>
                   <TooltipContent className="m-0 p-0 text-sm">
                     <p className="m-0 p-1">
@@ -299,6 +302,7 @@ function ComponentPreviewUsingCn({
                         target="_blank"
                         rel="noreferrer"
                         href="https://www.framer.com/motion/"
+                        className="text-red-500 no-underline hover:text-red-500"
                       >
                         Framer Motion
                       </Link>

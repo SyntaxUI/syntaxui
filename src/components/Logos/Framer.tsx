@@ -8,12 +8,10 @@ const FramerLogo = (props: SVGProps<SVGSVGElement>) => (
     height="1em"
     xmlns="http://www.w3.org/2000/svg"
     preserveAspectRatio="xMidYMid"
+    fill="currentColor"
     {...props}
   >
-    <path
-      fill="#000"
-      d="M0 0h256v128H128L0 0Zm0 128h128l128 128H128v128L0 256V128Z"
-    />
+    <path d="M0 0h256v128H128L0 0Zm0 128h128l128 128H128v128L0 256V128Z" />
   </svg>
 )
 export default FramerLogo
