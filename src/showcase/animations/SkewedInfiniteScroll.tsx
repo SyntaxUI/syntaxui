@@ -36,7 +36,7 @@ const SkewedInfiniteScroll: FC = () => {
             {items.map((item) => (
               <div
                 key={item.id}
-                className="flex cursor-pointer items-center space-x-2 rounded-md border border-gray-100 px-5 shadow-md transition-all hover:-translate-y-1 hover:translate-x-1 hover:scale-[1.025] hover:shadow-xl"
+                className="flex cursor-pointer items-center space-x-2 rounded-md border border-gray-100 px-5 shadow-md transition-all hover:-translate-y-1 hover:translate-x-1 hover:scale-[1.025] hover:shadow-xl dark:border-gray-800"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
