@@ -105,7 +105,7 @@ const Pricing = () => {
       {pricingPlans.map((plan, index) => (
         <div
           key={index}
-          className="w-full rounded-xl border-[1px] border-gray-300 p-6 text-left"
+          className="w-full rounded-xl border-[1px] border-gray-300 p-6 text-left dark:border-gray-600"
         >
           <p className="mb-1 mt-0 text-sm font-medium uppercase text-red-500">
             {plan.name}
