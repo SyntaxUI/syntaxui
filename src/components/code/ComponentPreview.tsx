@@ -123,7 +123,7 @@ export function ComponentPreview({
                 </TooltipTrigger>
                 <TooltipContent className="m-0 p-0 text-sm">
                   <p className="m-0 p-1">
-                    This component requires{' '}
+                    This component requires
                     <Link
                       target="_blank"
                       rel="noreferrer"
@@ -143,7 +143,7 @@ export function ComponentPreview({
                   </TooltipTrigger>
                   <TooltipContent className="m-0 p-0 text-sm">
                     <p className="m-0 p-1">
-                      This component requires{' '}
+                      This component requires
                       <Link
                         target="_blank"
                         rel="noreferrer"
@@ -263,7 +263,9 @@ function ComponentPreviewUsingCn({
     >
       <div className="flex flex-col items-center justify-between md:flex-row">
         <div className="flex w-full items-center justify-between gap-2  md:justify-start">
-          <h2 className="text-md m-0 font-medium text-gray-800">{name}</h2>
+          <h2 className="text-md m-0 font-medium text-gray-800  dark:text-gray-200">
+            {name}
+          </h2>
           <div className="flex items-center justify-center gap-x-2">
             <TooltipProvider>
               <Tooltip delayDuration={0}>
@@ -308,7 +310,7 @@ function ComponentPreviewUsingCn({
           </div>
         </div>
       </div>
-      <div className="relative rounded-md border">
+      <div className="relative rounded-md border border-gray-200 dark:border-gray-600">
         <div>
           <div
             className={cn(
