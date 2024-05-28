@@ -105,14 +105,16 @@ export function ComponentPreview({
   return (
     <div
       className={cn(
-        'group relative my-10 flex w-full max-w-5xl flex-col space-y-2',
+        'group relative my-10 flex w-full max-w-5xl flex-col space-y-2 ',
         className,
       )}
       {...props}
     >
       <div className="flex flex-col items-center justify-between md:flex-row">
         <div className="flex w-full items-center justify-between gap-2  md:justify-start">
-          <h2 className="text-md m-0 font-medium text-gray-800">{name}</h2>
+          <h2 className="text-md m-0 font-medium text-gray-800 dark:text-gray-200">
+            {name}
+          </h2>
           <div className="flex items-center justify-center gap-x-2">
             <TooltipProvider>
               <Tooltip delayDuration={0}>
@@ -165,12 +167,12 @@ export function ComponentPreview({
         />
       </div>
       {selectedTab === 'preview' && (
-        <div className="relative rounded-md border">
+        <div className="relative rounded-md border border-gray-200 dark:border-gray-600 ">
           <CopyButton value={codeString} />
           <div>
             <div
               className={cn(
-                'preview flex min-h-[250px] w-full justify-center overflow-hidden p-10',
+                'preview flex min-h-[250px] w-full justify-center overflow-hidden p-10 ',
                 {
                   'items-center': align === 'center',
                   'items-start': align === 'start',
