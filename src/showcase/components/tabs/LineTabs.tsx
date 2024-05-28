@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
@@ -17,7 +18,9 @@ const Tab = ({ text, selected, setSelected, customID }: TabProps) => {
     <button
       onClick={() => setSelected(text)}
       className={` ${
-        selected ? 'text-red-500' : ' hover:text-gray-900'
+        selected
+          ? 'text-red-500'
+          : ' hover:text-gray-900 dark:hover:text-gray-100'
       } relative rounded-md  px-2 py-1 text-sm font-medium text-gray-500 transition-colors duration-300 focus-within:outline-red-500/50`}
     >
       <span className="relative z-10">{text}</span>
@@ -43,9 +46,10 @@ const LineTabs = ({ center, customID }: LineTabProps) => {
   const [selected, setSelected] = useState<string>(tabs[0])
   return (
     <div
-      className={` ${
-        center ? 'justify-center ' : ''
-      } border-black-500/25 mb-8 flex flex-wrap items-center gap-2 border-b`}
+      className={cn(
+        'mb-8 flex flex-wrap items-center gap-2 border-b border-gray-200 dark:border-gray-600',
+        center && 'justify-center',
+      )}
     >
       {tabs.map((tab) => (
         <Tab
