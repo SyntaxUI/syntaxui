@@ -84,7 +84,7 @@ export const Header = forwardRef<
             width={100}
             height={100}
           />
-          <div className="text-md font-medium text-gray-800">
+          <div className="text-md font-medium text-gray-800 dark:text-white">
             Syntax<span className="text-[10px] font-bold text-red-500">UI</span>
           </div>
         </Link>
