@@ -169,7 +169,7 @@ export function ComponentPreview({
         />
       </div>
       {selectedTab === 'preview' && (
-        <div className="relative rounded-md border border-gray-200 dark:border-gray-600 ">
+        <div className="relative rounded-md border border-gray-200 dark:border-gray-700 ">
           <CopyButton value={codeString} />
           <div>
             <div
@@ -314,7 +314,7 @@ function ComponentPreviewUsingCn({
           </div>
         </div>
       </div>
-      <div className="relative rounded-md border border-gray-200 dark:border-gray-600">
+      <div className="relative rounded-md border border-gray-200 dark:border-gray-700">
         <div>
           <div
             className={cn(
