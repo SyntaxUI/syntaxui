@@ -132,7 +132,7 @@ export function Property({
 
 export function Preview({ children }: { children: React.ReactNode }) {
   return (
-    <div className="group inline-flex w-full items-center justify-center gap-3 rounded-lg border border-gray-200 py-8 sm:max-lg:block dark:border-gray-600">
+    <div className="group inline-flex w-full items-center justify-center gap-3 rounded-lg border border-gray-200 py-8 sm:max-lg:block dark:border-gray-700">
       {children}
     </div>
   )
