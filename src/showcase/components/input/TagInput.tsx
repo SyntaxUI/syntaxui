@@ -69,7 +69,7 @@ const TagInput: React.FC = () => {
   }
 
   return (
-    <div className="flex w-full flex-wrap items-center rounded-lg border p-2">
+    <div className="flex w-full flex-wrap items-center rounded-lg border border-gray-200 p-2 dark:border-gray-600">
       <div
         className="flex w-full flex-wrap overflow-y-auto"
         style={{ maxHeight: '300px' }}
@@ -91,7 +91,7 @@ const TagInput: React.FC = () => {
           onKeyDown={handleKeyDown}
           onPaste={handlePaste}
           onBlur={(e) => handleBlur(e)}
-          className="my-1 flex-1 text-sm outline-none"
+          className="my-1 flex-1 bg-transparent text-sm outline-none"
           placeholder="Type keyword and press Enter..."
         />
       </div>

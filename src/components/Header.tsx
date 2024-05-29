@@ -13,6 +13,7 @@ import XIcon from '@/icons/x'
 import DiscordIcon from '@/icons/discord'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import { ThemeToggle } from './ThemeToggle'
 
 function TopLevelNavItem({
   href,
@@ -83,7 +84,7 @@ export const Header = forwardRef<
             width={100}
             height={100}
           />
-          <div className="text-md font-medium text-gray-800">
+          <div className="text-md font-medium text-gray-800 dark:text-white">
             Syntax<span className="text-[10px] font-bold text-red-500">UI</span>
           </div>
         </Link>
@@ -127,31 +128,37 @@ export const Header = forwardRef<
         {/* <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10 md:dark:bg-white/15" /> */}
         <div className="flex items-center gap-2">
           <MobileSearch />
-          {/* <ThemeToggle /> */}
+          <ThemeToggle />
 
           <Link
             href="https://twitter.com/justansub"
             target="_blank"
             rel="noreferrer"
-            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex"
+            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex dark:hover:bg-white/5 "
           >
-            <XIcon className="h-4 w-4" />
+            <XIcon className="h-4 w-4 dark:text-white" fill="currentColor" />
           </Link>
           <Link
             href="https://discord.gg/P8GXYyH3ZU"
             target="_blank"
             rel="noreferrer"
-            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex"
+            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex dark:hover:bg-white/5"
           >
-            <DiscordIcon className="h-4 w-4" />
+            <DiscordIcon
+              className="h-4 w-4 dark:text-white"
+              fill="currentColor"
+            />
           </Link>
           <Link
             href="https://github.com/ansub/ui"
             target="_blank"
             rel="noreferrer"
-            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex"
+            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex dark:hover:bg-white/5"
           >
-            <GitHubIcon className="h-4 w-4" />
+            <GitHubIcon
+              className="h-4 w-4 dark:text-white"
+              fill="currentColor"
+            />
           </Link>
         </div>
       </div>

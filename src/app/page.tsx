@@ -72,8 +72,8 @@ const Home = () => {
               rel="noreferrer"
             >
               <Button variant={'outline'} className="gap-1">
-                <div className="h-5 w-5 text-gray-800">
-                  <GitHubIcon />
+                <div className="h-5 w-5 text-gray-800 dark:text-white">
+                  <GitHubIcon fill="currentColor" />
                 </div>
                 Star on Github
               </Button>

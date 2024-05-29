@@ -1,4 +1,5 @@
 'use client'
+import Card from '@/showcase/ui-group/Card'
 import { motion } from 'framer-motion'
 import { Check, Copy } from 'lucide-react'
 import { useState } from 'react'
@@ -54,19 +55,12 @@ const GradientCards = () => {
     <div>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {data.map((item, index) => (
-          <motion.div
-            key={index}
-            className="group no-underline"
-            whileTap={{ scale: 0.95 }}
-          >
-            <div
-              className="overflow group relative rounded-xl border border-gray-200 transition-all ease-in-out hover:cursor-pointer"
-              onClick={() => copyGradient(item.gradient)}
-            >
+          <button key={index} onClick={() => copyGradient(item.gradient)}>
+            <Card title={item.title}>
               <div
-                className={`relative flex h-[9rem] items-center justify-center rounded-t-xl border-b text-xs text-gray-400 transition-all ease-in-out group-hover:bg-gray-100 md:h-[12rem] ${item.gradient}`}
+                className={`relative flex h-full w-full items-center justify-center ${item.gradient}`}
               >
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <div className="inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   {copied ? (
                     <Check className="text-2xl text-white" />
                   ) : (
@@ -74,11 +68,8 @@ const GradientCards = () => {
                   )}
                 </div>
               </div>
-              <div className="w-full p-4 text-sm font-medium text-gray-800">
-                {item.title}
-              </div>
-            </div>
-          </motion.div>
+            </Card>
+          </button>
         ))}
       </div>
     </div>

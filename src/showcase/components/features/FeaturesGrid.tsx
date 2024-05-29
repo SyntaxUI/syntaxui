@@ -87,10 +87,10 @@ const FeaturesGrid = () => {
                 className="mb-2 h-5 w-5 text-red-500"
                 aria-hidden="true"
               />
-              <div className="text-md inline font-semibold text-gray-800">
+              <div className="text-md inline font-semibold text-gray-800 dark:text-gray-100">
                 {feature.name}
               </div>{' '}
-              <div className="inline max-w-xs text-sm text-gray-700">
+              <div className="inline max-w-xs text-sm text-gray-700 dark:text-gray-300">
                 {feature.description}
               </div>
             </div>
