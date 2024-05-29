@@ -63,13 +63,13 @@ const HoverSpring = () => {
                   src={project.image}
                   width={30}
                   height={30}
-                  className="mb-3 rounded-lg"
+                  className="mb-3 rounded-lg border-gray-400 dark:border"
                   alt={project.name}
                 />
-                <div className="mb-1 text-sm font-medium text-gray-900">
+                <div className="mb-1 text-sm font-medium text-gray-900 dark:text-gray-100">
                   {project.name}
                 </div>
-                <div className="max-w-[250px] text-sm font-normal text-gray-500">
+                <div className="max-w-[250px] text-sm font-normal text-gray-500 dark:text-gray-500">
                   {project.description}
                 </div>
               </a>

@@ -12,7 +12,17 @@ import {
 } from 'react'
 import { Button } from '../mdx'
 
-export const CodeGroupContext = createContext(false)
+export const CodeGroupContext = createContext({
+  inCodeGroup: false,
+  hasTitle: false,
+})
+
+export function useInCodeGroup() {
+  return useContext(CodeGroupContext).inCodeGroup
+}
+export function useCodeGroup() {
+  return useContext(CodeGroupContext)
+}
 
 /**
  * This is a code group component that accepts `children` which should be a `RawCode` or a `Code` component and an optional `title: string`.
@@ -36,22 +46,37 @@ export default function CodeGroup({
   const [minimized, setMinimized] = useState<boolean | undefined>(
     noExpand ? undefined : true,
   )
-  const codeRef = useRef<HTMLDivElement>(null)
 
   return (
-    <CodeGroupContext.Provider value={true}>
+    <CodeGroupContext.Provider
+      value={{
+        inCodeGroup: true,
+        hasTitle: Boolean(title),
+      }}
+    >
       <div
         className={cn(
-          'relative mb-4 mt-8 max-h-full overflow-hidden rounded-lg transition-[max-height] duration-500',
-          minimized ? 'max-h-[300px]' : '',
+          'relative mb-4 mt-8  border-collapse overflow-hidden rounded-lg border border-gray-600 duration-500 dark:border-gray-700',
         )}
       >
         {title && (
-          <div className="border border-zinc-700  bg-zinc-800 px-5 py-3 text-xs font-semibold text-white">
+          <div
+            className={cn(
+              ' border-b border-gray-600 bg-zinc-800 px-5 py-3 text-xs font-semibold text-white dark:border-gray-700',
+            )}
+          >
             {title}
           </div>
         )}
-        <div ref={codeRef}>{children}</div>
+
+        <div
+          className={cn(
+            'max-h-full transition-[max-height] ',
+            minimized ? 'max-h-[300px]' : '',
+          )}
+        >
+          {children}
+        </div>
         {!noExpand && (
           <button
             className="absolute bottom-0 block w-full rounded-2xl  bg-[#18181b50] py-2 text-sm font-medium text-white hover:text-red-500"

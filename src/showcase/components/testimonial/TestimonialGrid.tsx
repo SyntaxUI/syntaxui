@@ -16,7 +16,7 @@ const TestimonialCard: FC<TestimonalCardProps> = ({
 }) => {
   return (
     <div
-      className={`card-shadow relative flex h-auto max-w-[22rem] flex-col items-start justify-center overflow-hidden rounded-2xl border border-[#F5F5F5] bg-white p-5 shadow-sm`}
+      className={`card-shadow dark:border-neutral-90 relative flex h-auto max-w-[22rem] flex-col items-start justify-center overflow-hidden rounded-2xl border border-neutral-100 p-5 shadow-sm dark:border-neutral-800 `}
     >
       <div className="absolute right-0 top-0 h-24 w-24 rounded-2xl bg-gradient-to-r from-[#fb3a5d]  to-[#fb3a5d] opacity-20 blur-3xl"></div>
       <div className="mb-0 flex h-fit flex-row items-center gap-3">
@@ -28,13 +28,15 @@ const TestimonialCard: FC<TestimonalCardProps> = ({
           height={80}
         />
         <div className="mb-0 flex h-fit flex-col items-start">
-          <h3 className="m-0 text-base font-medium text-gray-900">{name}</h3>
-          <p className="font-regular m-0 text-center text-sm text-gray-600">
+          <h3 className="m-0 text-base font-medium text-gray-900 dark:text-gray-100">
+            {name}
+          </h3>
+          <p className="font-regular m-0 text-center text-sm text-gray-600 dark:text-gray-400">
             {profession}
           </p>
         </div>
       </div>
-      <p className="mb-0 mt-3 text-left text-sm font-light text-gray-600 md:text-base">
+      <p className="mb-0 mt-3 text-left text-sm font-light text-gray-600 md:text-base dark:text-gray-400">
         {description}
       </p>
     </div>
@@ -44,10 +46,10 @@ const TestimonialCard: FC<TestimonalCardProps> = ({
 const Testimonals = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-5 py-12">
-      <h1 className="mb-1 max-w-2xl text-center text-2xl font-semibold tracking-tighter text-gray-900 md:text-4xl">
+      <h1 className="mb-1 max-w-2xl text-center text-2xl font-semibold tracking-tighter text-gray-900 md:text-4xl dark:text-gray-100">
         Why people love SyntaxUI
       </h1>
-      <p className="max-w-2xl text-center text-sm font-light text-gray-600 md:text-base">
+      <p className="max-w-2xl text-center text-sm font-light text-gray-600 md:text-base dark:text-gray-400">
         Choose the Perfect Plan to Fit Your Needs - From Individual Clinicians
         to Large Healthcare Organizations
       </p>
@@ -56,7 +58,7 @@ const Testimonals = () => {
           <TestimonialCard
             name="Ethan Pollack"
             description="I've been using SyntaxUI for a few months now and I'm really impressed with the results. The components are easy to use and the documentation is great."
-            profession="App Developer"
+            profession="Software Developer"
             image="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
           />
           <TestimonialCard

@@ -56,13 +56,13 @@ const Home = () => {
             <span className="max-w-lg text-3xl font-bold tracking-tight md:max-w-2xl md:text-5xl">
               Stop coding from scratch. Build faster. Launch sooner.
             </span>
-            <div className="text-gray-600">
+            <div className="text-gray-600 dark:text-gray-300">
               Free-to-use UI elements designed for rapid development.
             </div>
           </div>
           <div className="flex items-center space-x-4">
             <Link href="/components">
-              <Button className="bg-red-500 hover:bg-red-500/90">
+              <Button className="bg-red-500 hover:bg-red-500/90 dark:bg-red-500 dark:text-white dark:hover:bg-red-500/90">
                 Get Started
               </Button>
             </Link>
@@ -72,8 +72,8 @@ const Home = () => {
               rel="noreferrer"
             >
               <Button variant={'outline'} className="gap-1">
-                <div className="h-5 w-5 text-gray-800">
-                  <GitHubIcon />
+                <div className="h-5 w-5 text-gray-800 dark:text-white">
+                  <GitHubIcon fill="currentColor" />
                 </div>
                 Star on Github
               </Button>

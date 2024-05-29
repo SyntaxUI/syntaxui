@@ -105,14 +105,16 @@ export function ComponentPreview({
   return (
     <div
       className={cn(
-        'group relative my-10 flex w-full max-w-5xl flex-col space-y-2',
+        'group relative my-10 flex w-full max-w-5xl flex-col space-y-2 ',
         className,
       )}
       {...props}
     >
       <div className="flex flex-col items-center justify-between md:flex-row">
         <div className="flex w-full items-center justify-between gap-2  md:justify-start">
-          <h2 className="text-md m-0 font-medium text-gray-800">{name}</h2>
+          <h2 className="text-md m-0 font-medium text-gray-800 dark:text-gray-200">
+            {name}
+          </h2>
           <div className="flex items-center justify-center gap-x-2">
             <TooltipProvider>
               <Tooltip delayDuration={0}>
@@ -126,6 +128,7 @@ export function ComponentPreview({
                       target="_blank"
                       rel="noreferrer"
                       href="https://tailwindcss.com/"
+                      className="text-red-500 no-underline hover:text-red-500"
                     >
                       Tailwind CSS
                     </Link>
@@ -137,7 +140,7 @@ export function ComponentPreview({
               <TooltipProvider>
                 <Tooltip delayDuration={0}>
                   <TooltipTrigger>
-                    <FramerLogo />
+                    <FramerLogo className="text-black dark:text-white" />
                   </TooltipTrigger>
                   <TooltipContent className="m-0 p-0 text-sm">
                     <p className="m-0 p-1">
@@ -146,6 +149,7 @@ export function ComponentPreview({
                         target="_blank"
                         rel="noreferrer"
                         href="https://www.framer.com/motion/"
+                        className="text-red-500 no-underline hover:text-red-500"
                       >
                         Framer Motion
                       </Link>
@@ -165,12 +169,12 @@ export function ComponentPreview({
         />
       </div>
       {selectedTab === 'preview' && (
-        <div className="relative rounded-md border">
+        <div className="relative rounded-md border border-gray-200 dark:border-gray-700 ">
           <CopyButton value={codeString} />
           <div>
             <div
               className={cn(
-                'preview flex min-h-[250px] w-full justify-center overflow-hidden p-10',
+                'preview flex min-h-[250px] w-full justify-center overflow-hidden p-10 ',
                 {
                   'items-center': align === 'center',
                   'items-start': align === 'start',
@@ -261,7 +265,9 @@ function ComponentPreviewUsingCn({
     >
       <div className="flex flex-col items-center justify-between md:flex-row">
         <div className="flex w-full items-center justify-between gap-2  md:justify-start">
-          <h2 className="text-md m-0 font-medium text-gray-800">{name}</h2>
+          <h2 className="text-md m-0 font-medium text-gray-800  dark:text-gray-200">
+            {name}
+          </h2>
           <div className="flex items-center justify-center gap-x-2">
             <TooltipProvider>
               <Tooltip delayDuration={0}>
@@ -275,6 +281,7 @@ function ComponentPreviewUsingCn({
                       target="_blank"
                       rel="noreferrer"
                       href="https://tailwindcss.com/"
+                      className="text-red-500 no-underline hover:text-red-500"
                     >
                       Tailwind CSS
                     </Link>
@@ -286,7 +293,7 @@ function ComponentPreviewUsingCn({
               <TooltipProvider>
                 <Tooltip delayDuration={0}>
                   <TooltipTrigger>
-                    <FramerLogo />
+                    <FramerLogo className="text-black dark:text-white" />
                   </TooltipTrigger>
                   <TooltipContent className="m-0 p-0 text-sm">
                     <p className="m-0 p-1">
@@ -295,6 +302,7 @@ function ComponentPreviewUsingCn({
                         target="_blank"
                         rel="noreferrer"
                         href="https://www.framer.com/motion/"
+                        className="text-red-500 no-underline hover:text-red-500"
                       >
                         Framer Motion
                       </Link>
@@ -306,7 +314,7 @@ function ComponentPreviewUsingCn({
           </div>
         </div>
       </div>
-      <div className="relative rounded-md border">
+      <div className="relative rounded-md border border-gray-200 dark:border-gray-700">
         <div>
           <div
             className={cn(
