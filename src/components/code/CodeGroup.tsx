@@ -56,13 +56,13 @@ export default function CodeGroup({
     >
       <div
         className={cn(
-          'relative mb-4 mt-8  border-collapse overflow-hidden rounded-lg border border-gray-600 duration-500 dark:border-gray-600',
+          'relative mb-4 mt-8  border-collapse overflow-hidden rounded-lg border border-gray-600 duration-500 dark:border-gray-700',
         )}
       >
         {title && (
           <div
             className={cn(
-              ' border-b border-gray-600 bg-zinc-800 px-5 py-3 text-xs font-semibold text-white',
+              ' border-b border-gray-600 bg-zinc-800 px-5 py-3 text-xs font-semibold text-white dark:border-gray-700',
             )}
           >
             {title}
