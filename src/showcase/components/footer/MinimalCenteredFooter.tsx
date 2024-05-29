@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
             <div key={item.name} className="px-5 py-2">
               <a
                 href={item.href}
-                className="text-sm text-gray-600 hover:text-gray-800"
+                className="text-sm text-gray-600 hover:text-gray-800 dark:text-gray-100"
               >
                 {item.name}
               </a>
@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
             <a
               key={item.name}
               href={item.href}
-              className="text-gray-600 hover:text-gray-800"
+              className="text-gray-600 hover:text-gray-800 dark:text-gray-100"
             >
               <span className="sr-only">{item.name}</span>
               {item.icon && (
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
             </a>
           ))}
         </div>
-        <p className="mt-6 text-center text-sm text-gray-600">
+        <p className="mt-6 text-center text-sm text-gray-600 dark:text-gray-100">
           &copy; {new Date().getFullYear()} SyntaxUI. All rights reserved.
         </p>
       </div>
