@@ -6,7 +6,6 @@
 - [LineTabs](https://syntaxui.com/components/tabs) - [Aiko](https://twitter.com/username_aiko)
 - [IconTabs](https://syntaxui.com/components/tabs) - [Aiko](https://twitter.com/username_aiko)
 - [Simple Toggle](https://syntaxui.com/components/toggle/simple-toggle) - [Ethan Pollack](https://epoll31.github.io)
-- [Icon Toggle](https://syntaxui.com/components/toggle/icon-toggle) - [Shashank Verma](https://x.com/Shashank_V99)
 - [Stitches Button](https://syntaxui.com/components/button/stitches-button) - [Saud](https://twitter.com/via_saud)
 - [Neubrutalism Toggle](https://syntaxui.com/components/button/neubrutalism-button) - [Ethan Pollack](https://epoll31.github.io)
 - [Shimmer Button](https://syntaxui.com/components/button/shimmer-button) - [Ethan Pollack](https://epoll31.github.io)
@@ -18,3 +17,4 @@
 - [CI greetings Bot](https://github.com/Ansub/SyntaxUI/pull/182) - [Daksh Singh Rathore](https://twitter.com/dakshsinghrath9)
 - [Issue Template](https://github.com/Ansub/SyntaxUI/pull/72) - [Daksh Singh Rathore](https://twitter.com/dakshsinghrath9)
 - [Automated Issue labeling](https://github.com/Ansub/SyntaxUI/pull/78) - [Daksh Singh Rathore](https://twitter.com/dakshsinghrath9)
+- [Icon Toggle](https://syntaxui.com/components/toggle/icon-toggle) - [Shashank Verma](https://x.com/Shashank_V99)
