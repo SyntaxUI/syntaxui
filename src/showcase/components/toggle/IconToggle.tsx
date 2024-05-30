@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Check, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -9,25 +9,14 @@ const IconToggle = ({
   onToggle?: (toggled: boolean) => void
 }) => {
   const [toggled, setToggled] = useState(true)
-  const [showIcon, setShowIcon] = useState(false)
 
   const handleToggle = () => {
     const newState = !toggled
     setToggled(newState)
-    setShowIcon(false)
     if (onToggle) {
       onToggle(newState)
     }
   }
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowIcon(true)
-    }, 200)
-
-    return () => clearTimeout(timer)
-  }, [toggled])
-
   return (
     <button
       className={`relative h-7 w-12 cursor-pointer rounded-full duration-200`}
@@ -44,13 +33,24 @@ const IconToggle = ({
           toggled ? 'm-1' : 'm-1.5',
         )}
       >
-        {showIcon && (
-          toggled ? (
-            <Check size={13} strokeWidth={3} className="text-red-500 transition-opacity duration-100" />
-          ) : (
-            <X size={13} strokeWidth={3} className="text-[#24252d50] transition-opacity duration-100" />
-          )
-        )}
+        <span className="relative flex h-full w-full">
+          <Check
+            size={13}
+            strokeWidth={3}
+            className={cn(
+              'absolute left-0 top-0 h-full w-full p-1 text-red-500 transition-opacity duration-200',
+              toggled ? 'opacity-100' : 'opacity-0',
+            )}
+          />
+          <X
+            size={13}
+            strokeWidth={3}
+            className={cn(
+              'absolute left-0 top-0 h-full w-full p-0.5 text-[#24252d50] transition-opacity duration-200',
+              toggled ? 'opacity-0' : 'opacity-100',
+            )}
+          />
+        </span>
       </span>
     </button>
   )
