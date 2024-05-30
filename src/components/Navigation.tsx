@@ -300,6 +300,16 @@ export const navigation: Array<NavGroup> = [
       },
     ],
   },
+  {
+    title: 'Templates',
+    links: [
+      {
+        title: 'Minimal Portfolio',
+        href: '/templates/minimal-portfolio',
+        tag: 'pro',
+      },
+    ],
+  },
 ]
 
 export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {
