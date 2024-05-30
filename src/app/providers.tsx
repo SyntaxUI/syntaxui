@@ -16,7 +16,11 @@ function CSPostHogProvider({ children }: { children: React.ReactNode }) {
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <ThemeProvider attribute="class" disableTransitionOnChange>
+    <ThemeProvider
+      attribute="class"
+      disableTransitionOnChange
+      defaultTheme="light"
+    >
       <CSPostHogProvider>{children}</CSPostHogProvider>
     </ThemeProvider>
   )
