@@ -4,17 +4,11 @@ export default function BackgroundGrid({
   color = 'black',
   size = '35px',
   strokeWidth = '1px',
-  fade,
-  fadeFrom = '0%',
-  fadeTo = '100%',
   className,
 }: {
   color?: string
   size?: string | number
   strokeWidth?: number | string
-  fadeFrom?: `${number}%`
-  fadeTo?: `${number}%`
-  fade?: boolean
   className?: string
 }) {
   const svg = `
@@ -28,7 +22,7 @@ export default function BackgroundGrid({
   return (
     <div
       className={cn(
-        'pointer-events-none fixed left-0 top-0 -z-50 flex h-full w-full overflow-hidden ',
+        'pointer-events-none fixed left-0 top-0 -z-50 flex h-full w-full overflow-hidden',
         className,
       )}
       style={{
@@ -36,9 +30,7 @@ export default function BackgroundGrid({
         backgroundImage: `url("${svgDataUrl}")`,
         backgroundRepeat: 'repeat',
         backgroundSize: size,
-        maskImage: fade
-          ? `radial-gradient(circle at 50% 50%, transparent ${fadeFrom}, black ${fadeTo})`
-          : '',
+        maskImage: `radial-gradient(ellipse at top, #00000080, transparent 70%)`,
       }}
     ></div>
   )
