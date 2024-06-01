@@ -15,8 +15,8 @@ const MinimalPortfolio = () => {
             <div className="text-xs font-medium text-red-500">50% off</div>
           </div>
           <div className="flex flex-row gap-2 text-lg">
-            <p className="font-semibold text-red-500">$9</p>
-            <p className="text-gray-600/50 line-through">$19</p>
+            <p className="font-semibold text-red-500">$19</p>
+            <p className="text-gray-600/50 line-through">$39</p>
           </div>
           <div className="mt-2 max-w-sm text-sm text-gray-600 dark:text-gray-200">
             <p className="">
