@@ -1,6 +1,50 @@
 import { FC } from 'react'
 import Image from 'next/image'
 
+const testimonials = [
+  {
+    name: 'Ethan Pollack',
+    description:
+      "I've been using SyntaxUI for a few months now and I'm really impressed with the results. The components are easy to use and the documentation is great.",
+    profession: 'Software Developer',
+    image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde',
+  },
+  {
+    name: 'Aiko',
+    profession: 'Design Engineer',
+    description:
+      "SyntaxUI is a great tool for building user interfaces. It's easy to use and has a lot of features. I've been using it for a while now and I'm really happy with the results.",
+    image: 'https://images.unsplash.com/photo-1601455763557-db1bea8a9a5a',
+  },
+  {
+    name: 'Alena Zhukova',
+    profession: 'Software Engineer',
+    description:
+      "SyntaxUI is the perfect tool for building user interfaces. It's easy to use and has a lot of features. I've been using it for a while now and I'm really happy with the results. The components are easy to use and the documentation is great.",
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330',
+  },
+  {
+    name: 'Lisa Kemp',
+    profession: 'Frontend Developer',
+    description:
+      "SyntaxUI is a great tool for building user interfaces. It's easy to use and has a lot of features. I've been using it for a while now and I'm really happy with the results. The components are easy to use and the documentation is great.",
+    image: 'https://images.unsplash.com/photo-1569913486515-b74bf7751574',
+  },
+  {
+    name: 'Saud',
+    profession: 'Game Developer',
+    description:
+      "SyntaxUI is a great tool for building user interfaces. It's easy to use and has a lot of features. I've been using it for a while now and I'm really happy with the results.",
+    image: 'https://images.unsplash.com/photo-1645830166230-187caf791b90',
+  },
+  {
+    name: 'Paula Smith',
+    profession: 'UX Designer',
+    description:
+      "SyntaxUI is a great tool for building user interfaces. It's easy to use and has a lot of features. I've been using it for a while now and I'm really happy with the results.",
+    image: 'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa',
+  },
+]
 interface TestimonalCardProps {
   name: string
   description: string
@@ -50,53 +94,19 @@ const Testimonals = () => {
         Why people love SyntaxUI
       </h1>
       <p className="max-w-2xl text-center text-sm font-light text-gray-600 md:text-base dark:text-gray-400">
-        Choose the Perfect Plan to Fit Your Needs - From Individual Clinicians
-        to Large Healthcare Organizations
+        SyntaxUI is loved by the community and is used by many companies. It is
+        a great tool for rapid development and launching projects.
       </p>
       <div className="relative mt-12 flex h-full w-full flex-col items-center justify-center gap-5 md:flex-row">
-        <div className="flex flex-col justify-center gap-4">
-          <TestimonialCard
-            name="Ethan Pollack"
-            description="I've been using SyntaxUI for a few months now and I'm really impressed with the results. The components are easy to use and the documentation is great."
-            profession="Software Developer"
-            image="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
-          />
-          <TestimonialCard
-            name="Alena Zhukova"
-            profession="Software Engineer"
-            description="SyntaxUI is a great tool for building user interfaces. It's easy to use and has a lot of features. I've been using it for a while now and I'm really happy with the results."
-            image="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
-          />
-        </div>
-        <div className="flex flex-col justify-center gap-4">
-          <TestimonialCard
-            name="Tom Anderson"
-            profession="Design Engineer"
-            description="SyntaxUI is the perfect tool for building user interfaces. It's easy to use and has a lot of features. I've been using it for a while now and I'm really happy with the results. The components are easy to use and the documentation is great."
-            image="https://images.unsplash.com/photo-1601455763557-db1bea8a9a5a"
-          />
-
-          <TestimonialCard
-            name="Lisa Kemp"
-            profession="Frontend Developer"
-            description="SyntaxUI is a great tool for building user interfaces. It's easy to use and has a lot of features. I've been using it for a while now and I'm really happy with the results. The components are easy to use and the documentation is great."
-            image="https://images.unsplash.com/photo-1569913486515-b74bf7751574"
-          />
-        </div>
-        <div className="flex flex-col justify-center gap-4">
-          <TestimonialCard
-            name="Arthur Morgan"
-            profession="Game Developer"
-            description="SyntaxUI is a great tool for building user interfaces. It's easy to use and has a lot of features. I've been using it for a while now and I'm really happy with the results."
-            image="https://images.unsplash.com/photo-1645830166230-187caf791b90"
-          />
-          <TestimonialCard
-            name="Paula Smith"
-            profession="UX Designer"
-            description="SyntaxUI is a great tool for building user interfaces. It's easy to use and has a lot of features. I've been using it for a while now and I'm really happy with the results."
-            image="https://images.unsplash.com/photo-1586297135537-94bc9ba060aa"
-          />
-        </div>
+        {[0, 1, 2].map((colIndex) => (
+          <div key={colIndex} className="flex flex-col justify-center gap-4">
+            {testimonials
+              .slice(colIndex * 2, colIndex * 2 + 2)
+              .map((testimonial) => (
+                <TestimonialCard key={testimonial.name} {...testimonial} />
+              ))}
+          </div>
+        ))}
       </div>
     </div>
   )
