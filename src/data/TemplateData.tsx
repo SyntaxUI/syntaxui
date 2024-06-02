@@ -1,32 +1,6 @@
 export const TemplateData = [
   {
     name: 'Minimal Portfolio',
-    id: 'minimal-portfolio',
-    images: [
-      '/images/templates/minimal-portfolio/1.png',
-      '/images/templates/minimal-portfolio/2.png',
-      '/images/templates/minimal-portfolio/3.png',
-      '/images/templates/minimal-portfolio/4.png',
-    ],
-    price: 19,
-    originalPrice: 49,
-    discount: 50,
-    description: 'ansub',
-  },
-  {
-    name: 'Modern Business',
-    id: 'modern-business',
-    images: [
-      '/images/templates/minimal-portfolio/1.png',
-      '/images/templates/minimal-portfolio/2.png',
-      '/images/templates/minimal-portfolio/3.png',
-      '/images/templates/minimal-portfolio/4.png',
-    ],
-    price: 29,
-    originalPrice: 59,
-  },
-  {
-    name: 'Creative Agency',
     images: [
       '/images/templates/minimal-portfolio/1.png',
       '/images/templates/minimal-portfolio/2.png',

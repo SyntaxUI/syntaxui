@@ -11,7 +11,6 @@ import { ChevronLeft } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect } from 'react'
 
 const Template = () => {
   const router = usePathname()
@@ -26,7 +25,7 @@ const Template = () => {
   return (
     <div className="flex h-screen w-full flex-col items-center justify-between text-center">
       <Header />
-      <div className="mx-5 mb-24 mt-[10rem] flex w-full max-w-7xl flex-col items-center justify-center gap-5">
+      <div className="mx-5 mb-24 mt-[5rem] flex w-full max-w-7xl flex-col items-center justify-center gap-5 md:mt-[10rem]">
         <div className="flex flex-col items-start justify-center gap-20 px-4 lg:flex-row lg:items-start">
           <div className="flex flex-col items-start justify-center gap-4 md:sticky md:top-[10rem]">
             <Link

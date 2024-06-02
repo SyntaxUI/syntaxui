@@ -5,6 +5,7 @@ import { Header } from '@/components/Header'
 import Image from 'next/image'
 import { TemplateData } from '@/data/TemplateData'
 import Link from 'next/link'
+import { motion, spring } from 'framer-motion'
 
 interface TemplateInfoProps {
   name: string
@@ -20,31 +21,43 @@ const TemplateInfo = ({
   price,
   originalPrice,
   link,
-}: TemplateInfoProps) => (
-  <Link
-    href={link}
-    className="group flex cursor-pointer flex-col items-start justify-center rounded-2xl"
-  >
-    <Image
-      src={image}
-      alt={name}
-      width={1200}
-      height={600}
-      className="w-full max-w-[400px] rounded-lg border bg-gray-100 px-5 pt-5"
-    />
-    <div className="mt-3 flex w-full flex-row items-center justify-between">
-      <div className="flex w-full flex-row items-center justify-between gap-2">
-        <h1 className="text-md text-left font-medium text-gray-900 dark:text-white">
-          {name}
-        </h1>
-        <div className="flex flex-row gap-2 text-sm">
-          <p>${price}</p>
-          <p className="text-xs text-gray-600/50">${originalPrice}</p>
+}: TemplateInfoProps) => {
+  const imageAnimate = {
+    initial: { y: '0%' },
+    animate: {
+      y: '-5%',
+    },
+  }
+
+  return (
+    <motion.a
+      whileHover="animate"
+      className="group flex cursor-pointer flex-col items-start justify-center rounded-2xl"
+    >
+      <motion.img
+        variants={imageAnimate}
+        src={image}
+        alt={name}
+        width={1200}
+        height={600}
+        className="w-full max-w-[400px] rounded-lg border bg-gray-100 px-5 pt-5"
+      />
+      <div className="mt-3 flex w-full flex-row items-center justify-between">
+        <div className="flex w-full flex-row items-center justify-between gap-2">
+          <h1 className="text-md text-left font-medium text-gray-900 transition-all duration-300 ease-in-out group-hover:text-red-500 dark:text-white">
+            {name}
+          </h1>
+          <div className="flex flex-row gap-2 text-sm transition-all duration-300 ease-in-out group-hover:text-red-500 dark:text-white">
+            <p>${price}</p>
+            <p className="text-xs text-gray-600/50 line-through">
+              ${originalPrice}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </Link>
-)
+    </motion.a>
+  )
+}
 
 const Templates = () => {
   return (
