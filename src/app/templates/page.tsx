@@ -30,32 +30,36 @@ const TemplateInfo = ({
   }
 
   return (
-    <motion.a
+    <motion.div
       whileHover="animate"
       className="group flex cursor-pointer flex-col items-start justify-center rounded-2xl"
     >
-      <motion.img
-        variants={imageAnimate}
-        src={image}
-        alt={name}
-        width={1200}
-        height={600}
-        className="w-full max-w-[400px] rounded-lg border bg-gray-100 px-5 pt-5"
-      />
-      <div className="mt-3 flex w-full flex-row items-center justify-between">
-        <div className="flex w-full flex-row items-center justify-between gap-2">
-          <h1 className="text-md text-left font-medium text-gray-900 transition-all duration-300 ease-in-out group-hover:text-red-500 dark:text-white">
-            {name}
-          </h1>
-          <div className="flex flex-row gap-2 text-sm transition-all duration-300 ease-in-out group-hover:text-red-500 dark:text-white">
-            <p>${price}</p>
-            <p className="text-xs text-gray-600/50 line-through">
-              ${originalPrice}
-            </p>
+      <Link href={link}>
+        <motion.img
+          variants={imageAnimate}
+          src={image}
+          alt={name}
+          width={1200}
+          height={600}
+          className="w-full max-w-[400px] rounded-lg border bg-gray-100 px-5 pt-5"
+        />
+        <div className="mt-3 flex w-full flex-row items-center justify-between">
+          <div className="flex w-full flex-row items-center justify-between gap-2">
+            <h1 className="text-md text-left font-medium text-gray-900 transition-all duration-300 ease-in-out group-hover:text-red-500 dark:text-white">
+              {name}
+            </h1>
+            <div className="flex flex-row gap-2 text-sm transition-all duration-300 ease-in-out group-hover:text-red-500 dark:text-white">
+              {price && <p>${price}</p>}
+              {originalPrice && (
+                <p className="text-xs text-gray-600/50 line-through">
+                  ${originalPrice}
+                </p>
+              )}
+            </div>
           </div>
         </div>
-      </div>
-    </motion.a>
+      </Link>
+    </motion.div>
   )
 }
 
@@ -65,18 +69,16 @@ const Templates = () => {
       <Header />
       <div className="mx-5 mb-24 mt-[10rem] flex w-full max-w-7xl flex-col items-center justify-center gap-5">
         <div className="mx-5 mb-5 flex flex-col items-center">
-          <h1 className="max-w-lg text-3xl font-bold tracking-tight md:max-w-3xl md:text-5xl">
-            <span className="text-red-500">Next.js</span> &{' '}
-            <span className="text-red-500">Tailwind CSS</span> templates for
-            your next project.
+          <h1 className="text-3xl font-medium tracking-tight md:text-4xl">
+            <span className="text-red-500">Minimal Website,</span> Simple Code
           </h1>
           <p className="mt-3 max-w-2xl text-center text-sm text-gray-600 md:text-base dark:text-gray-300">
-            Simplify your Next.js app creation process with Tailwind
-            CSS-integrated, fully responsive, and SEO-optimized foundation.
+            Get templates made with Next.js and Tailwind CSS for your next
+            project.
           </p>
         </div>
         {/* <Pages */}
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-5 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {TemplateData.map((template, index) => (
             <TemplateInfo
               key={index}
