@@ -6,6 +6,7 @@ import Link from 'next/link'
 import HeartbeatButton from '../components/button/HeartbeatButton'
 import AnimatedLogoCloud from '../components/logo-cloud/AnimatedLogoCloud'
 import Card from './Card'
+import AvatarCarousel from '../components/carousel/AvatarCarousel'
 
 const data = [
   {
@@ -62,6 +63,11 @@ const data = [
     title: 'Logo Cloud',
     component: <AnimatedLogoCloud />,
     link: '/components/logo-cloud',
+  },
+  {
+    title: 'Carousel',
+    component: <AvatarCarousel />,
+    link: '/components/carousel',
   },
 ]
 

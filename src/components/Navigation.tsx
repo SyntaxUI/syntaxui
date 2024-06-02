@@ -269,6 +269,10 @@ export const navigation: Array<NavGroup> = [
         title: 'Toggle',
         href: '/components/toggle',
       },
+      {
+        title: 'Carousel',
+        href: '/components/carousel',
+      },
     ],
   },
   {
