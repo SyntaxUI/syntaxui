@@ -272,6 +272,7 @@ export const navigation: Array<NavGroup> = [
       {
         title: 'Carousel',
         href: '/components/carousel',
+        tag: 'new',
       },
     ],
   },
