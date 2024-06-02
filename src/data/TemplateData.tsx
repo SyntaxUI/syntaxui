@@ -1,8 +1,13 @@
 export const TemplateData = [
   {
     name: 'Minimal Portfolio',
-    thumbnailImage: '/images/templates/minimal-portfolio.png',
     id: 'minimal-portfolio',
+    images: [
+      '/images/templates/minimal-portfolio/1.png',
+      '/images/templates/minimal-portfolio/2.png',
+      '/images/templates/minimal-portfolio/3.png',
+      '/images/templates/minimal-portfolio/4.png',
+    ],
     price: 19,
     originalPrice: 49,
     discount: 50,
@@ -10,14 +15,24 @@ export const TemplateData = [
   },
   {
     name: 'Modern Business',
-    thumbnailImage: '/images/templates/minimal-portfolio.png',
     id: 'modern-business',
+    images: [
+      '/images/templates/minimal-portfolio/1.png',
+      '/images/templates/minimal-portfolio/2.png',
+      '/images/templates/minimal-portfolio/3.png',
+      '/images/templates/minimal-portfolio/4.png',
+    ],
     price: 29,
     originalPrice: 59,
   },
   {
     name: 'Creative Agency',
-    thumbnailImage: '/images/templates/minimal-portfolio.png',
+    images: [
+      '/images/templates/minimal-portfolio/1.png',
+      '/images/templates/minimal-portfolio/2.png',
+      '/images/templates/minimal-portfolio/3.png',
+      '/images/templates/minimal-portfolio/4.png',
+    ],
     id: 'creative-agency',
     price: 39,
     originalPrice: 69,

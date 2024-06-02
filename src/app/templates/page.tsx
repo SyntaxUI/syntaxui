@@ -68,7 +68,7 @@ const Templates = () => {
             <TemplateInfo
               key={index}
               name={template.name}
-              image={template.thumbnailImage}
+              image={template.images[0]}
               price={template.price}
               originalPrice={template.originalPrice}
               link={`/templates/${template.id}`}

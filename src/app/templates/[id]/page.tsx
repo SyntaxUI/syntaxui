@@ -11,6 +11,7 @@ import { ChevronLeft } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useEffect } from 'react'
 
 const Template = () => {
   const router = usePathname()
@@ -27,7 +28,7 @@ const Template = () => {
       <Header />
       <div className="mx-5 mb-24 mt-[10rem] flex w-full max-w-7xl flex-col items-center justify-center gap-5">
         <div className="flex flex-col items-start justify-center gap-20 px-4 lg:flex-row lg:items-start">
-          <div className="flex flex-col items-start justify-center gap-4">
+          <div className="flex flex-col items-start justify-center gap-4 md:sticky md:top-[10rem]">
             <Link
               href="/templates"
               className="group flex flex-row items-center text-xs uppercase text-gray-600/80"
@@ -78,27 +79,16 @@ const Template = () => {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center gap-5">
-            <Image
-              src="/images/templates/minimal-portfolio.png"
-              alt="Minimal Portfolio"
-              width={1200}
-              height={600}
-              className="w-full max-w-[600px] rounded-lg border"
-            />
-            <Image
-              src="/images/templates/minimal-portfolio.png"
-              alt="Minimal Portfolio"
-              width={1200}
-              height={600}
-              className="w-full max-w-[600px] rounded-lg border"
-            />{' '}
-            <Image
-              src="/images/templates/minimal-portfolio.png"
-              alt="Minimal Portfolio"
-              width={1200}
-              height={600}
-              className="w-full max-w-[600px] rounded-lg border"
-            />
+            {template.images.map((image, index) => (
+              <Image
+                key={index}
+                src={image}
+                alt={template.name}
+                width={1200}
+                height={600}
+                className="w-full max-w-[600px] rounded-lg border"
+              />
+            ))}
           </div>
         </div>
       </div>
