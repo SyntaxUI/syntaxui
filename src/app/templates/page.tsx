@@ -3,35 +3,15 @@
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import Image from 'next/image'
-import React from 'react'
-import { motion } from 'framer-motion'
-
-const templates = [
-  {
-    name: 'Minimal Portfolio',
-    image: '/images/templates/minimal-portfolio.png',
-    price: 19,
-    originalPrice: 49,
-  },
-  {
-    name: 'Modern Business',
-    image: '/images/templates/minimal-portfolio.png',
-    price: 29,
-    originalPrice: 59,
-  },
-  {
-    name: 'Creative Agency',
-    image: '/images/templates/minimal-portfolio.png',
-    price: 39,
-    originalPrice: 69,
-  },
-]
+import { TemplateData } from '@/data/TemplateData'
+import Link from 'next/link'
 
 interface TemplateInfoProps {
   name: string
   image: string
   price: number
   originalPrice: number
+  link: string
 }
 
 const TemplateInfo = ({
@@ -39,8 +19,12 @@ const TemplateInfo = ({
   image,
   price,
   originalPrice,
+  link,
 }: TemplateInfoProps) => (
-  <div className="group flex cursor-pointer flex-col items-start justify-center rounded-2xl">
+  <Link
+    href={link}
+    className="group flex cursor-pointer flex-col items-start justify-center rounded-2xl"
+  >
     <Image
       src={image}
       alt={name}
@@ -59,7 +43,7 @@ const TemplateInfo = ({
         </div>
       </div>
     </div>
-  </div>
+  </Link>
 )
 
 const Templates = () => {
@@ -80,13 +64,14 @@ const Templates = () => {
         </div>
         {/* <Pages */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {templates.map((template, index) => (
+          {TemplateData.map((template, index) => (
             <TemplateInfo
               key={index}
               name={template.name}
-              image={template.image}
+              image={template.thumbnailImage}
               price={template.price}
               originalPrice={template.originalPrice}
+              link={`/templates/${template.id}`}
             />
           ))}
         </div>
