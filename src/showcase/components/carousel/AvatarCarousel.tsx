@@ -91,24 +91,6 @@ export default function AvatarCarousel({
               } as any
             }
           />
-          // <span
-          //   key={index}
-          //   className=" absolute flex flex-none items-center justify-center rounded-full"
-          //   style={{
-          //     width: avatarSize,
-          //     height: avatarSize,
-          //     top: '50%',
-          //     left: `calc(50% + ${left}px)`,
-          //     transform: `translate(-50%, -50%)`,
-          //     zIndex: activeIndex === index ? 1 : 0,
-          //     opacity: opacity,
-          //     transition: 'left 2s, opacity 2s',
-          //   }}
-          // >
-          //   {index}
-          //   <br />
-          //   {placement}
-          // </span>
         )
       })}
     </div>
