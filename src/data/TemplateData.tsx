@@ -1,13 +1,14 @@
 export const TemplateData = [
   {
-    name: 'Minimal Portfolio',
+    name: 'Stoic',
     images: [
       '/images/templates/minimal-portfolio/1.png',
       '/images/templates/minimal-portfolio/2.png',
       '/images/templates/minimal-portfolio/3.png',
       '/images/templates/minimal-portfolio/4.png',
     ],
-    id: 'minimal-portfolio',
+    category: 'personal',
+    id: 'stoic',
     price: 19,
     originalPrice: 39,
     discount: 50,

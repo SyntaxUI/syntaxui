@@ -95,7 +95,9 @@ export const Header = forwardRef<
       </div>
       {/* <Search /> */}
       <div className="flex items-center gap-3 lg:hidden">
-        {pathname === '/' ? null : <MobileNavigation />}
+        {pathname === '/' || pathname.includes('/templates') ? null : (
+          <MobileNavigation />
+        )}
         <Link
           href="/"
           aria-label="Home"

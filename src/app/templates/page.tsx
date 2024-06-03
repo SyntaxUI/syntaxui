@@ -13,6 +13,7 @@ interface TemplateInfoProps {
   price: number
   originalPrice: number
   link: string
+  category: string
 }
 
 const TemplateInfo = ({
@@ -21,6 +22,7 @@ const TemplateInfo = ({
   price,
   originalPrice,
   link,
+  category,
 }: TemplateInfoProps) => {
   const imageAnimate = {
     initial: { y: '0%' },
@@ -45,9 +47,14 @@ const TemplateInfo = ({
         />
         <div className="mt-3 flex w-full flex-row items-center justify-between">
           <div className="flex w-full flex-row items-center justify-between gap-2">
-            <h1 className="text-md text-left font-medium text-gray-900 transition-all duration-300 ease-in-out group-hover:text-red-500 dark:text-white">
-              {name}
-            </h1>
+            <div className="flex flex-row items-center gap-2">
+              <h1 className="text-md text-left font-medium text-gray-900 transition-all duration-300 ease-in-out group-hover:text-red-500 dark:text-white">
+                {name}
+              </h1>
+              <p className="rounded-full bg-red-500 px-2 py-0.5 text-[11px] font-medium capitalize text-white">
+                {category}
+              </p>
+            </div>
             <div className="flex flex-row gap-2 text-sm transition-all duration-300 ease-in-out group-hover:text-red-500 dark:text-white">
               {price && <p>${price}</p>}
               {originalPrice && (
@@ -87,6 +94,7 @@ const Templates = () => {
               price={template.price}
               originalPrice={template.originalPrice}
               link={`/templates/${template.id}`}
+              category={template.category}
             />
           ))}
         </div>

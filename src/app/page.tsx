@@ -27,7 +27,7 @@ const DiscordButton = () => {
       onClick={() => {
         // window.open('https://cal.com/ansub/15')
         // window.open('https://discord.com/invite/P8GXYyH3ZU')
-        router.push('/templates/minimal-portfolio')
+        router.push('/templates/stoic')
         // posthog.capture('meeting_button_clicked')
       }}
     >
