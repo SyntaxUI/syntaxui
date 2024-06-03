@@ -295,16 +295,6 @@ export const navigation: Array<NavGroup> = [
       { title: 'Image Fade', href: '/effects/image-fade' },
     ],
   },
-  {
-    title: 'Templates',
-    links: [
-      {
-        title: 'Minimal Portfolio',
-        href: '/templates/minimal-portfolio',
-        tag: 'pro',
-      },
-    ],
-  },
 ]
 
 export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {
