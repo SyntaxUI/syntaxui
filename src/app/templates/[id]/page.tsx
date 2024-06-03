@@ -7,10 +7,37 @@ import FramerLogo from '@/components/Logos/Framer'
 import Nextjs from '@/components/Logos/NextJS'
 import TailwindCSS from '@/components/Logos/Tailwind'
 import { TemplateData } from '@/data/TemplateData'
+import { cn } from '@/lib/utils'
 import { ChevronLeft } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+
+const TemplateButton = ({
+  href,
+  children,
+  variant,
+}: {
+  href: string
+  children: string
+  variant?: string
+}) => {
+  return (
+    <Link
+      href={href || ''}
+      target="_blank"
+      rel="noreferrer"
+      className={cn(
+        `hover:bg-red-500/90" rounded-lg bg-red-500 px-2 py-1 text-sm font-medium text-white transition-all duration-300 ease-in-out`,
+        variant === 'primary' && 'bg-red-500 text-white',
+        variant === 'secondary' &&
+          'border bg-white text-gray-900 hover:bg-gray-100/50',
+      )}
+    >
+      {children}
+    </Link>
+  )
+}
 
 const Template = () => {
   const router = usePathname()
@@ -67,14 +94,12 @@ const Template = () => {
               >
                 Download Template
               </Link>
-              <Link
-                href={template.livePreviewLink || ''}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-lg  border px-2 py-1 text-sm font-medium transition-all duration-300 ease-in-out hover:bg-gray-100/50"
+              <TemplateButton
+                href={template.livePreviewLink}
+                variant="secondary"
               >
                 Live Preview
-              </Link>
+              </TemplateButton>
             </div>
           </div>
           <div className="flex flex-col items-center justify-center gap-5">

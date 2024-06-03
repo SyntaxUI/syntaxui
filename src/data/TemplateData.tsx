@@ -8,8 +8,8 @@ export const TemplateData = [
       '/images/templates/minimal-portfolio/4.png',
     ],
     id: 'minimal-portfolio',
-    price: 39,
-    originalPrice: 69,
+    price: 19,
+    originalPrice: 39,
     discount: 50,
     downloadLink:
       'https://syntaxui.lemonsqueezy.com/buy/a3c17154-6196-4704-ab1d-2d47dcf15d97',
