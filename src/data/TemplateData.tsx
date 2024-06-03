@@ -14,7 +14,7 @@ export const TemplateData = [
     discount: 50,
     downloadLink:
       'https://syntaxui.lemonsqueezy.com/buy/a3c17154-6196-4704-ab1d-2d47dcf15d97',
-    livePreviewLink: 'https://minimal-portfolio-mocha.vercel.app/',
+    livePreviewLink: 'https://stoic-syntaxui.vercel.app/',
     description: (
       <>
         <p className="">
