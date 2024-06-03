@@ -7,7 +7,7 @@ export const TemplateData = [
       '/images/templates/minimal-portfolio/3.png',
       '/images/templates/minimal-portfolio/4.png',
     ],
-    id: 'creative-agency',
+    id: 'minimal-portfolio',
     price: 39,
     originalPrice: 69,
     discount: 50,
