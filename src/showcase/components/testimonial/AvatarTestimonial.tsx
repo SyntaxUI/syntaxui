@@ -17,7 +17,7 @@ const defaultAvatars = [
   'https://images.unsplash.com/photo-1569913486515-b74bf7751574',
 ]
 
-export default function AvatarCarousel({
+function AvatarCarousel({
   avatarSize = 48,
   avatarSpacing = 8,
   avatars = defaultAvatars,
@@ -96,3 +96,14 @@ export default function AvatarCarousel({
     </div>
   )
 }
+
+const Avatar = () => {
+  return (
+    <div className="flex h-full w-full flex-col items-center justify-center gap-4">
+      <div>Trusted by</div>
+      <AvatarCarousel />
+    </div>
+  )
+}
+
+export default Avatar
