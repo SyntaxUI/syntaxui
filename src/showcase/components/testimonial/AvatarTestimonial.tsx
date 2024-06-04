@@ -99,8 +99,8 @@ function AvatarCarousel({
 
 const Avatar = () => {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center gap-4">
-      <div>Trusted by</div>
+    <div className="flex h-full w-full flex-col items-center justify-center gap-6">
+      <div>People who love SyntaxUI</div>
       <AvatarCarousel />
     </div>
   )
