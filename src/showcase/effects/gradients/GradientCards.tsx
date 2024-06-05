@@ -1,6 +1,6 @@
 'use client'
 import Card from '@/showcase/ui-group/Card'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { Check, Copy } from 'lucide-react'
 import { useState } from 'react'
 import { toast } from 'sonner'
@@ -47,8 +47,13 @@ const GradientCards = () => {
   const copyGradient = (gradient: string) => {
     navigator.clipboard.writeText(gradient)
     setCopied(true)
-    setTimeout(() => setCopied(false), 500)
+    setTimeout(() => setCopied(false), 1000)
     toast.success('Gradient copied to clipboard!')
+  }
+
+  const variants = {
+    hidden: { opacity: 0, scale: 0.5 },
+    visible: { opacity: 1, scale: 1 },
   }
 
   return (
@@ -60,12 +65,30 @@ const GradientCards = () => {
               <div
                 className={`relative flex h-full w-full items-center justify-center ${item.gradient}`}
               >
-                <div className="inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  {copied ? (
-                    <Check className="text-2xl text-white" />
-                  ) : (
-                    <Copy className="text-2xl text-white" />
-                  )}
+                <div className="inset-0 flex items-center justify-center  rounded-lg border border-gray-900/50  p-2 text-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <AnimatePresence mode="wait" initial={false}>
+                    {copied ? (
+                      <motion.span
+                        key="checkmark"
+                        variants={variants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                      >
+                        <Check size={16} />
+                      </motion.span>
+                    ) : (
+                      <motion.span
+                        key="copy"
+                        variants={variants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                      >
+                        <Copy size={16} />
+                      </motion.span>
+                    )}
+                  </AnimatePresence>
                 </div>
               </div>
             </Card>
