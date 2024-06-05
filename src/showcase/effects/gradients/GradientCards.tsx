@@ -65,7 +65,7 @@ const GradientCards = () => {
               <div
                 className={`relative flex h-full w-full items-center justify-center ${item.gradient}`}
               >
-                <div className="inset-0 flex items-center justify-center  rounded-lg border border-gray-900/50  p-2 text-gray-900 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <div className="inset-0 flex items-center justify-center  rounded-lg   bg-gray-900 p-2 text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <AnimatePresence mode="wait" initial={false}>
                     {copied ? (
                       <motion.span
