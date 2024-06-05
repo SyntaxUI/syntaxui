@@ -2,6 +2,7 @@ import headlessuiPlugin from '@headlessui/tailwindcss'
 import typographyPlugin from '@tailwindcss/typography'
 import { type Config } from 'tailwindcss'
 import typographyStyles from './typography'
+import { text } from 'stream/consumers'
 
 export default {
   content: ['./src/**/*.{js,mjs,jsx,ts,tsx,mdx}'],
@@ -219,6 +220,16 @@ export default {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(calc(-100% - 4rem))' },
         },
+        textGradient: {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center',
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -234,6 +245,7 @@ export default {
           'discord-button-angle 6s linear infinite, discord-button-x 6s 0.5s ease-in-out infinite',
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
         'logo-cloud': 'logo-cloud 30s linear infinite',
+        textGradient: 'textGradient 5s ease infinite',
       },
     },
   },
