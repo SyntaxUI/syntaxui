@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import BackgroundGrid from '@/showcase/effects/BackgroundGrid'
 import Card from './Card'
 
 const data = [
@@ -16,6 +17,19 @@ const data = [
     image: '/images/ui/gradients.png',
     link: '/effects/gradients',
   },
+  {
+    id: 3,
+    title: 'Background Grid',
+    preview: (
+      <BackgroundGrid
+        className="relative z-0"
+        color="#FB3A5D"
+        size="25px"
+        strokeWidth="3px"
+      />
+    ),
+    link: '/effects/background-grid',
+  },
 ]
 
 const EffectCards = () => {
@@ -25,13 +39,17 @@ const EffectCards = () => {
         {data.map((item) => (
           <Link href={item.link} key={item.id}>
             <Card title={item.title}>
-              <Image
-                width={200}
-                height={200}
-                src={item.image}
-                alt={item.title}
-                className="h-auto w-[150px] duration-300 ease-in-out group-hover:scale-110 md:w-[200px]"
-              />
+              {item.image ? (
+                <Image
+                  width={200}
+                  height={200}
+                  src={item.image}
+                  alt={item.title}
+                  className="h-auto w-[150px] duration-300 ease-in-out group-hover:scale-110"
+                />
+              ) : (
+                item.preview
+              )}
             </Card>
           </Link>
         ))}

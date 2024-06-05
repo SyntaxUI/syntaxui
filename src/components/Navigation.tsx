@@ -293,6 +293,11 @@ export const navigation: Array<NavGroup> = [
         tag: 'new',
       },
       { title: 'Image Fade', href: '/effects/image-fade' },
+      {
+        title: 'Background Grid',
+        href: '/effects/background-grid',
+        tag: 'new',
+      },
     ],
   },
 ]
