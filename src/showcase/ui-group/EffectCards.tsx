@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
-import BackgroundGrid from '@/showcase/effects/BackgroundGrid'
+import DotPatternBackground from '../effects/BackgroundDots'
 import Card from './Card'
 
 const data = [
@@ -19,16 +18,11 @@ const data = [
   },
   {
     id: 3,
-    title: 'Background Grid',
+    title: 'Background Patterns',
     preview: (
-      <BackgroundGrid
-        className="relative z-0"
-        color="#FB3A5D"
-        size="25px"
-        strokeWidth="3px"
-      />
+      <DotPatternBackground className="relative z-0" dotColor="#fb3a5d" />
     ),
-    link: '/effects/background-grid',
+    link: '/effects/patterns',
   },
 ]
 
