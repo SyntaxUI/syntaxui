@@ -5,6 +5,7 @@ import BackgroundGrid from '../effects/BackgroundGrid'
 import BackgroundBricks from '../effects/BackgroundBricks'
 import BackgroundCross from '../effects/BackgroundCross'
 import BackgroundPlus from '../effects/BackgroundPlus'
+import BackgroundXO from '../effects/BackgroundXO'
 
 const data = [
   {
@@ -39,6 +40,11 @@ const data = [
     title: 'Plus',
     link: '/effects/background/plus',
     component: <BackgroundPlus className="relative z-0" fade={false} />,
+  },
+  {
+    title: 'XO',
+    link: '/effects/background/xo',
+    component: <BackgroundXO className="relative z-0" fade={false} />,
   },
 ]
 
