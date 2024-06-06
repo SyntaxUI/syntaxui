@@ -11,15 +11,7 @@ const data = [
   {
     title: 'Grid',
     link: '/effects/background/grid',
-    component: (
-      <BackgroundGrid
-        color="#a1a1a1"
-        className="relative z-0"
-        cellSize="25px"
-        strokeWidth="3px"
-        fade={false}
-      />
-    ),
+    component: <BackgroundGrid className="relative z-0" fade={false} />,
   },
   {
     title: 'Dots',
