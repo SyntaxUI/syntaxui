@@ -10,7 +10,7 @@ interface CrossPatternBackgroundProps {
   [key: string]: any
 }
 
-export const CrossPatternBackground: React.FC<CrossPatternBackgroundProps> = ({
+export const BackgroundCross: React.FC<CrossPatternBackgroundProps> = ({
   crossColor = '#a1a1a1',
   backgroundColor = 'transparent',
   crossSize = 40,
@@ -44,4 +44,4 @@ export const CrossPatternBackground: React.FC<CrossPatternBackgroundProps> = ({
   )
 }
 
-export default CrossPatternBackground
+export default BackgroundCross
