@@ -1,5 +1,3 @@
-import { cn } from '@/lib/utils'
-
 interface DotPatternBackgroundProps {
   dotSize?: number
   dotColor?: string
@@ -40,7 +38,7 @@ export const DotPatternBackground: React.FC<DotPatternBackgroundProps> = ({
 
   return (
     <div
-      className={cn('absolute inset-0 h-full w-full', className)}
+      className={`absolute inset-0 h-full w-full ${className}`}
       style={backgroundStyle}
       {...props}
     />
