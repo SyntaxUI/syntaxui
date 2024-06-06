@@ -1,0 +1,23 @@
+import BackgroundGrid from '@/showcase/effects/BackgroundGrid'
+
+export const metadata = {
+  title: 'Background Grid',
+  description:
+    'Adds a grid pattern to the background of an element or window with a specified color, size, and stroke width.',
+}
+
+<BackButton href="/effects/background" />
+
+<ComponentPreview
+  path="effects/BackgroundGrid"
+  preview={
+    <BackgroundGrid
+      color="#aaaaaa70"
+      className="relative z-0"
+      size="30px"
+      strokeWidth="4px"
+      fade={false}
+    />
+  }
+  usingCn
+/>

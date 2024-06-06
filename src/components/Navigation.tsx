@@ -288,16 +288,15 @@ export const navigation: Array<NavGroup> = [
     title: 'Effects',
     links: [
       {
+        title: 'Background',
+        href: '/effects/background',
+        tag: 'new',
+      },
+      {
         title: 'Gradients',
         href: '/effects/gradients',
-        tag: 'new',
       },
       { title: 'Image Fade', href: '/effects/image-fade' },
-      {
-        title: 'Background Grid',
-        href: '/effects/background-grid',
-        tag: 'new',
-      },
     ],
   },
 ]
