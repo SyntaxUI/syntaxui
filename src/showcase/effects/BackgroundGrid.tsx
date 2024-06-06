@@ -1,3 +1,5 @@
+import { HTMLProps } from 'react'
+
 interface BackgroundGridProps {
   color: string
   cellSize: string | number
@@ -12,7 +14,8 @@ const BackgroundGrid = ({
   strokeWidth = '3px',
   className,
   fade = true,
-}: Partial<BackgroundGridProps>) => {
+  ...props
+}: Partial<BackgroundGridProps> & HTMLProps<HTMLDivElement>) => {
   const svg = `
     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' stroke='${color}' stroke-width='${strokeWidth}' fill-opacity='0.4' >
       <path d='M 100 0 L 100 200'/>
@@ -35,6 +38,7 @@ const BackgroundGrid = ({
           ? `radial-gradient(ellipse at top, white, transparent 70%)`
           : undefined,
       }}
+      {...props}
     ></div>
   )
 }
