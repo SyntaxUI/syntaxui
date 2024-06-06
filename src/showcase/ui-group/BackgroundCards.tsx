@@ -10,10 +10,10 @@ const data = [
     link: '/effects/background/grid',
     component: (
       <BackgroundGrid
-        color="#aaaaaa70"
+        color="#a1a1a1"
         className="relative z-0"
-        size="30px"
-        strokeWidth="4px"
+        cellSize="25px"
+        strokeWidth="3px"
         fade={false}
       />
     ),
