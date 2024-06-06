@@ -4,6 +4,7 @@ import DotPatternBackground, { BackgroundDots } from '../effects/BackgroundDots'
 import BackgroundGrid from '../effects/BackgroundGrid'
 import BackgroundBricks from '../effects/BackgroundBricks'
 import BackgroundCross from '../effects/BackgroundCross'
+import BackgroundPlus from '../effects/BackgroundPlus'
 
 const data = [
   {
@@ -22,33 +23,22 @@ const data = [
   {
     title: 'Dots',
     link: '/effects/background/dots',
-    component: (
-      <BackgroundDots
-        className="relative z-0"
-        dotColor="#a1a1a1"
-        size="25px"
-        strokeWidth="3px"
-        fade={false}
-      />
-    ),
+    component: <BackgroundDots className="relative z-0" fade={false} />,
   },
   {
     title: 'Cross',
     link: '/effects/background/cross',
-    component: (
-      <BackgroundCross
-        className="relative z-0"
-        dotColor="#a1a1a1"
-        size="25px"
-        strokeWidth="3px"
-        fade={false}
-      />
-    ),
+    component: <BackgroundCross className="relative z-0" fade={false} />,
   },
   {
     title: 'Bricks',
     link: '/effects/background/bricks',
     component: <BackgroundBricks className="relative z-0" fade={false} />,
+  },
+  {
+    title: 'Plus',
+    link: '/effects/background/plus',
+    component: <BackgroundPlus className="relative z-0" fade={false} />,
   },
 ]
 
