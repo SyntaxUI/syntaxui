@@ -18,11 +18,11 @@ const data = [
   },
   {
     id: 3,
-    title: 'Background Patterns',
+    title: 'Background',
     preview: (
       <DotPatternBackground className="relative z-0" dotColor="#fb3a5d" />
     ),
-    link: '/effects/patterns',
+    link: '/effects/background',
   },
 ]
 
