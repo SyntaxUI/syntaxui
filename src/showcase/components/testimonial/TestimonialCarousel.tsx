@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, delay } from 'framer-motion'
 
 const testimonials = [
   {
@@ -25,7 +25,7 @@ const TestimonialCarousel = () => {
       setCurrentTestimonial(
         (prevTestimonial) => (prevTestimonial + 1) % testimonials.length,
       )
-    }, 3000)
+    }, 5000)
 
     return () => {
       clearInterval(intervalId)
@@ -35,23 +35,27 @@ const TestimonialCarousel = () => {
   const { text, author, title } = testimonials[currentTestimonial]
 
   const variants = {
-    initial: { opacity: 0, x: 20 },
-    animate: { opacity: 1, x: 0 },
-    exit: { opacity: 0, x: -20 },
+    initial: { opacity: 0, scale: 0.1, y: 100 },
+    animate: { opacity: 1, scale: 1, y: 0 },
+    exit: { opacity: 0, scale: 0.1, y: -100 },
   }
-
   return (
-    <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20" />
+    <section className="relative overflow-hidden py-12 md:py-24">
       <div className="mx-auto max-w-2xl lg:max-w-3xl">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="popLayout">
           <motion.div
             key={currentTestimonial}
             initial="initial"
             animate="animate"
             exit="exit"
             variants={variants}
-            transition={{ duration: 0.5 }}
+            transition={{
+              type: 'spring',
+              stiffness: 200,
+              damping: 20,
+              duration: 0.6,
+              delayChildren: 5,
+            }}
           >
             <p className="text-center text-2xl font-semibold tracking-tight">
               {text}
