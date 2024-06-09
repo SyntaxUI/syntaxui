@@ -59,7 +59,7 @@ const TestimonialCarousel = () => {
   }
 
   return (
-    <section className="relative overflow-hidden py-12 md:py-24">
+    <section className="py-12 md:py-24">
       <div className="w-full max-w-2xl">
         <AnimatePresence mode="popLayout">
           <motion.div
@@ -77,12 +77,14 @@ const TestimonialCarousel = () => {
             }}
           >
             <img src={image} alt={author} className="m-0 h-24 w-24" />
-            <p className="m-0 text-center text-2xl font-semibold tracking-tight">
+            <p className="m-0 text-center text-2xl font-medium tracking-tight">
               &quot;{text}&quot;
             </p>
             <div className="mx-auto mt-5">
-              <div className="flex flex-col items-center justify-center space-x-3 text-base">
-                <div className="font-medium text-gray-600">{author}</div>
+              <div className="flex flex-col items-center justify-center space-x-3">
+                <div className="font-regular text-sm text-gray-900/80">
+                  {author}
+                </div>
               </div>
             </div>
           </motion.div>
@@ -90,7 +92,7 @@ const TestimonialCarousel = () => {
             {testimonials.map((_, index) => (
               <motion.div
                 key={index}
-                className="mx-1 h-2 w-2 cursor-pointer rounded-full"
+                className="mx-1 h-1 w-1 cursor-pointer rounded-full"
                 variants={dotVariants}
                 animate={index === currentTestimonial ? 'active' : 'inactive'}
                 onClick={() => setCurrentTestimonial(index)}
