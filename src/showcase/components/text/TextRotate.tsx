@@ -1,11 +1,11 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 const text = ['Syntax UI', 'UI Library', 'Text Flip']
 
-const TextFlip = () => {
+const TextRotate = () => {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
@@ -37,4 +37,4 @@ const TextFlip = () => {
   )
 }
 
-export default TextFlip
+export default TextRotate
