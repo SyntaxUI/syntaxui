@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { TextTicker } from '../components/text/text-ticker/TextTicker'
-import Card from './Card'
 import TextGradient from '../components/text/TextGradient'
+import TextRotate from '../components/text/TextRotate'
+import Card from './Card'
 
 interface ToggleCardProps {
   title: string
@@ -16,6 +17,11 @@ const data: ToggleCardProps[] = [
     component: <TextTicker />,
   },
   {
+    title: 'Text Rotate',
+    link: '/components/text/text-rotate',
+    component: <TextRotate />,
+  },
+  {
     title: 'Text Gradient',
     link: '/components/text/text-gradient',
     component: <TextGradient />,
@@ -26,8 +32,8 @@ const ToggleCards = () => {
   return (
     <div>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {data.map((item, i) => (
-          <Link href={item.link} key={i} className="no-underline">
+        {data.map((item, index) => (
+          <Link href={item.link} key={index} className="no-underline">
             <Card title={item.title}>{item.component}</Card>
           </Link>
         ))}
