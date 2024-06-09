@@ -110,7 +110,7 @@ const Template = () => {
                 alt={template.name}
                 width={1200}
                 height={600}
-                className="w-full max-w-[600px] rounded-lg border"
+                className="w-full max-w-[800px] rounded-lg border"
               />
             ))}
           </div>
