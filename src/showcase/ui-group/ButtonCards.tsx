@@ -9,6 +9,7 @@ import ShineButton from '@/showcase/components/button/ShineButton'
 import StitchesButton from '@/showcase/components/button/StitchesButton'
 import TextRevealButton from '../components/button/TextRevealButton'
 import Card from './Card'
+import BounceButton from '../components/button/BounceButton'
 
 const data = [
   {
@@ -55,6 +56,11 @@ const data = [
     title: 'Text Reveal',
     link: '/components/button/text-reveal-button',
     component: <TextRevealButton />,
+  },
+  {
+    title: 'Bounce',
+    link: '/components/button/bounce-button',
+    component: <BounceButton />,
   },
 ]
 
