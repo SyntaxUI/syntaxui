@@ -12,7 +12,7 @@ export const metadata = {
 <div className="my-4"></div>{' '}
 
 <Preview>
-  <TextDrop />
+  <TextDrop text="SyntaxUI is a UI library" />
 </Preview>
 
 Step 1. Create a DropCharacters component
@@ -75,7 +75,7 @@ Step 2. Create a TextDrop component
 import { motion } from 'framer-motion'
 import DropCharacters from './DropCharacters'
 
-const TextDrop = () => {
+const TextDrop = ({ text }: { text: string }) => {
   const container = {
     visible: {
       transition: {
@@ -88,7 +88,7 @@ const TextDrop = () => {
     <motion.div initial="hidden" animate="visible" variants={container}>
       <div>
         <DropCharacters
-          text={'SyntaxUI'}
+          text={text}
           className="text-3xl font-semibold tracking-tight text-red-500" // Add your own class names here
         />
       </div>
@@ -109,7 +109,7 @@ Step 3. Call the TextDrop component in your page
 import TextDrop from './TextDrop'
 
 export default function Page() {
-  return <TextDrop />
+  return <TextDrop text="SyntaxUI is a UI library" />
 }
 ```
 

@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import DropCharacters from './DropCharacters'
 
-const TextDrop = () => {
+const TextDrop = ({ text }: { text: string }) => {
   const container = {
     visible: {
       transition: {
@@ -16,7 +16,7 @@ const TextDrop = () => {
     <motion.div initial="hidden" animate="visible" variants={container}>
       <div>
         <DropCharacters
-          text={'SyntaxUI'}
+          text={text}
           className="text-3xl font-semibold tracking-tight text-red-500"
         />
       </div>
