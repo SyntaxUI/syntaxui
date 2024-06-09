@@ -1,12 +1,14 @@
-import React, { ReactNode } from 'react'
+'use client'
+
 import { motion } from 'framer-motion'
+import React from 'react'
 
 interface AnimatedCharactersProps {
   text: string
   className?: string
 }
 
-const AnimatedCharacters: React.FC<AnimatedCharactersProps> = ({
+const DropCharacters: React.FC<AnimatedCharactersProps> = ({
   text,
   className = '',
 }) => {
@@ -40,4 +42,4 @@ const AnimatedCharacters: React.FC<AnimatedCharactersProps> = ({
   )
 }
 
-export default AnimatedCharacters
+export default DropCharacters

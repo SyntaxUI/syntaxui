@@ -4,7 +4,6 @@ import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Button } from '@/components/ui/button'
 import GitHubIcon from '@/icons/github'
-import TextDrop from '@/showcase/components/text/text-drop/AnimatedTextDrop'
 import AnimationCards from '@/showcase/ui-group/AnimationCards'
 import ComponentCards from '@/showcase/ui-group/ComponentCards'
 import EffectCards from '@/showcase/ui-group/EffectCards'
@@ -65,7 +64,6 @@ const Home = () => {
               Free-to-use UI elements designed for rapid development.
             </div>
           </div>
-          <TextDrop />
           <div className="flex items-center space-x-4">
             <Link href="/components">
               <Button className="bg-red-500 hover:bg-red-500/90 dark:bg-red-500 dark:text-white dark:hover:bg-red-500/90">
