@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import TextDrop from '../components/text/text-drop/TextDrop'
 import { TextTicker } from '../components/text/text-ticker/TextTicker'
+import TextFlip from '../components/text/TextFlip'
 import TextGradient from '../components/text/TextGradient'
 import TextRotate from '../components/text/TextRotate'
 import Card from './Card'
@@ -21,6 +22,11 @@ const data: ToggleCardProps[] = [
     title: 'Text Rotate',
     link: '/components/text/text-rotate',
     component: <TextRotate />,
+  },
+  {
+    title: 'Text Flip',
+    link: '/components/text/text-flip',
+    component: <TextFlip />,
   },
   {
     title: 'Text Drop',

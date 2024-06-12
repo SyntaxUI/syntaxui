@@ -3,9 +3,9 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
-const text = ['Syntax UI', 'UI Library', 'Text Rotate']
+const text = ['Syntax UI', 'UI Library', 'Text Flip']
 
-const TextRotate = () => {
+const TextFlip = () => {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
@@ -20,15 +20,14 @@ const TextRotate = () => {
 
   return (
     <div className="relative flex w-full items-center justify-center py-4 text-center">
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         <motion.div
           className="absolute cursor-pointer text-3xl font-semibold tracking-tight text-red-500"
           key={index}
-          initial={{ y: 20, opacity: 0, scale: 0.8 }}
-          animate={{ y: 0, opacity: 1, scale: 1 }}
-          exit={{ y: -20, opacity: 0, scale: 0.8 }}
-          transition={{ ease: 'easeInOut', delay: 0.2, duration: 0.5 }}
-          whileHover={{ scale: 1.1 }}
+          initial={{ rotateX: 90, opacity: 0 }}
+          animate={{ rotateX: 0, opacity: 1 }}
+          exit={{ rotateX: -90, opacity: 0 }}
+          transition={{ duration: 0.2 }}
         >
           {text[index]}
         </motion.div>
@@ -37,4 +36,4 @@ const TextRotate = () => {
   )
 }
 
-export default TextRotate
+export default TextFlip
