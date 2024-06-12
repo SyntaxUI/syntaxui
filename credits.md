@@ -20,3 +20,4 @@
 - [Avatar Carousel](https://syntaxui.com/blocks/testimonial) - [Ethan Pollack](https://epoll31.github.io)
 - [Background Grid Effect](https://syntaxui.com/effects/background/grid) - [Ethan Pollack](https://epoll31.github.io)
 - Grid Patterns are taken from [Hero Patterns](https://heropatterns.com/)
+- [Added Blocks Section](https://github.com/SyntaxUI/syntaxui/pull/224) - [Ethan Pollack](https://epoll31.github.io)
