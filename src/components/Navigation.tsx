@@ -231,14 +231,6 @@ export const navigation: Array<NavGroup> = [
         tag: 'new',
       },
       {
-        title: 'Features',
-        href: '/components/features',
-      },
-      {
-        title: 'Footer',
-        href: '/components/footer',
-      },
-      {
         title: 'Input',
         href: '/components/input',
       },
@@ -247,22 +239,8 @@ export const navigation: Array<NavGroup> = [
         href: '/components/loaders',
       },
       {
-        title: 'Logo Cloud',
-        href: '/components/logo-cloud',
-        tag: 'new',
-      },
-      {
-        title: 'Pricing',
-        href: '/components/pricing',
-      },
-      {
         title: 'Tabs',
         href: '/components/tabs',
-      },
-      {
-        title: 'Testimonial',
-        href: '/components/testimonial',
-        tag: 'new',
       },
       {
         title: 'Text',
@@ -271,6 +249,33 @@ export const navigation: Array<NavGroup> = [
       {
         title: 'Toggle',
         href: '/components/toggle',
+      },
+    ],
+  },
+  {
+    title: 'Blocks',
+    links: [
+      {
+        title: 'Features',
+        href: '/blocks/features',
+      },
+      {
+        title: 'Footer',
+        href: '/blocks/footer',
+      },
+      {
+        title: 'Logo Cloud',
+        href: '/blocks/logo-cloud',
+        tag: 'new',
+      },
+      {
+        title: 'Pricing',
+        href: '/blocks/pricing',
+      },
+      {
+        title: 'Testimonial',
+        href: '/blocks/testimonial',
+        tag: 'new',
       },
     ],
   },

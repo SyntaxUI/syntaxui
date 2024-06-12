@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import GitHubIcon from '@/icons/github'
 import AnimationCards from '@/showcase/ui-group/AnimationCards'
 import ComponentCards from '@/showcase/ui-group/ComponentCards'
+import BlockCards from '@/showcase/ui-group/BlockCards'
 import EffectCards from '@/showcase/ui-group/EffectCards'
 import { motion } from 'framer-motion'
 import { ChevronRight } from 'lucide-react'
@@ -91,6 +92,12 @@ const Home = () => {
               Components
             </h1>
             <ComponentCards />
+          </div>
+          <div>
+            <h1 className="mb-4 text-left text-lg font-semibold tracking-tight">
+              Blocks
+            </h1>
+            <BlockCards />
           </div>
           <div>
             <h1 className="mb-4 text-left text-lg font-semibold tracking-tight">
