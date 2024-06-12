@@ -17,6 +17,6 @@
 - [CI greetings Bot](https://github.com/Ansub/SyntaxUI/pull/182) - [Daksh Singh Rathore](https://twitter.com/dakshsinghrath9)
 - [Issue Template](https://github.com/Ansub/SyntaxUI/pull/72) - [Daksh Singh Rathore](https://twitter.com/dakshsinghrath9)
 - [Automated Issue labeling](https://github.com/Ansub/SyntaxUI/pull/78) - [Daksh Singh Rathore](https://twitter.com/dakshsinghrath9)
-- [Avatar Carousel](https://syntaxui.com/components/testimonial) - [Ethan Pollack](https://epoll31.github.io)
+- [Avatar Carousel](https://syntaxui.com/blocks/testimonial) - [Ethan Pollack](https://epoll31.github.io)
 - [Background Grid Effect](https://syntaxui.com/effects/background/grid) - [Ethan Pollack](https://epoll31.github.io)
 - Grid Patterns are taken from [Hero Patterns](https://heropatterns.com/)
