@@ -1,45 +1,37 @@
-import OrbitingLoader from '@/showcase/components/loaders/OrbitingLoader'
-import { TextTicker } from '@/showcase/components/text/text-ticker/TextTicker'
-import SimpleToggle from '@/showcase/components/toggle/SimpleToggle'
 import Image from 'next/image'
 import Link from 'next/link'
-import HeartbeatButton from '../components/button/HeartbeatButton'
+import AnimatedLogoCloud from '../blocks/logo-cloud/AnimatedLogoCloud'
 import Card from './Card'
 
 const data = [
   {
-    title: 'Button',
-    component: <HeartbeatButton />,
-    link: '/components/button',
+    title: 'Features',
+    image: '/images/ui/features.svg',
+    link: '/blocks/features',
   },
   {
-    title: 'Loaders',
-    component: <OrbitingLoader />,
-    link: '/components/loaders',
+    title: 'Pricing',
+    image: '/images/ui/pricing.svg',
+    link: '/blocks/pricing',
   },
   {
-    title: 'Text',
-    component: <TextTicker />,
-    link: '/components/text',
+    title: 'Testimonial',
+    image: '/images/ui/testimonial.svg',
+    link: '/blocks/testimonial',
   },
   {
-    title: 'Input',
-    image: '/images/ui/input.png',
-    link: '/components/input',
+    title: 'Footer',
+    image: '/images/ui/footer.svg',
+    link: '/blocks/footer',
   },
   {
-    title: 'Tab',
-    image: '/images/ui/tabs.png',
-    link: '/components/tabs',
-  },
-  {
-    title: 'Toggle',
-    component: <SimpleToggle />,
-    link: '/components/toggle',
+    title: 'Logo Cloud',
+    component: <AnimatedLogoCloud />,
+    link: '/blocks/logo-cloud',
   },
 ]
 
-const ComponentCards = () => {
+const BlockCards = () => {
   return (
     <div>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -65,4 +57,4 @@ const ComponentCards = () => {
   )
 }
 
-export default ComponentCards
+export default BlockCards
