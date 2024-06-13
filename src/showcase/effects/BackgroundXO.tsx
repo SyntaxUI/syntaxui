@@ -11,7 +11,7 @@ interface PlusPatternBackgroundProps {
 }
 
 export const BackgroundXO: React.FC<PlusPatternBackgroundProps> = ({
-  plusColor = '#aaaaaa',
+  plusColor = '#fb3a5d',
   backgroundColor = 'transparent',
   plusSize = 45,
   className,

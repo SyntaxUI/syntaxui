@@ -9,7 +9,7 @@ interface PlusPatternBackgroundProps {
 }
 
 export const BackgroundPlus: React.FC<PlusPatternBackgroundProps> = ({
-  plusColor = '#aaaaaa',
+  plusColor = '#fb3a5d',
   backgroundColor = 'transparent',
   plusSize = 60,
   className,
