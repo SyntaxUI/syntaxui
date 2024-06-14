@@ -40,16 +40,6 @@ const TemplateButton = ({
   )
 }
 
-const imageVariants = {
-  open: { opacity: 1, scale: 1 },
-  closed: { opacity: 0, scale: 0.5 },
-}
-
-const overlayVariants = {
-  open: { opacity: 1, scale: 1 },
-  closed: { opacity: 0, scale: 0.95 },
-}
-
 const Template = () => {
   const router = usePathname()
   const slug = router.replace('/templates/', '')
