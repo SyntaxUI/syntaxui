@@ -38,14 +38,18 @@ function NavLink({
   active?: boolean
   isAnchorLink?: boolean
 }) {
+  const isActive = usePathname().startsWith(href); //checking if the pathname starts with the link's href.
+
   return (
     <Link
       href={href}
-      aria-current={active ? 'page' : undefined}
+      // aria-current={active ? 'page' : undefined}
+      aria-current={isActive ? 'page' : undefined}
+
       className={clsx(
         'flex justify-between gap-2 py-1 pr-3 text-sm transition',
         isAnchorLink ? 'pl-7' : 'pl-4',
-        active
+        isActive
           ? 'text-gray-900 dark:text-white'
           : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white',
       )}
@@ -108,7 +112,8 @@ function ActivePageMarker({
 }) {
   let itemHeight = remToPx(2)
   let offset = remToPx(0.25)
-  let activePageIndex = group.links.findIndex((link) => link.href === pathname)
+  // let activePageIndex = group.links.findIndex((link) => link.href === pathname)
+  let activePageIndex = group.links.findIndex((link) => pathname.startsWith(link.href))   //  // Find the index of the link whose href is the prefix of the pathname
   let top = offset + activePageIndex * itemHeight
 
   return (
