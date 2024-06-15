@@ -1,0 +1,110 @@
+import LandingPage from '@/showcase/components/landingpage/LandingPage'
+import CodeGroup from '@/components/code/CodeGroup'
+
+export const metadata = {
+  title: 'Landing Page',
+  description:
+    'This is a LandingPage component made by TailwindCSS',
+}
+
+# Landing Page
+
+## Tag Landing Page
+
+Some Key Features of Landing Page are:
+
+- Change the tag line according to your requirement
+- Try to use a catchy tagline and don't add too many words in tagline
+- Add a little description for your product in the description part
+
+<div className="mb-4"></div>
+<Preview>
+<div className="w-full m-2">
+<LandingPage title={"SyntaxUi Stop coding from scratch. Build faster. Launch sooner."} description={"Free-to-use UI elements designed for rapid development."} 
+ctaName={"GitHub"} ctaLink={"https://github.com/SyntaxUI/syntaxui"}/>
+</div>
+</Preview>
+<CodeGroup title="LandingPage.tsx">
+```jsx{{ title: 'React'}}
+
+import Image from 'next/image'
+import LandingPageImage from './Landingpage.png'
+
+type LandingPageProps = {
+  title: string
+  description: string
+  ctaName: string
+  ctaLink: string
+}
+
+const LandingPage: React.FC<LandingPageProps> = ({
+  title,
+  description,
+  ctaName,
+  ctaLink,
+}) => {
+  return (
+    <div className="font-Poppins mx-auto flex max-w-screen-xl flex-col items-center p-8 px-4 sm:px-6 md:flex-row">
+      <div className="md:w-1/2 md:py-10 md:pr-10">
+        <div className="text-left">
+          <p className="text-4xl font-bold text-black dark:text-white">
+            {title}
+          </p>
+          <p className="mt-2 text-xl text-black dark:text-white">
+            {description}
+          </p>
+          <div className="mt-4">
+            <a
+              className="inline-block rounded bg-yellow-500 px-8 py-4 text-xl font-bold uppercase leading-normal text-black hover:bg-yellow-600 focus:bg-yellow-700 active:bg-yellow-800"
+              href={ctaLink}
+            >
+              {ctaName}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="md:w-1/2 md:py-10 md:pl-10">
+        <div className="relative w-full rounded">
+          <Image
+            className="rounded-lg"
+            src={LandingPageImage}
+            alt="Landing Page Image"
+            width={600}
+            height={400}
+          />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default LandingPage;
+
+```
+
+    </CodeGroup>
+
+### Usage
+
+<CodeGroup>
+  ```jsx {{ title: 'React' }}
+
+import React from 'react'
+import LandingPage from 'LandingPage.tsx'
+
+const MyComponent = () => {
+return (
+    <>
+      <LandingPage
+        title={'SyntaxUi Stop coding from scratch. Build faster. Launch sooner.'}
+        description={'Free-to-use UI elements designed for rapid development.'}
+        ctaName={'GitHub'}
+        ctaLink={'https://github.com/SyntaxUI/syntaxui'}
+      />
+    </>
+  ); 
+};
+
+export default MyComponent;
+```
+</CodeGroup>

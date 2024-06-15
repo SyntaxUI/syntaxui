@@ -272,6 +272,10 @@ export const navigation: Array<NavGroup> = [
         title: 'Toggle',
         href: '/components/toggle',
       },
+      {
+        title: 'Landing Page',
+        href: '/components/landingpage',
+      },
     ],
   },
   {

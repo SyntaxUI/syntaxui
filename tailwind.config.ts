@@ -35,6 +35,10 @@ export default {
         red: {
           500: '#fb3a5d',
         },
+        'custom-red': '#fb3a5d',
+        'custom-red-dark': '#e03453',
+        'custom-red-darker': '#c92f49',
+        'custom-red-darkest': '#b22940',
       },
       boxShadow: {
         glow: '0 0 4px rgb(0 0 0 / 0.1)',
