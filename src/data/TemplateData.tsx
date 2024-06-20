@@ -9,8 +9,8 @@ export const TemplateData = [
     ],
     category: 'personal',
     id: 'stoic',
-    price: 19,
-    originalPrice: 39,
+    price: 9,
+    originalPrice: 19,
     discount: 50,
     downloadLink:
       'https://syntaxui.lemonsqueezy.com/buy/a3c17154-6196-4704-ab1d-2d47dcf15d97',
