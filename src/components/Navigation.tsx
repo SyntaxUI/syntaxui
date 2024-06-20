@@ -25,6 +25,13 @@ function useInitialValue<T>(value: T, condition = true) {
   return condition ? initialValue : value
 }
 
+function matchPath(pathname: string, href: string) {
+  if (href === '/components') {
+    return pathname === '/components'
+  }
+  return pathname.startsWith(href)
+}
+
 function NavLink({
   href,
   children,
@@ -83,7 +90,8 @@ function VisibleSectionHighlight({
     ? Math.max(1, visibleSections.length) * itemHeight
     : itemHeight
   let top =
-    group.links.findIndex((link) => link.href === pathname) * itemHeight +
+    group.links.findIndex((link) => matchPath(pathname, link.href)) *
+      itemHeight +
     firstVisibleSectionIndex * itemHeight
 
   return (
@@ -108,7 +116,9 @@ function ActivePageMarker({
 }) {
   let itemHeight = remToPx(2)
   let offset = remToPx(0.25)
-  let activePageIndex = group.links.findIndex((link) => link.href === pathname)
+  let activePageIndex = group.links.findIndex((link) =>
+    matchPath(pathname, link.href),
+  )
   let top = offset + activePageIndex * itemHeight
 
   return (
@@ -143,7 +153,7 @@ function NavigationGroup({
   )
 
   let isActiveGroup =
-    group.links.findIndex((link) => link.href === pathname) !== -1
+    group.links.findIndex((link) => matchPath(pathname, link.href)) !== -1
 
   return (
     <li className={clsx('relative mt-6', className)}>
@@ -173,13 +183,13 @@ function NavigationGroup({
             <motion.li key={link.href} layout="position" className="relative">
               <NavLink
                 href={link.href}
-                active={link.href === pathname}
+                active={matchPath(pathname, link.href)}
                 tag={link.tag}
               >
                 {link.title}
               </NavLink>
               <AnimatePresence mode="popLayout" initial={false}>
-                {link.href === pathname && sections.length > 0 && (
+                {matchPath(pathname, link.href) && sections.length > 0 && (
                   <motion.ul
                     role="list"
                     initial={{ opacity: 0 }}
