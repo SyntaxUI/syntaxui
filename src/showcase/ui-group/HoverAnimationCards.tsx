@@ -4,6 +4,7 @@ import { HoverJiggleButton } from '@/showcase/animations/hover/HoverJiggleButton
 import { HoverPopButton } from '@/showcase/animations/hover/HoverPopButton'
 import { HoverVibrateButton } from '@/showcase/animations/hover/HoverVibrateButton'
 import Card from './Card'
+import { HoverPulseButton } from '../animations/hover/HoverPulseButton'
 
 const data = [
   {
@@ -29,6 +30,12 @@ const data = [
     title: 'Vibrate',
     link: '/animations/hovers/vibrate',
     component: <HoverVibrateButton />,
+  },
+  {
+    id: 5,
+    title: 'Pulse',
+    link: '/animations/hovers/pulse',
+    component: <HoverPulseButton />,
   },
 ]
 

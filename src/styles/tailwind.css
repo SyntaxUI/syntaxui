@@ -34,13 +34,37 @@
   font-size: 14px;
 }
 @property --discord-button-angle {
-  syntax: "<angle>";
+  syntax: '<angle>';
   inherits: false;
   initial-value: 0deg;
 }
 
 @property --discord-button-x {
-  syntax: "<length>";
+  syntax: '<length>';
   inherits: false;
   initial-value: 0;
+}
+
+.pulse-button {
+  border-radius: 0.5rem;
+  background-color: #ef4444; /* Tailwind's bg-red-500 */
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+.pulse-button:hover,
+.pulse-button:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 2em rgba(255, 0, 0, 0);
+  }
 }
