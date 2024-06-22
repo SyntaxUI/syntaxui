@@ -85,6 +85,10 @@ export default {
             transform: 'scale(1)',
           },
         },
+        pulse: {
+          '0%': { boxShadow: '0 0 0 0 rgba(255, 0, 0, 0.7)' },
+          '100%': { boxShadow: '0 0 0 2em rgba(255, 0, 0, 0)' },
+        },
         'hover-tada': {
           '0%': {
             transform: 'scale(1)',
@@ -237,6 +241,7 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'skew-scroll': 'skew-scroll 20s linear infinite',
         buttonheartbeat: 'buttonheartbeat 2s infinite ease-in-out',
+        pulse: 'pulse 1s',
         'hover-tada': 'hover-tada 1s ease-in-out',
         'hover-jiggle': 'hover-jiggle 0.3s ease-in-out',
         'tag-input-scale-in': 'tag-input-scale-in 0.3s ease-in-out forwards',
