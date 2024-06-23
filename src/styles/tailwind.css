@@ -25,3 +25,22 @@
     display: none;
   }
 }
+
+.prose code {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  box-shadow: none;
+  font-size: 14px;
+}
+@property --discord-button-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@property --discord-button-x {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 0;
+}
