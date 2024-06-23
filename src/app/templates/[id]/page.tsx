@@ -74,8 +74,8 @@ const Template = () => {
               )}
             </div>
             <div className="flex flex-row items-center gap-1 text-lg">
-              <p className="font-semibold text-red-500">$19</p>
-              <p className="text-xs text-gray-600/50 line-through">$39</p>
+              <p className="font-semibold text-red-500">${template?.price}</p>
+              <p className="text-xs text-gray-600/50 line-through">${template?.originalPrice}</p>
             </div>
             <div className="mt-2 max-w-sm text-left text-sm text-gray-600 dark:text-gray-200">
               {template.description}
