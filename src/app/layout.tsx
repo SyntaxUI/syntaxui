@@ -11,10 +11,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://syntaxui.com'),
   title: {
     template: '%s - SyntaxUI',
-    default:
-      'SyntaxUI - Stop coding from scratch. Build faster. Launch sooner.',
+    default: 'SyntaxUI - Free React, Tailwind CSS & Framer UI Components',
   },
-  description: `Get free access to pre-built, Tailwind CSS-powered components, animations and effects - brought to life using Framer Motion. Just copy, paste and you're ready to go!`,
+  description: `Get free-to-use Prebuilt React components powered by Tailwind CSS & Framer Motion. Modern, Minimal and customizable. Just copy, paste and you're ready to go!`,
 }
 
 export default async function RootLayout({
