@@ -54,7 +54,7 @@ const Template = () => {
       <Header />
       <div className="mx-5 mb-24 mt-[5rem] flex w-full max-w-7xl flex-col items-center justify-center gap-5 md:mt-[10rem]">
         <div className="flex flex-col items-start justify-center gap-20 px-4 lg:flex-row lg:items-start">
-          <div className="flex flex-col items-start justify-center gap-4 md:sticky md:top-[10rem]">
+          <div className="flex flex-col items-start justify-center gap-4 lg:sticky lg:top-[10rem]">
             <Link
               href="/templates"
               className="group flex flex-row items-center text-xs uppercase text-gray-600/80"
@@ -74,8 +74,8 @@ const Template = () => {
               )}
             </div>
             <div className="flex flex-row items-center gap-1 text-lg">
-              <p className="font-semibold text-red-500">$19</p>
-              <p className="text-xs text-gray-600/50 line-through">$39</p>
+              <p className="font-semibold text-red-500">${template?.price}</p>
+              <p className="text-xs text-gray-600/50 line-through">${template?.originalPrice}</p>
             </div>
             <div className="mt-2 max-w-sm text-left text-sm text-gray-600 dark:text-gray-200">
               {template.description}

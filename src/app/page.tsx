@@ -53,17 +53,17 @@ const Home = () => {
             <DiscordButton />
             <Image
               src="/images/syntaxUI.svg"
-              alt="syntaxUI"
+              alt="SyntaxUI"
               className="mb-4 h-16 w-16 rounded-lg"
               width={100}
               height={100}
             />
-            <span className="max-w-lg text-3xl font-bold tracking-tight md:max-w-2xl md:text-5xl">
+            <h1 className="max-w-lg text-3xl font-bold tracking-tight md:max-w-2xl md:text-5xl">
               Stop coding from scratch. Build faster. Launch sooner.
-            </span>
-            <div className="text-gray-600 dark:text-gray-300">
+            </h1>
+            <p className="text-gray-600 dark:text-gray-300">
               Free-to-use UI elements designed for rapid development.
-            </div>
+            </p>
           </div>
           <div className="flex items-center space-x-4">
             <Link href="/components">
@@ -88,27 +88,27 @@ const Home = () => {
         {/* UI Elements */}
         <div className="mb-12 flex w-full max-w-7xl flex-col gap-8 px-3">
           <div>
-            <h1 className="mb-4 text-left text-lg font-semibold tracking-tight">
+            <div className="mb-4 text-left text-lg font-semibold tracking-tight">
               Components
-            </h1>
+            </div>
             <ComponentCards />
           </div>
           <div>
-            <h1 className="mb-4 text-left text-lg font-semibold tracking-tight">
+            <div className="mb-4 text-left text-lg font-semibold tracking-tight">
               Blocks
-            </h1>
+            </div>
             <BlockCards />
           </div>
           <div>
-            <h1 className="mb-4 text-left text-lg font-semibold tracking-tight">
+            <div className="mb-4 text-left text-lg font-semibold tracking-tight">
               Animations
-            </h1>
+            </div>
             <AnimationCards />
           </div>
           <div>
-            <h1 className="mb-4 w-full text-left text-lg font-semibold">
+            <div className="mb-4 w-full text-left text-lg font-semibold">
               Effects
-            </h1>
+            </div>
             <EffectCards />
           </div>
         </div>
