@@ -7,21 +7,20 @@ const ImageSection = () => {
 
   const ImageTabs = [
     {
-      name: 'Blog Generation',
+      name: 'UI Library',
       description:
-        'Generate high-quality, personalized, SEO-optimized blogs in seconds',
+        'Build faster. Launch sooner. Build your next project with SyntaxUI.',
       icon: <Rss />,
     },
     {
-      name: 'Google Ads',
+      name: 'Templates',
       description:
-        'Create high-quality, personalized, SEO-optimized Google Ads in seconds',
+        'Get templates made with Next.js and Tailwind CSS for your next project.',
       icon: <BadgeDollarSign />,
     },
     {
-      name: 'Keyword Research',
-      description:
-        'Generate keywords that rank and bring your business more organic traffic!',
+      name: 'Ui Blocks',
+      description: 'Get UI blocks and components for your next project.',
       icon: <BookOpenText />,
     },
   ]
