@@ -52,7 +52,7 @@ export default function Code({
   return (
     <div
       className={cn(
-        'overflow-x-auto border border-gray-600 bg-zinc-900 pb-0 dark:border-gray-600',
+        'overflow-x-auto border border-gray-700 bg-zinc-900 pb-0 dark:border-gray-700',
         rounded ? 'rounded-b-lg rounded-t-none' : 'rounded-lg',
         inCodeGroup && 'border-0',
       )}
