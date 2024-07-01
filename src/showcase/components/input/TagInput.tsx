@@ -24,7 +24,6 @@ const TagInput: React.FC<TagInputProps> = ({ unique = false }) => {
     ) {
       event.preventDefault()
       const newKeyword = inputValue.trim()
-
       const newKeywords = unique
         ? [...new Set([...keywords, newKeyword])]
         : [...keywords, newKeyword]
@@ -49,7 +48,6 @@ const TagInput: React.FC<TagInputProps> = ({ unique = false }) => {
       .map((keyword) => keyword.trim())
       .filter(Boolean)
     if (keywordsToAdd.length) {
-      // const newKeywords = [...keywords, ...keywordsToAdd]
       const newKeywords = unique
         ? [...new Set([...keywords, ...keywordsToAdd])]
         : [...keywords, ...keywordsToAdd]
