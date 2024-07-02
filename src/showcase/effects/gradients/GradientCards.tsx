@@ -140,6 +140,18 @@ const data = [
     title: 'Flamingo Flair',
     gradient: 'bg-gradient-to-r from-[#fecdd3] via-[#fda4af] to-[#f87171]',
   },
+  {
+    title: 'Ocean',
+    gradient: `bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-[#48cae4] to-[#023e8a]`,
+  },
+  {
+    title: 'Forest',
+    gradient: `bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#80ed99] to-[#1a4301]`,
+  },
+  {
+    title: 'Night Life',
+    gradient: `bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-[#ff00ff] to-[#00ffff]`,
+  },
 ]
 
 const GradientCards = () => {
