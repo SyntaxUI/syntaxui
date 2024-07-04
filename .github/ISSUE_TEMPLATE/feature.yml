@@ -1,0 +1,25 @@
+name: ✨ Feature Request
+description: Suggest a new feature to enhance SyntaxUI
+
+title: '[FEATURE]: '
+
+labels: [Enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+
+        Fill in the information below to help us understand and evaluate your feature request.
+
+  - type: textarea
+    attributes:
+      label: Feature Description 📝
+      description: A clear and concise description of the new feature.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Screenshots 📸
+      description: add screenshot of the feature if you have any.
+    validations:
+      required: false
