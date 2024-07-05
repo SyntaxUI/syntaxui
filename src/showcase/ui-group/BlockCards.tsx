@@ -29,6 +29,15 @@ const data = [
     component: <AnimatedLogoCloud />,
     link: '/blocks/logo-cloud',
   },
+  {
+    title: 'Banner',
+    component: (
+      <div className="rounded-lg border bg-white px-20 py-2 font-semibold text-red-500">
+        Banner
+      </div>
+    ),
+    link: '/blocks/banner',
+  },
 ]
 
 const BlockCards = () => {
