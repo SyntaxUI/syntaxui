@@ -266,6 +266,11 @@ export const navigation: Array<NavGroup> = [
     title: 'Blocks',
     links: [
       {
+        title: 'Banner',
+        href: '/blocks/banner',
+        tag: 'latest',
+      },
+      {
         title: 'Features',
         href: '/blocks/features',
       },
@@ -276,7 +281,6 @@ export const navigation: Array<NavGroup> = [
       {
         title: 'Logo Cloud',
         href: '/blocks/logo-cloud',
-        tag: 'new',
       },
       {
         title: 'Pricing',
