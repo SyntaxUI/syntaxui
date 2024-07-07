@@ -12,6 +12,7 @@ const Banner = () => {
     <div className="flex w-full flex-col items-center justify-center gap-5 py-12">
       <ComponentPreview path="blocks/banner/CollapsibleBanner" />
       <ComponentPreview path="blocks/banner/SimpleBanner" />
+      <ComponentPreview path="blocks/banner/CookieBanner" />
     </div>
   )
 }
