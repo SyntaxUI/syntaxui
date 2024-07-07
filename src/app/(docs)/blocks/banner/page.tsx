@@ -13,6 +13,7 @@ const Banner = () => {
       <ComponentPreview path="blocks/banner/CollapsibleBanner" />
       <ComponentPreview path="blocks/banner/SimpleBanner" />
       <ComponentPreview path="blocks/banner/CookieBanner" />
+      <ComponentPreview path="blocks/banner/FloatingBanner" />
     </div>
   )
 }
