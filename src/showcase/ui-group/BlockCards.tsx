@@ -31,11 +31,7 @@ const data = [
   },
   {
     title: 'Banner',
-    component: (
-      <div className="rounded-lg border bg-white px-20 py-2 font-semibold text-red-500">
-        Banner
-      </div>
-    ),
+    image: '/images/ui/banner.svg',
     link: '/blocks/banner',
   },
 ]
