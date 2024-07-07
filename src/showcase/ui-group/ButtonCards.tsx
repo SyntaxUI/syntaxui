@@ -10,6 +10,7 @@ import StitchesButton from '@/showcase/components/button/StitchesButton'
 import TextRevealButton from '../components/button/TextRevealButton'
 import Card from './Card'
 import BounceButton from '../components/button/BounceButton'
+import MagneticButton from '../components/button/MagneticButton'
 
 const data = [
   {
@@ -62,6 +63,11 @@ const data = [
     link: '/components/button/bounce-button',
     component: <BounceButton />,
   },
+  {
+    title: "Magnetic Button",
+    link: "/components/button/magnetic-button",
+    component: <MagneticButton />
+  }
 ]
 
 const ButtonCards = () => {
