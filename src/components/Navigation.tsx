@@ -264,6 +264,11 @@ export const navigation: Array<NavGroup> = [
         title: 'Toggle',
         href: '/components/toggle',
       },
+      {
+        title: 'Stepper',
+        href: '/components/stepper',
+        tag: 'new',
+      }
     ],
   },
   {
