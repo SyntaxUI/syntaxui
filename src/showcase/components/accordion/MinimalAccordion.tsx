@@ -60,7 +60,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
         initial="collapsed"
         animate={isExpanded ? 'expanded' : 'collapsed'}
       >
-        <p className="m-0 text-sm text-gray-600">{content}</p>
+        <p className="m-0 text-sm text-gray-900">{content}</p>
       </motion.div>
     </motion.div>
   )
