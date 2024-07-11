@@ -27,6 +27,7 @@ Please check the boxes that apply:
 - [ ] I ran `npm run build` and build is successful
 - [ ] I have added necessary documentation (if applicable)
 - [ ] I have updated the credits.md file (if applicable)
+- [ ] I have added dark theme support (if applicable)
 
 ## Additional Context
 
