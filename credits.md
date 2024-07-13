@@ -20,4 +20,5 @@
 - [Avatar Carousel](https://syntaxui.com/blocks/testimonial) - [Ethan Pollack](https://epoll31.github.io)
 - [Background Grid Effect](https://syntaxui.com/effects/background/grid) - [Ethan Pollack](https://epoll31.github.io)
 - Grid Patterns are taken from [Hero Patterns](https://heropatterns.com/)
-- [Magnetic Button](https://syntaxui.com/components/button/magnetic-button) - [Nikhil Nigam](https://github.com/nikhilnigamnik)
+- [Magnetic Button](https://syntaxui.com/components/button/magnetic-button) - [Nikhil Nigam](https://x.com/nikhil_nigamnik)
+- [Minimal Stepper](https://syntaxui.com/components/stepper) - [Nikhil Nigam](https://x.com/nikhil_nigamnik)
