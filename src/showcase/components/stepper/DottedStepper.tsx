@@ -38,24 +38,24 @@ const steps: StepProps[] = [
 const StepIndicator: React.FC<{
   currentStep: number
   steps: StepProps[]
-  totalSteps: number
-}> = ({ currentStep, steps, totalSteps }) => (
+}> = ({ currentStep, steps }) => (
   <div className="relative w-full">
     <div className="flex items-center justify-between">
       {steps.map((step, index) => (
         <React.Fragment key={step.label}>
           <div className="flex flex-col items-center">
             <motion.div
-              className={`z-10 flex h-10 w-10 items-center justify-center rounded-full ${
-                index <= currentStep ? 'bg-red-500 text-white' : 'bg-gray-200'
+              className={`z-10 flex h-8 w-8 items-center justify-center rounded-full ${
+                index <= currentStep
+                  ? 'bg-red-500 text-white'
+                  : 'bg-gray-200 text-white'
               }`}
-              initial={false}
-              animate={{ scale: index === currentStep ? 1.2 : 1 }}
+              animate={{ scale: 1.02 }}
             >
               {index < currentStep ? (
-                <CheckCircle size={18} />
+                <CheckCircle size={17} />
               ) : (
-                <Circle size={18} fill="currentColor" />
+                <Circle size={17} fill="currentColor" />
               )}
             </motion.div>
           </div>
@@ -63,12 +63,12 @@ const StepIndicator: React.FC<{
             <div className="relative flex-grow">
               <div className="absolute -top-1 h-1.5 w-full bg-gray-100" />
               <motion.div
-                className="absolute -top-1 h-1.5 w-full rounded-full bg-red-500"
+                className="absolute -top-1 h-1.5 w-full bg-red-500"
                 initial={{ width: '0%' }}
                 animate={{
                   width: index < currentStep ? '100%' : '0%',
                 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
               />
             </div>
           )}
@@ -122,11 +122,7 @@ const Stepper: React.FC = () => {
 
   return (
     <div className="mx-auto w-full max-w-2xl p-6">
-      <StepIndicator
-        currentStep={currentStep}
-        steps={steps}
-        totalSteps={steps.length}
-      />
+      <StepIndicator currentStep={currentStep} steps={steps} />
       <StepContent />
       <NavigationButtons
         currentStep={currentStep}
