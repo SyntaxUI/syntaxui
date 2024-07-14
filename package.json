@@ -43,6 +43,7 @@
     "posthog-js": "^1.118.0",
     "raw-loader": "^4.0.2",
     "react": "^18.2.0",
+    "react-confetti": "^6.1.0",
     "react-dom": "^18.2.0",
     "react-highlight-words": "^0.20.0",
     "react-syntax-highlighter": "^15.5.0",
