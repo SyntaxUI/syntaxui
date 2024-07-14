@@ -268,7 +268,7 @@ export const navigation: Array<NavGroup> = [
         title: 'Stepper',
         href: '/components/stepper',
         tag: 'new',
-      }
+      },
     ],
   },
   {
@@ -277,7 +277,7 @@ export const navigation: Array<NavGroup> = [
       {
         title: 'Banner',
         href: '/blocks/banner',
-        tag: 'latest',
+        tag: 'new',
       },
       {
         title: 'Features',
