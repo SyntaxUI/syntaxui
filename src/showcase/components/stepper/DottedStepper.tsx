@@ -48,7 +48,7 @@ const StepIndicator: React.FC<{
               className={`z-10 flex h-8 w-8 items-center justify-center rounded-full ${
                 index <= currentStep
                   ? 'bg-red-500 text-white'
-                  : 'bg-gray-200 text-white'
+                  : 'bg-gray-200 text-white dark:bg-gray-800 dark:text-gray-600'
               }`}
               animate={{ scale: 1.02 }}
             >
@@ -61,7 +61,7 @@ const StepIndicator: React.FC<{
           </div>
           {index < steps.length - 1 && (
             <div className="relative flex-grow">
-              <div className="absolute -top-1 h-1.5 w-full bg-gray-100" />
+              <div className="absolute -top-1 h-1.5 w-full bg-gray-100 dark:bg-gray-800" />
               <motion.div
                 className="absolute -top-1 h-1.5 w-full bg-red-500"
                 initial={{ width: '0%' }}
@@ -80,7 +80,7 @@ const StepIndicator: React.FC<{
 
 const StepContent: React.FC = () => {
   return (
-    <div className="my-4 flex min-h-[30vh] w-full items-center justify-center rounded-lg border bg-gray-100 text-center">
+    <div className="my-4 flex min-h-[30vh] w-full items-center justify-center rounded-lg border bg-gray-100 text-center dark:border-gray-600 dark:bg-gray-800">
       Stepper Content
     </div>
   )
