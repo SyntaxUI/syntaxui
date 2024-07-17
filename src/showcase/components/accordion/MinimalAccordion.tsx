@@ -25,13 +25,22 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   onToggle,
 }) => {
   const cardVariants: Variants = {
-    collapsed: { height: '60px' },
-    expanded: { height: 'auto' },
+    collapsed: {
+      height: '60px',
+      transition: { type: 'spring', stiffness: 300, damping: 15 },
+    },
+    expanded: {
+      height: 'auto',
+      transition: { type: 'spring', stiffness: 300, damping: 15 },
+    },
   }
 
   const contentVariants: Variants = {
-    collapsed: { opacity: 0, y: -20 },
-    expanded: { opacity: 1, y: 0, transition: { delay: 0.1 } },
+    collapsed: { opacity: 0 },
+    expanded: {
+      opacity: 1,
+      transition: { delay: 0.1 },
+    },
   }
 
   const chevronVariants: Variants = {
@@ -41,14 +50,14 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
 
   return (
     <motion.div
-      className={`w-90 dark:bg-gray-800' my-4 h-full cursor-pointer select-none overflow-hidden rounded-lg border bg-gray-100 dark:border-gray-700 dark:bg-gray-800`}
+      className={`w-90 dark:bg-gray-800' my-4 h-full cursor-pointer select-none overflow-hidden rounded-lg border  dark:border-gray-700`}
       variants={cardVariants}
       initial="collapsed"
       animate={isExpanded ? 'expanded' : 'collapsed'}
       onClick={onToggle}
     >
       <div className="flex items-center justify-between p-4 text-gray-900 dark:text-gray-100">
-        <h2 className="m-0 text-sm font-semibold">{title}</h2>
+        <h2 className="m-0 text-sm font-semibold text-red-500">{title}</h2>
         <motion.div variants={chevronVariants}>
           <ChevronDown size={18} />
         </motion.div>
