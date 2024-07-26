@@ -1,3 +1,5 @@
+'use client'
+
 import clsx from 'clsx'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Link from 'next/link'
