@@ -1,4 +1,6 @@
-import AniamtedBadge from '@/components/AnimatedBadge'
+'use client'
+
+import AnimatedBadge from '@/components/AnimatedBadge'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Button } from '@/components/ui/button'
@@ -17,7 +19,7 @@ const Home = () => {
         <Header />
         <div className="my-[8rem] flex h-full flex-col items-center justify-center gap-4 px-3">
           <div className="flex w-full flex-col items-center justify-center gap-2">
-            <AniamtedBadge />
+            <AnimatedBadge />
             <Image
               src="/images/syntaxUI.svg"
               alt="SyntaxUI"
