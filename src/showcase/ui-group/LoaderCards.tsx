@@ -13,6 +13,7 @@ import PulsatingGradientLoader from '@/showcase/components/loaders/PulsatingGrad
 import Card from './Card'
 import WaveLoader from '../components/loaders/WaveLoader'
 import SpiralLoader from '../components/loaders/SpiralLoader'
+import RippleWaveLoader from '../components/loaders/RippleWaveLoader'
 
 interface LoaderCardProps {
   title: string
@@ -83,6 +84,11 @@ const data: LoaderCardProps[] = [
     title: 'Spiral',
     link: '/components/loaders/spiral',
     component: <SpiralLoader />,
+  },
+  {
+    title: 'Ripple Wave',
+    link: '/components/loaders/ripple-wave',
+    component: <RippleWaveLoader />,
   },
 ]
 
