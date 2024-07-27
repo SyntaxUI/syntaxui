@@ -15,6 +15,7 @@ import WaveLoader from '../components/loaders/WaveLoader'
 import SpiralLoader from '../components/loaders/SpiralLoader'
 import RippleWaveLoader from '../components/loaders/RippleWaveLoader'
 import ParticleSwarmLoader from '../components/loaders/ParticleSwarmLoader'
+import WhirlpoolLoader from '../components/loaders/WhirlpoolLoader'
 
 interface LoaderCardProps {
   title: string
@@ -95,6 +96,11 @@ const data: LoaderCardProps[] = [
     title: 'Particle Swarm',
     link: '/components/loaders/particle-swarm',
     component: <ParticleSwarmLoader />,
+  },
+  {
+    title: 'Whirlpool',
+    link: '/components/loaders/whirlpool',
+    component: <WhirlpoolLoader />,
   },
 ]
 
