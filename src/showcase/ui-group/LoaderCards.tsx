@@ -12,6 +12,7 @@ import NeonGlowLoader from '@/showcase/components/loaders/NeonGlowLoader'
 import PulsatingGradientLoader from '@/showcase/components/loaders/PulsatingGradientLoader'
 import Card from './Card'
 import WaveLoader from '../components/loaders/WaveLoader'
+import SpiralLoader from '../components/loaders/SpiralLoader'
 
 interface LoaderCardProps {
   title: string
@@ -77,6 +78,11 @@ const data: LoaderCardProps[] = [
     title: 'Wave',
     link: '/components/loaders/wave',
     component: <WaveLoader />,
+  },
+  {
+    title: 'Spiral',
+    link: '/components/loaders/spiral',
+    component: <SpiralLoader />,
   },
 ]
 
