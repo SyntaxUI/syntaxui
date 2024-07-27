@@ -16,6 +16,7 @@ import SpiralLoader from '../components/loaders/SpiralLoader'
 import RippleWaveLoader from '../components/loaders/RippleWaveLoader'
 import ParticleSwarmLoader from '../components/loaders/ParticleSwarmLoader'
 import WhirlpoolLoader from '../components/loaders/WhirlpoolLoader'
+import ConstellationLoader from '../components/loaders/ConstellationLoader'
 
 interface LoaderCardProps {
   title: string
@@ -101,6 +102,11 @@ const data: LoaderCardProps[] = [
     title: 'Whirlpool',
     link: '/components/loaders/whirlpool',
     component: <WhirlpoolLoader />,
+  },
+  {
+    title: 'Constellation',
+    link: '/components/loaders/constellation',
+    component: <ConstellationLoader />,
   },
 ]
 
