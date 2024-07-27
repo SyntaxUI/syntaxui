@@ -11,6 +11,7 @@ import BounceLoader from '@/showcase/components/loaders/BounceLoader'
 import NeonGlowLoader from '@/showcase/components/loaders/NeonGlowLoader'
 import PulsatingGradientLoader from '@/showcase/components/loaders/PulsatingGradientLoader'
 import Card from './Card'
+import WaveLoader from '../components/loaders/WaveLoader'
 
 interface LoaderCardProps {
   title: string
@@ -71,6 +72,11 @@ const data: LoaderCardProps[] = [
     link: '/components/loaders/pulsating-gradient',
     component: <PulsatingGradientLoader />,
     hide: true,
+  },
+  {
+    title: 'Wave',
+    link: '/components/loaders/wave',
+    component: <WaveLoader />,
   },
 ]
 
