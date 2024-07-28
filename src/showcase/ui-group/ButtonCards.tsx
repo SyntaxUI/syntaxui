@@ -13,6 +13,7 @@ import BounceButton from '../components/button/BounceButton'
 import MagneticButton from '../components/button/MagneticButton'
 import { title } from 'process'
 import StarWarsButton from '../components/button/StarWarsButton'
+import EmojiConfettiButton from '../components/button/EmojiConfettiButton'
 
 const data = [
   {
@@ -44,6 +45,11 @@ const data = [
     title: 'Star Wars',
     link: '/components/button/star-wars-button',
     component: <StarWarsButton />,
+  },
+  {
+    title: 'Emoji Confetti',
+    link: '/components/button/emoji-confetti-button',
+    component: <EmojiConfettiButton />,
   },
   {
     title: 'Shine',
