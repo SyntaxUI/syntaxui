@@ -5,6 +5,7 @@ import TextFlip from '../components/text/TextFlip'
 import TextGradient from '../components/text/TextGradient'
 import TextRotate from '../components/text/TextRotate'
 import Card from './Card'
+import TextScramble from '../components/text/TextScramble'
 
 interface ToggleCardProps {
   title: string
@@ -37,6 +38,11 @@ const data: ToggleCardProps[] = [
     title: 'Text Gradient',
     link: '/components/text/text-gradient',
     component: <TextGradient />,
+  },
+  {
+    title: 'Text Scramble',
+    link: '/components/text/text-scramble',
+    component: <TextScramble />,
   },
 ]
 
