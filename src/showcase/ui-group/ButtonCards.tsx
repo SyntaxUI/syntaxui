@@ -11,6 +11,8 @@ import TextRevealButton from '../components/button/TextRevealButton'
 import Card from './Card'
 import BounceButton from '../components/button/BounceButton'
 import MagneticButton from '../components/button/MagneticButton'
+import { title } from 'process'
+import StarWarsButton from '../components/button/StarWarsButton'
 
 const data = [
   {
@@ -39,14 +41,9 @@ const data = [
     component: <ShimmerButton />,
   },
   {
-    title: 'Border Glow',
-    link: '/components/button/border-glow-button',
-    component: <BorderGlowButton />,
-  },
-  {
-    title: 'Gradient Fill',
-    link: '/components/button/gradient-fill-button',
-    component: <GradientFillButton />,
+    title: 'Star Wars',
+    link: '/components/button/star-wars-button',
+    component: <StarWarsButton />,
   },
   {
     title: 'Shine',
@@ -64,10 +61,20 @@ const data = [
     component: <BounceButton />,
   },
   {
-    title: "Magnetic Button",
-    link: "/components/button/magnetic-button",
-    component: <MagneticButton />
-  }
+    title: 'Magnetic Button',
+    link: '/components/button/magnetic-button',
+    component: <MagneticButton />,
+  },
+  {
+    title: 'Border Glow',
+    link: '/components/button/border-glow-button',
+    component: <BorderGlowButton />,
+  },
+  {
+    title: 'Gradient Fill',
+    link: '/components/button/gradient-fill-button',
+    component: <GradientFillButton />,
+  },
 ]
 
 const ButtonCards = () => {
@@ -76,16 +83,6 @@ const ButtonCards = () => {
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {data.map((item, index) => (
           <Link href={item.link} key={index} className="no-underline">
-            {/* <div className="overflow group rounded-xl border border-white ring-1 ring-zinc-200 transition-all ease-in-out hover:cursor-pointer">
-              <div className="flex h-[9rem] items-center justify-center overflow-hidden rounded-t-xl border-b bg-gray-50 text-xs text-gray-400 transition-all ease-in-out group-hover:bg-gray-100 md:h-[12rem]">
-                {item.component}
-              </div>
-              <div className="flex items-center justify-between px-3 py-4">
-                <div className="text-sm font-medium text-gray-800">
-                  {item.title}
-                </div>
-              </div>
-            </div> */}
             <Card title={item.title}>{item.component}</Card>
           </Link>
         ))}
