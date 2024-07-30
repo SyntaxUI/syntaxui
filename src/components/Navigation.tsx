@@ -321,13 +321,17 @@ export const navigation: Array<NavGroup> = [
       {
         title: 'Background',
         href: '/effects/background',
-        tag: 'new',
       },
       {
         title: 'Gradients',
         href: '/effects/gradients',
       },
       { title: 'Image Fade', href: '/effects/image-fade' },
+      {
+        title: 'Emoji Confetti',
+        href: '/effects/emoji-confetti',
+        tag: 'new',
+      },
     ],
   },
 ]

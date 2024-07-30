@@ -13,7 +13,7 @@ interface Particle {
   rotationSpeed: number
 }
 
-const EmojiConfettiButton: React.FC = () => {
+const EmojiConfetti: React.FC = () => {
   const [isExploding, setIsExploding] = useState(false)
   const buttonRef = useRef<HTMLButtonElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -111,7 +111,7 @@ const EmojiConfettiButton: React.FC = () => {
         whileTap={{ scale: 0.95 }}
         onClick={handleClick}
       >
-        Celebrate!
+        Click Me! 🎉
       </motion.button>
       {isExploding && (
         <canvas
@@ -124,4 +124,4 @@ const EmojiConfettiButton: React.FC = () => {
   )
 }
 
-export default EmojiConfettiButton
+export default EmojiConfetti

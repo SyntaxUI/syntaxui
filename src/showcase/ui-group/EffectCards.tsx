@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import DotPatternBackground from '../effects/BackgroundDots'
 import Card from './Card'
+import EmojiConfetti from '../effects/EmojiConfetti'
 
 const data = [
   {
@@ -23,6 +24,12 @@ const data = [
       <DotPatternBackground className="relative z-0" dotColor="#fb3a5d" />
     ),
     link: '/effects/background',
+  },
+  {
+    id: 4,
+    title: 'Emoji Confetti',
+    link: '/effects/emoji-confetti',
+    preview: <EmojiConfetti />,
   },
 ]
 

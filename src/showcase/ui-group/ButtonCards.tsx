@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import ThreeDButton from '@/showcase/components/button/3DButton'
 import BorderGlowButton from '@/showcase/components/button/BorderGlowButton'
 import GradientFillButton from '@/showcase/components/button/GradientFillButton'
@@ -7,13 +6,12 @@ import NeubrutalismButton from '@/showcase/components/button/NeubrutalismButton'
 import ShimmerButton from '@/showcase/components/button/ShimmerButton'
 import ShineButton from '@/showcase/components/button/ShineButton'
 import StitchesButton from '@/showcase/components/button/StitchesButton'
-import TextRevealButton from '../components/button/TextRevealButton'
-import Card from './Card'
+import Link from 'next/link'
 import BounceButton from '../components/button/BounceButton'
 import MagneticButton from '../components/button/MagneticButton'
-import { title } from 'process'
 import StarWarsButton from '../components/button/StarWarsButton'
-import EmojiConfettiButton from '../components/button/EmojiConfettiButton'
+import TextRevealButton from '../components/button/TextRevealButton'
+import Card from './Card'
 
 const data = [
   {
@@ -46,11 +44,7 @@ const data = [
     link: '/components/button/star-wars-button',
     component: <StarWarsButton />,
   },
-  {
-    title: 'Emoji Confetti',
-    link: '/components/button/emoji-confetti-button',
-    component: <EmojiConfettiButton />,
-  },
+
   {
     title: 'Shine',
     link: '/components/button/shine-button',
