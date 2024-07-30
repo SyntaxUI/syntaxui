@@ -22,3 +22,4 @@
 - Grid Patterns are taken from [Hero Patterns](https://heropatterns.com/)
 - [Magnetic Button](https://syntaxui.com/components/button/magnetic-button) - [Nikhil Nigam](https://x.com/nikhil_nigamnik)
 - [Minimal Stepper](https://syntaxui.com/components/stepper) - [Nikhil Nigam](https://x.com/nikhil_nigamnik)
+- [Feedback Component](https://syntaxui.com/components/stepper) - [Nikhil Nigam](https://x.com/nikhil_nigamnik)
