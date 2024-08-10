@@ -12,6 +12,7 @@ import MagneticButton from '../components/button/MagneticButton'
 import StarWarsButton from '../components/button/StarWarsButton'
 import TextRevealButton from '../components/button/TextRevealButton'
 import Card from './Card'
+import RotatingCompleteButton from '@/showcase/components/button/3DButton'
 
 const data = [
   {
@@ -54,6 +55,11 @@ const data = [
     title: 'Text Reveal',
     link: '/components/button/text-reveal-button',
     component: <TextRevealButton />,
+  },
+  {
+    title: 'Rotating Complete',
+    link: '/components/button/rotating-complete-button',
+    component: <RotatingCompleteButton />,
   },
   {
     title: 'Bounce',
