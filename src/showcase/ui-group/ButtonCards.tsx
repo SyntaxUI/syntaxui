@@ -12,7 +12,8 @@ import MagneticButton from '../components/button/MagneticButton'
 import StarWarsButton from '../components/button/StarWarsButton'
 import TextRevealButton from '../components/button/TextRevealButton'
 import Card from './Card'
-import RotatingCompleteButton from '@/showcase/components/button/3DButton'
+import RotatingCompleteButton from '@/showcase/components/button/RotatingCompleteButton'
+import EcoModeButton from '../components/button/EcoModeButton'
 
 const data = [
   {
@@ -60,6 +61,11 @@ const data = [
     title: 'Rotating Complete',
     link: '/components/button/rotating-complete-button',
     component: <RotatingCompleteButton />,
+  },
+  {
+    title: 'Eco Mode',
+    link: '/components/button/eco-mode-button',
+    component: <EcoModeButton />,
   },
   {
     title: 'Bounce',
