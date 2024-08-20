@@ -3,7 +3,11 @@
 import React, { useState } from 'react'
 import { X } from 'lucide-react'
 
-const TagInput: React.FC = () => {
+interface TagInputProps {
+  unique: boolean
+}
+
+const TagInput: React.FC<TagInputProps> = ({ unique = false }) => {
   const [keywords, setKeywords] = useState<string[]>(['ansub', 'syntax'])
 
   const onKeywordsChange = (newKeywords: string[]) => {
@@ -19,7 +23,11 @@ const TagInput: React.FC = () => {
       inputValue.trim() !== ''
     ) {
       event.preventDefault()
-      const newKeywords = [...keywords, inputValue.trim()]
+      const newKeyword = inputValue.trim()
+      const newKeywords = unique
+        ? [...new Set([...keywords, newKeyword])]
+        : [...keywords, newKeyword]
+
       setKeywords(newKeywords)
       onKeywordsChange(newKeywords)
       setInputValue('')
@@ -40,7 +48,10 @@ const TagInput: React.FC = () => {
       .map((keyword) => keyword.trim())
       .filter(Boolean)
     if (keywordsToAdd.length) {
-      const newKeywords = [...keywords, ...keywordsToAdd]
+      const newKeywords = unique
+        ? [...new Set([...keywords, ...keywordsToAdd])]
+        : [...keywords, ...keywordsToAdd]
+
       setKeywords(newKeywords)
       onKeywordsChange(newKeywords)
       setInputValue('')
@@ -69,7 +80,7 @@ const TagInput: React.FC = () => {
   }
 
   return (
-    <div className="flex w-full flex-wrap items-center rounded-lg border p-2">
+    <div className="flex w-full flex-wrap items-center rounded-lg border border-gray-200 p-2 dark:border-gray-600">
       <div
         className="flex w-full flex-wrap overflow-y-auto"
         style={{ maxHeight: '300px' }}
@@ -91,7 +102,7 @@ const TagInput: React.FC = () => {
           onKeyDown={handleKeyDown}
           onPaste={handlePaste}
           onBlur={(e) => handleBlur(e)}
-          className="my-1 flex-1 text-sm outline-none"
+          className="my-1 flex-1 bg-transparent text-sm outline-none"
           placeholder="Type keyword and press Enter..."
         />
       </div>

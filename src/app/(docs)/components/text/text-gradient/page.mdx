@@ -1,0 +1,69 @@
+
+import TextGradient from '@/showcase/components/text/TextGradient'
+
+export const metadata = {
+  title: 'Text Gradient',
+  description: 'A Text ticker component using Framer Motion and Tailwind CSS',
+}
+
+<BackButton href="/components/text" />
+
+# Text Gradient
+
+<div className="my-4"></div>{' '}
+
+<Preview>
+  <TextGradient />
+</Preview>
+
+### Step 1. Add the Tailwind CSS configuration
+
+<CodeGroup title="tailwind.config.js">
+
+```js
+module.exports = {
+  theme: {
+    extend: {
+      animation: {
+        textGradient: 'textGradient 5s ease infinite',
+      },
+      keyframes: {
+        textGradient: {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center',
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center',
+          },
+        },
+      },
+    },
+  },
+}
+
+```
+
+</CodeGroup>
+
+
+### Step 2. Add the component 
+
+<CodeGroup title="TextGradient.tsx">
+
+```js {{ title: 'React' }}
+
+const TextGradient = () => {
+  return (
+    <h1 className="animate-textGradient bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 bg-clip-text text-3xl font-semibold text-transparent">
+      SyntaxUI
+    </h1>
+  )
+}
+
+export default TextGradient
+
+
+```
+</CodeGroup>

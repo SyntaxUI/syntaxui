@@ -21,6 +21,9 @@ Build faster & Launch sooner with SyntaxUI. Get instant access to pre-built, Tai
 - Framer Motion-enhanced interactions for stunning animations
 - Easy to use: just copy, paste, and customize
 
+## Activity
+![Alt](https://repobeats.axiom.co/api/embed/386106ba46f02119388dff0847760deb0e6dfb03.svg "Repobeats analytics image")
+
 
 ## Sponsors
 

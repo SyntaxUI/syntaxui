@@ -10,6 +10,13 @@ import ClassicLoader from '@/showcase/components/loaders/ClassicLoader'
 import BounceLoader from '@/showcase/components/loaders/BounceLoader'
 import NeonGlowLoader from '@/showcase/components/loaders/NeonGlowLoader'
 import PulsatingGradientLoader from '@/showcase/components/loaders/PulsatingGradientLoader'
+import Card from './Card'
+import WaveLoader from '../components/loaders/WaveLoader'
+import SpiralLoader from '../components/loaders/SpiralLoader'
+import RippleWaveLoader from '../components/loaders/RippleWaveLoader'
+import ParticleSwarmLoader from '../components/loaders/ParticleSwarmLoader'
+import WhirlpoolLoader from '../components/loaders/WhirlpoolLoader'
+import ConstellationLoader from '../components/loaders/ConstellationLoader'
 
 interface LoaderCardProps {
   title: string
@@ -71,6 +78,36 @@ const data: LoaderCardProps[] = [
     component: <PulsatingGradientLoader />,
     hide: true,
   },
+  {
+    title: 'Wave',
+    link: '/components/loaders/wave',
+    component: <WaveLoader />,
+  },
+  {
+    title: 'Spiral',
+    link: '/components/loaders/spiral',
+    component: <SpiralLoader />,
+  },
+  {
+    title: 'Ripple Wave',
+    link: '/components/loaders/ripple-wave',
+    component: <RippleWaveLoader />,
+  },
+  {
+    title: 'Particle Swarm',
+    link: '/components/loaders/particle-swarm',
+    component: <ParticleSwarmLoader />,
+  },
+  {
+    title: 'Whirlpool',
+    link: '/components/loaders/whirlpool',
+    component: <WhirlpoolLoader />,
+  },
+  {
+    title: 'Constellation',
+    link: '/components/loaders/constellation',
+    component: <ConstellationLoader />,
+  },
 ]
 
 export default function LoaderCards() {
@@ -80,14 +117,15 @@ export default function LoaderCards() {
         .filter((item) => !item.hide)
         .map((item, i) => (
           <Link href={item.link} key={i}>
-            <div className="overflow group group rounded-xl border border-white ring-1 ring-zinc-200 transition-all ease-in-out hover:cursor-pointer">
+            {/* <div className="overflow group group rounded-xl border border-white ring-1 ring-zinc-200 transition-all ease-in-out hover:cursor-pointer">
               <div className="flex h-[9rem] items-center justify-center overflow-hidden rounded-t-xl border-b bg-gray-50 text-xs text-gray-400 transition-all ease-in-out group-hover:bg-gray-100 md:h-[12rem]">
                 {item.component}
               </div>
               <div className="w-full p-4 text-sm font-medium text-gray-800">
                 {item.title}
               </div>
-            </div>
+            </div> */}
+            <Card title={item.title}>{item.component}</Card>
           </Link>
         ))}
     </div>

@@ -1,8 +1,8 @@
+import headlessuiPlugin from '@headlessui/tailwindcss'
+import typographyPlugin from '@tailwindcss/typography'
 import { type Config } from 'tailwindcss'
 import typographyStyles from './typography'
-import typographyPlugin from '@tailwindcss/typography'
-import headlessuiPlugin from '@headlessui/tailwindcss'
-import { transform } from 'next/dist/build/swc'
+import { text } from 'stream/consumers'
 
 export default {
   content: ['./src/**/*.{js,mjs,jsx,ts,tsx,mdx}'],
@@ -28,6 +28,7 @@ export default {
     extend: {
       colors: {
         gray: {
+          100: '#fafafa',
           600: '#666666',
           700: '#333333',
           800: '#222222',
@@ -83,6 +84,10 @@ export default {
             'box-shadow': '0 0 0 0 theme("colors.red.500/0")',
             transform: 'scale(1)',
           },
+        },
+        'hover-pulse': {
+          '0%': { boxShadow: '0 0 0 0 rgba(255, 0, 0, 0.7)' },
+          '100%': { boxShadow: '0 0 0 2em rgba(255, 0, 0, 0)' },
         },
         'hover-tada': {
           '0%': {
@@ -212,12 +217,31 @@ export default {
             '--discord-button-x': '50px',
           },
         },
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        },
+        'logo-cloud': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(calc(-100% - 4rem))' },
+        },
+        textGradient: {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center',
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'skew-scroll': 'skew-scroll 20s linear infinite',
         buttonheartbeat: 'buttonheartbeat 2s infinite ease-in-out',
+        'hover-pulse': 'hover-pulse 1s',
         'hover-tada': 'hover-tada 1s ease-in-out',
         'hover-jiggle': 'hover-jiggle 0.3s ease-in-out',
         'tag-input-scale-in': 'tag-input-scale-in 0.3s ease-in-out forwards',
@@ -225,6 +249,9 @@ export default {
         'hover-vibrate': 'hover-vibrate 0.4s ease-in-out',
         'discord-button':
           'discord-button-angle 6s linear infinite, discord-button-x 6s 0.5s ease-in-out infinite',
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+        'logo-cloud': 'logo-cloud 30s linear infinite',
+        textGradient: 'textGradient 5s ease infinite',
       },
     },
   },

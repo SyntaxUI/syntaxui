@@ -16,6 +16,7 @@ interface NavGroup {
   links: Array<{
     title: string
     href: string
+    tag?: string
   }>
 }
 
@@ -24,23 +25,11 @@ function useInitialValue<T>(value: T, condition = true) {
   return condition ? initialValue : value
 }
 
-function TopLevelNavItem({
-  href,
-  children,
-}: {
-  href: string
-  children: React.ReactNode
-}) {
-  return (
-    <li className="md:hidden">
-      <Link
-        href={href}
-        className="block py-1 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-      >
-        {children}
-      </Link>
-    </li>
-  )
+function matchPath(pathname: string, href: string) {
+  if (href === '/components') {
+    return pathname === '/components'
+  }
+  return pathname.startsWith(href)
 }
 
 function NavLink({
@@ -64,16 +53,12 @@ function NavLink({
         'flex justify-between gap-2 py-1 pr-3 text-sm transition',
         isAnchorLink ? 'pl-7' : 'pl-4',
         active
-          ? 'text-zinc-900 dark:text-white'
-          : 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white',
+          ? 'text-gray-900 dark:text-white'
+          : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white',
       )}
     >
       <span className="truncate">{children}</span>
-      {tag && (
-        <Tag variant="small" color="zinc">
-          {tag}
-        </Tag>
-      )}
+      {tag && <Tag>{tag}</Tag>}
     </Link>
   )
 }
@@ -105,7 +90,8 @@ function VisibleSectionHighlight({
     ? Math.max(1, visibleSections.length) * itemHeight
     : itemHeight
   let top =
-    group.links.findIndex((link) => link.href === pathname) * itemHeight +
+    group.links.findIndex((link) => matchPath(pathname, link.href)) *
+      itemHeight +
     firstVisibleSectionIndex * itemHeight
 
   return (
@@ -130,7 +116,9 @@ function ActivePageMarker({
 }) {
   let itemHeight = remToPx(2)
   let offset = remToPx(0.25)
-  let activePageIndex = group.links.findIndex((link) => link.href === pathname)
+  let activePageIndex = group.links.findIndex((link) =>
+    matchPath(pathname, link.href),
+  )
   let top = offset + activePageIndex * itemHeight
 
   return (
@@ -149,9 +137,11 @@ function ActivePageMarker({
 function NavigationGroup({
   group,
   className,
+  tag,
 }: {
   group: NavGroup
   className?: string
+  tag?: string
 }) {
   // If this is the mobile navigation then we always render the initial
   // state, so that the state does not change during the close animation.
@@ -163,7 +153,7 @@ function NavigationGroup({
   )
 
   let isActiveGroup =
-    group.links.findIndex((link) => link.href === pathname) !== -1
+    group.links.findIndex((link) => matchPath(pathname, link.href)) !== -1
 
   return (
     <li className={clsx('relative mt-6', className)}>
@@ -191,11 +181,15 @@ function NavigationGroup({
         <ul role="list" className="border-l border-transparent">
           {group.links.map((link) => (
             <motion.li key={link.href} layout="position" className="relative">
-              <NavLink href={link.href} active={link.href === pathname}>
+              <NavLink
+                href={link.href}
+                active={matchPath(pathname, link.href)}
+                tag={link.tag}
+              >
                 {link.title}
               </NavLink>
               <AnimatePresence mode="popLayout" initial={false}>
-                {link.href === pathname && sections.length > 0 && (
+                {matchPath(pathname, link.href) && sections.length > 0 && (
                   <motion.ul
                     role="list"
                     initial={{ opacity: 0 }}
@@ -233,23 +227,22 @@ function NavigationGroup({
 export const navigation: Array<NavGroup> = [
   {
     title: 'Getting Started',
-    links: [{ title: 'Introduction', href: '/components' }],
+    links: [
+      { title: 'Introduction', href: '/components' },
+      { title: 'Playground', href: '/playground' },
+    ],
   },
   {
     title: 'Components',
     links: [
       {
+        title: 'Accordion',
+        href: '/blocks/accordion',
+      },
+      {
         title: 'Button',
         href: '/components/button',
-      },
-      // { title: 'Breadcrumb', href: '/components/breadcrumb' },
-      {
-        title: 'Features',
-        href: '/components/features',
-      },
-      {
-        title: 'Footer',
-        href: '/components/footer',
+        tag: 'new',
       },
       {
         title: 'Input',
@@ -258,11 +251,6 @@ export const navigation: Array<NavGroup> = [
       {
         title: 'Loaders',
         href: '/components/loaders',
-      },
-
-      {
-        title: 'Pricing',
-        href: '/components/pricing',
       },
       {
         title: 'Tabs',
@@ -275,6 +263,42 @@ export const navigation: Array<NavGroup> = [
       {
         title: 'Toggle',
         href: '/components/toggle',
+      },
+      {
+        title: 'Stepper',
+        href: '/components/stepper',
+        tag: 'new',
+      },
+    ],
+  },
+  {
+    title: 'Blocks',
+    links: [
+      {
+        title: 'Banner',
+        href: '/blocks/banner',
+        tag: 'new',
+      },
+      {
+        title: 'Features',
+        href: '/blocks/features',
+      },
+      {
+        title: 'Footer',
+        href: '/blocks/footer',
+      },
+      {
+        title: 'Logo Cloud',
+        href: '/blocks/logo-cloud',
+      },
+      {
+        title: 'Pricing',
+        href: '/blocks/pricing',
+      },
+      {
+        title: 'Testimonial',
+        href: '/blocks/testimonial',
+        tag: 'new',
       },
     ],
   },
@@ -295,34 +319,27 @@ export const navigation: Array<NavGroup> = [
     title: 'Effects',
     links: [
       {
+        title: 'Background',
+        href: '/effects/background',
+      },
+      {
         title: 'Gradients',
         href: '/effects/gradients',
       },
       { title: 'Image Fade', href: '/effects/image-fade' },
+      {
+        title: 'Emoji Confetti',
+        href: '/effects/emoji-confetti',
+        tag: 'new',
+      },
     ],
   },
-  // {
-  //   title: 'Hooks',
-  //   links: [
-  //     {
-  //       title: 'useVisible()',
-  //       href: '/hooks/useVisible',
-  //     },
-  //     {
-  //       title: 'useMediaSizes()',
-  //       href: '/hooks/useMediaSizes',
-  //     },
-  //   ],
-  // },
 ]
 
 export function Navigation(props: React.ComponentPropsWithoutRef<'nav'>) {
   return (
     <nav {...props}>
       <ul role="list">
-        {/* <TopLevelNavItem href="/">API</TopLevelNavItem>
-        <TopLevelNavItem href="#">Documentation</TopLevelNavItem>
-        <TopLevelNavItem href="#">Support</TopLevelNavItem> */}
         {navigation.map((group, groupIndex) => (
           <NavigationGroup
             key={group.title}

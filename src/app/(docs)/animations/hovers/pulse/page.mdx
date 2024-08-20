@@ -1,0 +1,43 @@
+export const metadata = {
+  title: 'Pulse Hover Effect',
+  description:
+    'A Pulse hover effect animation that gives a playful and energetic effect to your React and Next.js projects, built using Tailwind CSS.',
+}
+
+import Link from 'next/link'
+import { HoverPulseButton } from '@/showcase/animations/hover/HoverPulseButton'
+import { ChevronLeft } from 'lucide-react'
+import PreviewCodeGroup from '@/components/code/PreviewCodeGroup'
+
+<Link className="flex flex-row items-center" href="/animations/hovers">
+  <ChevronLeft size={17} />
+  Back
+</Link>
+
+# Pulse
+
+<PreviewCodeGroup
+  preview={
+    <div className="group flex w-full items-center justify-center  py-[20rem]">
+      <HoverPulseButton />
+    </div>
+  }
+  code={`
+{
+  animation: {
+    'hover-pulse': 'hover-pulse 1s ease-in-out'
+  },
+  keyframes: {
+    'hover-pulse': {
+      '0%': {
+        boxShadow: '0 0 0 0 rgba(255, 0, 0, 0.7)'
+      },
+      '100%': {
+        boxShadow: '0 0 0 2em rgba(255, 0, 0, 0)'
+      }
+    }
+  }
+}
+`}
+  language="javascript"
+/>

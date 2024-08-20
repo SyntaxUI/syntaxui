@@ -57,7 +57,9 @@ const Tab = ({ text, selected, setSelected, index, children }: TabProps) => {
       onClick={() => setSelected(tabs[index])}
       transition={transition}
       className={`${
-        selected ? 'bg-red-500/15 text-red-500 ' : ' hover:text-gray-900'
+        selected
+          ? 'bg-red-500/15 text-red-500 '
+          : ' hover:text-gray-900 dark:hover:text-gray-100'
       } relative flex items-center rounded-full px-4 py-2 text-sm font-medium text-gray-500 transition-colors duration-300 focus-within:outline-red-500/50`}
     >
       {children}
@@ -88,7 +90,7 @@ const IconTabs = ({ center }: { center?: boolean }) => {
     <div
       className={` ${
         center ? 'justify-center ' : ''
-      } border-black-500/25 mb-8 flex flex-wrap items-center gap-2 border-b pb-2`}
+      } mb-8 flex flex-wrap items-center gap-2 border-b border-gray-200 pb-2 dark:border-gray-600`}
     >
       {tabs.map((tab, index) => (
         <Tab

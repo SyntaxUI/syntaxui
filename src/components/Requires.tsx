@@ -1,8 +1,13 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const RequiresTailwind = () => {
   return (
-    <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer">
+    <Link
+      href="https://tailwindcss.com"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <div className="inline-flex h-6 items-center justify-center gap-1 rounded-full border border-cyan-100 bg-cyan-100/30 px-1">
         <Image
           src="/images/tailwind.svg"
@@ -12,13 +17,13 @@ export const RequiresTailwind = () => {
         />
         <div className="text-xs font-medium text-cyan-500">Tailwind CSS</div>
       </div>
-    </a>
+    </Link>
   )
 }
 
 export const RequiresFramerMotion = () => {
   return (
-    <a
+    <Link
       href="https://www.framer.com/motion/"
       target="_blank"
       rel="noopener noreferrer"
@@ -32,13 +37,17 @@ export const RequiresFramerMotion = () => {
         />
         <div className="text-xs font-medium text-white">Framer Motion</div>
       </div>
-    </a>
+    </Link>
   )
 }
 
 export const RequiresShadcn = () => {
   return (
-    <a href="https://ui.shadcn.com/" target="_blank" rel="noopener noreferrer">
+    <Link
+      href="https://ui.shadcn.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <div className="inline-flex h-6 items-center justify-center gap-1 rounded-full border border-gray-100 bg-black px-1">
         <Image
           src="/images/shadcn.svg"
@@ -48,6 +57,6 @@ export const RequiresShadcn = () => {
         />
         <div className="text-xs font-medium text-white">shadcn/ui</div>
       </div>
-    </a>
+    </Link>
   )
 }

@@ -8,7 +8,10 @@ interface BackButtonProps {
 
 export const BackButton: FC<BackButtonProps> = ({ href }) => {
   return (
-    <Link className="mb-8 flex flex-row items-center" href={href}>
+    <Link
+      className="mb-8 flex flex-row items-center text-red-500 no-underline hover:text-red-500/70"
+      href={href}
+    >
       <ChevronLeft size={17} />
       Back
     </Link>

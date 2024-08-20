@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import { cn } from '@/lib/utils'
 
 const SimpleToggle = ({
   onToggle,
@@ -18,23 +18,22 @@ const SimpleToggle = ({
   }
 
   return (
-    <motion.button
-      className={`flex h-[25px] w-[45px] cursor-pointer items-center rounded-full p-[2px]`}
+    <button
+      className={`relative h-7 w-12 cursor-pointer rounded-full duration-200`}
       onClick={handleToggle}
-      animate={{ backgroundColor: toggled ? '#fb3a5d' : '#24252d50' }}
-      transition={{ duration: 0.2 }}
+      style={{
+        backgroundColor: toggled ? '#fb3a5d' : '#24252d50',
+      }}
     >
-      <motion.span
-        className="rounded-full bg-white shadow-lg"
-        layout
-        transition={{ duration: 0.2 }}
-        style={{
-          width: toggled ? '19px' : '16px',
-          height: toggled ? '19px' : '16px',
-          marginLeft: toggled ? '20px' : '2px',
-        }}
+      <span
+        className={cn(
+          `absolute left-0 top-0 rounded-full bg-white shadow-lg transition-all duration-200`,
+          toggled ? 'translate-x-full transform' : 'translate-x-0 transform',
+          toggled ? 'h-5 w-5' : 'h-4 w-4',
+          toggled ? 'm-1' : 'm-1.5',
+        )}
       />
-    </motion.button>
+    </button>
   )
 }
 

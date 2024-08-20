@@ -1,7 +1,7 @@
 'use client'
 
 import { useContext, useEffect, useMemo, useState } from 'react'
-import { CodeGroupContext } from './CodeGroup'
+import { CodeGroupContext, useCodeGroup } from './CodeGroup'
 import { cn } from '@/lib/utils'
 import { CopyButton } from './CopyButton'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
@@ -31,7 +31,7 @@ export default function Code({
   language: string
 }) {
   const code = useMemo(() => (rawCode ?? '').trim(), [rawCode])
-  const inCodeGroup = useContext(CodeGroupContext)
+  const { inCodeGroup, hasTitle: rounded } = useCodeGroup()
   const inline = useMemo(() => {
     return code.trim().split('\n').length === 1 && !inCodeGroup
   }, [inCodeGroup, code])
@@ -52,11 +52,12 @@ export default function Code({
   return (
     <div
       className={cn(
-        'relative bg-zinc-900 pb-0',
-        inCodeGroup ? 'rounded-b-lg rounded-t-none' : 'rounded-lg',
+        'prose overflow-x-auto border border-gray-700 bg-zinc-900 pb-0 dark:border-gray-700',
+        rounded ? 'rounded-b-lg rounded-t-none' : 'rounded-lg',
+        inCodeGroup && 'border-0',
       )}
     >
-      <CopyButton value={code} className="z-10 border-none" />
+      <CopyButton value={code} className="z-10 border-gray-600" />
       <SyntaxHighlighter language={lang} wrapLines wrapLongLines style={theme}>
         {code}
       </SyntaxHighlighter>

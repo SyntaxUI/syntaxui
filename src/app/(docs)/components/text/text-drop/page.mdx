@@ -1,0 +1,116 @@
+import TextDrop from '@/showcase/components/text/text-drop/TextDrop'
+
+export const metadata = {
+  title: 'Text Drop',
+  description: 'A Text drop component using Framer Motion and Tailwind CSS',
+}
+
+<BackButton href="/components/text" />
+
+# Text Drop
+
+<div className="my-4"></div>{' '}
+
+<Preview>
+  <TextDrop text="SyntaxUI is a UI library" />
+</Preview>
+
+Step 1. Create a DropCharacters component
+
+<CodeGroup title="DropCharacters.tsx">
+
+```js {{ title: 'React' }}
+import { motion } from 'framer-motion'
+import React from 'react'
+
+interface AnimatedCharactersProps {
+  text: string
+  className?: string
+}
+
+const DropCharacters: React.FC<AnimatedCharactersProps> = ({
+  text,
+  className = '',
+}) => {
+  const item = {
+    hidden: {
+      y: '200%',
+      opacity: 0,
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 },
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 },
+    },
+  }
+
+  return (
+    <div className={className}>
+      {text.split(' ').map((word, wordIndex) => (
+        <span key={wordIndex} className="whitespace-nowrap">
+          {[...word, '\u00A0'].map((char, charIndex) => (
+            <span key={charIndex} className="inline-block overflow-hidden">
+              <motion.span className="inline-block" variants={item}>
+                {char}
+              </motion.span>
+            </span>
+          ))}
+        </span>
+      ))}
+    </div>
+  )
+}
+
+export default DropCharacters
+```
+
+</CodeGroup>
+
+Step 2. Create a TextDrop component
+
+<CodeGroup title="TextDrop.tsx">
+
+```jsx
+import { motion } from 'framer-motion'
+import DropCharacters from './DropCharacters'
+
+const TextDrop = ({ text }: { text: string }) => {
+  const container = {
+    visible: {
+      transition: {
+        staggerChildren: 0.025,
+      },
+    },
+  }
+
+  return (
+    <motion.div initial="hidden" animate="visible" variants={container}>
+      <div>
+        <DropCharacters
+          text={text}
+          className="text-3xl font-semibold tracking-tight text-red-500" // Add your own class names here
+        />
+      </div>
+    </motion.div>
+  )
+}
+
+export default TextDrop
+```
+
+</CodeGroup>
+
+Step 3. Call the TextDrop component in your page
+
+<CodeGroup title="page.tsx">
+
+```jsx
+import TextDrop from './TextDrop'
+
+export default function Page() {
+  return <TextDrop text="SyntaxUI is a UI library" />
+}
+```
+
+</CodeGroup>
