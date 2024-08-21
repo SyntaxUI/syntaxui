@@ -17,14 +17,20 @@ const direction = [
 
 
 ]
+const gradientShape = [
+  { name: 'Ellipse', value: "ellipse" },
 
+  { name: 'Circle', value: "circle" },
+
+]
 const CustomGradientGenerator = () => {
   const [copied, setCopied] = useState(false)
   const [fromColor, setFromColor] = useState("#aabbcc");
   const [viaColor, setViaColor] = useState("#aabbcc");
   const [toColor, setToColor] = useState("#ddeeff");
   const [selected, setSelected] = useState(direction[0])
-  const gradient = `radial-gradient(circle at ${selected.value}, ${fromColor},${viaColor},${toColor})`;
+  const [shapes, setShapes] = useState(gradientShape[0])
+  const gradient = `radial-gradient(${shapes.value} at ${selected.value}, ${fromColor},${viaColor},${toColor})`;
 
   const copyGradient = () => {
     navigator.clipboard.writeText(gradient)
@@ -77,8 +83,8 @@ const CustomGradientGenerator = () => {
         </button>
       </div>
 
-      <div className="flex flex-col items-start justify-start px-5 pt-2 gap-3 rounded-xl border border-white ring-1 ring-zinc-200 transition-all ease-in-out hover:cursor-pointer dark:border-transparent dark:ring-zinc-700 ">
-        <div className='flex items-center w-full mx-auto justify-center gap-3'>
+      <div className="flex flex-col items-center justify-center px-5 pt-2 gap-1 rounded-xl border border-white ring-1 ring-zinc-200 transition-all ease-in-out hover:cursor-pointer dark:border-transparent dark:ring-zinc-700 ">
+        <div className='flex items-center w-full mx-auto justify-center gap-1'>
           <Popover className="relative ">
             <Popover.Button className="p-2 border-2 dark:border-zinc-800 border-zinc-200 flex items-center gap-2 justify-between rounded-lg">
               <span>From</span>
@@ -110,7 +116,7 @@ const CustomGradientGenerator = () => {
           </Popover>
         </div>
 
-        <div className="w-full px-6 py-3">
+        <div className="w-full ">
           <Listbox value={selected} onChange={setSelected} >
             <div className="relative mt-1">
               <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white  py-2 pl-3 pr-10 text-left border-2 focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
@@ -124,6 +130,47 @@ const CustomGradientGenerator = () => {
               >
                 <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md z-30 bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
                   {direction.map((directionItem, directionIdx) => (
+                    <Listbox.Option
+                      key={directionIdx}
+                      className={({ active }) =>
+                        `relative cursor-default select-none z-30 py-2 pl-10 pr-4 ${
+                          active ? 'bg-amber-100 text-amber-900' : 'text-gray-900'
+                        }`
+                      }
+                      value={directionItem}
+                    >
+                      {({ selected }) => (
+                        <>
+                          <span
+                            className={`block truncate ${
+                              selected ? 'font-medium' : 'font-normal'
+                            }`}
+                          >
+                            {directionItem.name}
+                          </span>
+                        </>
+                      )}
+                    </Listbox.Option>
+                  ))}
+                </Listbox.Options>
+              </Transition>
+            </div>
+          </Listbox>
+        </div>
+        <div className="w-full ">
+          <Listbox value={shapes} onChange={setShapes} >
+            <div className="relative mt-1">
+              <Listbox.Button className="relative w-full cursor-default rounded-lg bg-white  py-2 pl-3 pr-10 text-left border-2 focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
+                <span className="block truncate">{shapes.name}</span>
+              </Listbox.Button>
+              <Transition
+                as={Fragment}
+                leave="transition ease-in duration-100"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+              >
+                <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md z-30 bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+                  {gradientShape.map((directionItem, directionIdx) => (
                     <Listbox.Option
                       key={directionIdx}
                       className={({ active }) =>
