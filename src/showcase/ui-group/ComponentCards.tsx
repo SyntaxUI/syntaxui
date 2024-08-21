@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import HeartbeatButton from '../components/button/HeartbeatButton'
 import Card from './Card'
+import CopyPasteButton from '../playground/CopyPasteButton'
 
 const data = [
   {
@@ -36,6 +37,16 @@ const data = [
     title: 'Toggle',
     component: <SimpleToggle />,
     link: '/components/toggle',
+  },
+  {
+    title: 'Accordion',
+    image: '/images/ui/accordion.svg',
+    link: '/components/accordion',
+  },
+  {
+    title: 'Playground',
+    component: <CopyPasteButton />,
+    link: '/playground',
   },
 ]
 
