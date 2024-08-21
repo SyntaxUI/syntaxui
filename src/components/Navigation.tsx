@@ -237,7 +237,7 @@ export const navigation: Array<NavGroup> = [
     links: [
       {
         title: 'Accordion',
-        href: '/blocks/accordion',
+        href: '/components/accordion',
       },
       {
         title: 'Button',
