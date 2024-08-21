@@ -48,6 +48,11 @@ const data = [
     component: <CopyPasteButton />,
     link: '/playground',
   },
+  {
+    title: 'Stepper',
+    image: '/images/ui/stepper.svg',
+    link: '/components/stepper',
+  },
 ]
 
 const ComponentCards = () => {
