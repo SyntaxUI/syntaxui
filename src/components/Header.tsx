@@ -1,20 +1,19 @@
 'use client'
 
-import clsx from 'clsx'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import Link from 'next/link'
-import { forwardRef } from 'react'
 import {
   MobileNavigation,
   useIsInsideMobileNavigation,
   useMobileNavigationStore,
 } from '@/components/MobileNavigation'
 import { MobileSearch, Search } from '@/components/Search'
+import { Button } from '@/components/ui/button'
 import GitHubIcon from '@/icons/github'
-import XIcon from '@/icons/x'
-import DiscordIcon from '@/icons/discord'
+import clsx from 'clsx'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { forwardRef } from 'react'
 import { ThemeToggle } from './ThemeToggle'
 
 function TopLevelNavItem({
@@ -131,36 +130,16 @@ export const Header = forwardRef<
         <div className="flex items-center gap-2">
           <MobileSearch />
           <ThemeToggle />
-
-          <Link
-            href="https://twitter.com/justansub"
-            target="_blank"
-            rel="noreferrer"
-            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex dark:hover:bg-white/5 "
-          >
-            <XIcon className="h-4 w-4 dark:text-white" fill="currentColor" />
-          </Link>
-          <Link
-            href="https://discord.gg/P8GXYyH3ZU"
-            target="_blank"
-            rel="noreferrer"
-            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex dark:hover:bg-white/5"
-          >
-            <DiscordIcon
-              className="h-4 w-4 dark:text-white"
-              fill="currentColor"
-            />
-          </Link>
-          <Link
-            href="https://github.com/ansub/ui"
-            target="_blank"
-            rel="noreferrer"
-            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex dark:hover:bg-white/5"
-          >
-            <GitHubIcon
-              className="h-4 w-4 dark:text-white"
-              fill="currentColor"
-            />
+          <Link href="https://git.new/syntax" target="_blank" rel="noreferrer">
+            <Button
+              variant={'outline'}
+              className="gap-1  bg-gray-800 text-white hover:bg-gray-800/90 hover:text-white"
+            >
+              <div className="h-5 w-5 text-white">
+                <GitHubIcon fill="currentColor" />
+              </div>
+              Star on Github
+            </Button>
           </Link>
         </div>
       </div>

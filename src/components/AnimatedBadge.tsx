@@ -18,14 +18,14 @@ const AniamtedBadge = () => {
       onClick={() => {
         // window.open('https://cal.com/ansub/15')
         // window.open('https://discord.com/invite/P8GXYyH3ZU')
-        router.push('/templates/stoic')
+        router.push('https://pro.syntaxui.com/')
         // posthog.capture('meeting_button_clicked')
       }}
     >
       <span className="absolute inset-[-1000%] animate-discord-button bg-[conic-gradient(from_calc(var(--discord-button-angle)+60deg)_at_calc(50%+var(--discord-button-x))_50%,transparent_50%,#fb3a5d_98%,transparent_100%)]"></span>
       <span className="inline-flex items-center gap-2 rounded-full bg-red-100 px-3 py-1 text-[12px] font-medium uppercase text-red-500 backdrop-blur">
         <span>
-          Get Portfolio Template
+          Get Premium Templates
           <ChevronRight className="inline-block h-4 w-4 text-red-400" />
         </span>
       </span>
