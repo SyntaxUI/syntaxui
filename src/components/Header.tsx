@@ -91,12 +91,12 @@ export const Header = forwardRef<
         </Link>
         <ul role="list" className="flex w-full items-center gap-4">
           <TopLevelNavItem href="/components">Get Started</TopLevelNavItem>
-          <TopLevelNavItem href="/templates">Templates</TopLevelNavItem>
+          <TopLevelNavItem href="/pro">Templates</TopLevelNavItem>
         </ul>
       </div>
       {/* <Search /> */}
       <div className="flex items-center gap-3 lg:hidden">
-        {pathname === '/' || pathname.includes('/templates') ? null : (
+        {pathname === '/' || pathname.includes('/pro') ? null : (
           <MobileNavigation />
         )}
         <Link
