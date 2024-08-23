@@ -7,6 +7,7 @@ import { HexColorPicker } from "react-colorful";
 import { Fragment, useState } from 'react'
 import { Listbox, Popover, Transition } from '@headlessui/react'
 import { gradientDirection, gradientShape } from '@/data/GradientData'
+import { generateTailwindGradient } from '@/lib/convertToTailwind'
 
 
 const CustomGradientGenerator = () => {
@@ -17,9 +18,15 @@ const CustomGradientGenerator = () => {
   const [selected, setSelected] = useState(gradientDirection[0])
   const [shapes, setShapes] = useState(gradientShape[0])
   const gradient = `radial-gradient(${shapes.value} at ${selected.value}, ${fromColor},${viaColor},${toColor})`;
-
+const tailwindGradient=  generateTailwindGradient({
+  shape: shapes.value,
+  direction: selected.value,
+  from: fromColor,
+  via: viaColor,
+  to: toColor
+});
   const copyGradient = () => {
-    navigator.clipboard.writeText(gradient)
+    navigator.clipboard.writeText(tailwindGradient)
     setCopied(true)
     setTimeout(() => setCopied(false), 1000)
     toast.success('Gradient copied to clipboard!')
