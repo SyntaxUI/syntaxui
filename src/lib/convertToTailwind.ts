@@ -11,7 +11,8 @@ export  function generateTailwindGradient({
     via: string; 
     to: string;
   }): string {
-    return `bg-[radial-gradient(${shape}_at_${direction},_var(--tw-gradient-stops))] from-[${from}] via-[${via}] to-[${to}]`;
+    const formattedDirection = direction.replace(/\s+/g, '_');
+    return `bg-[radial-gradient(${shape}_at_${formattedDirection},_var(--tw-gradient-stops))] from-[${from}] via-[${via}] to-[${to}]`;
   }
   
 
