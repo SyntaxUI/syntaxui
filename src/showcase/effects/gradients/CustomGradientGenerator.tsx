@@ -6,32 +6,15 @@ import { toast } from 'sonner'
 import { HexColorPicker } from "react-colorful";
 import { Fragment, useState } from 'react'
 import { Listbox, Popover, Transition } from '@headlessui/react'
-
-const direction = [
-  { name: 'Top', value: "top" },
-  { name: 'Bottom', value: "bottom" },
-  { name: 'Left', value: "left" },
-  { name: 'Right', value: "right" },
-  { name: 'Top Right', value: "top right" },
-  { name: 'Bottom Right', value: "bottom right" },
-  { name: 'Bottom Left', value: "bottom left" },
-  { name: 'Top Left', value: "top left" },
-  { name: 'Center', value: "center" },
+import { gradientDirection, gradientShape } from '@/data/GradientData'
 
 
-]
-const gradientShape = [
-  { name: 'Ellipse', value: "ellipse" },
-
-  { name: 'Circle', value: "circle" },
-
-]
 const CustomGradientGenerator = () => {
   const [copied, setCopied] = useState(false)
   const [fromColor, setFromColor] = useState("#aabbcc");
   const [viaColor, setViaColor] = useState("#aabbcc");
   const [toColor, setToColor] = useState("#ddeeff");
-  const [selected, setSelected] = useState(direction[0])
+  const [selected, setSelected] = useState(gradientDirection[0])
   const [shapes, setShapes] = useState(gradientShape[0])
   const gradient = `radial-gradient(${shapes.value} at ${selected.value}, ${fromColor},${viaColor},${toColor})`;
 
@@ -135,7 +118,7 @@ const CustomGradientGenerator = () => {
                 leaveTo="opacity-0"
               >
                 <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md z-30 bg-white dark:bg-neutral-800  py-1 text-base shadow-lg ring-1 ring-black/5  focus:outline-none sm:text-sm">
-                  {direction.map((directionItem, directionIdx) => (
+                  {gradientDirection.map((directionItem, directionIdx) => (
                     <Listbox.Option
                       key={directionIdx}
                       className={({ active }) =>
@@ -176,15 +159,15 @@ const CustomGradientGenerator = () => {
                 leaveTo="opacity-0"
               >
                 <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md z-30 bg-white dark:bg-neutral-800 py-1  shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
-                  {gradientShape.map((directionItem, directionIdx) => (
+                  {gradientShape.map((shape, shapeIdx) => (
                     <Listbox.Option
-                      key={directionIdx}
+                      key={shapeIdx}
                       className={({ active }) =>
                         `relative cursor-default select-none z-30 py-2 pl-10 pr-4  ${
                           active ? 'bg-amber-100 text-amber-900' : 'text-gray-900 dark:text-white '
                         }`
                       }
-                      value={directionItem}
+                      value={shape}
                     >
                       {({ selected }) => (
                         <>
@@ -193,7 +176,7 @@ const CustomGradientGenerator = () => {
                               selected ? 'font-medium' : 'font-normal'
                             }`}
                           >
-                            {directionItem.name}
+                            {shape.name}
                           </span>
                         </>
                       )}
