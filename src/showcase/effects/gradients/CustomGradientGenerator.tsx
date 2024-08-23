@@ -8,6 +8,7 @@ import { Fragment, useState } from 'react'
 import { Listbox, Popover, Transition } from '@headlessui/react'
 import { gradientDirection, gradientShape } from '@/data/GradientData'
 import { generateTailwindGradient } from '@/lib/convertToTailwind'
+import { generateCssGradient } from '@/lib/convertToVanillaCssGradient'
 
 
 const CustomGradientGenerator = () => {
@@ -17,7 +18,13 @@ const CustomGradientGenerator = () => {
   const [toColor, setToColor] = useState("#ddeeff");
   const [selected, setSelected] = useState(gradientDirection[0])
   const [shapes, setShapes] = useState(gradientShape[0])
-  const gradient = `radial-gradient(${shapes.value} at ${selected.value}, ${fromColor},${viaColor},${toColor})`;
+  const gradient=generateCssGradient({
+    shape: shapes.value,
+    position: selected.value,
+    fromColor: fromColor,
+    viaColor: viaColor,
+    toColor: toColor
+  })
 const tailwindGradient=  generateTailwindGradient({
   shape: shapes.value,
   direction: selected.value,
