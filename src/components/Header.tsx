@@ -6,8 +6,6 @@ import {
   useMobileNavigationStore,
 } from '@/components/MobileNavigation'
 import { MobileSearch, Search } from '@/components/Search'
-import { Button } from '@/components/ui/button'
-import GitHubIcon from '@/icons/github'
 import clsx from 'clsx'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
@@ -117,31 +115,17 @@ export const Header = forwardRef<
         </Link>
         <ul role="list" className="flex w-full items-center gap-4">
           <TopLevelNavItem href="/docs">Get Started</TopLevelNavItem>
-          <TopLevelNavItem href="https://discord.gg/P8GXYyH3ZU">
-            Community
-          </TopLevelNavItem>
+          <TopLevelNavItem href="/pro">Templates</TopLevelNavItem>
         </ul>
       </div>
       <div className="flex items-center gap-5">
-        <nav className="hidden md:block">
-          <Search />
-        </nav>
-        {/* <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10 md:dark:bg-white/15" /> */}
         <div className="flex items-center gap-2">
           <MobileSearch />
           <ThemeToggle />
-          <Link href="https://git.new/syntax" target="_blank" rel="noreferrer">
-            <Button
-              variant={'outline'}
-              className="gap-1  bg-gray-800 text-white hover:bg-gray-800/90 hover:text-white"
-            >
-              <div className="h-5 w-5 text-white">
-                <GitHubIcon fill="currentColor" />
-              </div>
-              Star on Github
-            </Button>
-          </Link>
         </div>
+        <nav className="hidden md:block">
+          <Search />
+        </nav>
       </div>
     </motion.div>
   )
