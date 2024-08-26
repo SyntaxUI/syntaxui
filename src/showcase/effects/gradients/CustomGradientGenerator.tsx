@@ -164,7 +164,7 @@ const CustomGradientGenerator = () => {
       {/* Gradient Preview */}
       <Card
         className="group relative w-full overflow-hidden rounded-lg p-0"
-        style={{ background: gradient }}
+        style={{ background: gradient, minHeight: '200px' }}
       >
         <CardContent
           className="absolute bottom-0 right-0 flex items-center justify-center"
