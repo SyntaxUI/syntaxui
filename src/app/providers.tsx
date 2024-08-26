@@ -1,6 +1,7 @@
 'use client'
 
 import { Button } from '@/components/mdx'
+import { ChevronRight } from 'lucide-react'
 import { ThemeProvider } from 'next-themes'
 import { useRouter } from 'next/navigation'
 
@@ -21,12 +22,13 @@ const SyntaxUIProBanner = () => {
   return (
     <>
       <div
-        className={`fixed bottom-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out`}
+        onClick={() => router.push('/pro')}
+        className={`fixed bottom-0 left-0 right-0 z-50 cursor-pointer transition-all duration-300 ease-in-out`}
       >
-        <div className="flex w-full items-center justify-center gap-x-6 bg-red-500 px-6 py-3 sm:px-3.5">
+        <div className="flex w-full items-center justify-center gap-x-6 bg-red-500 px-6 py-2 sm:px-3.5">
           <div className="flex items-center gap-4 text-sm font-medium leading-6 text-white">
             <p>{`Get Premium Blocks and Templates for your next project on SyntaxUI Pro`}</p>
-            <Button onClick={() => router.push('/pro')}>Get Now!</Button>
+            <ChevronRight className="h-4 w-4" />
           </div>
         </div>
       </div>
