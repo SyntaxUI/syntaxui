@@ -29,6 +29,11 @@ const nextConfig = {
         destination: 'https://discord.com/invite/P8GXYyH3ZU',
         permanent: true,
       },
+      {
+        source: '/pro',
+        destination: 'https://pro.syntaxui.com/',
+        permanent: true,
+      },
     ]
   },
   images: {

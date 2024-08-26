@@ -1,20 +1,17 @@
 'use client'
 
-import clsx from 'clsx'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import Link from 'next/link'
-import { forwardRef } from 'react'
 import {
   MobileNavigation,
   useIsInsideMobileNavigation,
   useMobileNavigationStore,
 } from '@/components/MobileNavigation'
 import { MobileSearch, Search } from '@/components/Search'
-import GitHubIcon from '@/icons/github'
-import XIcon from '@/icons/x'
-import DiscordIcon from '@/icons/discord'
+import clsx from 'clsx'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { forwardRef } from 'react'
 import { ThemeToggle } from './ThemeToggle'
 
 function TopLevelNavItem({
@@ -92,12 +89,12 @@ export const Header = forwardRef<
         </Link>
         <ul role="list" className="flex w-full items-center gap-4">
           <TopLevelNavItem href="/components">Get Started</TopLevelNavItem>
-          <TopLevelNavItem href="/templates">Templates</TopLevelNavItem>
+          <TopLevelNavItem href="/pro">Templates</TopLevelNavItem>
         </ul>
       </div>
       {/* <Search /> */}
       <div className="flex items-center gap-3 lg:hidden">
-        {pathname === '/' || pathname.includes('/templates') ? null : (
+        {pathname === '/' || pathname.includes('/pro') ? null : (
           <MobileNavigation />
         )}
         <Link
@@ -118,51 +115,17 @@ export const Header = forwardRef<
         </Link>
         <ul role="list" className="flex w-full items-center gap-4">
           <TopLevelNavItem href="/docs">Get Started</TopLevelNavItem>
-          <TopLevelNavItem href="https://discord.gg/P8GXYyH3ZU">
-            Community
-          </TopLevelNavItem>
+          <TopLevelNavItem href="/pro">Templates</TopLevelNavItem>
         </ul>
       </div>
       <div className="flex items-center gap-5">
-        <nav className="hidden md:block">
-          <Search />
-        </nav>
-        {/* <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10 md:dark:bg-white/15" /> */}
         <div className="flex items-center gap-2">
           <MobileSearch />
           <ThemeToggle />
-
-          <Link
-            href="https://twitter.com/justansub"
-            target="_blank"
-            rel="noreferrer"
-            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex dark:hover:bg-white/5 "
-          >
-            <XIcon className="h-4 w-4 dark:text-white" fill="currentColor" />
-          </Link>
-          <Link
-            href="https://discord.gg/P8GXYyH3ZU"
-            target="_blank"
-            rel="noreferrer"
-            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex dark:hover:bg-white/5"
-          >
-            <DiscordIcon
-              className="h-4 w-4 dark:text-white"
-              fill="currentColor"
-            />
-          </Link>
-          <Link
-            href="https://github.com/ansub/ui"
-            target="_blank"
-            rel="noreferrer"
-            className="hidden items-center gap-1 rounded-lg p-2  text-sm text-gray-600 transition-all duration-300 ease-in-out hover:bg-gray-100 md:flex dark:hover:bg-white/5"
-          >
-            <GitHubIcon
-              className="h-4 w-4 dark:text-white"
-              fill="currentColor"
-            />
-          </Link>
         </div>
+        <nav className="hidden md:block">
+          <Search />
+        </nav>
       </div>
     </motion.div>
   )
