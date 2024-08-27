@@ -92,7 +92,12 @@ const CustomGradientGenerator = () => {
     setFromColor(newFromColor)
     setToColor(newToColor)
     setSelected(newDirection)
-    setShowVia(false) // Optionally, you can set this to Math.random() > 0.5 to randomly include or exclude the via color
+    const newShowVia = Math.random() > 0.5
+    setShowVia(newShowVia)
+    if (newShowVia) {
+      const newViaColor = getRandomColor()
+      setViaColor(newViaColor)
+    }
   }
 
   const variants = {
