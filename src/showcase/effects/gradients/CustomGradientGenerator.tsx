@@ -15,7 +15,7 @@ import {
 import { gradientDirection, gradientShape } from '@/data/GradientData'
 import { generateCssGradient, generateTailwindGradient } from '@/lib/gradients'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Check, Copy } from 'lucide-react'
+import { Check, Copy, Shuffle } from 'lucide-react'
 import { useState } from 'react'
 import { HexColorPicker } from 'react-colorful'
 import { toast } from 'sonner'
@@ -74,6 +74,27 @@ const CustomGradientGenerator = () => {
     toast.success('Gradient copied to clipboard!')
   }
 
+  const getRandomColor = () => {
+    return '#' + Math.floor(Math.random() * 16777215).toString(16)
+  }
+
+  const getRandomDirection = () => {
+    return gradientDirection[
+      Math.floor(Math.random() * gradientDirection.length)
+    ]
+  }
+
+  const generateRandomGradient = () => {
+    const newFromColor = getRandomColor()
+    const newToColor = getRandomColor()
+    const newDirection = getRandomDirection()
+
+    setFromColor(newFromColor)
+    setToColor(newToColor)
+    setSelected(newDirection)
+    setShowVia(false) // Optionally, you can set this to Math.random() > 0.5 to randomly include or exclude the via color
+  }
+
   const variants = {
     hidden: { opacity: 0, scale: 0.5 },
     visible: { opacity: 1, scale: 1 },
@@ -84,15 +105,23 @@ const CustomGradientGenerator = () => {
       {/* Gradient Generator */}
       <Card>
         <CardContent className="flex flex-col items-start justify-center gap-4 pt-6">
-          <label className="flex w-fit cursor-pointer select-none items-center text-left">
-            <input
-              type="checkbox"
-              checked={showVia}
-              onChange={() => setShowVia(!showVia)}
-              className="mr-2"
-            />
-            Add Via
-          </label>
+          <div className="flex w-full items-center justify-between gap-2">
+            <label className="flex w-fit cursor-pointer select-none items-center text-left">
+              <input
+                type="checkbox"
+                checked={showVia}
+                onChange={() => setShowVia(!showVia)}
+                className="mr-2"
+              />
+              Add Via
+            </label>
+            <button
+              onClick={generateRandomGradient}
+              className="rounded-lg border p-2 hover:bg-gray-100"
+            >
+              <Shuffle size={16} />
+            </button>
+          </div>
           <div className="mx-auto flex w-full items-center justify-start gap-1">
             <ColorPickerPopover
               color={fromColor}
@@ -112,6 +141,7 @@ const CustomGradientGenerator = () => {
               label="To"
             />
           </div>
+
           <div className="w-full ">
             <Select
               value={selected.value}
