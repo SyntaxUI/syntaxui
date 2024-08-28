@@ -20,7 +20,7 @@ const SyntaxUIProBanner = () => {
             width={120}
             height={120}
           />
-          <div className="absolute -right-4 bottom-4 rotate-[-18deg] rounded-full bg-black px-1 text-[10px] text-white">
+          <div className="absolute -right-3 bottom-2 rotate-[-18deg] rounded-full bg-black px-1 text-[10px] text-white">
             PRO
           </div>
         </div>
