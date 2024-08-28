@@ -84,7 +84,7 @@ function SocialLink({
   return (
     <Link href={href} target="_blank" rel="noreferrer" className="group">
       <span className="sr-only">{children}</span>
-      <Icon className="h-5 w-5 fill-zinc-700 dark:fill-gray-100 transition group-hover:fill-zinc-900 dark:group-hover:fill-zinc-500" />
+      <Icon className="h-5 w-5 fill-zinc-700 transition group-hover:fill-zinc-900 dark:fill-gray-100 dark:group-hover:fill-zinc-500" />
     </Link>
   )
 }
@@ -117,10 +117,32 @@ function SmallPrint() {
   )
 }
 
+const FooterBanner = () => {
+  return (
+    <div className="flex flex-col items-center justify-center rounded-xl border  bg-gray-100 py-8 text-black">
+      <div className="mb-4 max-w-xl text-center text-xl font-semibold  tracking-tight">
+        Say goodbye to the grind of coding everything from scratch. So you can
+        focus on what matters most
+      </div>
+      <div>
+        <a
+          href="https://pro.syntaxui.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-lg bg-red-500 px-4 py-3 text-sm font-medium text-white hover:bg-red-500/90"
+        >
+          Get SyntaxUI Pro
+        </a>
+      </div>
+    </div>
+  )
+}
+
 export function Footer() {
   return (
     <footer className="mx-auto w-full max-w-2xl space-y-10 pb-16 lg:max-w-5xl">
       <PageNavigation />
+      <FooterBanner />
       <SmallPrint />
     </footer>
   )
