@@ -119,7 +119,7 @@ function SmallPrint() {
 
 const FooterBanner = () => {
   return (
-    <div className="flex flex-col items-center justify-center rounded-xl border  bg-gray-100 py-8 text-black">
+    <div className="flex w-full flex-col items-center justify-center rounded-xl border bg-gray-100 py-8 text-black">
       <div className="mb-4 max-w-xl text-center text-xl font-semibold  tracking-tight">
         Say goodbye to the grind of coding everything from scratch. So you can
         focus on what matters most
@@ -139,10 +139,12 @@ const FooterBanner = () => {
 }
 
 export function Footer() {
+  const pathname = usePathname()
+
   return (
     <footer className="mx-auto w-full max-w-2xl space-y-10 pb-16 lg:max-w-5xl">
       <PageNavigation />
-      <FooterBanner />
+      {pathname !== '/' && <FooterBanner />}
       <SmallPrint />
     </footer>
   )
