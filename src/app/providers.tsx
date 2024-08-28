@@ -1,9 +1,9 @@
 'use client'
 
-import { Button } from '@/components/mdx'
-import { ChevronRight } from 'lucide-react'
+import SyntaxUIProBanner from '@/components/SyntaxUIProBanner'
+import { useProBannerStore } from '@/store'
+import { X } from 'lucide-react'
 import { ThemeProvider } from 'next-themes'
-import { useRouter } from 'next/navigation'
 
 import posthog from 'posthog-js'
 import { PostHogProvider } from 'posthog-js/react'
@@ -17,26 +17,9 @@ function CSPostHogProvider({ children }: { children: React.ReactNode }) {
   return <PostHogProvider client={posthog}>{children}</PostHogProvider>
 }
 
-const SyntaxUIProBanner = () => {
-  const router = useRouter()
-  return (
-    <>
-      <div
-        onClick={() => router.push('/pro')}
-        className={`fixed bottom-0 left-0 right-0 z-50 cursor-pointer transition-all duration-300 ease-in-out`}
-      >
-        <div className="flex w-full items-center justify-center gap-x-6 bg-red-500 px-6 py-2 sm:px-3.5">
-          <div className="flex items-center gap-4 text-sm font-medium leading-6 text-white">
-            <p>{`Get Premium Blocks and Templates for your next project on SyntaxUI Pro`}</p>
-            <ChevronRight className="h-4 w-4" />
-          </div>
-        </div>
-      </div>
-    </>
-  )
-}
-
 export function Providers({ children }: { children: React.ReactNode }) {
+  const { showProBanner } = useProBannerStore()
+
   return (
     <ThemeProvider
       attribute="class"
@@ -45,7 +28,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
     >
       <CSPostHogProvider>
         {children}
-        <SyntaxUIProBanner />
+        {showProBanner && <SyntaxUIProBanner />}
       </CSPostHogProvider>
     </ThemeProvider>
   )
