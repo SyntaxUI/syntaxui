@@ -5,7 +5,7 @@ import Image from 'next/image'
 const SyntaxUIProBanner = () => {
   const { setShowProBanner } = useProBannerStore()
   return (
-    <div className="border-border group fixed bottom-2 right-2 z-50 h-auto w-[calc(100vw-16px)] max-w-[350px] overflow-hidden rounded-lg border bg-white  p-4 text-gray-900 transition-all animate-in slide-in-from-bottom-full md:bottom-4 md:right-4 ">
+    <div className="group fixed bottom-2 right-2 z-50 h-auto w-[calc(100vw-16px)] max-w-[350px] overflow-hidden rounded-lg border border-gray-200 bg-white p-4 text-gray-900 transition-all animate-in slide-in-from-bottom-full dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100">
       <a
         href="https://pro.syntaxui.com/"
         target="_blank"
@@ -28,7 +28,7 @@ const SyntaxUIProBanner = () => {
           <h1 className="text-md font-medium tracking-tight md:block">
             Code Less, Create More!
           </h1>
-          <div className="font-regular flex items-start justify-start font-mono text-xs leading-[17px] tracking-tighter text-gray-900/80">
+          <div className="font-regular flex items-start justify-start font-mono text-xs leading-[17px] tracking-tighter text-gray-900/80 dark:text-gray-100/80">
             {`Get Premium Blocks and Templates for your next project on SyntaxUI Pro ↗`}
           </div>
         </div>
