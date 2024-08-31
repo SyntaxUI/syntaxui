@@ -169,7 +169,7 @@ export function ComponentPreview({
         />
       </div>
       {selectedTab === 'preview' && (
-        <div className="relative overflow-hidden rounded-md border border-gray-200 dark:border-gray-700 flex flex-col justify-center items-center">
+        <div className="relative overflow-hidden rounded-md border border-gray-200 dark:border-gray-700">
           <CopyButton value={codeString} />
           <div className=' w-full '>
             <div
