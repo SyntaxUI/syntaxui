@@ -61,7 +61,7 @@ const ImageSection = () => {
         </p>
       </div>
       <div className="image-navigation mt-8 flex w-full items-center justify-center text-center">
-        <div className="mb-10 flex w-full max-w-6xl flex-col gap-2 md:flex-row">
+        <div className="mb-10 flex w-full max-w-5xl flex-col gap-2 md:flex-row">
           {ImageTabs.map((tab, index) => (
             <button
               key={index}
@@ -69,11 +69,10 @@ const ImageSection = () => {
               onClick={() => handleImageChange(index + 1)}
             >
               <div
-                className={`mb-3 ${
-                  activeImage === index + 1
+                className={`mb-3 ${activeImage === index + 1
                     ? `bg-red-500 text-red-100`
                     : `bg-red-100 text-red-500`
-                } z-10 rounded-lg p-1 group-hover:bg-red-500 group-hover:text-red-100`}
+                  } z-10 rounded-lg p-1 group-hover:bg-red-500 group-hover:text-red-100`}
               >
                 {tab.icon}
               </div>
@@ -92,7 +91,7 @@ const ImageSection = () => {
           ))}
         </div>
       </div>
-      <div className="max-w-6xl rounded-lg border">
+      <div className="max-w-5xl rounded-lg border">
         {Images.map((image, index) => (
           <div key={index} data-image-number={image.imageNumber}>
             {activeImage === image.imageNumber && (

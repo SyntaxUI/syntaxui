@@ -105,7 +105,7 @@ export function ComponentPreview({
   return (
     <div
       className={cn(
-        'group relative my-10 flex w-full max-w-5xl flex-col space-y-2 ',
+        'group relative my-10 flex w-full lg:max-w-5xl xl:max-w-7xl flex-col space-y-2 ',
         className,
       )}
       {...props}
@@ -258,7 +258,7 @@ function ComponentPreviewUsingCn({
   return (
     <div
       className={cn(
-        'group relative my-10 flex w-full max-w-5xl flex-col space-y-2',
+        'group relative my-10 flex w-full lg:max-w-5xl xl:max-w-7xl flex-col space-y-2',
         className,
       )}
       {...props}

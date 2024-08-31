@@ -3,7 +3,7 @@ import { FC } from 'react'
 const ImageFade: FC = () => {
   return (
     <div>
-      <div className="relative flex max-w-6xl justify-center overflow-hidden">
+      <div className="relative flex max-w-5xl justify-center overflow-hidden">
         <img
           src="https://dashboardsdesign.com/img/dashboards/dashboard-05-custom.png"
           alt="hero-section"

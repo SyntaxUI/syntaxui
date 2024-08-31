@@ -101,7 +101,7 @@ const Pricing = () => {
   )
 
   const PricingCards = () => (
-    <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col gap-8 lg:flex-row lg:gap-4">
+    <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col gap-8 lg:flex-row lg:gap-4">
       {pricingPlans.map((plan, index) => (
         <div
           key={index}
