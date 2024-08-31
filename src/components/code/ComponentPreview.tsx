@@ -169,9 +169,9 @@ export function ComponentPreview({
         />
       </div>
       {selectedTab === 'preview' && (
-        <div className="relative overflow-hidden rounded-md border border-gray-200 dark:border-gray-700">
+        <div className="relative overflow-hidden rounded-md border border-gray-200 dark:border-gray-700 flex flex-col justify-center items-center">
           <CopyButton value={codeString} />
-          <div>
+          <div className=' w-full '>
             <div
               className={cn(
                 'preview flex min-h-[250px] w-full justify-center overflow-hidden p-10 ',
