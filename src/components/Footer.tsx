@@ -119,10 +119,9 @@ function SmallPrint() {
 
 const FooterBanner = () => {
   return (
-    <div className="flex w-full flex-col items-center justify-center rounded-xl border bg-gray-100 py-8 text-black">
-      <div className="mb-4 max-w-xl text-center text-xl font-semibold  tracking-tight">
-        Say goodbye to the grind of coding everything from scratch. So you can
-        focus on what matters most
+    <div className="flex w-full flex-col items-center justify-center rounded-xl border py-12 text-black dark:border-white/5">
+      <div className="mb-6 text-center text-xl font-semibold  tracking-tight dark:text-white">
+        Get Premium Blocks and Templates for your next project on SyntaxUI Pro
       </div>
       <div>
         <a
