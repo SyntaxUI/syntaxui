@@ -26,7 +26,7 @@ const SyntaxUIProBanner = () => {
         </div>
         <div className="flex flex-col items-start gap-0.5">
           <h1 className="text-md font-medium tracking-tight md:block">
-            Code Less, Create More!
+            Build Faster, Launch Sooner!
           </h1>
           <div className="font-regular flex items-start justify-start font-mono text-xs leading-[17px] tracking-tighter text-gray-900/80 dark:text-gray-100/80">
             {`Get Premium Blocks and Templates for your next project on SyntaxUI Pro ↗`}
