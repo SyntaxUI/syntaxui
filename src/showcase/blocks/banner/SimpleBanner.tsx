@@ -9,7 +9,7 @@ const SimpleBanner = () => {
       >
         <div className="flex w-full items-center justify-center gap-x-6 bg-red-500 px-6 py-3 sm:px-3.5">
           <div className="flex items-center text-sm font-medium leading-6 text-white">
-            <p>{`Get 50+ Premium Components for your next project on SyntaxUI`}</p>
+            <p>Get 50+ Premium Components for your next project on SyntaxUI</p>
           </div>
         </div>
       </div>
