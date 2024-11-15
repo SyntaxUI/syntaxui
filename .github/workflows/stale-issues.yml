@@ -34,3 +34,6 @@ jobs:
           # Disable PR processing entirely by setting these to -1
           days-before-pr-stale: -1
           days-before-pr-close: -1
+
+          # Restrict to only issues by using an empty label list for only-issue-labels
+          only-issue-labels: ''
