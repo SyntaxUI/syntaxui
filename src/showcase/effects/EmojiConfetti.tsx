@@ -13,13 +13,13 @@ interface Particle {
   rotationSpeed: number
 }
 
+const emojis = ['🎉', '🎊', '🥳', '🍾', '🎈', '🎇', '✨', '💥']
+
 const EmojiConfetti: React.FC = () => {
   const [isExploding, setIsExploding] = useState(false)
   const buttonRef = useRef<HTMLButtonElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const particles = useRef<Particle[]>([])
-
-  const emojis = ['🎉', '🎊', '🥳', '🍾', '🎈', '🎇', '✨', '💥']
 
   useEffect(() => {
     if (isExploding) {
